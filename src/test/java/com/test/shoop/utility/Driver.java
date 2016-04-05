@@ -28,7 +28,7 @@ public abstract class Driver {
         } else {
             if (browsertype.equalsIgnoreCase("chrome")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\browserBinaries\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"usr/bin/google-chrome");
                 driver = new ShoopChromeDriver(dc);
             }
         }

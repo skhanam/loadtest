@@ -28,7 +28,8 @@ public class MerchantSearch extends Driver {
     @FindBy(css = ".styled-rate-text.ng-binding.ng-scope")
     private WebElement catProfit;
 
-    String catTable = ".item-inner.ng-binding:contains('%s')";
+   String catTable = ".category-list>ul>li>a:contains('%s')";
+
 
 
 

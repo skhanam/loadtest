@@ -9,7 +9,7 @@ Feature: As a new user i should be able to join Quidco
    | merchantTable            |
    |Mode                      |
    |Maison & Jardin           |
-   | Voyages                  |
+   |Voyages                   |
    |High-Tech & Électroménager|
    |Mobile, Internet & TV     |
    |Mobile, Internet & TV     |

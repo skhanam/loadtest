@@ -29,7 +29,7 @@ public class Runner extends Driver {
     @BeforeClass
     public static void setUp() throws IOException {
         System.out.println("Starting testing");
-        Driver.driver("chrome");
+        Driver.driver("firefox");
         Driver.driver.manage().window().maximize();
 
     }
