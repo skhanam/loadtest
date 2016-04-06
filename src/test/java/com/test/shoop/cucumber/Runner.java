@@ -11,7 +11,7 @@ import java.io.IOException;
 
 @RunWith(Cucumber.class)
 @CucumberOptions( tags="@smoke-test",
-        plugin= {"pretty","html:target/cucumber"},
+        plugin= {"pretty","html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_sd",
                 "com.test.shoop.com.test.shoop.utility",
