@@ -21,15 +21,33 @@ LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
 
     @And("^I enter my username and password$")
     public void i_enter_my_username_and_password() throws Throwable {
+        login.enterUsernameAndPassWord();
 
     }
 
     @Then("^I should be logged in$")
     public void i_should_be_logged_in() throws Throwable {
+        login.validateUserLoggedIn();
+
+    }
+    @And("^I am currently signed out$")
+    public void i_am_currently_signed_out() throws Throwable {
+        login.checkUserIsNotLoggedIn();
+
 
     }
 
+    @When("^I enter my username and an incorrect password$")
+    public void i_enter_my_username_and_an_incorrect_password() throws Throwable {
+        login.enterUsernameAndIncorrectPassWord();
 
+    }
+
+    @Then("^I should not be logged in$")
+    public void i_should_not_be_logged_in() throws Throwable {
+        login.validateUserInvaliddetailsIsdisplayed();
+
+    }
 
 
 }

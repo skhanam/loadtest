@@ -1,18 +1,25 @@
-SHOOP APPLICATIONTESTS AUTOMATION FRAME WORK Spring Project
-===========================
+ Java Spring maven,cucumber and Selenium Webdriver automated  Test flamework
+--------------------------------------------------------------------------------
 
-To build this project use
+To run this project :
+=====================
 
-    mvn clean install
+ In any ide: click on Runner class
 
-To run this project with Maven use
+command line:  mvn clean verify -DCucumber.options=" --tags @smoke-test"
 
- In ide: click on Runner class
+To Change browser type:
+=======================
 
- On command line:  mvn clean verify -DCucumber.options=" --tags @smoke-test"
+Go to the runner class  junit @Beforeclass
+And change Driver.driver(" chrome ")parameters
+
+Reports :
+=========
+When tests fail or pass
+Maven failsafe-plugin takes screen shots and keeps them in this location "target/cucumber"
 
 
-For more help see the Apache Camel documentation
+For more help see the Apache  maven failsafe plugin documentation
 
-    http://www.shoop.fr/
 
