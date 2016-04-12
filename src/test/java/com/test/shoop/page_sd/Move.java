@@ -25,6 +25,8 @@ public class Move {
         driver.get("https://shoop.fr");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        driver.getTitle();
+        System.out.println(driver.getTitle());
         List<WebElement> elements = driver.findElements(By.xpath("html/body/header/div[2]/div/div[3]/nav/div[1]/ul/li[1]/a"));
                elements.get(0).click();
         String catResult = driver.findElement(By.cssSelector("h4 span .ng-scope")).getText().replaceAll("([A-Za-z\\s])\\w+", "").trim();
