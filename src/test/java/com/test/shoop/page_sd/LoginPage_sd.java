@@ -3,6 +3,7 @@ package com.test.shoop.page_sd;
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.utility.Driver;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
@@ -32,7 +33,7 @@ LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
     }
     @And("^I am currently signed out$")
     public void i_am_currently_signed_out() throws Throwable {
-        login.checkUserIsNotLoggedIn();
+
 
 
     }
@@ -48,6 +49,19 @@ LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
         login.validateUserInvaliddetailsIsdisplayed();
 
     }
+
+    @Given("^I am currently signed in$")
+    public void i_am_currently_signed_in() throws Throwable {
+
+    }
+
+    @Then("^I should be logged out$")
+    public void i_should_be_logged_out() throws Throwable {
+
+
+    }
+
+
 
 
 }

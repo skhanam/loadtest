@@ -1,4 +1,4 @@
-@smoke-test1
+@ignore
 Feature: As a new user i should be able to join Quidco
 
  Scenario Outline: Merchant category search
@@ -14,4 +14,5 @@ Feature: As a new user i should be able to join Quidco
    |Mobile, Internet & TV     |
    |Mobile, Internet & TV     |
    |Divertissement            |
+
 

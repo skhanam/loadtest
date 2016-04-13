@@ -11,7 +11,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <selenium.version>2.48.0</selenium.version>
+    <selenium.version>2.53.0</selenium.version>
     <cucumber.version>1.2.3</cucumber.version>
     <junit.version>4.12</junit.version>
   </properties>

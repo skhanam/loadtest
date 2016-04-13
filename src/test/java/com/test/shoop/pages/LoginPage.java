@@ -11,6 +11,7 @@ import static junit.framework.TestCase.assertTrue;
  * Created by Thadeus Ssweanyana on 3/21/2016.
  */
 public class LoginPage extends Driver {
+    Actions build  = new Actions(Driver.driver);
 
     @FindBy(css = "h1.mb20 > span.ng-scope")
     private WebElement loginPopup;
@@ -31,7 +32,9 @@ public class LoginPage extends Driver {
     private WebElement confirmUserLogged;
 
     @FindBy(xpath = "tml/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
-    private WebElement myaccount;
+    private WebElement myAccount;
+    @FindBy(css = ".ng-scope:contains('Mon compte')")
+    private WebElement userAccount;
     @FindBy(css = "a[name='sign-out-link']")
     private WebElement signOutLink;
 
@@ -54,11 +57,13 @@ public class LoginPage extends Driver {
         assertTrue(loggedIn.isDisplayed());
     }
 
-    public void checkUserIsNotLoggedIn(){
-        waitForElementDisplay(myaccount);
-        myaccount.click();
-        Actions build  = new Actions(Driver.driver);
-        build.moveToElement(signOutLink).click().perform();
+    public void logOutUser(){
+        waitForElementDisplay(myAccount);
+        build.click(myAccount).build().perform();
+        build.moveToElement(signOutLink).
+                click().
+                build().
+                perform();
     }
 
 

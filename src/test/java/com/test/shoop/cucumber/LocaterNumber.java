@@ -16,16 +16,7 @@ import java.util.regex.Pattern;
  */
 public class LocaterNumber {
 
-      static WebDriver driver;
 
-
-        public static void main(String[] args) {
-
-
-      driver = new FirefoxDriver();
-      driver.get("https://www.shoop.fr");
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }
 
 
             /*WebElement catTab = driver.findElement(By.cssSelector(".item-inner.ng-binding"));
