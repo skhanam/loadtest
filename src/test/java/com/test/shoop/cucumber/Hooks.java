@@ -8,10 +8,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
 
+import static com.test.shoop.utility.Driver.driver;
+
 /**
  * Created by sThadeus sewanyana on 18/03/2016.
  */
-public class Hooks extends Driver {
+public class Hooks extends  {
 
 
 
