@@ -29,12 +29,10 @@ LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
     @Then("^I should be logged in$")
     public void i_should_be_logged_in() throws Throwable {
         login.validateUserLoggedIn();
-
     }
     @And("^I am currently signed out$")
     public void i_am_currently_signed_out() throws Throwable {
-
-
+      login.logOutUser();
 
     }
 
@@ -52,12 +50,12 @@ LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
 
     @Given("^I am currently signed in$")
     public void i_am_currently_signed_in() throws Throwable {
-
+         login.validateUserInvaliddetailsIsdisplayed();
     }
 
     @Then("^I should be logged out$")
     public void i_should_be_logged_out() throws Throwable {
-
+        login.logOutUser();
 
     }
 

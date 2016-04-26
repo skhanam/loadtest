@@ -1,9 +1,9 @@
-@smoke-test
+@ignore
 Feature: Testing login to my shoop memeber account and edit details
 
-  As Shoop ccount holder I should be able to login with my email and password
+  As Shoop count holder I should be able to login with my email and password
 
-  Background:Login to to User Account
+  Scenario: Login to to User Account
 
     Given I go to "https://www.shoop.fr/"
     When I click on the login link

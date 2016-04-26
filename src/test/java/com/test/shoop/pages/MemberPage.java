@@ -23,8 +23,6 @@ public class MemberPage extends Driver{
 
     }
 
-
-
     public void validateAccountPage(){
         waitForElementDisplay(memberArea);
         Assert.assertTrue(memberArea.getText().contains("Mon compte"));
