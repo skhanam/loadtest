@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37b91b4-c2a5-4c68-8384-4161cb8ca126" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/ExactMatch_sd.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/ExactMatch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/MatchInMiddle.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Quidco-ApplicationsTests/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Quidco-ApplicationsTests/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SearchTest_sd.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SearchTest_sd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SimilarMerchantSearch_sd.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SimilarMerchantSearch_sd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/cucumber/Runner.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/cucumber/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/SearchTest.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/SearchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/jsons/SearchtestEndpoint.json" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/jsons/SearchtestEndpoint.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/jsons/UserLogin.json" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/jsons/UserLogin.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/BestMatch.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/BestMatch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/CategoryMatch.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/CategoryMatch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/ExaMatch.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/ExaMatch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/ExactMatchAmpersand.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/ExactMatchAmpersand.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchContent.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchContent.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchTest.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchTest.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SimilarMerchantSearch.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SimilarMerchantSearch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Hooks.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Hooks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_sd/LoginPage_sd.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_sd/LoginPage_sd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/SearchMearch.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/SearchMearch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/SearchTerm.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/SearchTerm.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/SignedUserSearch.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/SignedUserSearch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/loggedInUserMerchantSearch.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/loggedInUserMerchantSearch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/merchantCat.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/merchantCat.feature" />
-    </list>
+    <list default="true" id="d37b91b4-c2a5-4c68-8384-4161cb8ca126" name="Default" comment="" />
     <ignored path="Shoop-ApplicationTests.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -490,7 +460,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="*.xml&#9;FILE&#9;file://C:/Users/sewadeus/Desktop/DeveloperinTest/Shoop-ApplicationTests/src/main/resources/META-INF/spring/camel-context.xml" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../QuidcoRestful" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Quidco-ApplicationsTests" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -1102,7 +1072,7 @@
       <workItem from="1461064435298" duration="560000" />
       <workItem from="1461575583261" duration="5638000" />
       <workItem from="1461589028564" duration="7184000" />
-      <workItem from="1461659401732" duration="1769000" />
+      <workItem from="1461659401732" duration="2356000" />
     </task>
     <servers />
   </component>
@@ -1139,7 +1109,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115091000" />
+    <option name="totallyTimeSpent" value="115678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1153,7 +1123,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19400631" sideWeight="0.18020679" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="88" y="450" width="1809" height="316" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35407725" sideWeight="0.8197932" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35407725" sideWeight="0.8197932" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.290625" sideWeight="0.6226138" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
