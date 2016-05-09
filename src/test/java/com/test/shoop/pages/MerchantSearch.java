@@ -20,7 +20,6 @@ public class MerchantSearch extends Driver {
     WebDriverWait wait = new WebDriverWait(Driver.driver,30);
 
     String xy ="Join Quidco for free and start earning";
-
     @FindBy(css = ".not-logged-in.join.ng-scope>a")
     private WebElement joinfree;
     @FindBy(css = ".col-xs-12.header.col-md-12>h2")

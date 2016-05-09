@@ -24,6 +24,7 @@ public class LoginPage extends Driver {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement loginButton;
     @FindBy(xpath= "html/body/div[1]/div/div[1]/h1/span[2]")
+    private WebElement logi;
     @FindBy(xpath="html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     private WebElement loggedIn;
     @FindBy(css = "h1.greeting-header > span.ng-binding.ng-scope")

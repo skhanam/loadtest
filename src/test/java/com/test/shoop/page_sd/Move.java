@@ -25,7 +25,6 @@ public class Move {
         driver.get("https://shoop.fr");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-        driver.getTitle();
         System.out.println(driver.getTitle());
         List<WebElement> elements = driver.findElements(By.xpath("html/body/header/div[2]/div/div[3]/nav/div[1]/ul/li[1]/a"));
                elements.get(0).click();
@@ -40,7 +39,8 @@ public class Move {
             System.out.println(driver.findElements(By.cssSelector(".merchants-list a div h4")).size());
         }
         while(p.isDisplayed());
-        Assert.assertEquals(Integer.parseInt(catResult),driver.findElements(By.cssSelector(".merchants-list a div h4")).size());
+        Assert.assertEquals(Integer.parseInt(catResult),
+                driver.findElements(By.cssSelector(".merchants-list a div h4")).size());
         driver.quit();
 
     }
