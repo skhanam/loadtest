@@ -11,7 +11,7 @@ import java.io.IOException;
 
 @RunWith(Cucumber.class)
 @CucumberOptions( tags="@smoke-testA",
-        plugin= {"pretty","html:target/cucumber", "json:target/cucumber.json"},
+        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_sd",
                 "com.test.shoop.com.test.shoop.utility",
@@ -27,7 +27,7 @@ public class Runner extends Driver {
     @BeforeClass
     public static void setUp() throws IOException {
         System.out.println("Starting testing");
-        Driver.driver("Chrome");
+        Driver.driver("firefox");
         Driver.driver.manage().window().maximize();
 
     }
