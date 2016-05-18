@@ -10,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 
 /**
  * Created by thadeus on 13/04/16.
