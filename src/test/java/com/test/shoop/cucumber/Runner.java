@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@smoke-testA",
+@CucumberOptions( tags="@QP-700",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_sd",
