@@ -1,8 +1,11 @@
 package com.test.shoop.utility;
 
+import gherkin.lexer.De;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -28,15 +31,19 @@ public abstract class Driver {
         } else {
             if (browsertype.equalsIgnoreCase("chrome")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
-               System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/LinuxbrowserBinaries/chromedriver");
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/resources/LinuxbrowserBinaries/chromedriver");
                 driver = new ShoopChromeDriver(dc);
 
             }
         }
+        {
+            if (browsertype.equalsIgnoreCase("phantomjs")) {
+                DesiredCapabilities dc = DesiredCapabilities.phantomjs();
+                driver = new PhantomJSDriver(dc);
 
-
+            }
+        }
     }
-
 
     public void waitForElementDisplay(final WebElement element) {
 

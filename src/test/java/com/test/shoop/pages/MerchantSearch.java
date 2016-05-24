@@ -26,6 +26,7 @@ public class MerchantSearch extends Driver {
     private WebElement regiPage;
     @FindBy(css = ".styled-rate-text.ng-binding.ng-scope")
     private WebElement catProfit;
+@FindBy()
 
    String catTable = ".category-list>ul>li>a:contains('%s')";
 

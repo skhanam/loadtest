@@ -25,7 +25,11 @@ Feature: Testing login to my shoop memeber account and edit details
     And I click on the setting link
     Then I should see the  edit emaillink
 
-
+   Scenario: Search a merchant
+     When I enter merchant name "merchantName" in the search field
+     Then I should see my search name in the search results
+     And click on the merchant name
+     Then I should be on shoop merchant page
 
   Scenario: Validate User Account Signout
 

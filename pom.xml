@@ -14,6 +14,7 @@
     <selenium.version>2.53.0</selenium.version>
     <cucumber.version>1.2.3</cucumber.version>
     <junit.version>4.12</junit.version>
+    <phantamjs.version>1.2.1</phantamjs.version>
   </properties>
 
   <dependencies>
@@ -78,6 +79,25 @@
       <groupId>net.masterthought</groupId>
       <artifactId>cucumber-reporting</artifactId>
       <version>2.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-htmlunit-driver</artifactId>
+      <version>${selenium.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>phantomjsdriver</artifactId>
+      <version>${phantamjs.version}</version>
+      <scope>test</scope>
+
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-htmlunit-driver</artifactId>
+      <version>2.50.0</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
