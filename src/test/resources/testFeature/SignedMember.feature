@@ -1,4 +1,4 @@
-@QP-700
+@smoke-testA
 Feature: Testing login to my shoop memeber account and edit details
 
   As Shoop count holder I should be able to login with my email and password
@@ -11,21 +11,19 @@ Feature: Testing login to my shoop memeber account and edit details
     And I click on the login button
 
 
-
   Scenario: Login to Myaccount
 
     Then I should be logged in to my account
 
 
-  Scenario: Validate Login page tabs
 
-    Then The tabs listed below should be displayed
-
-      | Tabs           |
-      | Mon activité   |
-      | Mes paiements  |
-      | Paramètres     |
-      | Se déconnecter |
+  Scenario: Validate member area tabs
+    Given I click on a member my activity link
+    Then I should be on the my activity page
+    And I click on the  my payments  tab link
+    Then i should  see  the your balance on payments page
+    And I click on the setting link
+    Then I should see the  edit emaillink
 
 
 

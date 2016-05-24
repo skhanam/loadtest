@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by thadeus on 13/04/16.
  */
-public class MemberPage extends Driver{
+public class SignedMemberPage extends Driver{
 
     @FindBy(xpath = "html/body/header/div[2]/div/div[3]/nav/div[1]/div/ul/li[2]/a")
     private WebElement memberArea;
@@ -23,15 +23,22 @@ public class MemberPage extends Driver{
     private WebElement loginLiknk;
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     private WebElement myAccountButton;
+    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/p/span/span")
+    private WebElement yourBalanceLink;
     @FindBy(xpath = "//*[@id='user.payments']")
     private WebElement paymentbutton;
     @FindBy(xpath = "//*[@id='user.activity.purchases']")
     private WebElement myactiviyButton;
+    @FindBy(xpath = "//*[@id='col-date']")
+    private WebElement calendarDate;
     @FindBy(xpath = "//*[@id='user.settings.general']")
     private  WebElement settingButton;
+    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[1]/div[1]")
+    private WebElement editEmail;
     @FindBy(xpath = "//*[@id='signOut']")
     private WebElement logOutButton;
 
+    String memberTabs= "//*[@id='user.activity.%s']";
 
 
     public void clickOnSignInLink(){
@@ -39,24 +46,35 @@ public class MemberPage extends Driver{
         loginLiknk.click();
     }
 
-    public void validateAccountPage(){
-        waitForElementDisplay(memberArea);
-        assertTrue(memberArea.getText().contains("Mon compte"));
-    }
-
-    public void validateTabsonAccountPage(List<List<String>> tab){
-        //waitForElementDisplay(memberArea);
-        //WebElement what = driver.findElement(By.xpath("//*[@id='user.payments']"));
-        System.out.println(tab.get(1));
-
-       Assert.assertTrue(Driver.driver.findElement(By.xpath(tab.get(1).get(0))).isDisplayed());
-        Assert.assertTrue(Driver.driver.findElement(By.xpath(tab.get(2).get(0))).isDisplayed());
-        Assert.assertTrue(Driver.driver.findElement(By.xpath(tab.get(3).get(0))).isDisplayed());
-        Assert.assertTrue(Driver.driver.findElement(By.xpath(tab.get(4).get(0))).isDisplayed());
-        Assert.assertTrue(Driver.driver.findElement(By.xpath(tab.get(5).get(0))).isDisplayed());
+    public void clickOnMyActivityPage(){
+        waitForElementDisplay(myactiviyButton);
+        myactiviyButton.click();
 
 
     }
+    public void validateOnMyActivityPage(){
+        assertTrue(calendarDate.isDisplayed());
+    }
+
+    public void clickOnMPaymentsPage(){
+        waitForElementDisplay(paymentbutton);
+        paymentbutton.click();
+
+
+    }
+    public void validateOnPaymentsPage(){
+        waitForElementDisplay(yourBalanceLink);
+        assertTrue(yourBalanceLink.isDisplayed());
+    }
+    public void clickAndAndvalidateOnSettingPage(){
+        waitForElementDisplay(settingButton);
+        settingButton.click();
+
+    }
+    public void validateOnEditEmailSettingPage(){
+        assertTrue(editEmail.isDisplayed());
+    }
+
     public void clickOnSignoutLink(){
         waitForElementDisplay(myAccountButton);
         myAccountButton.click();

@@ -54,6 +54,7 @@ public class LoginPage extends Driver {
     }
     public void validateUserLoggedIn(){
         waitForElementDisplay(loggedIn);
+        loggedIn.click();
         assertTrue(loggedIn.isDisplayed());
     }
 

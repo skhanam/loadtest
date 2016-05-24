@@ -28,7 +28,7 @@ public abstract class Driver {
         } else {
             if (browsertype.equalsIgnoreCase("chrome")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/resources/LinuxbrowserBinaries/chromedriver");
+               System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/LinuxbrowserBinaries/chromedriver");
                 driver = new ShoopChromeDriver(dc);
 
             }
