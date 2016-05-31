@@ -5,7 +5,7 @@ Feature: Testing login to my shoop memeber account and edit details
 
   Scenario: Login to to User Account
 
-    Given I go to "http://developer:SieraZulu97@mvpbeta5.quidco.com"
+    Given I go to "https://www.shoop.fr"
     When I click on the login link
     And I enter my username and password
     And I click on the login button
