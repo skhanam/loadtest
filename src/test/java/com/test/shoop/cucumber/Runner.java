@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@smoke-testA,@sp-58",
+@CucumberOptions( tags="@SH-70,@sp-58,@smoke-testA",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_sd",
@@ -27,7 +27,7 @@ public class Runner extends Driver {
     @BeforeClass
     public static void setUp() throws IOException {
         System.out.println("Starting testing");
-        Driver.driver("firefox");
+        Driver.initialize();
         Driver.driver.manage().window().maximize();
 
     }
