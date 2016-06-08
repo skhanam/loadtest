@@ -35,7 +35,7 @@ public class SignedMemberPage extends Driver{
     private  WebElement settingButton;
     @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[1]/div[1]")
     private WebElement editEmail;
-    @FindBy(xpath = "//*[@id='signOut']")
+    @FindBy(xpath = "//a[@id='signOut']")
     private WebElement logOutButton;
 
     String memberTabs= "//*[@id='user.activity.%s']";
@@ -53,6 +53,7 @@ public class SignedMemberPage extends Driver{
 
     }
     public void validateOnMyActivityPage(){
+
         assertTrue(calendarDate.isDisplayed());
     }
 
@@ -76,8 +77,8 @@ public class SignedMemberPage extends Driver{
     }
 
     public void clickOnSignoutLink(){
-        waitForElementDisplay(myAccountButton);
-        myAccountButton.click();
+        waitForElementDisplay(logOutButton);
+
         logOutButton.click();
 
     }

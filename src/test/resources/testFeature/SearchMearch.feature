@@ -1,8 +1,8 @@
 @sp-58
-Feature: As a new user i should be able to join Quidco
+Feature: NOt logged user Merchant category search on shoop
 
  Scenario Outline: Merchant category search
-    Given I go to "https://www.shoop.fr/"
+   Given I go to shoop home Page
     When I click on merchant"<merchantTable>"category name
     Then I should see a category of merchant
   Examples:

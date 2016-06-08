@@ -3,9 +3,9 @@ Feature: Testing login to my shoop memeber account and edit details
 
   As Shoop count holder I should be able to login with my email and password
 
-  Scenario: Login to to User Account
+  Scenario: Login as shoop member
 
-    Given I go to "https://www.shoop.fr"
+    Given I go to shoop home Page
     When I click on the login link
     And I enter my username and password
     And I click on the login button

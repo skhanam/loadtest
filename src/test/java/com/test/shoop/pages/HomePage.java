@@ -10,9 +10,8 @@ import java.io.IOException;
  */
 public class HomePage extends Driver {
 
-    public void navigateToHomePage(String url){
+    public void navigateToHomePage(){
         driver.get(CONFIG.getProperty("HomePageUrl"));
-
     }
 
     public String getUrl(){

@@ -2,7 +2,7 @@ Feature: Signed member navigates to quidco merchant
 
   Scenario Outline: navigating to a merchant page
 
-Given I am on "https://www.quidco.com"
+Given I am on "https://www.shoop.fr"
 When I sign in with my username and password
 And I navigate to a merchant page"<MerchantUrl>"
 Then I should get responses "<responses> containing status "<status>" message

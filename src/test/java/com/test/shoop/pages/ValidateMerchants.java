@@ -21,7 +21,6 @@ public class ValidateMerchants extends Driver{
 
     public void goToMerchantPage(String merchantNames){
         String url = homePage.getUrl();
-
         String fullUrl = url + "/c/"+ merchantNames;
         driver.get(fullUrl);
         System.out.println(driver.getTitle());

@@ -11,12 +11,17 @@ import org.openqa.selenium.support.PageFactory;
 public class LandingPage_sd {
     HomePage landingpage = new HomePage();
     MerchantSearch registerPages = PageFactory.initElements(Driver.driver,MerchantSearch.class);
-    @Given("^I go to \"(.*?)\"$")
+    /*@Given("^I go to \"(.*?)\"$")
     public void i_go_to(String arg1) throws Throwable {
        landingpage.navigateToHomePage(arg1);
+    }*/
+
+    @Given("^I go to shoop home Page$")
+    public void i_go_to_shoop_home_Page() throws Throwable {
+        landingpage.navigateToHomePage();
     }
 
-    @When("^I click on merchant\"(.*?)\"category name$")
+        @When("^I click on merchant\"(.*?)\"category name$")
     public void i_click_on_merchant_category_name(String arg1) throws Throwable {
         registerPages.clickOnMerchantTab(arg1);
 
