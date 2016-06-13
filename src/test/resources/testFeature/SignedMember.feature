@@ -16,7 +16,6 @@ Feature: Testing login to my shoop memeber account and edit details
     Then I should be logged in to my account
 
 
-
   Scenario: Validate member area tabs
     Given I click on a member my activity link
     Then I should be on the my activity page

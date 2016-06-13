@@ -11,10 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 public class LandingPage_sd {
     HomePage landingpage = new HomePage();
     MerchantSearch registerPages = PageFactory.initElements(Driver.driver,MerchantSearch.class);
-    /*@Given("^I go to \"(.*?)\"$")
-    public void i_go_to(String arg1) throws Throwable {
-       landingpage.navigateToHomePage(arg1);
-    }*/
 
     @Given("^I go to shoop home Page$")
     public void i_go_to_shoop_home_Page() throws Throwable {

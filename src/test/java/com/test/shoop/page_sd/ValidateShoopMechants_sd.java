@@ -1,9 +1,7 @@
 package com.test.shoop.page_sd;
 
-import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.ValidateMerchants;
 import com.test.shoop.utility.Driver;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;

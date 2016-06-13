@@ -16,3 +16,7 @@ Feature: validate merchant url
       | auto-moto             | Auto-Moto             |
       | jouets                | Jouets                |
       | jeux-paris-en-ligne   | Jeux & Paris en ligne |
+
+
+
+

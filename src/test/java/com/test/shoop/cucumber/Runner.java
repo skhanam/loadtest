@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@smoke-testA,@sp-58,@SH-70",
+@CucumberOptions( tags="@smoke-testA,@SH-59,@SH-70",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_sd",
@@ -20,6 +20,7 @@ import java.io.IOException;
         features={"src/test/resources/testFeature"}
 
 )
+//@smoke-testA,@sp-59,@SH-70
 
 public class Runner extends Driver {
 

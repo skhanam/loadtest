@@ -78,7 +78,6 @@ public class SignedMemberPage extends Driver{
 
     public void clickOnSignoutLink(){
         waitForElementDisplay(logOutButton);
-
         logOutButton.click();
 
     }
