@@ -8,7 +8,7 @@ Feature: Testing login to my shoop memeber account and edit details
     Given I go to shoop home Page
     When I click on the login link
     And I enter my username and password
-    And I click on the login button
+    And I click on the login link
 
 
   Scenario: Login to Myaccount

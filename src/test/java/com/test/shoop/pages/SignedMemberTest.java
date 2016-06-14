@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by thadeus on 13/04/16.
  */
-public class SignedMemberPage extends Driver{
+public class SignedMemberTest extends Driver{
 
     @FindBy(xpath = "html/body/header/div[2]/div/div[3]/nav/div[1]/div/ul/li[2]/a")
     private WebElement memberArea;

@@ -69,16 +69,3 @@ Feature: Validate merchant category on shoop
       | films-series             |
       | livres-magazines         |
 
-#      | merchantTable              | CategoryName                                                                                                                                   |
-#      | femme-enceinte             | Femme-enceinte                                                                                                                                 |
-#      | bebe                       | Bebe                                                                                                                                           |
-#      | sacs-bagages               | Sacs-bagages                                                                                                                                   |
-#      | lunettes-de-soleil         | Lunettes de soleil                                                                                                                             |
-#      | montres-bijoux             | services-a-domicile
-#      | chaussures,enfant          | gaz-electricite                                                                                                                                |
-#      | Maison & Jardin            | services-a-domicile,gaz-electricite,animalerie,meubles,cuisine,jardin,bricolage                                                                |
-#      | Voyages                    | Parcs de loisirs,Ski & Sports d'hiver,Thalasso,Courts séjours,Croisières,Location de voiture,Train                                             |
-#      | High-Tech & Électroménager | Caméscope & Photo,Électroménager,Gadgets électroniques,Image & Son,Informatique,Logiciels                                                      |
-#      | Mobile, Internet & TV      | Offres Internet,Forfaits mobile                                                                                                                |
-#      | Beauté & Santé             | Bio & produits naturels,Puériculture,Minceur,Maquillage & cosmétiques,Parapharmacie,Nutrition sportive,Lunettes & lentilles                    |
-#      | Divertissement             | Rencontre sur Internet,Photo numérique & tirages,Consoles & Jeux vidéo,Déguisements,Billetterie & Concerts,Charme & Adulte,Musique & Streaming |

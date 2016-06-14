@@ -1,4 +1,4 @@
-@sp-58
+@ignore
 Feature: NOt logged user Merchant category search on shoop
 
   Scenario Outline: Merchant category search

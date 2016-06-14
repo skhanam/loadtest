@@ -14,10 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage_sd {
 LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
 
-    @When("^I click on the login button$")
-    public void i_click_on_the_login_button() throws Throwable {
-        login.clickOnLoginLink();
-    }
+
 
     @And("^I enter my username and password$")
     public void i_enter_my_username_and_password() throws Throwable {

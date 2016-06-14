@@ -1,30 +1,17 @@
-Feature: Signed member navigates to quidco merchant
-
-  Scenario Outline: navigating to a merchant page
-
-Given I am on "https://www.shoop.fr"
-When I sign in with my username and password
-And I navigate to a merchant page"<MerchantUrl>"
-Then I should get responses "<responses> containing status "<status>" message
-And the response contains confirmation message
-
-  Examples:
-  |MerchantUrl                                                   | responses      |status   |
-  |http://www.quidco.com/visit/2188/TDq/cashback/voucher/72763/  |      Success   |   302   |
+@SH-62
+Feature:Sign in with un-registered email address
 
 
-#Background:
-#    Given I am currently signed out
-#
-#  Scenario: Sign up with un-registered email address
-#    When I navigate to the registration page on mvpbeta5
-#    And I enter an email address that is not registered with Shoop
-#    And I enter a password
-#    And I tick to agree to the terms and conditions of Shoop
-#    And I press the register button
-#    Then I should be taken to the logged in home page
-#    And I should receive an activation email
-#
+  Scenario: Sign up with un-registered email address
+    Given I go to shoop home Page
+    When I click on the login link
+    And I enter an email address that is not registered with Shoop
+    And I enter my password
+    And I click on the login button
+    Then I should see "Nous sommes désolés, l'adresse e-mail et/ou le mot de passe sont incorrects" text displayed
+
+
+
 #  Scenario: Sign up with email address already registered
 #    When I navigate to the registration page
 #    And I enter an email address that is already registered with Shoop

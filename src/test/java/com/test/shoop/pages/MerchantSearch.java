@@ -1,5 +1,4 @@
 package com.test.shoop.pages;
-
 import com.test.shoop.utility.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

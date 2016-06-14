@@ -1,6 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.utility.Driver;
+import cucumber.api.java.en.When;
 
 import java.io.IOException;
 

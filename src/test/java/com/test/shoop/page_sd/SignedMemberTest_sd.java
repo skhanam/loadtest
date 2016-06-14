@@ -1,7 +1,7 @@
 package com.test.shoop.page_sd;
 
 import com.test.shoop.pages.LoginPage;
-import com.test.shoop.pages.SignedMemberPage;
+import com.test.shoop.pages.SignedMemberTest;
 import com.test.shoop.utility.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,15 +12,9 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by thadeus on 13/04/16.
  */
-public class SignedMemberPage_sd {
+public class SignedMemberTest_sd {
     LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
-    SignedMemberPage memberpage= PageFactory.initElements(Driver.driver, SignedMemberPage.class);
-
-    @When("^I click on the login link$")
-    public void i_click_on_the_login_link() throws Throwable {
-        memberpage.clickOnSignInLink();
-
-    }
+    SignedMemberTest memberpage= PageFactory.initElements(Driver.driver, SignedMemberTest.class);
 
 
     @Given("^I click on a member my activity link$")
