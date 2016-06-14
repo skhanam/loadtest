@@ -52,7 +52,7 @@ Feature: Validate merchant category on shoop
       | train                    |
       | bricolage                |
       | jardin                   |
-      | cuisine                  |
+      | cuisi                 |
       | meubles                  |
       | animalerie               |
       | gaz-electricite          |
