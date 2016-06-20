@@ -36,7 +36,7 @@ public abstract class Driver {
             } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/resources/centosChromeDriverBinaries/chromedriver");
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/resources/linux/googlechrome/64bit/chromedriver");
                            // "/src/test/resources/linux/googlechrome/64bit/chromedriver");
                     driver = new ShoopChromeDriver(dc);
 
