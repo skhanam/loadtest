@@ -23,7 +23,7 @@ Feature: Validate merchant category on shoop
       | Divertissement           |
       | rencontre-sur-internet   |
       | photo-numerique-tirages  |
-      | consoles-jeux-video      |
+     # | consoles-jeux-video      |
       | deguisements             |
       | billetterie-concerts     |
       | charme-adulte            |
@@ -31,7 +31,7 @@ Feature: Validate merchant category on shoop
       | bio-produits-naturels    |
       | puericulture             |
       | minceur                  |
-      | maquillage-cosmetiques   |
+      | parfums-cosmetiques      |
       | parapharmacie            |
       | nutrition-sportive       |
       | lunettes-lentilles       |

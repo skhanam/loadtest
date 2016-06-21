@@ -8,18 +8,11 @@ Feature:Sign in with un-registered email address
     And I enter an email address that is not registered with Shoop
     And I enter my password
     And I click on the login button
+
+    Scenario:
     Then I should see "Nous sommes désolés, l'adresse e-mail et/ou le mot de passe sont incorrects" text displayed
 
 
-
-#  Scenario: Sign up with email address already registered
-#    When I navigate to the registration page
-#    And I enter an email address that is already registered with Shoop
-#    And I enter a password
-#    And I tick to agree to the terms and conditions of Shoop
-#    And I press the register button
-#    Then I should see an error message advising me that my email address is already registered
-#
 #  Scenario: Sign up and do not tick to agree to terms and conditions (not registered)
 #    When I navigate to the registration page
 #    And I enter an email address that is not registered with Shoop

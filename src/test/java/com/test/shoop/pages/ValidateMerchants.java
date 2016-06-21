@@ -1,4 +1,5 @@
 package com.test.shoop.pages;
+import com.test.shoop.helper.Constants;
 import com.test.shoop.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,14 +13,11 @@ import static junit.framework.TestCase.assertTrue;
 public class ValidateMerchants extends Driver{
    HomePage homePage = new HomePage();
 
-    String searchButton = "//*[starts-with(@id, '%s')][@type='submit']";
-
-
-    @FindBy(css = "h4 span .ng-scope")
+    @FindBy(css = Constants.searchResult)
     private WebElement searchResult;
-    @FindBy(xpath = ".//*[@id='menu-categories']/div[1]/div")
-     private WebElement menuCategory;
-    String merchantCat = "#%s";
+    @FindBy(xpath = Constants.menuCategory)
+    private WebElement menuCategory;
+
 
 
     public void goToMerchantPage(String merchantNames){

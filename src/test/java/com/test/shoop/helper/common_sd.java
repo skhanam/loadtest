@@ -1,6 +1,9 @@
 package com.test.shoop.helper;
 import com.test.shoop.pages.LoginPage;
+import com.test.shoop.pages.UpdateUserDetails;
 import com.test.shoop.utility.Driver;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
 
@@ -11,8 +14,20 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class common_sd {
     LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
+    UpdateUserDetails userDetails = PageFactory.initElements(Driver.driver,UpdateUserDetails.class);
+
     @When("^I click on the login link$")
     public void i_click_on_the_login_link() throws Throwable {
        login.clickOnLoginLink();
+    }
+    @Given("^I click on a record button$")
+    public void i_click_on_a_record_button() throws Throwable {
+        userDetails.clickOnRecordButton();
+
+    }
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed$")
+    public void i_should_see_details_changed_succefully_message_displayed(String arg1) throws Throwable {
+     userDetails.validateYourModificationIsSuccessfulMessageDisplayed(arg1);
+
     }
 }

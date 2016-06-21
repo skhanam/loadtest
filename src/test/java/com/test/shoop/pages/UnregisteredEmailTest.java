@@ -1,5 +1,6 @@
 package com.test.shoop.pages;
 
+import com.test.shoop.helper.Constants;
 import com.test.shoop.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,21 +12,23 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class UnregisteredEmailTest extends Driver{
 
-    @FindBy(css = "h1.mb20 > span.ng-scope")
+    @FindBy(css = Constants.loginPopup)
     private WebElement loginPopup;
-    @FindBy(xpath = "//a[contains(@href,'je-me-connecte')]")
+    @FindBy(xpath = Constants.loginLink)
     private WebElement loginLink;
-    @FindBy(name="username")
+    @FindBy(name=Constants.userName)
     private WebElement userName;
-    @FindBy(xpath = "//input[@type='password']")
+    @FindBy(xpath = Constants.password)
     private WebElement password;
-    @FindBy(xpath = "//button[@type='submit']")
+    @FindBy(xpath = Constants.loginButton)
     private WebElement loginButton;
-    @FindBy(css = "#persist_signin")
+    @FindBy(css = Constants.rememberMe)
     private WebElement rememberMe;
-
-    @FindBy(xpath ="html/body/div[2]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div")
+    @FindBy(xpath =Constants.invalidemailPassword)
     private WebElement invalidemailPassword;
+
+
+
 
     public void ClickOnRememberMeCheckBox(){
         waitForElementDisplay(rememberMe);

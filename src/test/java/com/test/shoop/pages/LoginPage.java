@@ -45,12 +45,19 @@ public class LoginPage extends Driver {
         waitForElementDisplay(loginLink);
         loginLink.click();
     }
-    public void enterUsernameAndPassWord(){
+    public void enterUsername(){
 
         waitForElementDisplay(userName);
         userName.sendKeys("t.ssewanyana@quidco.com");
+
+    }
+ public void clickLoginButton(){
+     waitForElementDisplay( loginButton);
+     loginButton.click();
+ }
+    public void enterMemberPassword(){
+        emailpassword.clear();
         emailpassword.sendKeys("kalanzi09");
-        loginButton.click();
     }
     public void validateUserLoggedIn(){
         waitForElementDisplay(loggedIn);

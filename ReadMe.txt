@@ -18,8 +18,6 @@ Reports :
 =========
 When tests fail or pass
 Maven failsafe-plugin takes screen shots and keeps them in this location "target/cucumber"
-
-
 For more help see the Apache  maven failsafe plugin documentation
 
 

@@ -16,9 +16,9 @@ LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
 
 
 
-    @And("^I enter my username and password$")
-    public void i_enter_my_username_and_password() throws Throwable {
-        login.enterUsernameAndPassWord();
+    @And("^I enter my username$")
+    public void i_enter_my_username() throws Throwable {
+        login.enterUsername();
     }
 
     @Then("^I should be logged in to my account$")

@@ -1,5 +1,6 @@
 package com.test.shoop.pages;
 
+import com.test.shoop.helper.Constants;
 import com.test.shoop.utility.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,10 +16,10 @@ public class MerchnatCategoryUrl extends Driver {
 
    // @FindBy(css = "a[id='breadcrumb-home']")
    // private WebElement backHomeButton;
-    @FindBy(css = "h4 span .ng-scope")
-    private WebElement backHomeButton;
-    @FindBy(css = ".breadcrumb")
-            private WebElement pageTopTab;
+    @FindBy(css = Constants.searchResult)
+    private WebElement searchResult;
+    @FindBy(css = Constants.pageTopTab)
+    private WebElement pageTopTab;
 
     String merchantCat = "a[id='%s']";
 
@@ -35,9 +36,9 @@ public class MerchnatCategoryUrl extends Driver {
     }
 
     public void validatemerchantCategoryurlPage(String cat_name){
-        waitForElementDisplay(backHomeButton);
+        waitForElementDisplay(searchResult);
        WebElement checkcatName = Driver.driver.findElement(By.cssSelector(String.format(merchantCat, cat_name)));
-        assertTrue(backHomeButton.getText().contains(cat_name));
+        assertTrue(searchResult.getText().contains(cat_name));
 
     }
     public void validateMerchantCategoryUrlPages(){

@@ -1,4 +1,5 @@
 package com.test.shoop.pages;
+import com.test.shoop.helper.Constants;
 import com.test.shoop.utility.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,35 +14,23 @@ import static junit.framework.TestCase.assertTrue;
  * Created by Thadeus ssewanyana on 18/03/2016.
  */
 public class MerchantSearch extends Driver {
-    WebDriverWait wait = new WebDriverWait(Driver.driver,30);
-
-    String xy ="Join Quidco for free and start earning";
-    @FindBy(css = ".not-logged-in.join.ng-scope>a")
-    private WebElement joinfree;
-    @FindBy(css = ".col-xs-12.header.col-md-12>h2")
-    private WebElement regiPage;
-    @FindBy(css = ".styled-rate-text.ng-binding.ng-scope")
-    private WebElement catProfit;
-@FindBy()
-
-   String catTable = ".category-list>ul>li>a:contains('%s')";
-
-
-
-
+      WebDriverWait wait= new WebDriverWait(driver,20);
+    @FindBy(css = Constants.merchantRate)
+    private WebElement merchantRate;
+    String catTable = ".category-list>ul>li>a:contains('%s')";
 
     public void clickOnMerchantTab(String m_name){
-        WebElement catName= Driver.driver.findElement(By.cssSelector(String.format(catTable, m_name)));
+        WebElement catName= driver.findElement(By.cssSelector(String.format(catTable, m_name)));
         wait.until(ExpectedConditions.visibilityOf(catName));
-        Driver.driver.findElement(By.cssSelector(String.format(catTable, m_name))).click();
+        driver.findElement(By.cssSelector(String.format(catTable, m_name))).click();
 
 
 
     }
 
     public void confirmOnCategoryList() {
-        waitForElementDisplay(catProfit);
-        assertTrue(catProfit.isDisplayed());
+        waitForElementDisplay(merchantRate);
+        assertTrue(merchantRate.isDisplayed());
 
 
        /* List<WebElement> elements = driver.findElements(By.cssSelector(".item-inner.ng-binding"));
