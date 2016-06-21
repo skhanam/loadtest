@@ -56,7 +56,7 @@ public abstract class Driver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",Constants.chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeLinuxdriver);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeCentosdriver);
                     driver = new ShoopChromeDriver(dc);
 
             }
