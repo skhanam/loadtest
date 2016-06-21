@@ -109,12 +109,6 @@ public class UpdateUserDetails extends Driver {
 
     }
 
-    public void clickUserNameModifyLink() {
-        waitForElementDisplay(usernameModifierLink);
-        usernameModifierLink.click();
-
-    }
-
     public void enterNewUserName(String n_userName) {
         waitForElementDisplay(editUserName);
         editUserName.sendKeys(n_userName);
@@ -131,10 +125,7 @@ public class UpdateUserDetails extends Driver {
         assertTrue(malesex.isSelected());
     }
 
-    public void clickToSelectFemaleGenderaption(String sexType) {
-        waitForElementDisplay(malesex);
-        malesex.click();
-    }
+
 
 
     public void clickDateOfBirthModifyLink() {
