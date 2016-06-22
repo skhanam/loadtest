@@ -1,4 +1,4 @@
-package com.test.shoop.page_sd;
+package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.MemberTestActivityPage;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by thadeus on 13/04/16.
  */
-public class MemberTestActivityPage_sd {
+public class MemberTestActivityPageStepDef {
     LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
     MemberTestActivityPage memberpage= PageFactory.initElements(Driver.driver, MemberTestActivityPage.class);
 

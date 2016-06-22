@@ -10,7 +10,7 @@ import static junit.framework.TestCase.assertTrue;
  * Created by thadeus on 06/06/16.
  */
 
-public class ValidateMerchants extends Driver{
+public class ValidateMerchantsPage extends Driver{
    HomePage homePage = new HomePage();
 
     @FindBy(css = Constants.searchResult)

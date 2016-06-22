@@ -1,6 +1,6 @@
-package com.test.shoop.page_sd;
+package com.test.shoop.page_stepdef;
 
-import com.test.shoop.pages.ValidateMerchants;
+import com.test.shoop.pages.ValidateMerchantsPage;
 import com.test.shoop.utility.Driver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by thadeus on 06/06/16.
  */
-public class ValidateShoopMechants_sd {
+public class ValidateShoopMechantsStepDef {
 
 
-    ValidateMerchants validatemerchants = PageFactory.initElements(Driver.driver,ValidateMerchants.class);
+    ValidateMerchantsPage validatemerchants = PageFactory.initElements(Driver.driver,ValidateMerchantsPage.class);
 
 
     @When("^I go to \"([^\"]*)\" page$")

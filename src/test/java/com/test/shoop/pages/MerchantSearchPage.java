@@ -13,7 +13,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by Thadeus ssewanyana on 18/03/2016.
  */
-public class MerchantSearch extends Driver {
+public class MerchantSearchPage extends Driver {
       WebDriverWait wait= new WebDriverWait(driver,20);
     @FindBy(css = Constants.merchantRate)
     private WebElement merchantRate;

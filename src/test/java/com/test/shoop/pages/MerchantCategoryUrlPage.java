@@ -11,7 +11,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by thadeus on 08/06/16.
  */
-public class MerchnatCategoryUrl extends Driver {
+public class MerchantCategoryUrlPage extends Driver {
     HomePage homePage = new HomePage();
 
    // @FindBy(css = "a[id='breadcrumb-home']")

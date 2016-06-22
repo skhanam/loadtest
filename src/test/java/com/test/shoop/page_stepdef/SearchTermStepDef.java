@@ -1,4 +1,4 @@
-package com.test.shoop.page_sd;
+package com.test.shoop.page_stepdef;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -6,7 +6,7 @@ import cucumber.api.java.en.When;
 /**
  * Created by thadeus on 15/04/16.
  */
-public class SearchTerm_sd {
+public class SearchTermStepDef {
     @When("^I enter merchant name \"([^\"]*)\" in the search field$")
     public void i_enter_merchant_name_in_the_search_field(String arg1) throws Throwable {
 

@@ -15,6 +15,7 @@ public class HomePage extends Driver {
         driver.get(CONFIG.getProperty("HomePageUrl"));
     }
 
+
     public String getUrl(){
         return CONFIG.getProperty("HomePageUrl");
     }

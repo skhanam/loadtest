@@ -13,7 +13,7 @@ import java.io.IOException;
 @CucumberOptions( tags="@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
-        glue = { "com.test.shoop.page_sd",
+        glue = { "com.test.shoop.page_stepdef",
                 "com.test.shoop.com.test.shoop.utility",
                  "com.test.shoop.page","com.test.shoop.helper",
                  "com.test.shoop.cucumber"},

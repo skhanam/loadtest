@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by thadeus on 16/06/16.
  */
-public class UpdateUserDetails extends Driver {
+public class UpdateUserDetailsPage extends Driver {
     @FindBy(xpath = Constants.nameModifierLink)
     private WebElement nameModifierLink;
     @FindBy(xpath = Constants.editFname)

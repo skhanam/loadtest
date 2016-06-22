@@ -1,6 +1,6 @@
-package com.test.shoop.page_sd;
+package com.test.shoop.page_stepdef;
 
-import com.test.shoop.pages.UpdateUserDetails;
+import com.test.shoop.pages.UpdateUserDetailsPage;
 import com.test.shoop.utility.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -10,9 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by thadeus on 16/06/16.
  */
-public class UpdateUserDetails_sd {
+public class UpdateUserDetailsStepDef {
 
-    UpdateUserDetails userDetails = PageFactory.initElements(Driver.driver,UpdateUserDetails.class);
+    UpdateUserDetailsPage userDetails = PageFactory.initElements(Driver.driver,UpdateUserDetailsPage.class);
 
     @Then("^I click on the my account settings tab$")
     public void i_click_on_the_my_account_settings_tab() throws Throwable {

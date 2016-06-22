@@ -10,7 +10,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by thadeus on 14/06/16.
  */
-public class UnregisteredEmailTest extends Driver{
+public class UnregisteredEmailPage extends Driver{
 
     @FindBy(css = Constants.loginPopup)
     private WebElement loginPopup;

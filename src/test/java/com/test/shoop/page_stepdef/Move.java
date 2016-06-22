@@ -1,4 +1,4 @@
-package com.test.shoop.page_sd;
+package com.test.shoop.page_stepdef;
 
 import org.junit.Assert;
 import org.junit.Test;
