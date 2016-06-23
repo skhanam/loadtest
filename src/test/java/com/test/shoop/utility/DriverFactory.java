@@ -13,23 +13,24 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 /**
  * Created by Thadeus ssewanyana on 18/03/2016.
  */
-public abstract class Driver {
+public abstract class DriverFactory {
 
     public static WebDriver driver = null;
     public static Properties CONFIG=null;
     private  static final String operatingSystem = System.getProperty("os.name").toUpperCase();
     private static final String systemArchitecture = System.getProperty("os.arch");
-
+    private static Logger LOGGER = Logger.getLogger("InfoLogging");
 
     public void getEnvironmentInfo() throws IOException {
-        System.out.println(("Current Operating System: " + operatingSystem));
-        System.out.println("Current Architecture: " + systemArchitecture);
-        System.out.println("Current Browser Selection: " + CONFIG.getProperty("Browser"));
-        System.out.println(" ");
+        LOGGER.info(("Current Operating System: " + operatingSystem));
+        LOGGER.info("Current Architecture: " + systemArchitecture);
+        LOGGER.info("Current Browser Selection: " + CONFIG.getProperty("Browser"));
+
 
     }
 
@@ -67,7 +68,7 @@ public abstract class Driver {
 
     public void waitForElementDisplay(final WebElement element) {
 
-        Wait<WebDriver> wait = new FluentWait<WebDriver>(Driver.driver)
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverFactory.driver)
                 .withTimeout(60, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);

@@ -1,15 +1,12 @@
 package com.test.shoop.pages;
 
-import com.test.shoop.utility.Driver;
-import cucumber.api.java.en.When;
-
-import java.io.IOException;
+import com.test.shoop.utility.DriverFactory;
 
 
 /**
  * Created by sewadeus on 20/03/2016.
  */
-public class HomePage extends Driver {
+public class HomePage extends DriverFactory {
 
     public void navigateToHomePage(){
         driver.get(CONFIG.getProperty("HomePageUrl"));

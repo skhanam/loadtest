@@ -1,6 +1,6 @@
 package com.test.shoop.pages;
 
-import com.test.shoop.utility.Driver;
+import com.test.shoop.utility.DriverFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -10,8 +10,8 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by Thadeus Ssweanyana on 3/21/2016.
  */
-public class LoginPage extends Driver {
-    Actions build  = new Actions(Driver.driver);
+public class LoginPage extends DriverFactory {
+    Actions build  = new Actions(DriverFactory.driver);
 
     @FindBy(css = "h1.mb20 > span.ng-scope")
     private WebElement loginPopup;

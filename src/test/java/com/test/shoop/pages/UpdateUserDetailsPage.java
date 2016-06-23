@@ -1,20 +1,17 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.Driver;
-import org.openqa.selenium.By;
+import com.test.shoop.utility.DriverFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by thadeus on 16/06/16.
  */
-public class UpdateUserDetailsPage extends Driver {
+public class UpdateUserDetailsPage extends DriverFactory {
     @FindBy(xpath = Constants.nameModifierLink)
     private WebElement nameModifierLink;
     @FindBy(xpath = Constants.editFname)

@@ -1,7 +1,7 @@
 package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.UnregisteredEmailPage;
-import com.test.shoop.utility.Driver;
+import com.test.shoop.utility.DriverFactory;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
  * Created by thadeus on 14/06/16.
  */
 public class UnregisteredEmailStepDef {
-    UnregisteredEmailPage unregisteredEmailTest = PageFactory.initElements(Driver.driver,UnregisteredEmailPage.class);
+    UnregisteredEmailPage unregisteredEmailTest = PageFactory.initElements(DriverFactory.driver,UnregisteredEmailPage.class);
 
     @When("^I enter an email address that is not registered with Shoop$")
     public void i_enter_an_email_address_that_is_not_registered_with_Shoop() throws Throwable {

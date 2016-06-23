@@ -2,7 +2,7 @@ package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.MerchantSearchPage;
-import com.test.shoop.utility.Driver;
+import com.test.shoop.utility.DriverFactory;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LandingPageStepDef {
     HomePage landingpage = new HomePage();
-    MerchantSearchPage registerPages = PageFactory.initElements(Driver.driver,MerchantSearchPage.class);
+    MerchantSearchPage registerPages = PageFactory.initElements(DriverFactory.driver,MerchantSearchPage.class);
 
     @Given("^I go to shoop home Page$")
     public void i_go_to_shkoop_home_Page() throws Throwable {

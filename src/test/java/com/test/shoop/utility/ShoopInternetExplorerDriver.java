@@ -17,7 +17,7 @@ public class ShoopInternetExplorerDriver extends InternetExplorerDriver {
     private final SizzleSelector sizzleSelector;
 
     /**
-     * Driver constructor
+     * DriverFactory constructor
      *
      * @param desiredCapabilities to be passed into the standard InternetExplorerDriver
      */

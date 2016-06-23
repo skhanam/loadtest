@@ -19,7 +19,7 @@ public class ShoopChromeDriver extends ChromeDriver {
     private final SizzleSelector sizzleSelector;
 
     /**
-     * Driver constructor
+     * DriverFactory constructor
      *
      * @param desiredCapabilities to be passed into the standard ChromeDriver
      */

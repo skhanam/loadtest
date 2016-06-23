@@ -18,7 +18,7 @@ public class ShoopFireFoxDriver extends FirefoxDriver {
     private final SizzleSelector sizzleSelector;
 
     /**
-     * Driver constructor
+     * DriverFactory constructor
      *
      * @param desiredCapabilities to be passed into the standard FirefoxDriver
      */

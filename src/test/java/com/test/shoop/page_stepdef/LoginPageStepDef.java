@@ -1,7 +1,7 @@
 package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.LoginPage;
-import com.test.shoop.utility.Driver;
+import com.test.shoop.utility.DriverFactory;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
  * Created by Thadeus Ssweanyana on 3/21/2016.
  */
 public class LoginPageStepDef {
-LoginPage login = PageFactory.initElements(Driver.driver,LoginPage.class);
+LoginPage login = PageFactory.initElements(DriverFactory.driver,LoginPage.class);
 
 
 

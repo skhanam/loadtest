@@ -1,6 +1,6 @@
 package com.test.shoop.cucumber;
 
-import com.test.shoop.utility.Driver;
+import com.test.shoop.utility.DriverFactory;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
@@ -22,21 +22,22 @@ import java.io.IOException;
 )
 //@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63
 
-public class Runner extends Driver {
+public class Runner extends DriverFactory {
 
 
     @BeforeClass
     public static void setUp() throws IOException {
+
         System.out.println("Starting testing");
-        Driver.initialize();
-        Driver.driver.manage().window().maximize();
+        DriverFactory.initialize();
+        DriverFactory.driver.manage().window().maximize();
 
     }
 
     @AfterClass
     public static void tearDown(){
     System.out.println("Quiting browser");
-    Driver.driver.quit();
+    DriverFactory.driver.quit();
 }
 
 
