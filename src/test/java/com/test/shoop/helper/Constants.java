@@ -16,6 +16,14 @@ public class Constants {
     public static final String  chromeMacdriver="/src/test/resources/macChromedriver/chromedriver";
 
 
+    //Search
+
+    public static final String searchHome =".form-control.search-input.ng-valid.ng-dirty.ng-valid-parse.ng-touched";
+    public static final String SearchResult= ".e2e-list-merchant-name.ng-binding";
+    public static final String cashBacklink="html/body/div[2]/div/div[5]/div/div[1]/div/div[3]/div/div[2]/a";
+    public static final String wayOutPopup=".modal-header.visit-confirmation-modal.ng-scope>h4";
+    public static final String pageTitle="Groupon Codes Promo, Cashback & Bons de Réduction | Shoop - Le Meilleur du Cashback & du Code Promo";
+
 // Member setting
 
     public static final String editFname= "//*[contains(@name,'first_name')]";
@@ -35,11 +43,11 @@ public class Constants {
     public static final String successfulUpdates = ".inline-notification.ng-isolate-scope.successful";
     //links
     public static final String nameModifierLink = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[1]/div[1]/div[3]/a";
-    public static final String emailModifierLink="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[1]/div[3]/a";
-    public static final String genderModifierLink = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[3]/div[1]/div[3]/a";
-    public static final String usernameModifierLink= "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[4]/div[1]/div[3]/a";
-    public static final String dateOFBirthModiefierLink = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[5]/div[1]/div[3]/a";
-    public static final String postCodeModiefier = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[6]/div[1]/div[3]/a";
+    public static final String emailModifierLink=".qp-btn.qp-btn-link.ng-binding:eq(1)";
+    public static final String genderModifierLink = ".qp-btn.qp-btn-link.ng-binding:eq(2)";
+    public static final String usernameModifierLink= ".qp-btn.qp-btn-link.ng-binding:eq(3)";
+    public static final String dateOFBirthModiefierLink = ".qp-btn.qp-btn-link.ng-binding:eq(4)";
+    public static final String postCodeModiefier = ".qp-btn.qp-btn-link.ng-binding:eq(5)";
 
 
     //login
@@ -65,12 +73,18 @@ public class Constants {
     public static final String searchResult= "h4 span .ng-scope";
     public static final String menuCategory= ".//*[@id='menu-categories']/div[1]/div";
     public static final String pageTopTab = ".breadcrumb";
-
-
     public static final String merchantRate =".styled-rate-text.ng-binding.ng-scope";
+
+    public static final String emailpassword= "//input[@type='password']";
+    public static final String logi= "html/body/div[1]/div/div[1]/h1/span[2]";
+    public static final String loggedIn= ".qp-flash-notification.active";
+    public static final String confirmUserLogged= "h1.greeting-header > span.ng-binding.ng-scope";
+    public static final String myAccount = "tml/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
+    public static final String userAccount= ".ng-scope:contains('Mon compte')";
+    public static final String signOutLink= "a[name='sign-out-link']";
+    public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
+
     String catTable = ".category-list>ul>li>a:contains('%s')";
-
-
 
 
 
