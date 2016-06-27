@@ -13,8 +13,6 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class LoginPage extends DriverFactory {
     Actions build = new Actions(DriverFactory.driver);
-
-
     @FindBy(xpath = Constants.loginLink)
     private WebElement loginLink;
     @FindBy(xpath = Constants.userName)
@@ -41,8 +39,7 @@ public class LoginPage extends DriverFactory {
 
     public void clickOnLoginLink() {
         waitForElementDisplay(loginLink);
-        if(loggedIn.isDisplayed())
-        loginLink.click();
+         loginLink.click();
     }
 
     public void doDefaultLogin() {
@@ -58,7 +55,7 @@ public class LoginPage extends DriverFactory {
     public void enterUsername() {
 
         waitForElementDisplay(userName);
-        userName.sendKeys("t.ssewanyana@quidco.com");
+        userName.sendKeys("t.ssewanyana++Kings@quidco.com");
 
     }
 
@@ -81,7 +78,7 @@ public class LoginPage extends DriverFactory {
     public void loginMember() {
         waitForElementDisplay(loginLink);
         loginLink.click();
-        userName.sendKeys("t.ssewanyana@quidco.com");
+        userName.sendKeys("t.ssewanyana++Kings@quidco.com");
         emailpassword.sendKeys("kalanzi09");
         loggedIn.click();
     }
@@ -98,7 +95,7 @@ public class LoginPage extends DriverFactory {
 
     public void enterUsernameAndIncorrectPassWord() {
         waitForElementDisplay(userName);
-        userName.sendKeys("t.ssewanyana@quidco.com");
+        userName.sendKeys("t.ssewanyana++Kings@quidco.com");
         emailpassword.sendKeys("kalanzi0");
         loginButton.click();
     }

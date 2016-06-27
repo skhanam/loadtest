@@ -123,8 +123,6 @@ public class UpdateUserDetailsPage extends DriverFactory {
     }
 
 
-
-
     public void clickDateOfBirthModifyLink() {
         waitForElementDisplay(dateOFBirthModiefierLink);
         dateOFBirthModiefierLink.click();

@@ -15,8 +15,8 @@ public class ValidateShoopMechantsStepDef {
     ValidateMerchantsPage validatemerchants = PageFactory.initElements(DriverFactory.driver,ValidateMerchantsPage.class);
 
 
-    @When("^I go to \"([^\"]*)\" page$")
-    public void i_go_to_page(String arg1) throws Throwable {
+    @When("^I click on a merchant category\"([^\"]*)\" link$")
+    public void i_click_on_a_merchant_category(String arg1) throws Throwable {
         validatemerchants.goToMerchantPage(arg1);
 
     }

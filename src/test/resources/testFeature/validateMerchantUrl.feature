@@ -3,8 +3,8 @@ Feature: validate merchant url
 
   Scenario Outline: validate merchant exist on shoop url
 
-
-    Given I go to "<merchantCategory>" page
+    Given I go to shoop home Page
+    When I click on a merchant category"<merchantCategory>" link
     Then I should be on the shoop "<termOnMerchantpage>" merchant page
     Examples:
 

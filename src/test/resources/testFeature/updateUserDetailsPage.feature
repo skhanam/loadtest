@@ -3,12 +3,8 @@ Feature: As a shoop member I should be able to edit personal details on general 
 
   Scenario: Member Login
 
-  Given I go to shoop home Page
-  When I click on the login link
-  And I enter my username
-  And I enter my password
-  And I click on the login button
-  And I click on a member my activity link
+  Given I am logged into shoop
+  When I click on a member my activity link
   Then I should be on the my activity page
   And I click on the my account settings tab
 

@@ -1,10 +1,11 @@
 package com.test.shoop.utility;
 
 import com.test.shoop.helper.Constants;
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -39,7 +40,7 @@ public abstract class DriverFactory {
 
         if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox") ){
                 DesiredCapabilities dc = new DesiredCapabilities();
-                driver = new ShoopFireFoxDriver(dc);
+                driver = new FirefoxDriver(dc);
             } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
@@ -52,8 +53,8 @@ public abstract class DriverFactory {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",Constants.chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeCentosdriver);
-                    driver = new ShoopChromeDriver(dc);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeLinuxdriver);
+                    driver = new ChromeDriver(dc);
 
             }
 

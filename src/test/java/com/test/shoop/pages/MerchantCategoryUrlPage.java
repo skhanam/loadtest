@@ -42,7 +42,7 @@ public class MerchantCategoryUrlPage extends DriverFactory {
 
     }
     public void validateMerchantCategoryUrlPages(){
-       // waitForElementDisplay(backHomeButton);
+       waitForElementDisplay(backHomeButton);
         //assertTrue(backHomeButton.isDisplayed());
     }
 

@@ -42,12 +42,19 @@ public class Constants {
     public static final String generalSettings= "//*[@id='user.settings.general']";
     public static final String successfulUpdates = ".inline-notification.ng-isolate-scope.successful";
     //links
-    public static final String nameModifierLink = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[1]/div[1]/div[3]/a";
-    public static final String emailModifierLink=".qp-btn.qp-btn-link.ng-binding:eq(1)";
-    public static final String genderModifierLink = ".qp-btn.qp-btn-link.ng-binding:eq(2)";
-    public static final String usernameModifierLink= ".qp-btn.qp-btn-link.ng-binding:eq(3)";
-    public static final String dateOFBirthModiefierLink = ".qp-btn.qp-btn-link.ng-binding:eq(4)";
-    public static final String postCodeModiefier = ".qp-btn.qp-btn-link.ng-binding:eq(5)";
+    public static final String nameModifierLink = "a[e2e-edit-row='name']";
+    public static final String emailModifierLink="a[e2e-edit-row='email']";
+    public static final String genderModifierLink = "a[e2e-edit-row='gender']";
+    public static final String usernameModifierLink= "a[e2e-edit-row='username']";
+    public static final String dateOFBirthModiefierLink = "a[e2e-edit-row='birthdate']";
+    public static final String postCodeModiefier = "a[e2e-edit-row='postcode']";
+
+    /*public static final String nameModifierLink = "a[e2e-edit-row='name']";
+    public static final String emailModifierLink="a[e2e-edit-row='email']";
+    public static final String genderModifierLink = "a[e2e-edit-row='gender']";
+    public static final String usernameModifierLink= "a[e2e-edit-row='username']";
+    public static final String dateOFBirthModiefierLink = "a[e2e-edit-row='birthdate']";
+    public static final String postCodeModiefier = "a[e2e-edit-row='postcode']";*/
 
 
     //login
@@ -74,7 +81,7 @@ public class Constants {
     public static final String registerPassword="//*[contains(@name,'password')]";
     public static final String invalidemailPassword ="html/body/div[2]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
     public static final String regWelcome=".greeting-header>span";
-
+    public static final String regErrorMessage="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[5]/div/span/span";
     public static final String searchResult= "#courses-en-ligne-drive";
     public static final String menuCategory= ".//*[@id='menu-categories']/div[1]/div";
     public static final String pageTopTab = "#courses-en-ligne-drive";

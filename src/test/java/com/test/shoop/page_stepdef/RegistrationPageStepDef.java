@@ -43,4 +43,19 @@ public class RegistrationPageStepDef {
                 reg.validateNewUserRegistered(arg1);
     }
 
+    @When("^I register with my email address and password$")
+    public void i_register_with_my_email_address_and_password() throws Throwable {
+        reg.doDefaultRegister();
+    }
+
+    @When("^I click on the register button$")
+    public void i_click_on_the_register_button() throws Throwable {
+        reg.clickOnRegisterForFreeButton();
+    }
+
+    @Then("^I should see message \"([^\"]*)\" advising me to accept the terms and conditions$")
+    public void i_should_see_message_advising_me_to_accept_the_terms_and_conditions(String arg1) throws Throwable {
+        reg.validaterErrorMessageForTermsandConditions(arg1);
+    }
+
 }

@@ -38,14 +38,32 @@ public class RegistrationPage extends DriverFactory {
     private WebElement regWelcome;
     @FindBy(css = ".ng-scope:contains('Bonjour')")
     private WebElement welcomeText;
-
-String regGreetings=".greeting-header>span:contains('%s')";
+    @FindBy(css=Constants.regErrorMessage)
+    private WebElement regErrorMessaging;
+    @FindBy(css=".greeting-header>span")
+    private WebElement regGreetings;
 
 
     public void clickOnRegistrationLink(){
         waitForElementDisplay(registerLink);
         registerLink.click();
     }
+
+    public void doDefaultRegister(){
+        waitForElementDisplay(registerLink);
+        registerLink.click();
+        final String email = UUID.randomUUID().toString() + "@quidco.com";
+        userName.sendKeys(email);
+        emailpassword.sendKeys("Testquality09!");
+
+    }
+
+    public void validaterErrorMessageForTermsandConditions(String terms_conds){
+        waitForElementDisplay(regErrorMessaging);
+        assertTrue(regErrorMessaging.isDisplayed());
+        //assertTrue(regErrorMessaging.getText().contains(terms_conds));
+    }
+
     public void enterUsernameAndPassWord(){
         waitForElementDisplay(userName);
         final String email = UUID.randomUUID().toString() + "@quidco.com";
@@ -60,8 +78,7 @@ String regGreetings=".greeting-header>span:contains('%s')";
                 perform();
 
 
-        //if( !regTermsAndConditions.isSelected()){
-        //regTermsAndConditions.click();
+
     }
 
     public void validateShoopLatestEmailOffersCheckBoxIsChecked(){
@@ -71,14 +88,12 @@ String regGreetings=".greeting-header>span:contains('%s')";
     public void clickOnRegisterForFreeButton(){
         regButton.click();
     }
+
     public void validateNewUserRegistered(String greetings){
-        //waitForElementDisplay(regWelcome);
-
-//       WebElement greetingMesssage= driver.findElement(By.cssSelector(String.format(regGreetings,greetings)));
-//        System.out.println(greetingMesssage.getText());
-//        assertTrue(greetingMesssage.getText().contains(greetings));
-
-
+        waitForElementDisplay(regGreetings);
+        assertTrue(regGreetings.getText().contains(greetings));
 
     }
+
+
 }
