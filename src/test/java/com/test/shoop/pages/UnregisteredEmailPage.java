@@ -16,7 +16,7 @@ public class UnregisteredEmailPage extends DriverFactory {
     private WebElement loginPopup;
     @FindBy(xpath = Constants.loginLink)
     private WebElement loginLink;
-    @FindBy(name=Constants.userName)
+    @FindBy(xpath=Constants.userName)
     private WebElement userName;
     @FindBy(xpath = Constants.password)
     private WebElement password;

@@ -17,7 +17,7 @@ Feature:Sign in with un-registered email address
 #    When I navigate to the registration page
 #    And I enter an email address that is not registered with Shoop
 #    And I enter a password
-#    And I do not tick to agree to the terms and conditions of Shoop
+#    And I do not tick to agree to the term conditions of Shoop
 #    And I press the register button
 #    Then I should see error message advising me to accept the terms and conditions
 #

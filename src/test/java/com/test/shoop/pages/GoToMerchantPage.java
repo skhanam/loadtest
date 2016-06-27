@@ -16,7 +16,7 @@ public class GoToMerchantPage extends DriverFactory {
 LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
 
-    @FindBy(name= Constants.userName)
+    @FindBy(xpath= Constants.userName)
     private WebElement userName;
     @FindBy(xpath = Constants.emailpassword)
     private WebElement emailpassword;

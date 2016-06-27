@@ -17,7 +17,7 @@ public class LoginPage extends DriverFactory {
 
     @FindBy(xpath = Constants.loginLink)
     private WebElement loginLink;
-    @FindBy(name = Constants.userName)
+    @FindBy(xpath = Constants.userName)
     private WebElement userName;
     @FindBy(xpath = Constants.emailpassword)
     private WebElement emailpassword;
@@ -41,6 +41,7 @@ public class LoginPage extends DriverFactory {
 
     public void clickOnLoginLink() {
         waitForElementDisplay(loginLink);
+        if(loggedIn.isDisplayed())
         loginLink.click();
     }
 

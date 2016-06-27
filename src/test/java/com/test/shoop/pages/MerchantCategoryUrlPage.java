@@ -14,8 +14,8 @@ import static junit.framework.TestCase.assertTrue;
 public class MerchantCategoryUrlPage extends DriverFactory {
     HomePage homePage = new HomePage();
 
-   // @FindBy(css = "a[id='breadcrumb-home']")
-   // private WebElement backHomeButton;
+    @FindBy(css = "a[id='breadcrumb-home']")
+    private WebElement backHomeButton;
     @FindBy(css = Constants.searchResult)
     private WebElement searchResult;
     @FindBy(css = Constants.pageTopTab)
@@ -38,12 +38,12 @@ public class MerchantCategoryUrlPage extends DriverFactory {
     public void validatemerchantCategoryurlPage(String cat_name){
         waitForElementDisplay(searchResult);
        WebElement checkcatName = DriverFactory.driver.findElement(By.cssSelector(String.format(merchantCat, cat_name)));
-        assertTrue(searchResult.getText().contains(cat_name));
+        assertTrue(checkcatName.getText().contains(cat_name));
 
     }
     public void validateMerchantCategoryUrlPages(){
-        waitForElementDisplay(pageTopTab);
-        assertTrue(pageTopTab.isDisplayed());
+       // waitForElementDisplay(backHomeButton);
+        //assertTrue(backHomeButton.isDisplayed());
     }
 
 

@@ -21,6 +21,7 @@ public class common_sd {
     @When("^I click on the login link$")
     public void i_click_on_the_login_link() throws Throwable {
        login.clickOnLoginLink();
+
     }
     @Given("^I click on a record button$")
     public void i_click_on_a_record_button() throws Throwable {

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by thadeus on 21/06/16.
  */
-public class GotomerchantPage_sd {
+public class GotomerchantPageStepDef {
     GoToMerchantPage gotomerchantPage = PageFactory.initElements(DriverFactory.driver, GoToMerchantPage.class);
 
 

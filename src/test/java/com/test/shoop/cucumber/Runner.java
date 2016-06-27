@@ -10,8 +10,9 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63,@QA-74",
-        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
+@CucumberOptions( tags="@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63,@QA-56,@QA-50",
+        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
+                  "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
         monochrome = true,
         glue = { "com.test.shoop.page_stepdef",
                 "com.test.shoop.com.test.shoop.utility",
@@ -20,7 +21,7 @@ import java.io.IOException;
         features={"src/test/resources/testFeature"}
 
 )
-//@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63
+//@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63,@QA-56
 
 public class Runner extends DriverFactory {
 

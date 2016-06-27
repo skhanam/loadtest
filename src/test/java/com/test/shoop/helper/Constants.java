@@ -65,14 +65,20 @@ public class Constants {
 
     public static final String loginPopup= "h1.mb20 > span.ng-scope";
     public static final String loginLink= "//a[contains(@href,'je-me-connecte')]";
-    public static final String userName="username";
+    public static final String userName="//input[@type='email']";
     public static final String password= "//input[@type='password']";
     public static final String loginButton = "//button[@type='submit']";
     public static final String rememberMe = "#persist_signin";
+    public static final String regTermsAndConditions="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]/span";
+    public static final String registerEmail="//*[contains(type,'email')]";
+    public static final String registerPassword="//*[contains(@name,'password')]";
     public static final String invalidemailPassword ="html/body/div[2]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
-    public static final String searchResult= "h4 span .ng-scope";
+    public static final String regWelcome=".greeting-header>span";
+
+    public static final String searchResult= "#courses-en-ligne-drive";
     public static final String menuCategory= ".//*[@id='menu-categories']/div[1]/div";
-    public static final String pageTopTab = ".breadcrumb";
+    public static final String pageTopTab = "#courses-en-ligne-drive";
+
     public static final String merchantRate =".styled-rate-text.ng-binding.ng-scope";
 
     public static final String emailpassword= "//input[@type='password']";
@@ -83,7 +89,8 @@ public class Constants {
     public static final String userAccount= ".ng-scope:contains('Mon compte')";
     public static final String signOutLink= "a[name='sign-out-link']";
     public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
-
+     public static final String category="//*[@id='%s']";
+    public static final String merchantCatResult=".e2e-list-merchant-name.ng-binding:contains('Bebe')";
     String catTable = ".category-list>ul>li>a:contains('%s')";
 
 

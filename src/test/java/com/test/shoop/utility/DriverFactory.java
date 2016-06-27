@@ -30,12 +30,7 @@ public abstract class DriverFactory {
         LOGGER.info(("Current Operating System: " + operatingSystem));
         LOGGER.info("Current Architecture: " + systemArchitecture);
         LOGGER.info("Current Browser Selection: " + CONFIG.getProperty("Browser"));
-
-
     }
-
-
-
 
     public static void initialize() throws IOException {
         CONFIG = new Properties();
@@ -67,7 +62,6 @@ public abstract class DriverFactory {
     }
 
     public void waitForElementDisplay(final WebElement element) {
-
         Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverFactory.driver)
                 .withTimeout(60, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)

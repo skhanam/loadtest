@@ -3,16 +3,16 @@ Feature: Validate merchant category on shoop
 
   Scenario Outline: Merchant category tabs urls
 
+    Given I go to shoop home Page
     When I click on a merchant"<merchantTable>"category name
     Then I should see merchant category tabs displayed
-   ## Then I should see merchant category "<CategoryName>"tabs displayed
+
 
     Examples:
-      | merchantTable            |
-      | femme-enceinte           |
-      | bebe                     |
-      | sacs-bagages             |
-      | lunettes-de-soleil       |
+      | merchantTable      |
+      | bebe               |
+      | Voyages            |
+      | lunettes-de-soleil |
       | montres-bijoux           |
       | chaussures               |
       | enfant                   |
@@ -23,7 +23,6 @@ Feature: Validate merchant category on shoop
       | Divertissement           |
       | rencontre-sur-internet   |
       | photo-numerique-tirages  |
-     # | consoles-jeux-video      |
       | deguisements             |
       | billetterie-concerts     |
       | charme-adulte            |
