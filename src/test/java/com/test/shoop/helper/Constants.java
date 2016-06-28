@@ -42,19 +42,13 @@ public class Constants {
     public static final String generalSettings= "//*[@id='user.settings.general']";
     public static final String successfulUpdates = ".inline-notification.ng-isolate-scope.successful";
     //links
+
     public static final String nameModifierLink = "a[e2e-edit-row='name']";
     public static final String emailModifierLink="a[e2e-edit-row='email']";
     public static final String genderModifierLink = "a[e2e-edit-row='gender']";
     public static final String usernameModifierLink= "a[e2e-edit-row='username']";
     public static final String dateOFBirthModiefierLink = "a[e2e-edit-row='birthdate']";
     public static final String postCodeModiefier = "a[e2e-edit-row='postcode']";
-
-    /*public static final String nameModifierLink = "a[e2e-edit-row='name']";
-    public static final String emailModifierLink="a[e2e-edit-row='email']";
-    public static final String genderModifierLink = "a[e2e-edit-row='gender']";
-    public static final String usernameModifierLink= "a[e2e-edit-row='username']";
-    public static final String dateOFBirthModiefierLink = "a[e2e-edit-row='birthdate']";
-    public static final String postCodeModiefier = "a[e2e-edit-row='postcode']";*/
 
 
     //login
@@ -92,9 +86,9 @@ public class Constants {
     public static final String logi= "html/body/div[1]/div/div[1]/h1/span[2]";
     public static final String loggedIn= ".qp-flash-notification.active";
     public static final String confirmUserLogged= "h1.greeting-header > span.ng-binding.ng-scope";
-    public static final String myAccount = "tml/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
+    public static final String myAccount = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
     public static final String userAccount= ".ng-scope:contains('Mon compte')";
-    public static final String signOutLink= "a[name='sign-out-link']";
+    public static final String signOutLink= "//*[@id='signOut']";
     public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
      public static final String category="//*[@id='%s']";
     public static final String merchantCatResult=".e2e-list-merchant-name.ng-binding:contains('Bebe')";

@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@QA-50",
+@CucumberOptions( tags="@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63,@QA-56,@QA-50",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
                   "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
         monochrome = true,

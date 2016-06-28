@@ -1,5 +1,6 @@
 package com.test.shoop.page_stepdef;
 
+import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.RegistrationPage;
 import com.test.shoop.utility.DriverFactory;
 import cucumber.api.java.en.Then;
@@ -10,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
  * Created by thadeus on 24/06/16.
  */
 public class RegistrationPageStepDef {
-
+    LoginPage login = PageFactory.initElements(DriverFactory.driver,LoginPage.class);
 
     RegistrationPage reg = PageFactory.initElements(DriverFactory.driver,RegistrationPage.class);
 
@@ -45,6 +46,7 @@ public class RegistrationPageStepDef {
 
     @When("^I register with my email address and password$")
     public void i_register_with_my_email_address_and_password() throws Throwable {
+        login.newUserlogout();
         reg.doDefaultRegister();
     }
 

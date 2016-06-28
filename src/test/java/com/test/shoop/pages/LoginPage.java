@@ -24,14 +24,14 @@ public class LoginPage extends DriverFactory {
     @FindBy(xpath = Constants.logi)
     private WebElement logi;
     @FindBy(css = Constants.loggedIn)
-    private WebElement loggedIn;
+    private static WebElement loggedIn;
     @FindBy(css = Constants.confirmUserLogged)
     private WebElement confirmUserLogged;
     @FindBy(xpath = Constants.myAccount)
     private WebElement myAccount;
     @FindBy(css = Constants.userAccount)
     private WebElement userAccount;
-    @FindBy(css = Constants.signOutLink)
+    @FindBy(xpath = Constants.signOutLink)
     private WebElement signOutLink;
     @FindBy(xpath = Constants.incorrectlogindetails)
     private WebElement incorrectlogindetails;
@@ -55,7 +55,7 @@ public class LoginPage extends DriverFactory {
     public void enterUsername() {
 
         waitForElementDisplay(userName);
-        userName.sendKeys("t.ssewanyana++Kings@quidco.com");
+        userName.sendKeys("t.ssewanyana@quidco.com");
 
     }
 
@@ -71,14 +71,13 @@ public class LoginPage extends DriverFactory {
 
     public void validateUserLoggedIn() {
         waitForElementDisplay(loggedIn);
-        loggedIn.click();
         assertTrue(loggedIn.isDisplayed());
     }
 
     public void loginMember() {
         waitForElementDisplay(loginLink);
         loginLink.click();
-        userName.sendKeys("t.ssewanyana++Kings@quidco.com");
+        userName.sendKeys("t.ssewanyana@quidco.com");
         emailpassword.sendKeys("kalanzi09");
         loggedIn.click();
     }
@@ -86,10 +85,11 @@ public class LoginPage extends DriverFactory {
     public void logOutUser() {
         waitForElementDisplay(myAccount);
         build.click(myAccount).build().perform();
-        build.moveToElement(signOutLink).
+        signOutLink.click();
+       /* build.moveToElement(signOutLink).
                 click().
                 build().
-                perform();
+                perform();*/
     }
 
 
@@ -104,6 +104,13 @@ public class LoginPage extends DriverFactory {
         waitForElementDisplay(loggedIn);
         assertTrue(incorrectlogindetails.isDisplayed());
         System.out.println(incorrectlogindetails.getText());
+
+    }
+    public void newUserlogout(){
+        if (myAccount.isDisplayed()){
+            logOutUser();
+
+     }
 
     }
 

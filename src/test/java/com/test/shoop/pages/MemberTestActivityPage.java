@@ -28,7 +28,7 @@ public class MemberTestActivityPage extends DriverFactory {
     private WebElement userActivityPage;
     @FindBy(xpath = Constants.settingButton)
     private  WebElement settingButton;
-    @FindBy(xpath = Constants.emailModifierLink)
+    @FindBy(css = Constants.emailModifierLink)
     private WebElement emailModifierLink;
     @FindBy(xpath = Constants.logOutButton )
     private WebElement logOutButton;
@@ -68,6 +68,7 @@ public class MemberTestActivityPage extends DriverFactory {
 
     }
     public void validateOnEditEmailSettingPage(){
+        waitForElementDisplay(emailModifierLink);
         assertTrue(emailModifierLink.isDisplayed());
     }
 

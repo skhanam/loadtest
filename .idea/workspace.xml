@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ca5044a-1450-49cf-a2aa-9ed7996ff660" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/SizzleSelector.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/ShoopChromeDriver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/ShoopFireFoxDriver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/ShoopInternetExplorerDriver.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QA-Tests/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QA-Tests/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/CategoryMatch.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/CategoryMatch.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config.properties" afterPath="$PROJECT_DIR$/src/config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/Constants.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/ValidateShoopMechantsStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/ValidateShoopMechantsStepDef.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantCategoryUrlPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantCategoryUrlPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/RegistrationPage.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/RegistrationPage.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/goToMerchantPage.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/goToMerchantPage.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/updateUserDetailsPage.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/updateUserDetailsPage.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/validateMerchantUrl.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/validateMerchantUrl.feature" />
     </list>
     <ignored path="Shoop-ApplicationTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +37,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RegistrationPage.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/RegistrationPage.feature">
+      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="86">
+              <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberTestActivityPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/helper/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="46" column="73" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="55" column="126" selection-start-line="55" selection-start-column="126" selection-end-line="55" selection-end-column="126" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberTestActivityPage.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MemberTestActivityPage.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateUserDetailsPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -57,28 +124,8 @@
       <file leaf-file-name="MerchantCatgoryUrl.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MerchantCatgoryUrl.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="126">
               <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MerchantCategoryStepDef.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MerchantCategoryStepDef.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MerchantCategoryUrlPage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantCategoryUrlPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -106,8 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchnatCategoryUrl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UnregisteredEmailTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantCategoryUrl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantSearch.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantSearchPage.java" />
@@ -142,21 +187,23 @@
         <option value="$PROJECT_DIR$/src/test/resources/testFeature/MerchantCatgoryUrl.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/testFeature/UnregisteredEmailPage.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/common_sd.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testFeature/goToMerchantPage.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/testFeature/validateMerchantUrl.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/ValidateShoopMechantsStepDef.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/config.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testFeature/updateUserDetailsPage.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/Constants.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/testFeature/RegistrationPage.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MerchantCategoryStepDef.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantCategoryUrlPage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/testFeature/RegistrationPage.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MemberTestActivityPageStepDef.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java" />
+        <option value="$PROJECT_DIR$/src/config.properties" />
       </list>
     </option>
   </component>
@@ -179,10 +226,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="24" />
-    <option name="width" value="1871" />
-    <option name="height" value="1056" />
+    <option name="x" value="2004" />
+    <option name="y" value="52" />
+    <option name="width" value="1779" />
+    <option name="height" value="942" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -374,6 +421,10 @@
               <option name="myItemId" value="shoop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page_stepdef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -428,10 +479,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shoop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cucumber" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1030,7 +1077,7 @@
       <workItem from="1466760675711" duration="632000" />
       <workItem from="1466762594692" duration="32489000" />
       <workItem from="1467024400179" duration="15987000" />
-      <workItem from="1467055385717" duration="8440000" />
+      <workItem from="1467055385717" duration="18315000" />
     </task>
     <task id="LOCAL-00001" summary="rename files">
       <created>1466612189086</created>
@@ -1078,42 +1125,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Runner - 2016.06.27 at 16h 06m 33s.xml">
+    <history-entry file="Runner - 2016.06.28 at 05h 50m 51s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Runner - 2016.06.27 at 16h 44m 15s.xml">
+    <history-entry file="Runner - 2016.06.28 at 05h 53m 46s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Runner - 2016.06.27 at 20h 05m 27s.xml">
+    <history-entry file="Runner - 2016.06.28 at 06h 32m 17s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Runner - 2016.06.27 at 22h 10m 04s.xml">
+    <history-entry file="Runner - 2016.06.28 at 08h 49m 21s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Runner - 2016.06.27 at 22h 10m 39s.xml">
+    <history-entry file="Runner - 2016.06.28 at 09h 08m 31s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Runner - 2016.06.27 at 22h 11m 17s.xml">
+    <history-entry file="Runner - 2016.06.28 at 10h 54m 48s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Runner - 2016.06.27 at 22h 22m 58s.xml">
+    <history-entry file="Runner - 2016.06.28 at 10h 55m 42s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Runner - 2016.06.27 at 22h 38m 06s.xml">
+    <history-entry file="Runner - 2016.06.28 at 11h 00m 08s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Scenario__Sign_up_and_do_not_tick_to_agree_to_terms_and_conditions_(not_registered) - 2016.06.27 at 21h 57m 10s.xml">
-      <configuration name="Scenario: Sign up and do not tick to agree to terms and conditions (not registered)" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Runner - 2016.06.28 at 11h 32m 18s.xml">
+      <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Scenario__Sign_up_and_do_not_tick_to_agree_to_terms_and_conditions_(not_registered) - 2016.06.27 at 22h 00m 17s.xml">
-      <configuration name="Scenario: Sign up and do not tick to agree to terms and conditions (not registered)" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Runner - 2016.06.28 at 11h 34m 18s.xml">
+      <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60199000" />
+    <option name="totallyTimeSpent" value="70074000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="1871" height="1056" extended-state="6" />
+    <frame x="2004" y="52" width="1779" height="942" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1124,18 +1171,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.105150215" sideWeight="0.28026533" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25026625" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5139485" sideWeight="0.71973467" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50855744" sideWeight="0.71973467" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37446353" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1769863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.186382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54613733" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4400978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1178,18 +1225,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java</url>
-          <line>52</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java</url>
-          <line>57</line>
+          <line>59</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1252,14 +1311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/model/CucumberScenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/refgate.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/regExample.java" />
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
@@ -1295,14 +1346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/LoginPageStepDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1310,35 +1353,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MerchantSearchPage.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MemberTestActivityPageStepDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1350,25 +1368,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/ValidateMerchantsPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="109" column="22" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1388,14 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/UnregisteredEmailStepDef.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1410,14 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MemberTestActivityPage.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1446,32 +1434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/helper/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/RegistrationPage.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/Timeout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1488,72 +1450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/StepDefinitionMatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/Runtime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/model/StepContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#1166#2048#0" expanded="true" />
-            <element signature="e#2047#2048#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
-          <folding>
-            <element signature="e#2982#2983#0" expanded="true" />
-            <element signature="e#3015#3016#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/LandingPageStepDef.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MerchantCatgoryUrl.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1570,6 +1470,164 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/LoginPageStepDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MerchantCatgoryUrl.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/StepDefinitionMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/Runtime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/model/StepContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.3/cucumber-core-1.2.3-sources.jar!/cucumber/runtime/model/CucumberScenario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/RegistrationPage.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MemberTestActivityPageStepDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MemberTestActivityPage.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/helper/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="46" column="73" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="55" column="126" selection-start-line="55" selection-start-column="126" selection-end-line="55" selection-end-column="126" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding />
         </state>
       </provider>

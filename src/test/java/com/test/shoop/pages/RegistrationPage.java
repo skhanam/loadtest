@@ -10,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.UUID;
-
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -36,6 +35,8 @@ public class RegistrationPage extends DriverFactory {
     private WebElement regButton;
     @FindBy(css = Constants.regWelcome)
     private WebElement regWelcome;
+    @FindBy(css = Constants.loggedIn)
+    private WebElement loggedIn;
     @FindBy(css = ".ng-scope:contains('Bonjour')")
     private WebElement welcomeText;
     @FindBy(css=Constants.regErrorMessage)
@@ -49,9 +50,11 @@ public class RegistrationPage extends DriverFactory {
         registerLink.click();
     }
 
+
     public void doDefaultRegister(){
         waitForElementDisplay(registerLink);
         registerLink.click();
+        waitForElementDisplay(userName);
         final String email = UUID.randomUUID().toString() + "@quidco.com";
         userName.sendKeys(email);
         emailpassword.sendKeys("Testquality09!");
@@ -76,8 +79,6 @@ public class RegistrationPage extends DriverFactory {
         click(regTermsAndConditions).
                 build().
                 perform();
-
-
 
     }
 

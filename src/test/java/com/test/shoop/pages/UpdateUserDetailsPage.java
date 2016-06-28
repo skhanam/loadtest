@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
  * Created by thadeus on 16/06/16.
  */
 public class UpdateUserDetailsPage extends DriverFactory {
-    @FindBy(xpath = Constants.nameModifierLink)
+    @FindBy(css = Constants.nameModifierLink)
     private WebElement nameModifierLink;
     @FindBy(xpath = Constants.editFname)
     private WebElement editFname;
@@ -30,9 +30,9 @@ public class UpdateUserDetailsPage extends DriverFactory {
     private WebElement editUserName;
     @FindBy(css = Constants.genderModifierLink)
     private WebElement genderModifierLink;
-    @FindBy(xpath = Constants.usernameModifierLink)
+    @FindBy(css= Constants.usernameModifierLink)
     private WebElement usernameModifierLink;
-    @FindBy(xpath = Constants.dateOFBirthModiefierLink)
+    @FindBy(css = Constants.dateOFBirthModiefierLink)
     private WebElement dateOFBirthModiefierLink;
     @FindBy(xpath = Constants.dayOFBirth)
     private WebElement dayOFBirth;
@@ -40,7 +40,7 @@ public class UpdateUserDetailsPage extends DriverFactory {
     private WebElement monthOFBirth;
     @FindBy(xpath = Constants.yearOFBirth)
     private WebElement yearOFBirth;
-    @FindBy(xpath = Constants.postCodeModiefier)
+    @FindBy(css = Constants.postCodeModiefier)
     private WebElement postCodeModiefier;
     @FindBy(xpath = Constants.editPositcode)
     private WebElement editPostcode;
@@ -121,7 +121,6 @@ public class UpdateUserDetailsPage extends DriverFactory {
         malesex.click();
         assertTrue(malesex.isSelected());
     }
-
 
     public void clickDateOfBirthModifyLink() {
         waitForElementDisplay(dateOFBirthModiefierLink);
