@@ -43,12 +43,21 @@ public class Constants {
     public static final String successfulUpdates = ".inline-notification.ng-isolate-scope.successful";
     //links
 
-    public static final String nameModifierLink = "a[e2e-edit-row='name']";
+    /*public static final String nameModifierLink = "a[e2e-edit-row='name']";
     public static final String emailModifierLink="a[e2e-edit-row='email']";
     public static final String genderModifierLink = "a[e2e-edit-row='gender']";
     public static final String usernameModifierLink= "a[e2e-edit-row='username']";
     public static final String dateOFBirthModiefierLink = "a[e2e-edit-row='birthdate']";
     public static final String postCodeModiefier = "a[e2e-edit-row='postcode']";
+    public static final String settingPage=".container.ng-binding";
+*/
+    public static final String nameModifierLink = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[1]/div[1]/div[3]/a";
+    public static final String emailModifierLink="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[1]/div[3]/a";
+    public static final String genderModifierLink = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[4]/div[1]/div[3]/a";
+    public static final String usernameModifierLink= "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[3]/div[1]/div[3]/a";
+    public static final String dateOFBirthModiefierLink = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[5]/div[1]/div[3]/a";
+    public static final String postCodeModiefier = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[6]/div[1]/div[3]/a";
+    public static final String settingPage=".container.ng-binding";
 
 
     //login

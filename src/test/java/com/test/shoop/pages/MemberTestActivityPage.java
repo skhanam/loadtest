@@ -32,6 +32,8 @@ public class MemberTestActivityPage extends AbstractDriver {
     private WebElement emailModifierLink;
     @FindBy(xpath = Constants.logOutButton )
     private WebElement logOutButton;
+    @FindBy(css = Constants.settingPage)
+    private WebElement settingPage;
 
     String memberTabs= "//*[@id='user.activity.%s']";
 
@@ -68,8 +70,8 @@ public class MemberTestActivityPage extends AbstractDriver {
 
     }
     public void validateOnEditEmailSettingPage(){
-        waitForElementDisplay(emailModifierLink);
-        assertTrue(emailModifierLink.isDisplayed());
+        waitForElementDisplay(settingPage);
+        assertTrue(settingPage.isDisplayed());
     }
 
     public void clickOnSignoutLink(){
