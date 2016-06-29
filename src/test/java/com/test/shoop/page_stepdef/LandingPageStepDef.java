@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LandingPageStepDef {
     HomePage landingpage = new HomePage();
-    MerchantSearchPage registerPages = PageFactory.initElements(AbstractDriver.driver,MerchantSearchPage.class);
+    MerchantSearchPage searchPage = PageFactory.initElements(AbstractDriver.driver,MerchantSearchPage.class);
 
     @Given("^I go to shoop home Page$")
     public void i_go_to_shoop_home_Page() throws Throwable {
@@ -19,13 +19,13 @@ public class LandingPageStepDef {
 
         @When("^I click on merchant\"(.*?)\"category name$")
     public void i_click_on_merchant_category_name(String arg1) throws Throwable {
-        registerPages.clickOnMerchantTab(arg1);
+            searchPage.clickOnMerchantTab(arg1);
 
     }
 
     @Then("^I should see a category of merchant$")
     public void i_should_see_a_category_of_merchant() throws Throwable {
-        registerPages.confirmOnCategoryList();
+        searchPage.confirmOnCategoryList();
 
 }
 

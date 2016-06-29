@@ -1,6 +1,9 @@
 @QA-63
 Feature: As a shoop member I should be able to edit personal details on general settings page
 
+  Background:
+
+
   Scenario: Member Login
 
   Given I am logged into shoop

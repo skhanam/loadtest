@@ -100,8 +100,10 @@ public class Constants {
     public static final String signOutLink= "//*[@id='signOut']";
     public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
      public static final String category="//*[@id='%s']";
-    public static final String merchantCatResult=".e2e-list-merchant-name.ng-binding:contains('Bebe')";
+    public static final String merchantCatResult=".e2e-list-merchant-name.ng-binding:contains(%s)";
     String catTable = ".category-list>ul>li>a:contains('%s')";
+    public static final String searchField="search";
+    public static final String merchantPageCashback="html/body/div[2]/div/div[5]/div/div[1]/div/div[3]/div/div[2]/a";
 
 
 

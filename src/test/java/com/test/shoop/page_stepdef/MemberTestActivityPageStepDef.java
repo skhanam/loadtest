@@ -35,6 +35,7 @@ public class MemberTestActivityPageStepDef {
     @Then("^i should  see  the your balance on payments page$")
     public void i_should_see_the_your_balance_on_payments_page() throws Throwable {
         memberpage.validateOnPaymentsPage();
+        memberpage.clickOnSignoutLink();
             }
 
     @Then("^I click on the setting link$")
@@ -44,6 +45,7 @@ public class MemberTestActivityPageStepDef {
     @Then("^I should see the  edit emaillink$")
     public void i_should_see_the_edit_emaillink() throws Throwable {
         memberpage.validateOnEditEmailSettingPage();
+        memberpage.clickOnSignoutLink();
     }
 
     @When("^I click on the signout link$")
