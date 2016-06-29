@@ -21,7 +21,7 @@ public class MerchantCategoryUrlPage extends DriverFactory {
     @FindBy(css = Constants.pageTopTab)
     private WebElement pageTopTab;
 
-    String merchantCat = "a[id='%s']";
+    String merchantCat = "#%s";
 
 
 

@@ -1,5 +1,5 @@
 @smoke-testA
-Feature: Testing login to my shoop memeber account and edit details
+Feature: login  shoop memeber account and edit details
 
   As Shoop count holder I should be able to login with my email and password
 

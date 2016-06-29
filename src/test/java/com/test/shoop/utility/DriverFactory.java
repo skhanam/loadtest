@@ -53,7 +53,7 @@ public abstract class DriverFactory {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",Constants.chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeCentosdriver);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeLinuxdriver);
                     driver = new ChromeDriver(dc);
 
             }
@@ -64,7 +64,7 @@ public abstract class DriverFactory {
 
     public void waitForElementDisplay(final WebElement element) {
         Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverFactory.driver)
-                .withTimeout(60, TimeUnit.SECONDS)
+                .withTimeout(20, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
         wait.until(input -> element.isDisplayed());

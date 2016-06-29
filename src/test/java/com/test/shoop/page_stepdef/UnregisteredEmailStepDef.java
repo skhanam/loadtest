@@ -1,5 +1,6 @@
 package com.test.shoop.page_stepdef;
 
+import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.UnregisteredEmailPage;
 import com.test.shoop.utility.DriverFactory;
 import cucumber.api.java.en.Then;
@@ -11,23 +12,16 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class UnregisteredEmailStepDef {
     UnregisteredEmailPage unregisteredEmailTest = PageFactory.initElements(DriverFactory.driver,UnregisteredEmailPage.class);
+    LoginPage login = PageFactory.initElements(DriverFactory.driver,LoginPage.class);
 
-    @When("^I enter an email address that is not registered with Shoop$")
-    public void i_enter_an_email_address_that_is_not_registered_with_Shoop() throws Throwable {
-        unregisteredEmailTest.enterUnregisteredEmailAddressOnShoop();
 
-    }
-
-    @When("^I enter my password$")
-    public void i_enter_my_password() throws Throwable {
-        unregisteredEmailTest.enterUserPasssword();
+    @When("^I try to login with an email address that is not registered with Shoop$")
+    public void i_try_to_login_with_an_email_address_that_is_not_registered_with_Shoop() throws Throwable {
+        login.clickOnLoginLink();
+        unregisteredEmailTest.logInWithRandomUnRegisteredEmail();
 
     }
-    @When("^I click on the login button$")
-    public void i_click_on_the_login_button() throws Throwable {
-        unregisteredEmailTest.clickOnUnLoginButton();
 
-    }
 
     @Then("^I should see \"([^\"]*)\" text displayed$")
     public void i_should_see_text_displayed(String arg1) throws Throwable {

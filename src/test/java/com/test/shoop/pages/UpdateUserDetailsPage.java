@@ -12,8 +12,18 @@ import static org.junit.Assert.assertTrue;
  * Created by thadeus on 16/06/16.
  */
 public class UpdateUserDetailsPage extends DriverFactory {
-    @FindBy(css = Constants.nameModifierLink)
+    @FindBy(xpath = Constants.nameModifierLink)
     private WebElement nameModifierLink;
+    @FindBy(xpath = Constants.postCodeModiefier)
+    private WebElement postCodeModiefier;
+    @FindBy(xpath = Constants.emailModifierLink)
+    private WebElement emailModifierLink;
+    @FindBy(xpath = Constants.genderModifierLink)
+    private WebElement genderModifierLink;
+    @FindBy(css= Constants.usernameModifierLink)
+    private WebElement usernameModifierLink;
+    @FindBy(xpath = Constants.dateOFBirthModiefierLink)
+    private WebElement dateOFBirthModiefierLink;
     @FindBy(xpath = Constants.editFname)
     private WebElement editFname;
     @FindBy(xpath = Constants.editLname)
@@ -24,24 +34,17 @@ public class UpdateUserDetailsPage extends DriverFactory {
     private WebElement emailConfirmation;
     @FindBy(xpath = Constants.editPassword)
     private WebElement editPassword;
-    @FindBy(xpath = Constants.emailModifierLink)
-    private WebElement emailModifierLink;
+
     @FindBy(xpath = Constants.editUsername)
     private WebElement editUserName;
-    @FindBy(css = Constants.genderModifierLink)
-    private WebElement genderModifierLink;
-    @FindBy(css= Constants.usernameModifierLink)
-    private WebElement usernameModifierLink;
-    @FindBy(css = Constants.dateOFBirthModiefierLink)
-    private WebElement dateOFBirthModiefierLink;
+
     @FindBy(xpath = Constants.dayOFBirth)
     private WebElement dayOFBirth;
     @FindBy(xpath = Constants.monthOFBirth)
     private WebElement monthOFBirth;
     @FindBy(xpath = Constants.yearOFBirth)
     private WebElement yearOFBirth;
-    @FindBy(css = Constants.postCodeModiefier)
-    private WebElement postCodeModiefier;
+
     @FindBy(xpath = Constants.editPositcode)
     private WebElement editPostcode;
     @FindBy(css = Constants.malesex)

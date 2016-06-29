@@ -38,10 +38,16 @@ public class LoginPage extends DriverFactory {
 
 
     public void clickOnLoginLink() {
-        waitForElementDisplay(loginLink);
+         waitForElementDisplay(loginLink);
          loginLink.click();
     }
 
+    public void clickOnHomePageLoginLink(){
+        if (myAccount.isDisplayed()){
+            logOutUser();
+              }
+        clickOnLoginLink();
+    }
     public void doDefaultLogin() {
         loginLink.click();
         waitForElementDisplay(userName);
@@ -53,8 +59,8 @@ public class LoginPage extends DriverFactory {
     }
 
     public void enterUsername() {
-
         waitForElementDisplay(userName);
+        userName.clear();
         userName.sendKeys("t.ssewanyana@quidco.com");
 
     }
@@ -86,10 +92,10 @@ public class LoginPage extends DriverFactory {
         waitForElementDisplay(myAccount);
         build.click(myAccount).build().perform();
         signOutLink.click();
-       /* build.moveToElement(signOutLink).
+       build.moveToElement(signOutLink).
                 click().
                 build().
-                perform();*/
+                perform();
     }
 
 

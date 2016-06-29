@@ -18,6 +18,15 @@ public class LoginPageStepDef {
         login.enterUsername();
     }
 
+    @And("^I enter my password$")
+    public void i_enter_my_password() throws Throwable {
+        login.enterMemberPassword();
+    }
+    @And("^I click on the login button$")
+    public void i_click_on_login_button() throws Throwable {
+        login.clickLoginButton();
+    }
+
     @Then("^I should be logged in to my account$")
     public void i_should_be_logged_in_to_my_account() throws Throwable {
         login.validateUserLoggedIn();
