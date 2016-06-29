@@ -108,8 +108,9 @@
           </execution>
         </executions>
         <configuration>
-          <includes>
-            <include>**/*Runner*.class</include>
+        <includes>
+          <include>**/*Runner*.class</include>
+            <include>**/LoginOutRunner.class</include>
           </includes>
         </configuration>
       </plugin>

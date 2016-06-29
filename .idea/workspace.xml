@@ -1,35 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ca5044a-1450-49cf-a2aa-9ed7996ff660" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/LoginOutRunner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/UpdateUserDetailsRunner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/DriverFactory.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/AbstractDriver.java" />
+    <list default="true" id="5ca5044a-1450-49cf-a2aa-9ed7996ff660" name="Default" comment="created new runner &amp; refactored code">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/vcs.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_jayway_restassured_rest_assured_2_4_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__com_jayway_restassured_rest_assured_2_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_core_1_2_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_core_1_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_html_0_2_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_html_0_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_java_1_2_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_java_1_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_junit_1_2_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_junit_1_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_jvm_deps_1_0_5.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_cucumber_jvm_deps_1_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_gherkin_2_12_2.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__info_cukes_gherkin_2_12_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__io_netty_netty_3_5_7_Final.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__io_netty_netty_3_5_7_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__mx4j_mx4j_tools_3_0_1.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__mx4j_mx4j_tools_3_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_6.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_48.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_48.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_48.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_48.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_ccil_cowan_tagsoup_tagsoup_1_2_1.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_ccil_cowan_tagsoup_tagsoup_1_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_3_7.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_3_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_codehaus_groovy_groovy_xml_2_3_7.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_codehaus_groovy_groovy_xml_2_3_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_json_json_20080701.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_json_json_20080701.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_rc_repacked_5.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_rc_repacked_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_repacked_9_2_13_v20150730.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_repacked_9_2_13_v20150730.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_leg_rc_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_leg_rc_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_server_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_server_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_53_0.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_53_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_yaml_snakeyaml_1_8.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/libraries/Maven__org_yaml_snakeyaml_1_8.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/misc.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/modules.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/QuidcoRestful.iml" afterPath="$PROJECT_DIR$/../QuidcoRestful/QuidcoRestful.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Hooks.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Hooks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/common_sd.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/common_sd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/GotomerchantPageStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/GotomerchantPageStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/LandingPageStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/LandingPageStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/LoginPageStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/LoginPageStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MemberTestActivityPageStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MemberTestActivityPageStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MerchantCategoryStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/MerchantCategoryStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/RegistrationPageStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/UnregisteredEmailStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/UnregisteredEmailStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/UpdateUserDetailsStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/UpdateUserDetailsStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/ValidateShoopMechantsStepDef.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/page_stepdef/ValidateShoopMechantsStepDef.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/HomePage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantCategoryUrlPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantCategoryUrlPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantSearchPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MerchantSearchPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/RegistrationPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UnregisteredEmailPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UnregisteredEmailPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/UpdateUserDetailsPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/ValidateMerchantsPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/ValidateMerchantsPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/MemberTestActivityPage.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/MemberTestActivityPage.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/MerchantCatgoryUrl.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/MerchantCatgoryUrl.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="Shoop-ApplicationTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,18 +89,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/Runner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UpdateUserDetailsRunner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/UpdateUserDetailsRunner.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -94,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validateMerchantUrl.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/validateMerchantUrl.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -139,11 +149,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidateMerchantCategoryRunner.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ValidateMerchantCategoryRunner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/ValidateMerchantCategoryRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginOutRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/LoginOutRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="111" column="46" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -181,7 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_sd/MemberTestActivityPageStepDef.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_sd/MerchantCategory_sd.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_sd/MerchantCategoryStepDef.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/page_sd/SearchTerm_sd.java" />
@@ -232,6 +263,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/UpdateUserDetailsRunner.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testFeature/MerchantCatgoryUrl.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/ValidateMerchantCategoryRunner.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -853,7 +885,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466679115454</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="created new runner &amp; refactored code">
+      <created>1467207792119</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1467207792119</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -902,10 +941,10 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.105150215" sideWeight="0.28026533" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25026625" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5079703" sideWeight="0.71973467" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5781084" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5079703" sideWeight="0.71973467" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37407014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37407014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26198083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -939,7 +978,8 @@
     <MESSAGE value="rename files" />
     <MESSAGE value="remove unwanted files" />
     <MESSAGE value="changed the logging renamed the Driver" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the logging renamed the Driver" />
+    <MESSAGE value="created new runner &amp; refactored code" />
+    <option name="LAST_COMMIT_MESSAGE" value="created new runner &amp; refactored code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -990,7 +1030,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/refgate.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/regExample.java" />
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -1268,16 +1307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/LoginOutRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MerchantSearchPage.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1307,7 +1336,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/MemberTestActivityPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1362,8 +1391,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/ValidateMerchantCategoryRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/cucumber/LoginOutRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="111" column="46" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="46" />
           <folding />
         </state>
       </provider>
