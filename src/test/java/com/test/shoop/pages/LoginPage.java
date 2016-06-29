@@ -1,7 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +11,8 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by Thadeus Ssweanyana on 3/21/2016.
  */
-public class LoginPage extends DriverFactory {
-    Actions build = new Actions(DriverFactory.driver);
+public class LoginPage extends AbstractDriver {
+    Actions build = new Actions(AbstractDriver.driver);
     @FindBy(xpath = Constants.loginLink)
     private WebElement loginLink;
     @FindBy(xpath = Constants.userName)

@@ -1,6 +1,5 @@
 package com.test.shoop.utility;
 
-import com.test.shoop.helper.Constants;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,10 +15,11 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+import static com.test.shoop.helper.Constants.*;
 /**
  * Created by Thadeus ssewanyana on 18/03/2016.
  */
-public abstract class DriverFactory {
+public abstract class AbstractDriver {
 
     public static WebDriver driver = null;
     public static Properties CONFIG=null;
@@ -45,15 +45,15 @@ public abstract class DriverFactory {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
                     if (operatingSystem.contains("WINDOWS")) {
-                        System.setProperty("webdriver.chrome.driver",Constants.chromeWindowsdriver);
+                        System.setProperty("webdriver.chrome.driver",chromeWindowsdriver);
                     } else if (operatingSystem.contains("MAC")) {
-                        System.setProperty("webdriver.chrome.driver",Constants.chromeMacdriver);
+                        System.setProperty("webdriver.chrome.driver",chromeMacdriver);
                     } else if (operatingSystem.contains("LINUX")) {
-                        System.setProperty("webdriver.chrome.driver",Constants.chromeLinuxdriver );
+                        System.setProperty("webdriver.chrome.driver",chromeLinuxdriver );
                     }else if (operatingSystem.contains("Centos")) {
-                        System.setProperty("webdriver.chrome.driver",Constants.chromeCentosdriver);
+                        System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeCentosdriver);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeCentosdriver);
                     driver = new ChromeDriver(dc);
 
             }
@@ -63,7 +63,7 @@ public abstract class DriverFactory {
     }
 
     public void waitForElementDisplay(final WebElement element) {
-        Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverFactory.driver)
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(AbstractDriver.driver)
                 .withTimeout(60, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);

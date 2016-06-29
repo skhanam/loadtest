@@ -1,7 +1,7 @@
 package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.ValidateMerchantsPage;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ValidateShoopMechantsStepDef {
 
 
-    ValidateMerchantsPage validatemerchants = PageFactory.initElements(DriverFactory.driver,ValidateMerchantsPage.class);
+    ValidateMerchantsPage validatemerchants = PageFactory.initElements(AbstractDriver.driver,ValidateMerchantsPage.class);
 
 
     @When("^I click on a merchant category\"([^\"]*)\" link$")

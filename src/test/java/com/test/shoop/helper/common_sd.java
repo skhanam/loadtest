@@ -2,7 +2,7 @@ package com.test.shoop.helper;
 import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.UpdateUserDetailsPage;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,8 +15,8 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class common_sd {
     HomePage homePage = new HomePage();
-    LoginPage login = PageFactory.initElements(DriverFactory.driver,LoginPage.class);
-    UpdateUserDetailsPage userDetails = PageFactory.initElements(DriverFactory.driver,UpdateUserDetailsPage.class);
+    LoginPage login = PageFactory.initElements(AbstractDriver.driver,LoginPage.class);
+    UpdateUserDetailsPage userDetails = PageFactory.initElements(AbstractDriver.driver,UpdateUserDetailsPage.class);
 
     @When("^I click on the login link$")
     public void i_click_on_the_login_link() throws Throwable {

@@ -1,6 +1,6 @@
 package com.test.shoop.cucumber;
 
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriverException;
 /**
  * Created by sThadeus sewanyana on 18/03/2016.
  */
-public class Hooks extends DriverFactory {
+public class Hooks extends AbstractDriver {
 
 
 

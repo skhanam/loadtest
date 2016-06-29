@@ -1,12 +1,12 @@
 package com.test.shoop.pages;
 
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 
 
 /**
  * Created by sewadeus on 20/03/2016.
  */
-public class HomePage extends DriverFactory {
+public class HomePage extends AbstractDriver {
 
     public void navigateToHomePage(){
         driver.get(CONFIG.getProperty("HomePageUrl"));

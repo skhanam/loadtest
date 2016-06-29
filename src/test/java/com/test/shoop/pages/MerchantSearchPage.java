@@ -1,6 +1,6 @@
 package com.test.shoop.pages;
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +13,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by Thadeus ssewanyana on 18/03/2016.
  */
-public class MerchantSearchPage extends DriverFactory {
+public class MerchantSearchPage extends AbstractDriver {
       WebDriverWait wait= new WebDriverWait(driver,20);
     @FindBy(css = Constants.merchantRate)
     private WebElement merchantRate;

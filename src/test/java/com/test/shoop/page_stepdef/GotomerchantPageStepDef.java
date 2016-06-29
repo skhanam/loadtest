@@ -1,7 +1,7 @@
 package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.GoToMerchantPage;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
  * Created by thadeus on 21/06/16.
  */
 public class GotomerchantPageStepDef {
-    GoToMerchantPage gotomerchantPage = PageFactory.initElements(DriverFactory.driver, GoToMerchantPage.class);
+    GoToMerchantPage gotomerchantPage = PageFactory.initElements(AbstractDriver.driver, GoToMerchantPage.class);
 
 
     @When("^I go to a merchant page \"([^\"]*)\"$")

@@ -1,7 +1,7 @@
 package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.UpdateUserDetailsPage;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class UpdateUserDetailsStepDef {
 
-    UpdateUserDetailsPage userDetails = PageFactory.initElements(DriverFactory.driver,UpdateUserDetailsPage.class);
+    UpdateUserDetailsPage userDetails = PageFactory.initElements(AbstractDriver.driver,UpdateUserDetailsPage.class);
 
     @Then("^I click on the my account settings tab$")
     public void i_click_on_the_my_account_settings_tab() throws Throwable {

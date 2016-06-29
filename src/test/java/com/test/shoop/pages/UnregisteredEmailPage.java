@@ -1,7 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,7 +10,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by thadeus on 14/06/16.
  */
-public class UnregisteredEmailPage extends DriverFactory {
+public class UnregisteredEmailPage extends AbstractDriver {
 
     @FindBy(css = Constants.loginPopup)
     private WebElement loginPopup;

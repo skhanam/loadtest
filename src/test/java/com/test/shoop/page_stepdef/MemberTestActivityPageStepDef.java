@@ -2,7 +2,7 @@ package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.MemberTestActivityPage;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,8 +13,8 @@ import org.openqa.selenium.support.PageFactory;
  * Created by thadeus on 13/04/16.
  */
 public class MemberTestActivityPageStepDef {
-    LoginPage login = PageFactory.initElements(DriverFactory.driver,LoginPage.class);
-    MemberTestActivityPage memberpage= PageFactory.initElements(DriverFactory.driver, MemberTestActivityPage.class);
+    LoginPage login = PageFactory.initElements(AbstractDriver.driver,LoginPage.class);
+    MemberTestActivityPage memberpage= PageFactory.initElements(AbstractDriver.driver, MemberTestActivityPage.class);
 
 
     @Given("^I click on a member my activity link$")

@@ -1,7 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by thadeus on 13/04/16.
  */
-public class MemberTestActivityPage extends DriverFactory {
+public class MemberTestActivityPage extends AbstractDriver {
 
     @FindBy(xpath = Constants.memberArea)
     private WebElement memberArea;

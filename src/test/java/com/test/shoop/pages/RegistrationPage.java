@@ -1,9 +1,7 @@
 package com.test.shoop.pages;
 
-import com.sun.org.apache.regexp.internal.RE;
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
-import org.openqa.selenium.By;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by thadeus on 24/06/16.
  */
-public class RegistrationPage extends DriverFactory {
+public class RegistrationPage extends AbstractDriver {
     Actions act = new Actions(driver);
     WebDriverWait wait = new WebDriverWait(driver,20);
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")

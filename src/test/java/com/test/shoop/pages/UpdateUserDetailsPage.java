@@ -1,7 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by thadeus on 16/06/16.
  */
-public class UpdateUserDetailsPage extends DriverFactory {
+public class UpdateUserDetailsPage extends AbstractDriver {
     @FindBy(css = Constants.nameModifierLink)
     private WebElement nameModifierLink;
     @FindBy(xpath = Constants.editFname)

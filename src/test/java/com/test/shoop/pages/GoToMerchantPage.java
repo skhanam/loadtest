@@ -1,7 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -12,7 +12,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by thadeus on 21/06/16.
  */
-public class GoToMerchantPage extends DriverFactory {
+public class GoToMerchantPage extends AbstractDriver {
 LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
 

@@ -1,7 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
-import com.test.shoop.utility.DriverFactory;
+import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +11,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by thadeus on 08/06/16.
  */
-public class MerchantCategoryUrlPage extends DriverFactory {
+public class MerchantCategoryUrlPage extends AbstractDriver {
     HomePage homePage = new HomePage();
 
     @FindBy(css = "a[id='breadcrumb-home']")
@@ -37,7 +37,7 @@ public class MerchantCategoryUrlPage extends DriverFactory {
 
     public void validatemerchantCategoryurlPage(String cat_name){
         waitForElementDisplay(searchResult);
-       WebElement checkcatName = DriverFactory.driver.findElement(By.cssSelector(String.format(merchantCat, cat_name)));
+       WebElement checkcatName = AbstractDriver.driver.findElement(By.cssSelector(String.format(merchantCat, cat_name)));
         assertTrue(checkcatName.getText().contains(cat_name));
 
     }
