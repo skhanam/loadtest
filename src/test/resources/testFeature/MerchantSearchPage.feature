@@ -1,11 +1,11 @@
 
 
-#Feature: User searches for a merchant
+Feature: User searches for a merchant
 #
-#  Scenario: I want to start typing the name of a merchant and results appear, even if I haven't finished typing
-#    When I navigate to the search bar
-#    And start to type out the name of a merchant
-#    Then I should be presented with any matching results within a few seconds
+ Scenario: I want to start typing the name of a merchant and results appear, even if I haven't finished typing
+    When I navigate to the search bar
+    And start to type out the name of a merchant
+    Then I should be presented with any matching results within a few seconds
 
 #  Scenario: Searching for a merchant's full name, merchant is active
 #    When I navigate to the search bar
@@ -16,7 +16,7 @@
 #  Scenario: Searching for a merchant's full name, merchant is not active/does not exist
 #    When I navigate to the search bar
 #    And type out a full merchant name
-#    And the merchant is not active
+ #And the merchant is not active
 #    Then I should be presented with message to advise me that no results can be found
 #
 #  Scenario: Searching for a text string, matches a merchant name
