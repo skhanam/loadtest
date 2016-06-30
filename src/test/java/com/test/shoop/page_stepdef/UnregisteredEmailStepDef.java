@@ -12,23 +12,12 @@ import org.openqa.selenium.support.PageFactory;
 public class UnregisteredEmailStepDef {
     UnregisteredEmailPage unregisteredEmailTest = PageFactory.initElements(AbstractDriver.driver,UnregisteredEmailPage.class);
 
-    @When("^I enter an email address that is not registered with Shoop$")
-    public void i_enter_an_email_address_that_is_not_registered_with_Shoop() throws Throwable {
+    @When("^I attempt to login with an email address that is not registered on Shoop$")
+    public void i_attempt_to_log_in_with_an_email_address_that_is_not_registered_on_Shoop() throws Throwable {
         unregisteredEmailTest.enterUnregisteredEmailAddressOnShoop();
-
-    }
-
-    @When("^I enter my password$")
-    public void i_enter_my_password() throws Throwable {
-        unregisteredEmailTest.enterUserPasssword();
-
-    }
-    @When("^I click on the login button$")
-    public void i_click_on_the_login_button() throws Throwable {
         unregisteredEmailTest.clickOnUnLoginButton();
 
     }
-
     @Then("^I should see \"([^\"]*)\" text displayed$")
     public void i_should_see_text_displayed(String arg1) throws Throwable {
         unregisteredEmailTest.validateInvalidEmailPasswordISDisplayed(arg1);

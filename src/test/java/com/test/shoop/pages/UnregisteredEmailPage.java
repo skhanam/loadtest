@@ -38,6 +38,7 @@ public class UnregisteredEmailPage extends AbstractDriver {
     public void enterUnregisteredEmailAddressOnShoop(){
         waitForElementDisplay(userName);
         userName.sendKeys("tseyana+GGGGTester@gmail.com");
+        enterUserPasssword();
     }
     public void enterUserPasssword(){
         waitForElementDisplay(password);

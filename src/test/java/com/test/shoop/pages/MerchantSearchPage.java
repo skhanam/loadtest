@@ -18,22 +18,48 @@ public class MerchantSearchPage extends AbstractDriver {
     @FindBy(css = Constants.merchantRate)
     private WebElement merchantRate;
     String catTable = ".category-list>ul>li>a:contains('%s')";
+    @FindBy(name = Constants.searchField)
+    private WebElement searchField;
+    @FindBy(css = Constants.searchResult)
+    private WebElement searchResult;
+    @FindBy(css = Constants.merchantPageCashback)
+    private WebElement merchantPageCashback;
 
     public void clickOnMerchantTab(String m_name){
         WebElement catName= driver.findElement(By.cssSelector(String.format(catTable, m_name)));
         wait.until(ExpectedConditions.visibilityOf(catName));
         driver.findElement(By.cssSelector(String.format(catTable, m_name))).click();
-
-
-
     }
 
     public void confirmOnCategoryList() {
         waitForElementDisplay(merchantRate);
         assertTrue(merchantRate.isDisplayed());
 
+    }
+    public void searchMerchants(String s_merchant){
+        waitForElementDisplay(searchField);
+        searchField.sendKeys(s_merchant);
+    }
+    public void clickOnSearchResult(){
+        waitForElementDisplay(searchResult);
+        searchResult.click();
+    }
+    public void validateOnMerchantPage(){
+    waitForElementDisplay(merchantPageCashback);
+    assertTrue(merchantPageCashback.isDisplayed());
 
-       /* List<WebElement> elements = driver.findElements(By.cssSelector(".item-inner.ng-binding"));
+}
+
+
+
+
+
+
+
+
+
+
+     /* List<WebElement> elements = driver.findElements(By.cssSelector(".item-inner.ng-binding"));
         elements.get(0).click();
         String catResult = driver.findElement(By.cssSelector("h4 span .ng-scope")).getText().replaceAll("([A-Za-z\\s])\\w+", "").trim();
         WebElement p= driver.findElement(By.cssSelector("div .show-more-big-button .ng-scope"));
@@ -50,6 +76,5 @@ public class MerchantSearchPage extends AbstractDriver {
         driver.quit();
 
     }*/
-    }
     }
 

@@ -76,7 +76,11 @@ public class MemberTestActivityPage extends AbstractDriver {
 
     public void clickOnSignoutLink(){
         waitForElementDisplay(logOutButton);
-        logOutButton.click();
+       //if(myAccountButton.isDisplayed()){
+           logOutButton.click();
+       //}
+
+
 
     }
     public void validateSignOutComplete(){
