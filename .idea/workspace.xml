@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ca5044a-1450-49cf-a2aa-9ed7996ff660" name="Default" comment="created new runner &amp; refactored code">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/CategoryMatch.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/CategoryMatch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/MerchantSearchPage.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/MerchantSearchPage.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/BestMatch.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/BestMatch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/ExactMatch.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/ExactMatch.java" />
     </list>
     <ignored path="Shoop-ApplicationTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1085,7 +1083,7 @@
       <workItem from="1466762594692" duration="32489000" />
       <workItem from="1467024400179" duration="15987000" />
       <workItem from="1467055385717" duration="22329000" />
-      <workItem from="1467211292999" duration="9633000" />
+      <workItem from="1467211292999" duration="9822000" />
     </task>
     <task id="LOCAL-00001" summary="rename files">
       <created>1466612189086</created>
@@ -1172,11 +1170,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83721000" />
+    <option name="totallyTimeSpent" value="83910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1969" y="52" width="1855" height="1028" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
