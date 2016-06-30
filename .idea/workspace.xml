@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ca5044a-1450-49cf-a2aa-9ed7996ff660" name="Default" comment="created new runner &amp; refactored code">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QA-Tests/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QA-Tests/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QA-Tests/src/Config.properties" afterPath="$PROJECT_DIR$/../QA-Tests/src/Config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QA-Tests/src/test/java/com/shoop/test/cucumber/Runner.java" afterPath="$PROJECT_DIR$/../QA-Tests/src/test/java/com/shoop/test/cucumber/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QA-Tests/src/test/java/com/shoop/test/utility/Driver.java" afterPath="$PROJECT_DIR$/../QA-Tests/src/test/java/com/shoop/test/utility/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java" />
     </list>
     <ignored path="Shoop-ApplicationTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,21 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoToMerchantPage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GoToMerchantPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="71" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1656">
-              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,7 +124,6 @@
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/builders/AllDefaultPossibilitiesBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/regExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/refgate.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java" />
         <option value="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.0/selenium-api-2.53.0-sources.jar!/org/openqa/selenium/interactions/Actions.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/ValidateMerchantsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/helper/common_sd.java" />
@@ -177,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/test/resources/testFeature/search.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/utility/AbstractDriver.java" />
         <option value="$PROJECT_DIR$/src/config.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java" />
       </list>
     </option>
   </component>
@@ -1030,7 +1016,7 @@
       <workItem from="1466762594692" duration="32489000" />
       <workItem from="1467024400179" duration="15987000" />
       <workItem from="1467055385717" duration="22329000" />
-      <workItem from="1467211292999" duration="13207000" />
+      <workItem from="1467211292999" duration="13455000" />
     </task>
     <task id="LOCAL-00001" summary="rename files">
       <created>1466612189086</created>
@@ -1117,7 +1103,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87295000" />
+    <option name="totallyTimeSpent" value="87543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1969" y="52" width="1855" height="1028" extended-state="0" />
@@ -1131,7 +1117,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.105150215" sideWeight="0.28026533" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5781084" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5045662" sideWeight="0.71973467" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5045662" sideWeight="0.71973467" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37328768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1552,14 +1538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="71" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/search.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1636,6 +1614,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1656">
           <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/shoop/pages/GoToMerchantPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>

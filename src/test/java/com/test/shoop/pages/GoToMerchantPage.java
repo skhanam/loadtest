@@ -4,7 +4,6 @@ import com.test.shoop.helper.Constants;
 import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.Set;
 
 import static junit.framework.TestCase.assertTrue;
