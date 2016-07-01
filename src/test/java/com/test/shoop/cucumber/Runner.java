@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@QA-63,@QA-56",
+@CucumberOptions( tags="@SH-59",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
                   "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
         monochrome = true,
@@ -29,7 +29,6 @@ public class Runner extends AbstractDriver {
 
     @BeforeClass
     public static void setUp() throws IOException {
-
         System.out.println("Starting testing");
         AbstractDriver.initialize();
         AbstractDriver.driver.manage().window().maximize();
