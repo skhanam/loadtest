@@ -1001,7 +1001,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467387779718</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added usercredentials,created page objects ,refactored the feature file">
+      <created>1467387837683</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1467387837683</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
