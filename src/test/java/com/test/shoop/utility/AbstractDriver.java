@@ -44,7 +44,7 @@ public abstract class AbstractDriver {
             } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
-                    if (operatingSystem.contains("WINDOWS")) {
+                   /* if (operatingSystem.contains("WINDOWS")) {
                         System.setProperty("webdriver.chrome.driver",chromeWindowsdriver);
                     } else if (operatingSystem.contains("MAC")) {
                         System.setProperty("webdriver.chrome.driver",chromeMacdriver);
@@ -54,6 +54,7 @@ public abstract class AbstractDriver {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+                    */
                     driver = new ChromeDriver(dc);
 
             }
