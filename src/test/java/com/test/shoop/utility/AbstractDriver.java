@@ -53,7 +53,7 @@ public abstract class AbstractDriver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeCentosdriver);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeMacdriver);
                     driver = new ChromeDriver(dc);
 
             }
@@ -63,7 +63,7 @@ public abstract class AbstractDriver {
     }
 
     public void waitForElementDisplay(final WebElement element) {
-        Wait<WebDriver> wait = new FluentWait<WebDriver>(AbstractDriver.driver)
+        Wait<WebDriver> wait = new FluentWait<>(AbstractDriver.driver)
                 .withTimeout(60, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);

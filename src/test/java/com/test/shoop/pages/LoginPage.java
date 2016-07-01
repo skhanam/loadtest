@@ -1,10 +1,15 @@
 package com.test.shoop.pages;
 
+import com.test.shoop.config.UserCredentials;
 import com.test.shoop.helper.Constants;
+import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.utility.AbstractDriver;
+import org.apache.logging.log4j.core.util.Assert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import static junit.framework.TestCase.assertTrue;
 
@@ -13,86 +18,75 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class LoginPage extends AbstractDriver {
     Actions build = new Actions(AbstractDriver.driver);
-    @FindBy(xpath = Constants.loginLink)
-    private WebElement loginLink;
-    @FindBy(xpath = Constants.userName)
-    private WebElement userName;
-    @FindBy(xpath = Constants.emailpassword)
-    private WebElement emailpassword;
-    @FindBy(xpath = Constants.loginButton)
-    private WebElement loginButton;
-    @FindBy(xpath = Constants.logi)
-    private WebElement logi;
-    @FindBy(css = Constants.loggedIn)
-    private static WebElement loggedIn;
-    @FindBy(css = Constants.confirmUserLogged)
-    private WebElement confirmUserLogged;
-    @FindBy(xpath = Constants.myAccount)
-    private WebElement myAccount;
-    @FindBy(css = Constants.userAccount)
-    private WebElement userAccount;
-    @FindBy(xpath = Constants.signOutLink)
-    private WebElement signOutLink;
-    @FindBy(xpath = Constants.incorrectlogindetails)
-    private WebElement incorrectlogindetails;
+    LoginPageObjects loginpo = new LoginPageObjects();
+    UserCredentials credentials;
+
+
+    public LoginPage( ) {
+
+        // loadPage();
+        PageFactory.initElements(AbstractDriver.driver,loginpo);
+    }
+
 
 
     public void clickOnLoginLink() {
-         waitForElementDisplay(loginLink);
-         loginLink.click();
+         waitForElementDisplay(loginpo.loginLink);
+        loginpo.loginLink.click();
     }
 
     public void clickOnHomePageLoginLink(){
-        if (myAccount.isDisplayed()){
+        if (loginpo.myAccount.isDisplayed()){
             logOutUser();
               }
         clickOnLoginLink();
     }
     public void doDefaultLogin() {
-        loginLink.click();
-        waitForElementDisplay(userName);
-        userName.sendKeys("t.ssewanyana@quidco.com");
-        emailpassword.clear();
-        emailpassword.sendKeys("kalanzi09");
-        loginButton.click();
+        loginpo.loginLink.click();
+        waitForElementDisplay(loginpo.userName);
+        credentials = new UserCredentials("t.ssewanyana@quidco.com","kalanzi09");
+        loginpo.userName.sendKeys(credentials.getUserName());
+        loginpo.emailpassword.clear();
+        loginpo.emailpassword.sendKeys(credentials.getPassword());
+        loginpo.loginButton.click();
 
     }
 
     public void enterUsername() {
-        waitForElementDisplay(userName);
-        userName.clear();
-        userName.sendKeys("t.ssewanyana@quidco.com");
+        waitForElementDisplay(loginpo.userName);
+        loginpo.userName.clear();
+        loginpo.userName.sendKeys("t.ssewanyana@quidco.com");
 
     }
 
     public void clickLoginButton() {
-        waitForElementDisplay(loginButton);
-        loginButton.click();
+        waitForElementDisplay(loginpo.loginButton);
+        loginpo.loginButton.click();
     }
 
     public void enterMemberPassword() {
-        emailpassword.clear();
-        emailpassword.sendKeys("kalanzi09");
+        loginpo.emailpassword.clear();
+        loginpo.emailpassword.sendKeys("kalanzi09");
     }
 
     public void validateUserLoggedIn() {
-        waitForElementDisplay(loggedIn);
-        assertTrue(loggedIn.isDisplayed());
+        waitForElementDisplay(loginpo.loggedIn);
+        assertTrue(loginpo.loggedIn.isDisplayed());
     }
 
     public void loginMember() {
-        waitForElementDisplay(loginLink);
-        loginLink.click();
-        userName.sendKeys("t.ssewanyana@quidco.com");
-        emailpassword.sendKeys("kalanzi09");
-        loggedIn.click();
+        waitForElementDisplay(loginpo.loginLink);
+        loginpo.loginLink.click();
+        loginpo.userName.sendKeys("t.ssewanyana@quidco.com");
+        loginpo.emailpassword.sendKeys("kalanzi09");
+        loginpo.loggedIn.click();
     }
 
     public void logOutUser() {
-        waitForElementDisplay(myAccount);
-        build.click(myAccount).build().perform();
-        signOutLink.click();
-       build.moveToElement(signOutLink).
+        waitForElementDisplay(loginpo.myAccount);
+        build.click(loginpo.myAccount).build().perform();
+        loginpo.signOutLink.click();
+       build.moveToElement(loginpo.signOutLink).
                 click().
                 build().
                 perform();
@@ -100,20 +94,20 @@ public class LoginPage extends AbstractDriver {
 
 
     public void enterUsernameAndIncorrectPassWord() {
-        waitForElementDisplay(userName);
-        userName.sendKeys("t.ssewanyana++Kings@quidco.com");
-        emailpassword.sendKeys("kalanzi0");
-        loginButton.click();
+        waitForElementDisplay(loginpo.userName);
+        loginpo.userName.sendKeys("t.ssewanyana++Kings@quidco.com");
+        loginpo.emailpassword.sendKeys("kalanzi0");
+        loginpo.loginButton.click();
     }
 
     public void validateUserInvaliddetailsIsdisplayed() {
-        waitForElementDisplay(loggedIn);
-        assertTrue(incorrectlogindetails.isDisplayed());
-        System.out.println(incorrectlogindetails.getText());
+        waitForElementDisplay(loginpo.loggedIn);
+        assertTrue(loginpo.incorrectlogindetails.isDisplayed());
+        System.out.println(loginpo.incorrectlogindetails.getText());
 
     }
     public void newUserlogout(){
-        if (myAccount.isDisplayed()){
+        if (loginpo.myAccount.isDisplayed()){
             logOutUser();
 
      }
@@ -121,10 +115,16 @@ public class LoginPage extends AbstractDriver {
     }
 
     public void validateUserIsLogged() {
-        waitForElementDisplay(loginLink);
-        if (loginLink.isDisplayed()) {
+        System.out.println("print the webelemnt  :  "+ loginpo.loginLink);
+        waitForElementDisplay(loginpo.loginLink);
+        if (loginpo.loginLink.isDisplayed()) {
             doDefaultLogin();
         }
     }
+
+
+//    public boolean validateUserNameFieldIsDisplayed() {
+//        return loginpo.userName.isDisplayed();
+//    }
 }
 

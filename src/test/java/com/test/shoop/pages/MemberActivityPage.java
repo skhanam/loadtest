@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by thadeus on 13/04/16.
  */
-public class MemberTestActivityPage extends AbstractDriver {
+public class MemberActivityPage extends AbstractDriver {
 
     @FindBy(xpath = Constants.memberArea)
     private WebElement memberArea;
