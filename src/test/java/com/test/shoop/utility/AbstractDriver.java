@@ -1,5 +1,6 @@
 package com.test.shoop.utility;
 
+import com.test.shoop.helper.Constants;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -53,7 +54,7 @@ public abstract class AbstractDriver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/usr/bin/chrome");
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeCentosdriver);
 
                     driver = new ChromeDriver(dc);
 
