@@ -1,6 +1,5 @@
-#@SH-59
-  @Validatemerchantcategory
-Feature: Validate merchant category on shoop
+@SH-59
+  Feature: Validate merchant category on shoop
 
   Scenario Outline: Merchant category tabs urls
 
