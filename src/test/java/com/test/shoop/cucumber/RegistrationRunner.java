@@ -9,23 +9,27 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
+/**
+ * Created by thadeus on 04/07/16.
+ */
+
+
+
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@QA-50",
-        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
-                  "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
+@CucumberOptions( tags="@Registration",
+        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_stepdef",
                 "com.test.shoop.com.test.shoop.utility",
-                 "com.test.shoop.page","com.test.shoop.helper",
-                 "com.test.shoop.cucumber"},
+                "com.test.shoop.page","com.test.shoop.helper",
+                "com.test.shoop.cucumber"},
         features={"src/test/resources/testFeature"}
 
 )
-//@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63,@QA-56
 
-public class Runner extends AbstractDriver {
 
+public class RegistrationRunner {
 
     @BeforeClass
     public static void setUp() throws IOException {
@@ -37,9 +41,8 @@ public class Runner extends AbstractDriver {
 
     @AfterClass
     public static void tearDown(){
-    System.out.println("Quiting browser");
-    AbstractDriver.driver.quit();
-}
-
+        System.out.println("Quiting browser");
+        AbstractDriver.driver.quit();
+    }
 
 }

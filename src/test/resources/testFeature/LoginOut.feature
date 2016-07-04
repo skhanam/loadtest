@@ -1,7 +1,7 @@
 @LoginOut
-Feature: Testing login to my shoop member account and edit details
+Feature:  Shoop member account login test
 
-  As Shoop count holder I should be able to login with my email and password
+  As Shoop Acount holder I should be able to login with my email and password
 
   Scenario: Login as shoop member
 

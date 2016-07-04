@@ -1,5 +1,4 @@
 package com.test.shoop.pageobjects;
-
 import com.test.shoop.helper.Constants;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
