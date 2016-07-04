@@ -8,26 +8,28 @@ import org.openqa.selenium.support.FindBy;
  */
 public class LoginPageObjects {
 
-    @FindBy(xpath = Constants.loginLink)
+    @FindBy(xpath = "//a[contains(@href,'je-me-connecte')]")
     public WebElement loginLink;
-    @FindBy(xpath = Constants.userName)
+    @FindBy(xpath = "//input[@type='email']")
     public WebElement userName;
-    @FindBy(xpath = Constants.emailpassword)
+    @FindBy(xpath = "//input[@type='password']")
     public WebElement emailpassword;
-    @FindBy(xpath = Constants.loginButton)
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
-    @FindBy(xpath = Constants.logi)
+    @FindBy(xpath = "html/body/div[1]/div/div[1]/h1/span[2]")
     public WebElement logi;
-    @FindBy(css = Constants.loggedIn)
+    @FindBy(css = ".qp-flash-notification.active")
     public static WebElement loggedIn;
-    @FindBy(css = Constants.confirmUserLogged)
+    @FindBy(css = "h1.greeting-header > span.ng-binding.ng-scope")
     public WebElement confirmUserLogged;
-    @FindBy(xpath = Constants.myAccount)
+    @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     public WebElement myAccount;
-    @FindBy(css = Constants.userAccount)
+    @FindBy(css = ".ng-scope:contains('Mon compte')")
     public WebElement userAccount;
-    @FindBy(xpath = Constants.signOutLink)
+    @FindBy(xpath = "//*[@id='signOut']")
     public WebElement signOutLink;
-    @FindBy(xpath = Constants.incorrectlogindetails)
+    @FindBy(xpath = "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div")
     public WebElement incorrectlogindetails;
+
+
 }

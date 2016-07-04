@@ -26,8 +26,8 @@ public class RegistrationPageObjects {
    public WebElement regButton;
     @FindBy(css = Constants.welcomeGreetings)
    public WebElement welcomeGreetings;
-    @FindBy(css = Constants.loggedIn)
-   public WebElement loggedIn;
+//    @FindBy(css = Constants.loggedIn)
+//   public WebElement loggedIn;
     @FindBy(css=Constants.regErrorMessage)
    public WebElement regErrorMessaging;
     @FindBy(css=".greeting-header>span")

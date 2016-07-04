@@ -1,6 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
+import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,16 +17,17 @@ public class GoToMerchantPage extends AbstractDriver {
     LoginPage loginPage = new LoginPage();
     private static Logger logger = Logger.getLogger("InfoLogging");
     HomePage homePage = new HomePage();
+    LoginPageObjects loginpo = new LoginPageObjects();
 
-    @FindBy(xpath= Constants.userName)
-    private WebElement userName;
-    @FindBy(xpath = Constants.emailpassword)
-    private WebElement emailpassword;
-    @FindBy(xpath = Constants.loginButton)
-    private WebElement loginButton;
-    @FindBy(xpath= Constants.logi)
-    private WebElement logi;
-    @FindBy(css = Constants.loggedIn)
+//    @FindBy(xpath= Constants.userName)
+//    private WebElement userName;
+//    @FindBy(xpath = Constants.emailpassword)
+//    private WebElement emailpassword;
+//    @FindBy(xpath = Constants.loginButton)
+//    private WebElement loginButton;
+//    @FindBy(xpath= Constants.logi)
+//    private WebElement logi;
+//    @FindBy(css = Constants.loggedIn)
     private WebElement searchHome;
     @FindBy(css = Constants.searchResult)
     private WebElement searchResult;
@@ -66,10 +68,10 @@ public void goTomerchantPage(String merchantName){
             logger.info(strTitle);
             if (Strhandles.equals(Strhandles)) {
 
-                waitForElementDisplay(userName);
-                userName.sendKeys("t.ssewanyana@quidco.com");
-                emailpassword.sendKeys("kalanzi09");
-                loginButton.click();
+                waitForElementDisplay(loginpo.userName);
+                loginpo.userName.sendKeys("t.ssewanyana@quidco.com");
+                loginpo.emailpassword.sendKeys("kalanzi09");
+                loginpo.loginButton.click();
             }
         }
     }

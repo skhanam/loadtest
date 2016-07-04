@@ -86,14 +86,14 @@ public class Constants {
 
     public static final String merchantRate =".styled-rate-text.ng-binding.ng-scope";
 
-    public static final String emailpassword= "//input[@type='password']";
-    public static final String logi= "html/body/div[1]/div/div[1]/h1/span[2]";
-    public static final String loggedIn= ".qp-flash-notification.active";
-    public static final String confirmUserLogged= "h1.greeting-header > span.ng-binding.ng-scope";
-    public static final String myAccount = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
-    public static final String userAccount= ".ng-scope:contains('Mon compte')";
-    public static final String signOutLink= "//*[@id='signOut']";
-    public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
+//    public static final String emailpassword= "//input[@type='password']";
+//    public static final String logi= "html/body/div[1]/div/div[1]/h1/span[2]";
+//    public static final String loggedIn= ".qp-flash-notification.active";
+//    public static final String confirmUserLogged= "h1.greeting-header > span.ng-binding.ng-scope";
+//    public static final String myAccount = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
+//    public static final String userAccount= ".ng-scope:contains('Mon compte')";
+//    public static final String signOutLink= "//*[@id='signOut']";
+//    public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
      public static final String category="//*[@id='%s']";
     public static final String merchantCatResult=".e2e-list-merchant-name.ng-binding:contains(%s)";
     String catTable = ".category-list>ul>li>a:contains('%s')";
