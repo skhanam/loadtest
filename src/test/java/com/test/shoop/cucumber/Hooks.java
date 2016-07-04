@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
 
+import java.util.logging.Logger;
 
 
 /**
@@ -15,11 +16,11 @@ import org.openqa.selenium.WebDriverException;
  */
 public class Hooks extends AbstractDriver {
 
-
+    private static Logger logger = Logger.getLogger("InfoLogging");
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
-        System.out.println( "Starting before test method");
+        logger.info( "Starting before test method");
 
     }
 

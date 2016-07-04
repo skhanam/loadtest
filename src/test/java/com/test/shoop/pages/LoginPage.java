@@ -11,6 +11,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.logging.Logger;
+
 import static junit.framework.TestCase.assertTrue;
 
 /**
@@ -20,6 +22,7 @@ public class LoginPage extends AbstractDriver {
     Actions build = new Actions(AbstractDriver.driver);
     LoginPageObjects loginpo = new LoginPageObjects();
     UserCredentials credentials;
+    private static Logger logger = Logger.getLogger("InfoLogging");
 
 
     public LoginPage( ) {
@@ -103,7 +106,7 @@ public class LoginPage extends AbstractDriver {
     public void validateUserInvaliddetailsIsdisplayed() {
         waitForElementDisplay(loginpo.loggedIn);
         assertTrue(loginpo.incorrectlogindetails.isDisplayed());
-        System.out.println(loginpo.incorrectlogindetails.getText());
+        logger.info(loginpo.incorrectlogindetails.getText());
 
     }
     public void newUserlogout(){
@@ -115,7 +118,7 @@ public class LoginPage extends AbstractDriver {
     }
 
     public void validateUserIsLogged() {
-        System.out.println("print the webelemnt  :  "+ loginpo.loginLink);
+        logger.info("print the webelemnt  :  "+ loginpo.loginLink);
         waitForElementDisplay(loginpo.loginLink);
         if (loginpo.loginLink.isDisplayed()) {
             doDefaultLogin();

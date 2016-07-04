@@ -25,7 +25,7 @@ import java.util.logging.Logger;
                     "com.test.shoop.com.test.shoop.utility",
                     "com.test.shoop.page","com.test.shoop.helper",
                     "com.test.shoop.cucumber"},
-            features={"src/test/resources/testFeature"}
+            features={"src/test/resources/features"}
 
     )
 

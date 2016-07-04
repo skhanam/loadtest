@@ -69,7 +69,7 @@ public class MerchantSearchPage extends AbstractDriver {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();",p);
             WebDriverWait wait= new WebDriverWait(driver, 10);
             wait.until(ExpectedConditions.visibilityOfAllElements((driver.findElements(By.cssSelector(".merchants-list a div h4")))));
-            System.out.println(driver.findElements(By.cssSelector(".merchants-list a div h4")).size());
+            logger.info(driver.findElements(By.cssSelector(".merchants-list a div h4")).size());
         }
         while(p.isDisplayed());
         Assert.assertEquals(Integer.parseInt(catResult),driver.findElements(By.cssSelector(".merchants-list a div h4")).size());

@@ -3,6 +3,9 @@ import com.test.shoop.helper.Constants;
 import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.logging.Logger;
+
 import static junit.framework.TestCase.assertTrue;
 
 
@@ -12,6 +15,7 @@ import static junit.framework.TestCase.assertTrue;
 
 public class ValidateMerchantsPage extends AbstractDriver {
    HomePage homePage = new HomePage();
+    private static Logger logger = Logger.getLogger("InfoLogging");
 
     @FindBy(css = Constants.searchResult)
     private WebElement searchResult;
@@ -24,7 +28,7 @@ public class ValidateMerchantsPage extends AbstractDriver {
         String url = homePage.getUrl();
         String fullUrl = url + "/c/"+ merchantNames;
         driver.get(fullUrl);
-        System.out.println(driver.getTitle());
+        logger.info(driver.getTitle());
 
     }
     public void validateOnShoopMerchantsPage(String m_name){

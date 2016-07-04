@@ -5,6 +5,7 @@ import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.Set;
+import java.util.logging.Logger;
 
 import static junit.framework.TestCase.assertTrue;
 
@@ -12,7 +13,8 @@ import static junit.framework.TestCase.assertTrue;
  * Created by thadeus on 21/06/16.
  */
 public class GoToMerchantPage extends AbstractDriver {
-LoginPage loginPage = new LoginPage();
+    LoginPage loginPage = new LoginPage();
+    private static Logger logger = Logger.getLogger("InfoLogging");
     HomePage homePage = new HomePage();
 
     @FindBy(xpath= Constants.userName)
@@ -41,7 +43,7 @@ public void goTomerchantPage(String merchantName){
     String url = homePage.getUrl();
     String fullUrl = url + "/"+ merchantName;
     driver.get(fullUrl);
-    System.out.println(driver.getTitle());
+    logger.info(driver.getTitle());
 }
 
     public void confirmOnShoopMerchantPage(String pagetitle) {
@@ -61,7 +63,7 @@ public void goTomerchantPage(String merchantName){
             //switch control to merchant window;
             driver.switchTo().window(handle);
             String strTitle = driver.getTitle();
-            System.out.println(strTitle);
+            logger.info(strTitle);
             if (Strhandles.equals(Strhandles)) {
 
                 waitForElementDisplay(userName);
@@ -77,15 +79,15 @@ public void goTomerchantPage(String merchantName){
             cashBackLoginPopUp();
         }
         String parent =driver.getWindowHandle();
-        System.out.println("Window handle for"  +driver.getTitle());
+        logger.info("Window handle for"  +driver.getTitle());
         Set<String> Strhandles =driver.getWindowHandles();
         for (String handle: Strhandles){
             //switch control to merchant window;
             driver.switchTo().window(handle);
             String strTitle=driver.getTitle();
-          //  System.out.println(strTitle);
+          //  logger.info(strTitle);
             if (Strhandles.equals(Strhandles)){
-                System.out.println( driver.getTitle());
+                logger.info( driver.getTitle());
             }
         }
         driver.close();
