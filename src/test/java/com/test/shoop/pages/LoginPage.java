@@ -47,7 +47,7 @@ public class LoginPage extends AbstractDriver {
     public void doDefaultLogin() {
         loginpo.loginLink.click();
         waitForElementDisplay(loginpo.userName);
-        credentials = new UserCredentials("t.ssewanyana@quidco.com","kalanzi09");
+        credentials = new UserCredentials("quidcoqa@quidco.com","testQA!12");
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
         loginpo.emailpassword.sendKeys(credentials.getPassword());
@@ -58,7 +58,7 @@ public class LoginPage extends AbstractDriver {
     public void enterUsername() {
         waitForElementDisplay(loginpo.userName);
         loginpo.userName.clear();
-        loginpo.userName.sendKeys("t.ssewanyana@quidco.com");
+        loginpo.userName.sendKeys("quidcoqa@quidco.com");
 
     }
 
@@ -69,7 +69,7 @@ public class LoginPage extends AbstractDriver {
 
     public void enterMemberPassword() {
         loginpo.emailpassword.clear();
-        loginpo.emailpassword.sendKeys("kalanzi09");
+        loginpo.emailpassword.sendKeys("testQA!12");
     }
 
     public void validateUserLoggedIn() {
@@ -80,8 +80,8 @@ public class LoginPage extends AbstractDriver {
     public void loginMember() {
         waitForElementDisplay(loginpo.loginLink);
         loginpo.loginLink.click();
-        loginpo.userName.sendKeys("t.ssewanyana@quidco.com");
-        loginpo.emailpassword.sendKeys("kalanzi09");
+        loginpo.userName.sendKeys("quidcoqa@quidco.com");
+        loginpo.emailpassword.sendKeys("testQA!12");
         loginpo.loggedIn.click();
     }
 
@@ -98,7 +98,7 @@ public class LoginPage extends AbstractDriver {
 
     public void enterUsernameAndIncorrectPassWord() {
         waitForElementDisplay(loginpo.userName);
-        loginpo.userName.sendKeys("t.ssewanyana++Kings@quidco.com");
+        loginpo.userName.sendKeys("quidcoqa@quidco.com");
         loginpo.emailpassword.sendKeys("kalanzi0");
         loginpo.loginButton.click();
     }

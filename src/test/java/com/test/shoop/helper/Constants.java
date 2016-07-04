@@ -73,11 +73,12 @@ public class Constants {
     public static final String password= "//input[@type='password']";
     public static final String loginButton = "//button[@type='submit']";
     public static final String rememberMe = "#persist_signin";
-    public static final String regTermsAndConditions="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]/span";
-    public static final String registerEmail="//*[contains(type,'email')]";
-    public static final String registerPassword="//*[contains(@name,'password')]";
+    //reg
+    public static final String registrationLink="html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
+    public static final String regTermsAndConditions="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[3]/label/span[1]/span";
+    public static final String acceptToReceiveShoopOffers="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]/span";
     public static final String invalidemailPassword ="html/body/div[2]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
-    public static final String regWelcome=".greeting-header>span";
+    public static final String welcomeGreetings=".greeting-header>span";
     public static final String regErrorMessage="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[5]/div/span/span";
     public static final String searchResult= "#courses-en-ligne-drive";
     public static final String menuCategory= ".//*[@id='menu-categories']/div[1]/div";

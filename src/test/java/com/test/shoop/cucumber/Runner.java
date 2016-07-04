@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@SH-59",
+@CucumberOptions( tags="@QA-50",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
                   "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
         monochrome = true,

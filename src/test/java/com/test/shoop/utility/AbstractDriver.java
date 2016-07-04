@@ -27,7 +27,7 @@ public abstract class AbstractDriver {
     private static final String systemArchitecture = System.getProperty("os.arch");
     private static Logger LOGGER = Logger.getLogger("InfoLogging");
 
-    public void getEnvironmentInfo() throws IOException {
+    public static void getEnvironmentInfo() throws IOException {
         LOGGER.info(("Current Operating System: " + operatingSystem));
         LOGGER.info("Current Architecture: " + systemArchitecture);
         LOGGER.info("Current Browser Selection: " + CONFIG.getProperty("Browser"));
