@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class Hooks extends AbstractDriver {
 
-    private static Logger logger = Logger.getLogger("InfoLogging");
+    public static Logger logger = Logger.getLogger("InfoLogging");
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {

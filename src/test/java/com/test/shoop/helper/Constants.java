@@ -54,16 +54,6 @@ public class Constants {
 
 
 
-    //login
-    public static final String memberArea = "html/body/header/div[2]/div/div[3]/nav/div[1]/div/ul/li[2]/a";
-    public static final String myAccountButton = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
-    public static final String yourBalanceLink= "html/body/div[2]/div/ui-view/div/p/span/span";
-    public static final String paymentbutton = "//*[@id='user.payments']";
-    public static final String myactiviyButton= "//*[contains(@name,'my-account-link')]";
-    public static final String userActivityPage="//*[@id='user.activity.purchases']";
-    public static final String settingButton = "//*[@id='user.settings.general']";
-    public static final String logOutButton = "//a[@id='signOut']";
-
 
     String memberTabs= "//*[@id='user.activity.%s']";
 
@@ -94,6 +84,7 @@ public class Constants {
 //    public static final String userAccount= ".ng-scope:contains('Mon compte')";
 //    public static final String signOutLink= "//*[@id='signOut']";
 //    public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
+
      public static final String category="//*[@id='%s']";
     public static final String merchantCatResult=".e2e-list-merchant-name.ng-binding:contains(%s)";
     String catTable = ".category-list>ul>li>a:contains('%s')";
