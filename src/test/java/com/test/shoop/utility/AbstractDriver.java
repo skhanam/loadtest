@@ -1,5 +1,6 @@
 package com.test.shoop.utility;
 
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,6 +36,7 @@ public abstract class AbstractDriver {
 
     public static void initialize() throws IOException {
         CONFIG = new Properties();
+        LOGGER.info(System.getProperty("user.dir"));
         FileInputStream fp = new FileInputStream(System.getProperty("user.dir") + "/src/config.properties");
         CONFIG.load(fp);
 
@@ -62,7 +64,7 @@ public abstract class AbstractDriver {
 
     }
 
-    public void waitForElementDisplay(final WebElement element) {
+    public void waitForElementDisplay(final WebElement element) throws ElementNotVisibleException{
         Wait<WebDriver> wait = new FluentWait<>(AbstractDriver.driver)
                 .withTimeout(60, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)

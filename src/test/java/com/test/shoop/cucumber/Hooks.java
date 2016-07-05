@@ -20,7 +20,7 @@ public class Hooks extends AbstractDriver {
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
-        logger.info( "Starting before test method");
+        logger.info( "Starting before each scenario ..");
 
     }
 

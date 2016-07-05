@@ -38,7 +38,9 @@ import java.util.logging.Logger;
 
             LOGGER.info("Starting testing");
             AbstractDriver.initialize();
+            AbstractDriver.driver.manage().deleteAllCookies();
             AbstractDriver.driver.manage().window().maximize();
+
 
         }
 
