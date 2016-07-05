@@ -1,6 +1,8 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
+import com.test.shoop.pageobjects.LoginPageObjects;
+import com.test.shoop.pageobjects.MemberActivityPageObjects;
 import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,80 +14,58 @@ import static org.junit.Assert.assertTrue;
  */
 public class MemberActivityPage extends AbstractDriver {
 
-    @FindBy(xpath = Constants.memberArea)
-    private WebElement memberArea;
-    @FindBy(xpath = Constants.loginLink)
-    private WebElement loginLiknk;
-    @FindBy(xpath = Constants.myAccountButton)
-    private WebElement myAccountButton;
-    @FindBy(xpath = Constants.yourBalanceLink)
-    private WebElement yourBalanceLink;
-    @FindBy(xpath = Constants.paymentbutton)
-    private WebElement paymentbutton;
-    @FindBy(xpath = Constants.myactiviyButton)
-    private WebElement myactiviyButton;
-    @FindBy(xpath = Constants.userActivityPage)
-    private WebElement userActivityPage;
-    @FindBy(xpath = Constants.settingButton)
-    private  WebElement settingButton;
-    @FindBy(css = Constants.emailModifierLink)
-    private WebElement emailModifierLink;
-    @FindBy(xpath = Constants.logOutButton )
-    private WebElement logOutButton;
-    @FindBy(css = Constants.settingPage)
-    private WebElement settingPage;
-
-    String memberTabs= "//*[@id='user.activity.%s']";
+    MemberActivityPageObjects  mempo = new MemberActivityPageObjects();
+    LoginPageObjects loginpo = new LoginPageObjects();
 
 
     public void clickOnSignInLink(){
-       waitForElementDisplay(loginLiknk);
-        loginLiknk.click();
+       waitForElementDisplay(loginpo.loginLink);
+        loginpo.loginLink.click();
     }
 
     public void clickOnMyActivityPage(){
-        waitForElementDisplay(myactiviyButton);
-        myactiviyButton.click();
+        waitForElementDisplay(mempo.myactivityButton);
+        mempo.myactivityButton.click();
 
 
     }
     public void validateOnMyActivityPage(){
-        waitForElementDisplay(userActivityPage);
-        assertTrue(userActivityPage.isDisplayed());
+        waitForElementDisplay(mempo.userActivityPage);
+        assertTrue(mempo.userActivityPage.isDisplayed());
     }
 
     public void clickOnMPaymentsPage(){
-        waitForElementDisplay(paymentbutton);
-        paymentbutton.click();
+        waitForElementDisplay(mempo.paymentbutton);
+        mempo.paymentbutton.click();
 
 
     }
     public void validateOnPaymentsPage(){
-        waitForElementDisplay(yourBalanceLink);
-        assertTrue(yourBalanceLink.isDisplayed());
+        waitForElementDisplay(mempo.yourBalanceLink);
+        assertTrue(mempo.yourBalanceLink.isDisplayed());
     }
     public void clickAndAndvalidateOnSettingPage(){
-        waitForElementDisplay(settingButton);
-        settingButton.click();
+        waitForElementDisplay(mempo.settingButton);
+        mempo.settingButton.click();
 
     }
     public void validateOnEditEmailSettingPage(){
-        waitForElementDisplay(settingPage);
-        assertTrue(settingPage.isDisplayed());
+        waitForElementDisplay(mempo.settingPage);
+        assertTrue(mempo.settingPage.isDisplayed());
     }
 
     public void clickOnSignoutLink(){
-        waitForElementDisplay(logOutButton);
+        waitForElementDisplay(mempo.logOutButton);
        //if(myAccountButton.isDisplayed()){
-           logOutButton.click();
+        mempo.logOutButton.click();
        //}
 
 
 
     }
     public void validateSignOutComplete(){
-        waitForElementDisplay(loginLiknk);
-        assertTrue(loginLiknk.isDisplayed());
+        waitForElementDisplay(loginpo.loginLink);
+        assertTrue(loginpo.loginLink.isDisplayed());
 
     }
 }
