@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
  * Created by shabanakhanum on 6/30/16.
  */
 public class LoginPageObjects {
-
     @FindBy(xpath = "//a[contains(@href,'je-me-connecte')]")
     public WebElement loginLink;
     @FindBy(xpath = "//input[@type='email']")

@@ -22,7 +22,8 @@ public class RegistrationPageStepDef {
 
     @When("^I enter my email and password$")
     public void i_enter_my_email_and_password() throws Throwable {
-        reg.enterUsernameAndPassWord();
+        reg.enterEmailAddressAndPassword();
+       // reg.enterUsernameAndPassWord();
     }
 
     @When("^I accept shoop terms and conditions$")

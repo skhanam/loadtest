@@ -3,6 +3,7 @@ package com.test.shoop.pages;
 import com.test.shoop.helper.Constants;
 import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
@@ -12,6 +13,7 @@ import static org.junit.Assert.assertTrue;
  * Created by thadeus on 16/06/16.
  */
 public class UpdateUserDetailsPage extends AbstractDriver {
+    Actions action = new Actions(driver);
     @FindBy(css = Constants.nameModifierLink)
     private WebElement nameModifierLink;
     @FindBy(xpath = Constants.editFname)
@@ -24,7 +26,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     private WebElement emailConfirmation;
     @FindBy(xpath = Constants.editPassword)
     private WebElement editPassword;
-    @FindBy(xpath = Constants.emailModifierLink)
+    @FindBy(css = Constants.emailModifierLink)
     private WebElement emailModifierLink;
     @FindBy(xpath = Constants.editUsername)
     private WebElement editUserName;
@@ -48,8 +50,18 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     private WebElement malesex;
     @FindBy(css = Constants.Femalesex)
     private WebElement Femalesex;
-    @FindBy(xpath = Constants.submitEditDataButton)
+    @FindBy(xpath = Constants.nameRecordButton)
     private WebElement submitEditDataButton;
+    @FindBy(xpath=Constants.emailRecordButton)
+    private WebElement emailRecordButton;
+    @FindBy(xpath=Constants.usernameRecordButton)
+    private WebElement usernamerRecordButton;
+    @FindBy(xpath=Constants.genderRecordButton)
+    private WebElement genderRecordButton;
+    @FindBy(xpath=Constants.doBRecordButton )
+    private WebElement doBRecordButton;
+    @FindBy(xpath=Constants.postcodeRecordButton)
+    private WebElement postcodeRecordButton;
     @FindBy(xpath = Constants.generalSettings)
     private WebElement generalSettings;
     @FindBy(css = Constants.successfulUpdates)
@@ -60,9 +72,35 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         generalSettings.click();
     }
 
-    public void clickOnRecordButton(){
+    public void clickOnNameRecordButton() {
         waitForElementDisplay(submitEditDataButton);
-        submitEditDataButton.click();
+        action.
+                click(submitEditDataButton).
+                build().
+                perform();
+    }
+    public void clickOnUserNameRecordButton(){
+        waitForElementDisplay(usernamerRecordButton);
+         usernamerRecordButton.click();
+    }
+    public void clickOnGenderRecordButton(){
+     waitForElementDisplay(genderRecordButton);
+        genderRecordButton.click();
+    }
+    public void clickOnDateOfBirthRecordButton(){
+        waitForElementDisplay(doBRecordButton);
+        doBRecordButton.click();
+
+    }
+    public void clickOnEmailRecordButton(){
+        waitForElementDisplay(emailRecordButton);
+        emailRecordButton.click();
+
+    }
+    public void clickOnPostCodeRecordButton(){
+        waitForElementDisplay(postcodeRecordButton);
+        postcodeRecordButton.click();
+
     }
 
     public void enterNewFirstNameAndSurnameTOEdit(String f_name, String s_name) {

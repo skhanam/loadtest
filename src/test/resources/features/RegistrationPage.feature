@@ -1,5 +1,5 @@
 
-@Registration
+@sh-80
 Feature: As new user I should be able to Register
 
   Scenario: New user Registering on Shoop
@@ -16,3 +16,6 @@ Feature: As new user I should be able to Register
     When I register with my email address and password
     And I click on the register button
     Then I should see message "Veuillez accepter les conditions générales d'utilisation" advising me to accept the terms and conditions
+
+
+  #@Registration

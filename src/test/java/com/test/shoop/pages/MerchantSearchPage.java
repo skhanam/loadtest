@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+import java.util.List;
+
 import static junit.framework.TestCase.assertTrue;
 
 /**
@@ -22,7 +24,7 @@ public class MerchantSearchPage extends AbstractDriver {
     private WebElement searchField;
     @FindBy(css = Constants.searchResult)
     private WebElement searchResult;
-    @FindBy(css = Constants.merchantPageCashback)
+    @FindBy(xpath = Constants.merchantPageCashback)
     private WebElement merchantPageCashback;
 
     public void clickOnMerchantTab(String m_name){
@@ -46,7 +48,8 @@ public class MerchantSearchPage extends AbstractDriver {
     }
     public void validateOnMerchantPage(){
     waitForElementDisplay(merchantPageCashback);
-    assertTrue(merchantPageCashback.isDisplayed());
+        assertTrue(merchantPageCashback.isDisplayed());
+
 
 }
 

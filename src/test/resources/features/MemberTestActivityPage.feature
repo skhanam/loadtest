@@ -1,7 +1,4 @@
-#@smoke-testA
-
-#@UpdateUserDetails
-@ignore
+@MemberActivity
 Feature: Testing login to my shoop member account and edit details
 
   As Shoop count holder I should be able to login with my email and password

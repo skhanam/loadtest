@@ -16,7 +16,8 @@ import static junit.framework.TestCase.assertTrue;
 public class ValidateMerchantsPage extends AbstractDriver {
    HomePage homePage = new HomePage();
     private static Logger logger = Logger.getLogger("InfoLogging");
-
+    @FindBy(css = "a[id='breadcrumb-home']")
+    private WebElement backHomeButton;
     @FindBy(css = Constants.searchResult)
     private WebElement searchResult;
     @FindBy(xpath = Constants.menuCategory)
@@ -31,6 +32,12 @@ public class ValidateMerchantsPage extends AbstractDriver {
         logger.info(driver.getTitle());
 
     }
+    public void validateOnShoopMerchantsCategoryPage(){
+        waitForElementDisplay(searchResult);
+        assertTrue(backHomeButton.isDisplayed());
+    }
+
+
     public void validateOnShoopMerchantsPage(String m_name){
        waitForElementDisplay(searchResult);
         assertTrue(searchResult.getText().contains(m_name));

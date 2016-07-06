@@ -55,7 +55,7 @@ public abstract class AbstractDriver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeMacdriver);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
                     driver = new ChromeDriver(dc);
 
             }
@@ -66,7 +66,7 @@ public abstract class AbstractDriver {
 
     public void waitForElementDisplay(final WebElement element) throws ElementNotVisibleException{
         Wait<WebDriver> wait = new FluentWait<>(AbstractDriver.driver)
-                .withTimeout(60, TimeUnit.SECONDS)
+                .withTimeout(30, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
         wait.until(input -> element.isDisplayed());

@@ -23,11 +23,7 @@ public class common_sd {
        login.clickOnLoginLink();
 
     }
-    @Given("^I click on a record button$")
-    public void i_click_on_a_record_button() throws Throwable {
-        userDetails.clickOnRecordButton();
 
-    }
     @Then("^I should see details changed succefully message\"([^\"]*)\" displayed$")
     public void i_should_see_details_changed_succefully_message_displayed(String arg1) throws Throwable {
      userDetails.validateYourModificationIsSuccessfulMessageDisplayed(arg1);

@@ -1,9 +1,12 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
+import com.test.shoop.pageobjects.MemberActivityPageObjects;
 import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
@@ -11,81 +14,60 @@ import static org.junit.Assert.assertTrue;
  * Created by thadeus on 13/04/16.
  */
 public class MemberActivityPage extends AbstractDriver {
+    MemberActivityPageObjects activity = new MemberActivityPageObjects();
+    Actions action = new Actions(driver);
+   public MemberActivityPage() {
 
-    @FindBy(xpath = Constants.memberArea)
-    private WebElement memberArea;
-    @FindBy(xpath = Constants.loginLink)
-    private WebElement loginLiknk;
-    @FindBy(xpath = Constants.myAccountButton)
-    private WebElement myAccountButton;
-    @FindBy(xpath = Constants.yourBalanceLink)
-    private WebElement yourBalanceLink;
-    @FindBy(xpath = Constants.paymentbutton)
-    private WebElement paymentbutton;
-    @FindBy(xpath = Constants.myactiviyButton)
-    private WebElement myactiviyButton;
-    @FindBy(xpath = Constants.userActivityPage)
-    private WebElement userActivityPage;
-    @FindBy(xpath = Constants.settingButton)
-    private  WebElement settingButton;
-    @FindBy(css = Constants.emailModifierLink)
-    private WebElement emailModifierLink;
-    @FindBy(xpath = Constants.logOutButton )
-    private WebElement logOutButton;
-    @FindBy(css = Constants.settingPage)
-    private WebElement settingPage;
+       PageFactory.initElements(AbstractDriver.driver, activity);
 
-    String memberTabs= "//*[@id='user.activity.%s']";
-
+   }
 
     public void clickOnSignInLink(){
-       waitForElementDisplay(loginLiknk);
-        loginLiknk.click();
+       waitForElementDisplay(activity.loginLiknk);
+        activity.loginLiknk.click();
     }
 
     public void clickOnMyActivityPage(){
-        waitForElementDisplay(myactiviyButton);
-        myactiviyButton.click();
+        waitForElementDisplay(activity.myactiviyButton);
+        activity.myactiviyButton.click();
 
 
     }
     public void validateOnMyActivityPage(){
-        waitForElementDisplay(userActivityPage);
-        assertTrue(userActivityPage.isDisplayed());
+        waitForElementDisplay(activity.userActivityPage);
+        assertTrue(activity.userActivityPage.isDisplayed());
     }
 
     public void clickOnMPaymentsPage(){
-        waitForElementDisplay(paymentbutton);
-        paymentbutton.click();
+        waitForElementDisplay(activity.paymentbutton);
+        activity.paymentbutton.click();
 
 
     }
     public void validateOnPaymentsPage(){
-        waitForElementDisplay(yourBalanceLink);
-        assertTrue(yourBalanceLink.isDisplayed());
+        waitForElementDisplay(activity.yourBalanceLink);
+        assertTrue(activity.yourBalanceLink.isDisplayed());
     }
     public void clickAndAndvalidateOnSettingPage(){
-        waitForElementDisplay(settingButton);
-        settingButton.click();
+        waitForElementDisplay(activity.settingButton);
+        activity.settingButton.click();
 
     }
     public void validateOnEditEmailSettingPage(){
-        waitForElementDisplay(settingPage);
-        assertTrue(settingPage.isDisplayed());
+        waitForElementDisplay(activity.settingPage);
+        assertTrue(activity.settingPage.isDisplayed());
     }
 
-    public void clickOnSignoutLink(){
-        waitForElementDisplay(logOutButton);
-       //if(myAccountButton.isDisplayed()){
-           logOutButton.click();
-       //}
-
-
-
+    public void clickOnSignoutLink() {
+        waitForElementDisplay(activity.logOutButton);
+        //if(myAccountButton.isDisplayed()){
+        activity.logOutButton.click();
+        // }
     }
+
     public void validateSignOutComplete(){
-        waitForElementDisplay(loginLiknk);
-        assertTrue(loginLiknk.isDisplayed());
+        waitForElementDisplay(activity.loginLiknk);
+        assertTrue(activity.loginLiknk.isDisplayed());
 
     }
 }

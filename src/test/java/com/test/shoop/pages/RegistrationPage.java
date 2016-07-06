@@ -1,14 +1,10 @@
 package com.test.shoop.pages;
-
-import com.test.shoop.helper.Constants;
 import com.test.shoop.pageobjects.RegistrationPageObjects;
 import com.test.shoop.utility.AbstractDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import java.rmi.server.UID;
 import java.util.UUID;
 import static org.junit.Assert.assertTrue;
 
@@ -16,7 +12,7 @@ import static org.junit.Assert.assertTrue;
  * Created by thadeus on 24/06/16.
  */
 public class RegistrationPage extends AbstractDriver {
-    Actions act = new Actions(driver);
+    Actions action = new Actions(driver);
     WebDriverWait wait = new WebDriverWait(driver,20);
    RegistrationPageObjects reg = new RegistrationPageObjects();
 public RegistrationPage()
@@ -36,12 +32,10 @@ public RegistrationPage()
         waitForElementDisplay(reg.registerLink);
        reg.registerLink.click();
         waitForElementDisplay(reg.userName);
-        final String email = UUID.randomUUID().toString() + "qa@quidco.com";
+        final String email = UUID.randomUUID().toString() +"staging"+ "@quidco.com";
         reg.userName.sendKeys(email);
         reg.emailpassword.sendKeys("Testquality09!");
-
     }
-
     public void validaterErrorMessageForTermsandConditions(String terms_conds){
         waitForElementDisplay(reg.regErrorMessaging);
         assertTrue(reg.regErrorMessaging.isDisplayed());
@@ -50,22 +44,28 @@ public RegistrationPage()
 
     public void enterUsernameAndPassWord(){
         waitForElementDisplay(reg.userName);
-        final String email = UUID.randomUUID().toString() + "qa@quidco.com";
+        final String email = UUID.randomUUID().toString() + "staging" + "qa@quidco.com";
         reg.userName.sendKeys(email);
-        reg.emailpassword.sendKeys("Testquality09!");
+        reg.emailpassword.sendKeys("Testquality9!");
+    }
+
+    public void enterEmailAddressAndPassword(){
+        for (int idx=0;idx<1; ++idx){
+            UID userid = new UID();
+            final String email =userid.toString().hashCode() +"@quidco.com";
+            reg.userName.sendKeys(email);
+            reg.emailpassword.sendKeys("Hannah123L");
+        }
     }
     public void acceptShoopTermsAndConditions(){
-        waitForElementDisplay(reg.regTermsAndConditions);
-                                 act.
-        click(reg.regTermsAndConditions).
-                             build().
-                            perform();
+            waitForElementDisplay(reg.regTermsAndConditions);
+            action.moveToElement(reg.regTermsAndConditions).click().build().perform();
 
     }
 
     public void validateShoopLatestEmailOffersCheckBoxIsChecked(){
-       reg.acceptToReceiveShoopOffers.click();
-        assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
+            reg.acceptToReceiveShoopOffers.click();
+             assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
     }
     public void clickOnRegisterForFreeButton(){
         reg.regButton.click();

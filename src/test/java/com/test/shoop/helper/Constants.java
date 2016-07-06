@@ -38,7 +38,12 @@ public class Constants {
     public static final String editPositcode = "//*[contains(@name,'post_code')]";
     public static final String malesex = "#male";
     public static final String Femalesex = "#female";
-    public static final String submitEditDataButton ="//*[contains(@type,'submit')]";
+    public static final String nameRecordButton ="//*[contains(@type,'submit')]";
+    public static final String emailRecordButton="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[2]/div[2]/form/div[4]/div/button[1]";
+    public static final String usernameRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[3]/div[2]/div[2]/form/div[2]/div/button[1]";
+    public static final String genderRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[4]/div[2]/div[2]/form/div[2]/div/button[1]";
+    public static final String doBRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[5]/div[2]/div[2]/form/div[2]/div/button[1]";
+    public static final String postcodeRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[6]/div[2]/div[2]/form/div[2]/div/button[1]";
     public static final String generalSettings= "//*[@id='user.settings.general']";
     public static final String successfulUpdates = ".inline-notification.ng-isolate-scope.successful";
     //links
@@ -51,9 +56,15 @@ public class Constants {
     public static final String postCodeModiefier = "a[e2e-edit-row='postcode']";
     public static final String settingPage=".container.ng-binding";
 
-
-
-
+    //login
+    public static final String memberArea = "html/body/header/div[2]/div/div[3]/nav/div[1]/div/ul/li[2]/a";
+    public static final String myAccountButton = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
+    public static final String yourBalanceLink= "html/body/div[2]/div/ui-view/div/p/span/span";
+    public static final String paymentbutton = "//*[@id='user.payments']";
+    public static final String myactiviyButton= "//*[contains(@name,'my-account-link')]";
+    public static final String userActivityPage="//*[@id='user.activity.purchases']";
+    public static final String settingButton = "//*[@id='user.settings.general']";
+    public static final String logOutButton = "//a[@id='signOut']";
 
     String memberTabs= "//*[@id='user.activity.%s']";
 
@@ -65,12 +76,12 @@ public class Constants {
     public static final String rememberMe = "#persist_signin";
     //reg
     public static final String registrationLink="html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span";
-    public static final String regTermsAndConditions="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[3]/label/span[1]/span";
+    public static final String regTermsAndConditions="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]";
     public static final String acceptToReceiveShoopOffers="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]/span";
     public static final String invalidemailPassword ="html/body/div[2]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
     public static final String welcomeGreetings=".greeting-header>span";
     public static final String regErrorMessage="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[5]/div/span/span";
-    public static final String searchResult= "#courses-en-ligne-drive";
+    public static final String searchResult= ".e2e-list-merchant-name.ng-binding";
     public static final String menuCategory= ".//*[@id='menu-categories']/div[1]/div";
     public static final String pageTopTab = "#courses-en-ligne-drive";
 
@@ -85,11 +96,10 @@ public class Constants {
 //    public static final String signOutLink= "//*[@id='signOut']";
 //    public static final String incorrectlogindetails= "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div";
 
-     public static final String category="//*[@id='%s']";
+    public static final String category="//*[@id='%s']";
     public static final String merchantCatResult=".e2e-list-merchant-name.ng-binding:contains(%s)";
-    String catTable = ".category-list>ul>li>a:contains('%s')";
     public static final String searchField="search";
-    public static final String merchantPageCashback="html/body/div[2]/div/div[5]/div/div[1]/div/div[3]/div/div[2]/a";
+    public static final String merchantPageCashback="html/body/div[2]/div/div[5]/div/div[1]/div/div[1]";
 
 
 

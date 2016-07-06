@@ -30,13 +30,17 @@ public class UpdateUserDetailsStepDef {
         userDetails.enterNewFirstNameAndSurnameTOEdit(arg1,arg2);
 
     }
+    @Given("^I click on name record button$")
+    public void i_click_on_name_record_button() throws Throwable {
+        userDetails.clickOnNameRecordButton();
+
+    }
     @Given("^I click on modifier email modifier link$")
     public void i_click_on_modifier_email_modifier_link() throws Throwable {
           userDetails.clickEmailModifyLink();
     }
-
-    @When("^I enter my new email \"([^\"]*)\" and renter email to confirm \"([^\"]*)\"$")
-    public void i_enter_my_new_email_and_renter_email_to_confirm(String arg1, String arg2) throws Throwable {
+    @When("^I enter my new email \"([^\"]*)\" and enter email to confirm \"([^\"]*)\"$")
+    public void i_enter_my_new_email_and_enter_email_to_confirm(String arg1, String arg2) throws Throwable {
         userDetails.enterNewEmailAndRe_enterEmailTocomfirmNewEmail(arg1,arg2);
     }
 
@@ -56,6 +60,14 @@ public class UpdateUserDetailsStepDef {
         userDetails.enterNewUserName(arg1);
 
     }
+    @When("^I click on username record button$")
+    public void i_click_on_username_record_button() throws Throwable {
+        userDetails.clickOnUserNameRecordButton();
+    }
+    @When("^I click on email record button$")
+    public void i_click_on_email_record_button() throws Throwable {
+        userDetails.clickOnEmailRecordButton();
+    }
 
     @Given("^I click on the modify link for gender$")
     public void i_click_on_the_modify_link_for_gender() throws Throwable {
@@ -66,6 +78,10 @@ public class UpdateUserDetailsStepDef {
     @When("^I click to select the \"([^\"]*)\" gender$")
     public void i_click_to_select_the_gender(String arg1) throws Throwable {
         userDetails.clickToSelectMaleGenderasOption(arg1);
+    }
+    @When("^I click on gender record button$")
+    public void i_click_on_gender_record_button() throws Throwable {
+      userDetails.clickOnGenderRecordButton();
     }
 
     @Given("^i click on modify link for date of birth$")
@@ -87,7 +103,10 @@ public class UpdateUserDetailsStepDef {
     public void i_enter_and_of_birth_as(String arg1) throws Throwable {
            userDetails.selectYearOfBirthToEditDOB(arg1);
     }
-
+    @When("^I click on DOB record button$")
+    public void i_click_on_DOB_record_button() throws Throwable {
+       userDetails.clickOnDateOfBirthRecordButton();
+    }
 
     @Given("^I click on the modify link for Postcode$")
     public void i_click_on_the_modify_link_for_Postcode() throws Throwable {
@@ -100,7 +119,11 @@ public class UpdateUserDetailsStepDef {
         userDetails.enterNewPostCodeToEditExistingPostCode(arg1);
 
     }
+    @When("^I click on postcode record button$")
+    public void i_click_on_postcode_record_button() throws Throwable {
+        userDetails.clickOnPostCodeRecordButton();
 
+    }
 
 
 }

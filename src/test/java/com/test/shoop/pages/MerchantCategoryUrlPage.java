@@ -1,10 +1,12 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
+import com.test.shoop.pageobjects.MerchantCategoryUrlPageObjects;
 import com.test.shoop.utility.AbstractDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import static junit.framework.TestCase.assertTrue;
 
@@ -13,15 +15,11 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class MerchantCategoryUrlPage extends AbstractDriver {
     HomePage homePage = new HomePage();
+    MerchantCategoryUrlPageObjects catUrl= new MerchantCategoryUrlPageObjects();
 
-    @FindBy(css = "a[id='breadcrumb-home']")
-    private WebElement backHomeButton;
-    @FindBy(css = Constants.searchResult)
-    private WebElement searchResult;
-    @FindBy(css = Constants.pageTopTab)
-    private WebElement pageTopTab;
-
-    String merchantCat = "#%s";
+  public MerchantCategoryUrlPage(){
+      PageFactory.initElements(AbstractDriver.driver,catUrl);
+    }
 
 
 
@@ -36,14 +34,14 @@ public class MerchantCategoryUrlPage extends AbstractDriver {
     }
 
     public void validatemerchantCategoryurlPage(String cat_name){
-        waitForElementDisplay(searchResult);
-       WebElement checkcatName = AbstractDriver.driver.findElement(By.cssSelector(String.format(merchantCat, cat_name)));
+        waitForElementDisplay(catUrl.searchResult);
+       WebElement checkcatName = AbstractDriver.driver.findElement(By.cssSelector(String.format(catUrl.merchantCat, cat_name)));
         assertTrue(checkcatName.getText().contains(cat_name));
 
     }
     public void validateMerchantCategoryUrlPages(){
-       waitForElementDisplay(backHomeButton);
-        //assertTrue(backHomeButton.isDisplayed());
+       waitForElementDisplay(catUrl.backHomeButton);
+        assertTrue(catUrl.backHomeButton.isDisplayed());
     }
 
 
