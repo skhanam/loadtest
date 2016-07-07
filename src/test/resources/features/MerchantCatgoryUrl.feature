@@ -31,7 +31,6 @@
       | bio-produits-naturels    |
       | puericulture             |
       | minceur                  |
-      | parfums-cosmetiques      |
       | parapharmacie            |
       | nutrition-sportive       |
       | lunettes-lentilles       |

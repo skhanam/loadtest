@@ -13,9 +13,6 @@ import java.io.IOException;
  * Created by thadeus on 04/07/16.
  */
 
-
-
-
 @RunWith(Cucumber.class)
 @CucumberOptions( tags="@Registration",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
@@ -24,12 +21,12 @@ import java.io.IOException;
                 "com.test.shoop.com.test.shoop.utility",
                 "com.test.shoop.page","com.test.shoop.helper",
                 "com.test.shoop.cucumber"},
-        features={"src/test/resources/testFeature"}
+        features={"src/test/resources/features"}
 
 )
 
 
-public class RegistrationRunner extends AbstractDriver{
+public class RegistrationRunner {
 
     @BeforeClass
     public static void setUp() throws IOException {

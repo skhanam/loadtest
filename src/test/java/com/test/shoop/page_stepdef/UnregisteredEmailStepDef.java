@@ -1,5 +1,6 @@
 package com.test.shoop.page_stepdef;
 
+import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.UnregisteredEmailPage;
 import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.java.en.Then;
@@ -12,10 +13,11 @@ import org.openqa.selenium.support.PageFactory;
 public class UnregisteredEmailStepDef {
     UnregisteredEmailPage unregisteredEmailTest = PageFactory.initElements(AbstractDriver.driver,UnregisteredEmailPage.class);
 
-    @When("^I attempt to login with an email address that is not registered on Shoop$")
-    public void i_attempt_to_log_in_with_an_email_address_that_is_not_registered_on_Shoop() throws Throwable {
-        unregisteredEmailTest.enterUnregisteredEmailAddressOnShoop();
-        unregisteredEmailTest.clickOnUnLoginButton();
+
+    @When("^I enter an email address that is not registered on Shoop$")
+    public void i_enter_an_email_address_that_is_not_registered_on_Shoop() throws Throwable {
+         unregisteredEmailTest.enterUnregisteredEmailAddressOnShoop();
+
 
     }
     @Then("^I should see \"([^\"]*)\" text displayed$")

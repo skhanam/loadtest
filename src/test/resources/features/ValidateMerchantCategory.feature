@@ -1,5 +1,5 @@
-@SH-70
-Feature: validate merchant url
+@MerchantCategory
+Feature: validate merchant Category
 
   Scenario Outline: validate merchant exist on shoop url
 

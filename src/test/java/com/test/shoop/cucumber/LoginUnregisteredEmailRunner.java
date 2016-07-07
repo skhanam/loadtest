@@ -1,6 +1,5 @@
 package com.test.shoop.cucumber;
 
-import com.test.shoop.pages.LoginPage;
 import com.test.shoop.utility.AbstractDriver;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -9,30 +8,29 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.logging.Logger;
+
+/**
+ * Created by thadeus on 07/07/16.
+ */
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@SH-62",
-        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
-                  "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
+@CucumberOptions( tags="@UnregisteredEmail",
+        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_stepdef",
                 "com.test.shoop.com.test.shoop.utility",
-                 "com.test.shoop.page","com.test.shoop.helper",
-                 "com.test.shoop.cucumber"},
+                "com.test.shoop.page","com.test.shoop.helper",
+                "com.test.shoop.cucumber"},
         features={"src/test/resources/features"}
 
 )
-//@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63,@QA-56
+public class LoginUnregisteredEmailRunner {
 
-public class Runner extends AbstractDriver {
-
-    private static Logger logger = Logger.getLogger("InfoLogging");
 
     @BeforeClass
     public static void setUp() throws IOException {
-        logger.info("Starting testing");
+        System.out.println("Starting testing");
         AbstractDriver.initialize();
         AbstractDriver.driver.manage().window().maximize();
 
@@ -40,9 +38,7 @@ public class Runner extends AbstractDriver {
 
     @AfterClass
     public static void tearDown(){
-    logger.info("Quiting browser");
-    AbstractDriver.driver.quit();
-}
-
-
+        System.out.println("Quiting browser");
+        AbstractDriver.driver.quit();
+    }
 }

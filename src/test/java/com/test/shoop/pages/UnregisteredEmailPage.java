@@ -1,59 +1,42 @@
 package com.test.shoop.pages;
-
-import com.test.shoop.helper.Constants;
+import com.test.shoop.pageobjects.UnregisteredEmailPageObjects;
 import com.test.shoop.utility.AbstractDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
+import org.openqa.selenium.support.PageFactory;
 import static junit.framework.TestCase.assertTrue;
 
 /**
  * Created by thadeus on 14/06/16.
  */
 public class UnregisteredEmailPage extends AbstractDriver {
+UnregisteredEmailPageObjects unReg = new UnregisteredEmailPageObjects();
 
-    @FindBy(css = Constants.loginPopup)
-    private WebElement loginPopup;
-    @FindBy(xpath = Constants.loginLink)
-    private WebElement loginLink;
-    @FindBy(xpath=Constants.userName)
-    private WebElement userName;
-    @FindBy(xpath = Constants.password)
-    private WebElement password;
-    @FindBy(xpath = Constants.loginButton)
-    private WebElement loginButton;
-    @FindBy(css = Constants.rememberMe)
-    private WebElement rememberMe;
-    @FindBy(xpath =Constants.invalidemailPassword)
-    private WebElement invalidemailPassword;
-
-
-
+  public UnregisteredEmailPage(){
+      PageFactory.initElements(AbstractDriver.driver,unReg);
+  }
 
     public void ClickOnRememberMeCheckBox(){
-        waitForElementDisplay(rememberMe);
-        rememberMe.click();
+        waitForElementDisplay(unReg.rememberMe);
+        unReg.rememberMe.click();
 
     }
     public void enterUnregisteredEmailAddressOnShoop(){
-        waitForElementDisplay(userName);
-        userName.sendKeys("tseyana+GGGGTester@gmail.com");
-        enterUserPasssword();
+        waitForElementDisplay(unReg.userName);
+        unReg.userName.sendKeys("quidcoqa2@quidco.com");
     }
     public void enterUserPasssword(){
-        waitForElementDisplay(password);
-        password.sendKeys("kalanzi09");
+        waitForElementDisplay(unReg.password);
+        unReg.password.sendKeys("kalanzi09");
     }
 
     public void clickOnUnLoginButton(){
-        waitForElementDisplay(loginButton);
-        loginButton.click();
+        waitForElementDisplay(unReg.loginButton);
+        unReg.loginButton.click();
     }
 
 
     public void validateInvalidEmailPasswordISDisplayed(String invalid_info){
-        waitForElementDisplay(invalidemailPassword);
-        assertTrue(invalidemailPassword.getText().contains(invalid_info));
+        waitForElementDisplay(unReg.incorrectlogindetails);
+        assertTrue(unReg.invalidemailPassword.getText().contains(invalid_info));
 
     }
 
