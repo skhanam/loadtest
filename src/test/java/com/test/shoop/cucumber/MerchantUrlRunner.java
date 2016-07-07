@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@merchantcategory",
+@CucumberOptions( tags="@merchantUrl",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
                 "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
         monochrome = true,
@@ -26,7 +26,7 @@ import java.util.logging.Logger;
                 "com.test.shoop.cucumber"},
         features={"src/test/resources/features"}
 )
-public class MerchantCategoryUrlRunner extends AbstractDriver {
+public class MerchantUrlRunner extends AbstractDriver {
     private static Logger logger = Logger.getLogger("InfoLogging");
 
     @BeforeClass
