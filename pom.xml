@@ -100,49 +100,49 @@
         </configuration>
         <version>3.5.1</version>
       </plugin>
-      <plugin>
-        <groupId>com.github.temyers</groupId>
-        <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-        <version>1.2.1</version>
-        <executions>
-          <execution>
-            <id>generateRunners</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>generateRunners</goal>
-            </goals>
-            <configuration>
-              <!-- Mandatory -->
-              <!-- comma separated list of package names to scan for glue code -->
-              <glue>com.test.shoop</glue>
-              <!-- These are the default values -->
-              <!-- Where to output the generated tests -->
-              <outputDirectory>${project.build.directory}/generated-test-sources/cucumber</outputDirectory>
-              <!-- The diectory, which must be in the root of the runtime classpath, containing your feature files.  -->
-              <featuresDirectory>src/test/resources/features/</featuresDirectory>
-              <!-- Directory where the cucumber report files shall be written  -->
-              <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
-              <!-- comma separated list of output formats -->
-              <format>json</format>
+      <!--<plugin>-->
+        <!--<groupId>com.github.temyers</groupId>-->
+        <!--<artifactId>cucumber-jvm-parallel-plugin</artifactId>-->
+        <!--<version>1.2.1</version>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<id>generateRunners</id>-->
+            <!--<phase>validate</phase>-->
+            <!--<goals>-->
+              <!--<goal>generateRunners</goal>-->
+            <!--</goals>-->
+            <!--<configuration>-->
+              <!--&lt;!&ndash; Mandatory &ndash;&gt;-->
+              <!--&lt;!&ndash; comma separated list of package names to scan for glue code &ndash;&gt;-->
+              <!--<glue>com.test.shoop</glue>-->
+              <!--&lt;!&ndash; These are the default values &ndash;&gt;-->
+              <!--&lt;!&ndash; Where to output the generated tests &ndash;&gt;-->
+              <!--<outputDirectory>${project.build.directory}/generated-test-sources/cucumber</outputDirectory>-->
+              <!--&lt;!&ndash; The diectory, which must be in the root of the runtime classpath, containing your feature files.  &ndash;&gt;-->
+              <!--<featuresDirectory>src/test/resources/features/</featuresDirectory>-->
+              <!--&lt;!&ndash; Directory where the cucumber report files shall be written  &ndash;&gt;-->
+              <!--<cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>-->
+              <!--&lt;!&ndash; comma separated list of output formats &ndash;&gt;-->
+              <!--<format>json</format>-->
               <!-- CucumberOptions.strict property -->
-              <strict>true</strict>
-              <!-- CucumberOptions.monochrome property -->
-              <monochrome>true</monochrome>
-              <!-- The tags to run, maps to CucumberOptions.tags property -->
-              <tags></tags>
-              <!-- If set to true, only feature files containing the required tags shall be generated. -->
-              <!-- Excluded tags (~@notMe) are ignored. -->
-              <filterFeaturesByTags>false</filterFeaturesByTags>
-              <!-- Generate TestNG runners instead of JUnit ones. -->
-              <useTestNG>false</useTestNG>
-              <!-- The naming scheme to use for the generated test classes.  One of 'simple' or 'feature-title' -->
-              <namingScheme>simple</namingScheme>
-              <!-- The class naming pattern to use.  Only required/used if naming scheme is 'pattern'.-->
-              <!--<namingPattern>Parallel{c}IT</namingPattern>-->
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+              <!--<strict>true</strict>-->
+              <!--&lt;!&ndash; CucumberOptions.monochrome property &ndash;&gt;-->
+              <!--<monochrome>true</monochrome>-->
+              <!--&lt;!&ndash; The tags to run, maps to CucumberOptions.tags property &ndash;&gt;-->
+              <!--&lt;!&ndash;<tags>"@LoginOut", "@MerchantCategory", "@MemberActivity", "@UnregisteredEmail", "@MerchantUrl", "@Registration", "@UpdateUserDetails" , "@Validatemerchantcategory"</tags>&ndash;&gt;-->
+              <!--&lt;!&ndash; If set to true, only feature files containing the required tags shall be generated. &ndash;&gt;-->
+              <!--&lt;!&ndash; Excluded tags (~@notMe) are ignored. &ndash;&gt;-->
+              <!--<filterFeaturesByTags>false</filterFeaturesByTags>-->
+              <!--&lt;!&ndash; Generate TestNG runners instead of JUnit ones. &ndash;&gt;-->
+              <!--<useTestNG>false</useTestNG>-->
+              <!--&lt;!&ndash; The naming scheme to use for the generated test classes.  One of 'simple' or 'feature-title' &ndash;&gt;-->
+              <!--<namingScheme>simple</namingScheme>-->
+              <!--&lt;!&ndash; The class naming pattern to use.  Only required/used if naming scheme is 'pattern'.&ndash;&gt;-->
+              <!--&lt;!&ndash;<namingPattern>Parallel{c}IT</namingPattern>&ndash;&gt;-->
+            <!--</configuration>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
@@ -158,8 +158,7 @@
         <configuration>
         <includes>
           <include>**/*Runner*.class</include>
-            <include>**/LoginOutRunner.class</include>
-          </includes>
+        </includes>
         </configuration>
       </plugin>
     </plugins>

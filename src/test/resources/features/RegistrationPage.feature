@@ -1,5 +1,7 @@
 
-@sh-80
+#@sh-80
+
+@Registration
 Feature: As new user I should be able to Register
 
   Scenario: New user Registering on Shoop
@@ -18,4 +20,3 @@ Feature: As new user I should be able to Register
     Then I should see message "Veuillez accepter les conditions générales d'utilisation" advising me to accept the terms and conditions
 
 
-  #@Registration
