@@ -41,7 +41,6 @@ import java.util.logging.Logger;
             AbstractDriver.driver.manage().deleteAllCookies();
             AbstractDriver.driver.manage().window().maximize();
 
-
         }
 
         @AfterClass

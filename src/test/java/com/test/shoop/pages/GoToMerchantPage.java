@@ -33,6 +33,10 @@ public class GoToMerchantPage extends AbstractDriver {
     private WebElement searchResult;
     @FindBy(xpath = Constants.cashBacklink)
     private WebElement cashBacklink;
+    @FindBy(css = ".qp-btn.e2e-obtain-cashback.ng-scope")
+    private WebElement cashBackAgain;
+    @FindBy(css = Constants.shoopMerchantPageTittle)
+    private WebElement shoopMerchantPageTittle;
     @FindBy(css = Constants.wayOutPopup)
     private WebElement wayOutPopup;
 
@@ -48,14 +52,19 @@ public void goTomerchantPage(String merchantName){
     logger.info(driver.getTitle());
 }
 
-    public void confirmOnShoopMerchantPage(String pagetitle) {
-        waitForElementDisplay(cashBacklink);
-        assertTrue(driver.getTitle().contains(pagetitle));
+    public void confirmMemberOnShoopMerchantPage() {
+        waitForElementDisplay(shoopMerchantPageTittle);
+        assertTrue(shoopMerchantPageTittle.isDisplayed());
     }
 
     public void clickOnCashBackLink(){
         waitForElementDisplay(cashBacklink);
         cashBacklink.click();
+
+    }
+    public void clickOnCashBackLinkAgain(){
+        waitForElementDisplay(cashBackAgain);
+        cashBackAgain.click();
 
     }
 

@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/target/generated-test-sources/cucumber" isTestSource="true" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/target/cucumber" />
+      <excludeFolder url="file://$MODULE_DIR$/target/cucumber-parallel" />
       <excludeFolder url="file://$MODULE_DIR$/target/failsafe-reports" />
       <excludeFolder url="file://$MODULE_DIR$/target/maven-archiver" />
       <excludeFolder url="file://$MODULE_DIR$/target/maven-status" />

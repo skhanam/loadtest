@@ -9,8 +9,8 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
 
 public class LandingPageStepDef {
-    HomePage landingpage = new HomePage();
-    MerchantSearchPage searchPage = PageFactory.initElements(AbstractDriver.driver,MerchantSearchPage.class);
+    private HomePage landingpage = new HomePage();
+    private MerchantSearchPage searchPage = PageFactory.initElements(AbstractDriver.driver,MerchantSearchPage.class);
 
     @Given("^I go to shoop home Page$")
     public void i_go_to_shoop_home_Page() throws Throwable {

@@ -10,13 +10,13 @@ import org.openqa.selenium.support.FindBy;
 public class RegistrationPageObjects {
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     public WebElement registerLink;
-    @FindBy(xpath="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]")
+    @FindBy(xpath="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[3]/label")
     public WebElement regTermsAndConditions;
     @FindBy(xpath ="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]/span")
     public WebElement acceptToReceiveShoopOffers;
     @FindBy(xpath ="html/body/div[2]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div")
     public WebElement invalidemailPassword;
-    @FindBy(xpath =".greeting-header>span")
+    @FindBy(css =".greeting-header>span")
     public WebElement welcomeGreetings;
     @FindBy(xpath  ="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[5]/div/span/span")
     public WebElement regErrorMessage;

@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@SH-62",
+@CucumberOptions( tags="@QA-74",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
                   "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
         monochrome = true,
@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 )
 //@smoke-testA,@SH-59,@SH-70,@SH-62,@QA-63,@QA-56
 
-public class Runner extends AbstractDriver {
+public class BaseRunner extends AbstractDriver {
 
     private static Logger logger = Logger.getLogger("InfoLogging");
 

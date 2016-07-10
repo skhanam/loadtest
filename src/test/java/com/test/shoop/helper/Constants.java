@@ -17,10 +17,10 @@ public class Constants {
 
 
     //Search
-
     public static final String searchHome =".form-control.search-input.ng-valid.ng-dirty.ng-valid-parse.ng-touched";
     public static final String SearchResult= ".e2e-list-merchant-name.ng-binding";
     public static final String cashBacklink="html/body/div[2]/div/div[5]/div/div[1]/div/div[3]/div/div[2]/a";
+    public static final String shoopMerchantPageTittle=".merchant-title";
     public static final String wayOutPopup=".modal-header.visit-confirmation-modal.ng-scope>h4";
     public static final String pageTitle="Groupon Codes Promo, Cashback & Bons de Réduction | Shoop - Le Meilleur du Cashback & du Code Promo";
 

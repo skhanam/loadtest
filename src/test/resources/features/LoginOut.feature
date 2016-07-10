@@ -1,4 +1,5 @@
 @LoginOut
+@complete
 Feature:  Shoop member account login test
 
   As Shoop Acount holder I should be able to login with my email and password
