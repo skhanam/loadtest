@@ -157,7 +157,7 @@
         </executions>
         <configuration>
         <includes>
-          <include>**/*BaseRunner*.class</include>
+          <include>**/*Runner.class</include>
         </includes>
         </configuration>
       </plugin>
