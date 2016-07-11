@@ -18,8 +18,7 @@ import java.util.logging.Logger;
 
     @RunWith(Cucumber.class)
     @CucumberOptions( tags="@LoginOut",
-            plugin= {"pretty","html:target/cucumber","json:target/cucumber.json",
-                    "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
+            plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
             monochrome = true,
             glue = { "com.test.shoop.page_stepdef",
                     "com.test.shoop.com.test.shoop.utility",
