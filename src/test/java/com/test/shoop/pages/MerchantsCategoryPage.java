@@ -1,9 +1,6 @@
 package com.test.shoop.pages;
-import com.test.shoop.helper.Constants;
 import com.test.shoop.pageobjects.MerchantCategoryPageObjects;
-import com.test.shoop.utility.AbstractDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Logger;

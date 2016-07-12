@@ -1,14 +1,9 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.config.UserCredentials;
-import com.test.shoop.helper.Constants;
 import com.test.shoop.pageobjects.LoginPageObjects;
-import com.test.shoop.utility.AbstractDriver;
-import org.apache.logging.log4j.core.util.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Logger;

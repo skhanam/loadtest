@@ -1,6 +1,6 @@
 package com.test.shoop.cucumber;
 
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;

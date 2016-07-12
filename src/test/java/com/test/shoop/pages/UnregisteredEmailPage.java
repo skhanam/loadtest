@@ -1,6 +1,6 @@
 package com.test.shoop.pages;
 import com.test.shoop.pageobjects.UnregisteredEmailPageObjects;
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.support.PageFactory;
 import static junit.framework.TestCase.assertTrue;
 

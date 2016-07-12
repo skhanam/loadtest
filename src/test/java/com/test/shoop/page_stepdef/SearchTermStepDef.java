@@ -2,7 +2,7 @@ package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.MemberActivityPage;
 import com.test.shoop.pages.MerchantSearchPage;
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class SearchTermStepDef {
     MemberActivityPage memberpage= PageFactory.initElements(AbstractDriver.driver, MemberActivityPage.class);
-    MerchantSearchPage searchPage = PageFactory.initElements(com.test.shoop.utility.AbstractDriver.driver,MerchantSearchPage.class);
+    MerchantSearchPage searchPage = PageFactory.initElements(AbstractDriver.driver,MerchantSearchPage.class);
 
     @When("^I enter merchant name \"([^\"]*)\" in the search field$")
     public void i_enter_merchant_name_in_the_search_field(String arg1) throws Throwable {

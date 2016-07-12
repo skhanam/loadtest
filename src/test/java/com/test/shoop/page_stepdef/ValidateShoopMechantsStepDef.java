@@ -1,7 +1,7 @@
 package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.MerchantsCategoryPage;
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;

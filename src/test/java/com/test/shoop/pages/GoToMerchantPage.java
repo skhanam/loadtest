@@ -2,7 +2,7 @@ package com.test.shoop.pages;
 
 import com.test.shoop.helper.Constants;
 import com.test.shoop.pageobjects.LoginPageObjects;
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.Set;

@@ -1,6 +1,6 @@
 package com.test.shoop.pages;
 
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 
 
 /**

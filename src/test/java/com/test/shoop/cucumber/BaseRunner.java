@@ -1,7 +1,7 @@
 //package com.test.shoop.cucumber;
 //
 //import com.test.shoop.pages.LoginPage;
-//import com.test.shoop.utility.AbstractDriver;
+//import com.test.shoop.config.AbstractDriver;
 //import cucumber.api.CucumberOptions;
 //import cucumber.api.junit.Cucumber;
 //import org.junit.AfterClass;

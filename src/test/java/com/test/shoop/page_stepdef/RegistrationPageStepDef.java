@@ -2,7 +2,7 @@ package com.test.shoop.page_stepdef;
 
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.RegistrationPage;
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;

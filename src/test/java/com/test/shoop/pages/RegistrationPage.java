@@ -1,11 +1,12 @@
 package com.test.shoop.pages;
 import com.test.shoop.pageobjects.RegistrationPageObjects;
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.rmi.server.UID;
-import java.util.UUID;
+
+import java.util.logging.Logger;
+
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -15,7 +16,10 @@ public class RegistrationPage extends AbstractDriver {
     Actions action = new Actions(driver);
     WebDriverWait wait = new WebDriverWait(driver,20);
    RegistrationPageObjects reg = new RegistrationPageObjects();
-public RegistrationPage()
+    private static Logger logger = Logger.getLogger("InfoLogging");
+    final String email = "autotest"+System.currentTimeMillis()+"@quidco.com";
+
+    public RegistrationPage()
 
     {
 
@@ -32,7 +36,8 @@ public RegistrationPage()
         waitForElementDisplay(reg.registerLink);
        reg.registerLink.click();
         waitForElementDisplay(reg.userName);
-        final String email = UUID.randomUUID().toString() +"staging"+ "@quidco.com";
+//        final String email = "autotest"+System.currentTimeMillis() +"staging"+ "@quidco.com";
+
         reg.userName.sendKeys(email);
         reg.emailpassword.sendKeys("Testquality09!");
     }
@@ -44,15 +49,18 @@ public RegistrationPage()
 
     public void enterUsernameAndPassWord(){
         waitForElementDisplay(reg.userName);
-        final String email = UUID.randomUUID().toString() + "staging" + "qa@quidco.com";
+//        final String email = UUID.randomUUID().toString() + "staging" + "qa@quidco.com";
+
         reg.userName.sendKeys(email);
         reg.emailpassword.sendKeys("Testquality9!");
     }
 
     public void enterEmailAddressAndPassword(){
         for (int idx=0;idx<1; ++idx){
-            UID userid = new UID();
-            final String email =userid.toString().hashCode() +"@quidco.com";
+//            UID userid = new UID();
+//            final String email =userid.toString().hashCode() +"@quidco.com";
+//            final String email = "autotest"+System.currentTimeMillis()+"@gmail.com";
+            logger.info("email being created :"+email);
             reg.userName.sendKeys(email);
             reg.emailpassword.sendKeys("Hannah123L");
         }
@@ -60,6 +68,7 @@ public RegistrationPage()
     public void acceptShoopTermsAndConditions(){
             waitForElementDisplay(reg.regTermsAndConditions);
             action.moveToElement(reg.regTermsAndConditions).click().build().perform();
+//         reg.regTermsAndConditions.click();
 
     }
 

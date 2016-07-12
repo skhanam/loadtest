@@ -107,9 +107,9 @@
           <version>1.0.9</version>
           <configuration>
             <!-- root directory that downloaded driver binaries will be stored in -->
-            <rootStandaloneServerDirectory>/my/location/binaries</rootStandaloneServerDirectory>
+            <rootStandaloneServerDirectory>src/resources/binaries</rootStandaloneServerDirectory>
             <!-- Where you want to store downloaded zip files -->
-            <downloadedZipFileDirectory>/my/location/zips</downloadedZipFileDirectory>
+            <downloadedZipFileDirectory>src/resources/zips</downloadedZipFileDirectory>
           </configuration>
           <executions>
             <execution>

@@ -1,4 +1,4 @@
-package com.test.shoop.utility;
+package com.test.shoop.config;
 
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;

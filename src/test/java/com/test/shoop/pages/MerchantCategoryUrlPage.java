@@ -1,11 +1,9 @@
 package com.test.shoop.pages;
 
-import com.test.shoop.helper.Constants;
 import com.test.shoop.pageobjects.MerchantCategoryUrlPageObjects;
-import com.test.shoop.utility.AbstractDriver;
+import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import static junit.framework.TestCase.assertTrue;
