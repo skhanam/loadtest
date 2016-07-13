@@ -39,7 +39,7 @@ public class RegistrationPageObjects {
 
 //    @FindBy(css = Constants.loggedIn)
 //   public WebElement loggedIn;
-   @FindBy(css=Constants.regErrorMessage)
+   @FindBy(css="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[5]/div/span/span")
    public WebElement regErrorMessaging;
 
     

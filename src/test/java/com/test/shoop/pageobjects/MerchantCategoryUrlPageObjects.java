@@ -11,9 +11,9 @@ public class MerchantCategoryUrlPageObjects {
 
     @FindBy(css = "a[id='breadcrumb-home']")
     public WebElement backHomeButton;
-    @FindBy(css = Constants.searchResult)
+    @FindBy(css = ".e2e-list-merchant-name.ng-binding")
     public WebElement searchResult;
-    @FindBy(css = Constants.pageTopTab)
+    @FindBy(css = "#courses-en-ligne-drive")
     public WebElement pageTopTab;
 
    public String merchantCat = "#%s";
