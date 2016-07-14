@@ -47,7 +47,6 @@ public class RegistrationPageStepDef {
 
     @When("^I register with my email address and password$")
     public void i_register_with_my_email_address_and_password() throws Throwable {
-        login.newUserlogout();
         reg.doDefaultRegister();
     }
 
