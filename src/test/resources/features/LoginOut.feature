@@ -1,8 +1,7 @@
 @LoginOut
-@complete
 Feature:  Shoop member account login test
 
-  As Shoop Acount holder I should be able to login with my email and password
+  As shoop Member I should be able to login with my email and password
 
   Scenario: Login as shoop member
 
@@ -13,7 +12,7 @@ Feature:  Shoop member account login test
     And I click on the login button
 
 
-  Scenario: Validate User Account Signout
+  Scenario: Validate shoop member is able to Signout
 
     Given I click on a member my activity link
     And I click on the signout link
