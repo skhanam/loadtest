@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 public class RegistrationPageObjects {
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     public WebElement registerLink;
-    @FindBy(xpath="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[3]/label")
+    @FindBy(xpath="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label")
 //    @FindBy(name="accepted_terms")
     public WebElement regTermsAndConditions;
     @FindBy(xpath ="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]/span")
@@ -39,7 +39,7 @@ public class RegistrationPageObjects {
 
 //    @FindBy(css = Constants.loggedIn)
 //   public WebElement loggedIn;
-   @FindBy(css="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[5]/div/span/span")
+   @FindBy(css=".error.ng-scope>span")
    public WebElement regErrorMessaging;
 
     
