@@ -123,7 +123,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>2.18.1</version>
+        <version>2.19.1</version>
         <executions>
           <execution>
             <goals>
@@ -141,7 +141,7 @@
           <argLine>-Dfile.encoding=UTF-8</argLine>
           <useFile>false</useFile>
         <includes>
-          <include>**/*Runner.class</include>
+          <include>**/*BaseRunner.class</include>
         </includes>
         </configuration>
       </plugin>
