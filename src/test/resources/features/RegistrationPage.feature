@@ -1,6 +1,4 @@
 
-
-
 @Registration
 Feature: As new user I should be able to Register
 
