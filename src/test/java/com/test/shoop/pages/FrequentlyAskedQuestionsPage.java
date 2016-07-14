@@ -1,0 +1,93 @@
+package com.test.shoop.pages;
+
+import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.pageobjects.FrequentlyAskedQuestionPageObjects;
+import org.openqa.selenium.support.PageFactory;
+
+import static org.junit.Assert.assertTrue;
+
+/**
+ * Created by thadeus on 14/07/16.
+ */
+public class FrequentlyAskedQuestionsPage extends AbstractDriver {
+    FrequentlyAskedQuestionPageObjects questions = new FrequentlyAskedQuestionPageObjects();
+
+    public FrequentlyAskedQuestionsPage() {
+        PageFactory.initElements(AbstractDriver.driver, questions);
+
+    }
+
+    public void clickOnByTheWaywhatsTheCashbackLink() {
+        waitForElementDisplay(questions.whatsthecashback);
+        questions.whatsthecashback.click();
+    }
+
+    public void validateTheWaywhatsTheCashbackLink(String c_back) {
+        waitForElementDisplay(questions.whatsthecashback);
+        assertTrue(questions.whatsthecashback.getText().contains(c_back));
+
+    }
+
+    public void clickOnShoopHowHeMakesMoneyLink() {
+        waitForElementDisplay(questions.howShoopMakesMoney);
+        questions.howShoopMakesMoney.click();
+    }
+
+    public void validateShoopHowHeMakesMoney(String text_cash) {
+        waitForElementDisplay(questions.howShoopMakesMoney);
+        assertTrue(questions.howShoopMakesMoney.getText().contains(text_cash));
+    }
+
+    public void clickOnIsItSafeAndSecureLink() {
+        waitForElementDisplay(questions.safeSecure);
+        questions.safeSecure.click();
+
+    }
+
+    public void ValidatesIsItSafeAndSecureLink(String s_secure) {
+        waitForElementDisplay(questions.safeSecure);
+        assertTrue(questions.safeSecure.getText().contains(s_secure));
+
+    }
+
+    public void canWeConsultTheOffersBeforeSignUpLink() {
+        waitForElementDisplay(questions.consultOfferB4SigningUp);
+        questions.consultOfferB4SigningUp.click();
+    }
+
+    public void canWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
+        waitForElementDisplay(questions.consultOfferB4SigningUp);
+        assertTrue(questions.consultOfferB4SigningUp.getText().contains(offer_signUp));
+    }
+
+    public void clickOnHowMuchWillIEarnLink() {
+        waitForElementDisplay(questions.HowMuchToEarn);
+        questions.HowMuchToEarn.click();
+    }
+
+    public void ValidateHowMuchWillEarnLink(String c_earing) {
+        waitForElementDisplay(questions.HowMuchToEarn);
+        assertTrue(questions.HowMuchToEarn.getText().contains(c_earing));
+
+    }
+
+    public void clickOnhowITWorksLink() {
+        waitForElementDisplay(questions.HowItWorks);
+        questions.HowItWorks.click();
+    }
+    public void validateHowITWorksLink(String w_texy) {
+        waitForElementDisplay(questions.HowItWorks);
+       assertTrue(questions.HowItWorks.getText().contains(w_texy));
+    }
+
+    public void clickOnHowItWorks(){
+        waitForElementDisplay(questions.contactUs);
+        questions.contactUs.click();
+    }
+    public void ValidateHowItWorks(String contactUs){
+        waitForElementDisplay(questions.contactUs);
+        assertTrue(questions.contactUs.getText().contains(contactUs));
+        driver.getTitle();
+    }
+
+}

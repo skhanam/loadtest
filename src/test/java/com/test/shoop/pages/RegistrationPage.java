@@ -14,7 +14,6 @@ import static org.junit.Assert.assertTrue;
  */
 public class RegistrationPage extends AbstractDriver {
     Actions action = new Actions(driver);
-    WebDriverWait wait = new WebDriverWait(driver,20);
    RegistrationPageObjects reg = new RegistrationPageObjects();
     private static Logger logger = Logger.getLogger("InfoLogging");
     final String email = "autotest"+System.currentTimeMillis()+"@quidco.com";
