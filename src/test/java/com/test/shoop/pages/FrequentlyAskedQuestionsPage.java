@@ -71,7 +71,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     }
 
-    public void clickOnhowITWorksLink() {
+    public void clickOnhowITWorksLink(){
         waitForElementDisplay(questions.HowItWorks);
         questions.HowItWorks.click();
     }
@@ -80,14 +80,17 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
        assertTrue(questions.HowItWorks.getText().contains(w_texy));
     }
 
-    public void clickOnHowItWorks(){
+    public void goToContactUsPage(){
         waitForElementDisplay(questions.contactUs);
         questions.contactUs.click();
     }
-    public void ValidateHowItWorks(String contactUs){
+    public void ValidateOnContactUsPage(String contactUs){
         waitForElementDisplay(questions.contactUs);
         assertTrue(questions.contactUs.getText().contains(contactUs));
         driver.getTitle();
     }
+
+
+
 
 }

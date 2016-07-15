@@ -53,11 +53,12 @@ public class FrequentlyAskedQuestionStepDef {
 
     @When("^I click on the Comment ça marche link$")
     public void i_click_on_the_Comment_ça_marche_link() throws Throwable{
-
+       questions.clickOnhowITWorksLink();
     }
 
     @When("^I click on the Contact us link$")
     public void i_click_on_the_Contact_us_link() throws Throwable {
+        questions.goToContactUsPage();
 
     }
 
