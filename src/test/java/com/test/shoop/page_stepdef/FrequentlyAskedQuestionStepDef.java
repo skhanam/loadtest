@@ -23,7 +23,7 @@ public class FrequentlyAskedQuestionStepDef {
         questions.validateTheWaywhatsTheCashbackLink(arg1);
 
     }
-<<<<<<< HEAD
+
     @When("^I click on the Shoop how he makes money link$")
     public void i_click_on_the_Shoop_how_he_makes_money_link() throws Throwable {
         questions.clickOnShoopHowHeMakesMoneyLink();
@@ -37,12 +37,7 @@ public class FrequentlyAskedQuestionStepDef {
     @When("^I click on the Comment Shoop gagne-t-il de l'argent link$")
     public void i_click_on_the_Comment_Shoop_gagne_t_il_de_l_argent_link() throws Throwable {
 
-=======
 
-    @When("^I click on the Comment Shoop gagne-t-il de l'argent link$")
-    public void i_click_on_the_Comment_Shoop_gagne_t_il_de_l_argent_link() throws Throwable {
-        questions.clickOnShoopHowHeMakesMoneyLink();
->>>>>>> develop
 
     }
 
@@ -57,7 +52,7 @@ public class FrequentlyAskedQuestionStepDef {
     }
 
     @When("^I click on the Comment ça marche link$")
-    public void i_click_on_the_Comment_ça_marche_link() throws Throwable {
+    public void i_click_on_the_Comment_ça_marche_link() throws Throwable{
 
     }
 
@@ -71,3 +66,4 @@ public class FrequentlyAskedQuestionStepDef {
 
     }
 }
+

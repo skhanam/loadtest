@@ -14,13 +14,11 @@ Feature: view shoop Questions fréquentes
     And I click on the Au fait cest quoi le cashback link
     Then I should see text containing " Le cashback existe depuis de nombreuses années en Europe et aux USA, il est notamment très populaire "
 
-<<<<<<< HEAD
+
   Scenario: Shoop how he makes money?
     And I click on the Shoop how he makes money link
     Then I should see text saying how shoop makes monet " Part of the commission charged dealers enables us to finance our business to continue to offer you the best"
 
-=======
->>>>>>> develop
   Scenario: Is it safe and secure link
     And I click on the Comment Shoop gagne-t-il de l'argent link
     Then I should see text containing " certains emplacements publicitaires payants sont également une source de revenu"
