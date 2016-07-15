@@ -19,15 +19,7 @@ public class GoToMerchantPage extends AbstractDriver {
     HomePage homePage = new HomePage();
     LoginPageObjects loginpo = new LoginPageObjects();
 
-//    @FindBy(xpath= Constants.userName)
-//    private WebElement userName;
-//    @FindBy(xpath = Constants.emailpassword)
-//    private WebElement emailpassword;
-//    @FindBy(xpath = Constants.loginButton)
-//    private WebElement loginButton;
-//    @FindBy(xpath= Constants.logi)
-//    private WebElement logi;
-//    @FindBy(css = Constants.loggedIn)
+
     private WebElement searchHome;
     @FindBy(css = Constants.searchResult)
     private WebElement searchResult;
