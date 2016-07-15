@@ -26,7 +26,6 @@ import java.util.logging.Logger;
                     "com.test.shoop.page","com.test.shoop.helper",
                     "com.test.shoop.cucumber"},
             features={"src/test/resources/features"}
-
     )
 
 
@@ -38,8 +37,8 @@ import java.util.logging.Logger;
 
             LOGGER.info("Starting testing");
             AbstractDriver.initialize();
-            AbstractDriver.driver.manage().deleteAllCookies();
-            AbstractDriver.driver.manage().window().maximize();
+            driver.manage().deleteAllCookies();
+           driver.manage().window().maximize();
 
         }
 
