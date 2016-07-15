@@ -1,10 +1,13 @@
 package com.test.shoop.pages;
 
-import com.test.shoop.helper.Constants;
+
+import com.test.shoop.pageobjects.GoTomerchantSitePageObjects;
 import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import java.util.Set;
 import java.util.logging.Logger;
 
@@ -18,26 +21,16 @@ public class GoToMerchantPage extends AbstractDriver {
     private static Logger logger = Logger.getLogger("InfoLogging");
     HomePage homePage = new HomePage();
     LoginPageObjects loginpo = new LoginPageObjects();
-
-
-    private WebElement searchHome;
-    @FindBy(css = Constants.searchResult)
-    private WebElement searchResult;
-    @FindBy(xpath = Constants.cashBacklink)
-    private WebElement cashBacklink;
-    @FindBy(css = ".qp-btn.e2e-obtain-cashback.ng-scope")
-    private WebElement cashBackAgain;
-    @FindBy(css = Constants.shoopMerchantPageTittle)
-    private WebElement shoopMerchantPageTittle;
-    @FindBy(css = Constants.wayOutPopup)
-    private WebElement wayOutPopup;
-
-    @FindBy(xpath = Constants.loginLink)
-    private WebElement loginLink;
+    GoTomerchantSitePageObjects gspo = new GoTomerchantSitePageObjects();
 
 
 
-public void goTomerchantPage(String merchantName){
+    public GoToMerchantPage() {
+        PageFactory.initElements(AbstractDriver.driver,gspo);
+    }
+
+
+    public void goTomerchantPage(String merchantName){
     String url = homePage.getUrl();
     String fullUrl = url + "/"+ merchantName;
     driver.get(fullUrl);
@@ -45,18 +38,18 @@ public void goTomerchantPage(String merchantName){
 }
 
     public void confirmMemberOnShoopMerchantPage() {
-        waitForElementDisplay(shoopMerchantPageTittle);
-        assertTrue(shoopMerchantPageTittle.isDisplayed());
+        waitForElementDisplay(gspo.shoopMerchantPageTitle);
+        assertTrue(gspo.shoopMerchantPageTitle.isDisplayed());
     }
 
     public void clickOnCashBackLink(){
-        waitForElementDisplay(cashBacklink);
-        cashBacklink.click();
+        waitForElementDisplay(gspo.cashBacklink);
+        gspo.cashBacklink.click();
 
     }
     public void clickOnCashBackLinkAgain(){
-        waitForElementDisplay(cashBackAgain);
-        cashBackAgain.click();
+        waitForElementDisplay(gspo.cashBackAgain);
+        gspo.cashBackAgain.click();
 
     }
 
@@ -78,7 +71,7 @@ public void goTomerchantPage(String merchantName){
     }
     public void confirmUserNavigatesToMerchantPage(){
        // waitForElementDisplay(wayOutPopup);
-        if (loginLink.isDisplayed()){
+        if (gspo.loginLink.isDisplayed()){
             cashBackLoginPopUp();
         }
         String parent =driver.getWindowHandle();
