@@ -35,11 +35,11 @@ public class Constants {
     public static final String malesex = "#male";
     public static final String Femalesex = "#female";
     public static final String nameRecordButton ="//*[contains(@type,'submit')]";
-    public static final String emailRecordButton="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[2]/div[2]/form/div[4]/div/button[1]";
-    public static final String usernameRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[3]/div[2]/div[2]/form/div[2]/div/button[1]";
-    public static final String genderRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[4]/div[2]/div[2]/form/div[2]/div/button[1]";
-    public static final String doBRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[5]/div[2]/div[2]/form/div[2]/div/button[1]";
-    public static final String postcodeRecordButton ="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[6]/div[2]/div[2]/form/div[2]/div/button[1]";
+    public static final String emailRecordButton="//*[@id='emailForm-save']";
+    public static final String usernameRecordButton ="//*[@id='userNameForm-save']";
+    public static final String genderRecordButton ="//*[@id='genderForm-save']";
+    public static final String doBRecordButton ="//*[@id='birthDateForm-save']";
+    public static final String postcodeRecordButton ="//*[@id='postCodeForm-save']";
     public static final String generalSettings= "//*[@id='user.settings.general']";
     public static final String successfulUpdates = ".inline-notification.ng-isolate-scope.successful";
     //links
