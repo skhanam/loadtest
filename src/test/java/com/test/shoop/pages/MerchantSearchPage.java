@@ -14,7 +14,8 @@ import static junit.framework.TestCase.assertTrue;
  * Created by Thadeus ssewanyana on 18/03/2016.
  */
 public class MerchantSearchPage extends AbstractDriver {
-      WebDriverWait wait= new WebDriverWait(driver,20);
+
+    WebDriverWait wait= new WebDriverWait(driver,20);
     @FindBy(css = Constants.merchantRate)
     private WebElement merchantRate;
     String catTable = ".category-list>ul>li>a:contains('%s')";

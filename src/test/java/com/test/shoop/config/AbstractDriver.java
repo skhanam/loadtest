@@ -27,6 +27,11 @@ public abstract class AbstractDriver {
     private  static final String operatingSystem = System.getProperty("os.name").toUpperCase();
     private static final String systemArchitecture = System.getProperty("os.arch");
     private static Logger LOGGER = Logger.getLogger("InfoLogging");
+    //chromebinaries
+    public static final String  chromeWindowsdriver="/src/test/resources/WinbrowserBinaries/chromedriver.exe";
+    public static final String  chromeCentosdriver="/src/test/resources/centosChromeDriverBinaries/chromedriver";
+    public static final String  chromeLinuxdriver="/src/test/resources/linux/googlechrome/64bit/chromedriver";
+    public static final String  chromeMacdriver="/src/test/resources/macChromedriver/chromedriver";
 
     public static void getEnvironmentInfo() throws IOException {
         LOGGER.info(("Current Operating System: " + operatingSystem));
@@ -55,7 +60,7 @@ public abstract class AbstractDriver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeMacdriver);
                     driver = new ChromeDriver(dc);
 
             }
