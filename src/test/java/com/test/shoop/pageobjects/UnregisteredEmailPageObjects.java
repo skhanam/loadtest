@@ -28,7 +28,7 @@ public class UnregisteredEmailPageObjects {
     public WebElement userAccount;
     @FindBy(xpath = "//*[@id='signOut']")
     public WebElement signOutLink;
-    @FindBy(xpath = "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div")
+    @FindBy(css = ".info-description.ng-binding.ng-scope")
     public WebElement incorrectlogindetails;
     @FindBy(css = "#persist_signin")
     public WebElement rememberMe;

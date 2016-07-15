@@ -11,15 +11,10 @@ Feature: Sign in with un-registered email address
     Then I should see "Nous sommes désolés, l'adresse e-mail et/ou le mot de passe sont incorrects" text displayed
 
 
-#  Scenario: Sign up and do not tick to agree to terms and conditions (not registered)
-#    When I navigate to the registration page
-#    And I enter an email address that is not registered with Shoop
-#    And I enter a password
-#    And I do not tick to agree to the term conditions of Shoop
-#    And I press the register button
-#    Then I should see error message advising me to accept the terms and conditions
-#
-#  Scenario: Sign up and do not tick to agree to terms and conditions (already registered)
+
+
+ Scenario: Sign up and do not tick to agree to terms and conditions (already registered
+
 #    When I navigate to the registration page
 #    And I enter an email address that is already registered with Shoop
 #    And I enter a password
