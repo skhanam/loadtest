@@ -16,7 +16,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import static com.test.shoop.helper.Constants.*;
+
 /**
  * Created by Thadeus ssewanyana on 18/03/2016.
  */
