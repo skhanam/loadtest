@@ -21,11 +21,11 @@ import java.util.logging.Logger;
                 "usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"},
         monochrome = true,
         glue = { "com.test.shoop.page_stepdef",
-                "com.test.shoop.com.test.shoop.utility",
-                "com.test.shoop.page","com.test.shoop.helper",
+                "com.test.shoop.config",
+                "com.test.shoop.page",
+                "com.test.shoop.pageobjects",
                 "com.test.shoop.cucumber"},
         features={"src/test/resources/features"}
-
 )
 
 

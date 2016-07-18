@@ -19,7 +19,6 @@ public class LoginPageStepDef {
     LoginPage login = PageFactory.initElements(AbstractDriver.driver,LoginPage.class);
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
-//    UpdateUserDetailsPage userdetailsPage = new UpdateUserDetailsPage(Actions action);
 
     UpdateUserDetailsPage userDetails = PageFactory.initElements(AbstractDriver.driver,UpdateUserDetailsPage.class);
 

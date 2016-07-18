@@ -1,5 +1,5 @@
 
-  @QA-74
+@GotoMerchantSite
   Feature: User clicks out of shoop to merchant site
 
   Scenario: login through the merchant site
@@ -9,7 +9,7 @@
     And I click on the cashback link Obtenir mon cashback
     Then I should be logged in to my account
     And I click again on cashback
-  #  Then the user is directed to the merchants home page "groupon"
+    Then the user is directed to the merchants home page "groupon"
 
 #    Then I see results <merchantname>
 #    Then I click on cashback of merchant
