@@ -22,6 +22,8 @@ public class FrequentlyAskedQuestionPageObjects {
     public WebElement HowItWorks;
     @FindBy(xpath = ".//*[@id='helpdesk-link']/span")
     public WebElement contactUs;
+    @FindBy(css = ".top_header_title")
+    public WebElement contactPage;
     @FindBy(xpath="html/body/main/section/div/div[1]/div[2]/p[3]/a")
     public WebElement CustomerServiceContact;
 

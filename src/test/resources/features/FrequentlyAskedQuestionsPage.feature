@@ -8,36 +8,34 @@ Feature: view shoop Questions fréquentes
     Given I go to shoop home Page
     When I click on the register link
 
+  Scenario: By the way what's the cashback?
+    And I click on the Au fait, c'est quoi le cashback link
+    #Then I should see text containing "nous recevons une commission de sa part"
 
-  Scenario: By the way what's the cashback link
+  Scenario: Shoop how he makes money
+    And I click on the Comment Shoop gagne-t-il de l'argent link
+    #Then I should see text containing "Une partie de la commission perçue des marchands nous permet de"
 
-    And I click on the Au fait cest quoi le cashback link
-    Then I should see text containing " Le cashback existe depuis de nombreuses années en Europe et aux USA, il est notamment très populaire "
-
-
-  Scenario: Shoop how he makes money?
-    And I click on the Shoop how he makes money link
-    Then I should see text saying how shoop makes monet " Part of the commission charged dealers enables us to finance our business to continue to offer you the best"
 
   Scenario: Is it safe and secure link
-    And I click on the Comment Shoop gagne-t-il de l'argent link
-    Then I should see text containing " certains emplacements publicitaires payants sont également une source de revenu"
+    And I click on the Est-ce que c'est sûr et sécurisé link
+    #Then I should see text containing " Oui. Pour assurer la sécurité de vos renseignements personnels" how shoop is secure
 
   Scenario: Can we consult the offers before signing up?
 
     And I click on the "Peut-on consulter les offres avant de s'inscrire  link
-    Then I should see text containing " Oui. Pour assurer la sécurité de vos renseignements personnels"
+    #Then I should see text containing "Of course ! We are already working with hundreds of merchants with whom we negotiate for you the best deals" offers
 
-  Scenario: CHow much will I earn?link
+  Scenario: How much will I earn?link
 
     And I click on the Combien vaisje gagner  link
-    Then I should see text containing " il n'y a pas de petites économies !"
+   # Then I should see text containing "There is no limit. You can collect as many as you want cashback" how much can earn
 
 
-  Scenario: How it works ? link
+  Scenario: How it works ?
 
     And I click on the Comment ça marche link
-    Then I should see text containing " Vous pourrez transférer votre solde sur votre compte bancaire dès que vous atteignez le montant minimum de cashback nécessaire."
+   # Then I should see text containing "After your purchase, we automatically log your cashback and send you a confirmation email" how shoop works
 
 
   Scenario: You have questions link

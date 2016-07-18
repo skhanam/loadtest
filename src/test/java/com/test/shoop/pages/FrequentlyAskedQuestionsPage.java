@@ -44,18 +44,18 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     }
 
-    public void ValidatesIsItSafeAndSecureLink(String s_secure) {
+    public void validatesIsItSafeAndSecureLink(String s_secure) {
         waitForElementDisplay(questions.safeSecure);
         assertTrue(questions.safeSecure.getText().contains(s_secure));
 
     }
 
-    public void canWeConsultTheOffersBeforeSignUpLink() {
+    public void clickOncanWeConsultTheOffersBeforeSignUpLink() {
         waitForElementDisplay(questions.consultOfferB4SigningUp);
         questions.consultOfferB4SigningUp.click();
     }
 
-    public void canWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
+    public void validateCanWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
         waitForElementDisplay(questions.consultOfferB4SigningUp);
         assertTrue(questions.consultOfferB4SigningUp.getText().contains(offer_signUp));
     }
@@ -71,26 +71,23 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     }
 
-    public void clickOnhowITWorksLink(){
+    public void clickOnhowITWorksLink() {
         waitForElementDisplay(questions.HowItWorks);
         questions.HowItWorks.click();
     }
     public void validateHowITWorksLink(String w_texy) {
         waitForElementDisplay(questions.HowItWorks);
-       assertTrue(questions.HowItWorks.getText().contains(w_texy));
+        assertTrue(questions.HowItWorks.getText().contains(w_texy));
     }
 
-    public void goToContactUsPage(){
+    public void clickOnTheContactLink(){
         waitForElementDisplay(questions.contactUs);
         questions.contactUs.click();
     }
-    public void ValidateOnContactUsPage(String contactUs){
-        waitForElementDisplay(questions.contactUs);
-        assertTrue(questions.contactUs.getText().contains(contactUs));
+    public void ValidateOnTheContactLinkPage(){
+        waitForElementDisplay(questions.contactPage);
+        assertTrue(questions.contactPage.isDisplayed());
         driver.getTitle();
     }
-
-
-
 
 }

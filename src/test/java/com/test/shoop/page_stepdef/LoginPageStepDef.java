@@ -19,6 +19,11 @@ public class LoginPageStepDef {
     HomePage homePage = new HomePage();
     UpdateUserDetailsPage userDetails = PageFactory.initElements(AbstractDriver.driver,UpdateUserDetailsPage.class);
 
+    @When("^I click on the login link$")
+    public void i_click_on_the_login_link() throws Throwable {
+        login.clickOnLoginLink();
+
+    }
 
     @And("^I enter my username$")
     public void i_enter_my_username() throws Throwable {
@@ -67,12 +72,6 @@ public class LoginPageStepDef {
 
     }
 
-
-    @When("^I click on the login link$")
-    public void i_click_on_the_login_link() throws Throwable {
-        login.clickOnLoginLink();
-
-    }
 
     @Then("^I should see details changed succefully message\"([^\"]*)\" displayed$")
     public void i_should_see_details_changed_succefully_message_displayed(String arg1) throws Throwable {
