@@ -15,12 +15,12 @@ import org.openqa.selenium.support.PageFactory;
  * Created by Thadeus Ssweanyana on 3/21/2016.
  */
 public class LoginPageStepDef {
-    Actions action = new Actions(AbstractDriver.driver);
+
     LoginPage login = PageFactory.initElements(AbstractDriver.driver,LoginPage.class);
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
-
     UpdateUserDetailsPage userDetails = PageFactory.initElements(AbstractDriver.driver,UpdateUserDetailsPage.class);
+    UpdateUserDetailsPage userdetailsPage = new UpdateUserDetailsPage();
 
 
 
@@ -55,14 +55,16 @@ public class LoginPageStepDef {
     }
 
 
-    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed$")
-    public void i_should_see_details_changed_succefully_message_displayed(String arg1) throws Throwable {
-        userDetails.validateYourModificationIsSuccessfulMessageDisplayed(arg1);
-
-    }
+//    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed$")
+//    public void i_should_see_details_changed_succefully_message_displayed(String arg1) throws Throwable {
+//        userDetails.validateYourModificationIsSuccessfulMessageDisplayed(arg1);
+//
+//    }
     @Given("^I am logged into shoop$")
     public void i_am_logged_into_shoop() throws Throwable {
         homePage.navigateToHomePage();
+        homePage.getUrl();
+        login.doDefaultLogin();
         login.validateUserIsLogged();
 
     }

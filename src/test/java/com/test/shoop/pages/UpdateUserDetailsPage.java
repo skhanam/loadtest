@@ -19,7 +19,12 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     UpdateUserPageObjects uupo = new UpdateUserPageObjects();
     Actions action = new Actions(driver);
 
-    public UpdateUserDetailsPage(Actions action) {
+//    public UpdateUserDetailsPage(Actions action) {
+//
+//        PageFactory.initElements(AbstractDriver.driver,uupo);
+//    }
+
+    public UpdateUserDetailsPage() {
         PageFactory.initElements(AbstractDriver.driver,uupo);
     }
 
