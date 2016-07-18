@@ -24,7 +24,7 @@ public class Hooks extends AbstractDriver {
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
         logger.info( "Starting before each scenario ..");
-
+        driver.manage().window().maximize();
 
     }
 

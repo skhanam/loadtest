@@ -23,6 +23,8 @@ public class HomePageStepDef {
 
     @Given("^user logged in$")
     public void user_logged_in() throws Throwable {
+        homePage.navigateToHomePage();
+        homePage.getUrl();
         loginPage.doDefaultLogin();
     }
 

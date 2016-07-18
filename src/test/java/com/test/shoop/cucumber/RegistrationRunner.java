@@ -33,7 +33,7 @@ public class RegistrationRunner {
     public static void setUp() throws IOException {
         System.out.println("Starting testing");
         AbstractDriver.initialize();
-        AbstractDriver.driver.manage().window().maximize();
+//        AbstractDriver.driver.manage().window().maximize();
 
     }
 
