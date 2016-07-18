@@ -4,6 +4,7 @@ import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.LoginPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 /**
@@ -26,9 +27,6 @@ public class HomePageStepDef {
 
     }
 
-
-
-
     @And("^I enter my username$")
     public void i_enter_my_username() throws Throwable {
         loginPage.enterUsername();
@@ -41,6 +39,11 @@ public class HomePageStepDef {
     @And("^I click on the login button$")
     public void i_click_on_login_button() throws Throwable {
         loginPage.clickLoginButton();
+    }
+
+    @Then("^I should be logged in to my account$")
+    public void i_should_be_logged_in_to_my_account() throws Throwable {
+        loginPage.validateUserLoggedIn();
     }
 
 }

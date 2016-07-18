@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
  * Created by thadeus on 15/04/16.
  */
 public class SearchTermStepDef {
+
     MemberActivityPage memberpage= PageFactory.initElements(AbstractDriver.driver, MemberActivityPage.class);
     MerchantSearchPage searchPage = PageFactory.initElements(AbstractDriver.driver,MerchantSearchPage.class);
 

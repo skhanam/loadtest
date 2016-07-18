@@ -25,10 +25,7 @@ public class LoginPageStepDef {
 
 
 
-    @Then("^I should be logged in to my account$")
-    public void i_should_be_logged_in_to_my_account() throws Throwable {
-        login.validateUserLoggedIn();
-    }
+
     @And("^I am currently signed out$")
     public void i_am_currently_signed_out() throws Throwable {
         login.logOutUser();
