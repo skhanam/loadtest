@@ -1,6 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.config.UserCredentials;
+import com.test.shoop.page_stepdef.LoginPageStepDef;
 import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -19,9 +20,7 @@ public class LoginPage extends AbstractDriver {
     UserCredentials credentials;
     private static Logger logger = Logger.getLogger("InfoLogging");
 
-
     public LoginPage( ) {
-
         // loadPage();
         PageFactory.initElements(AbstractDriver.driver,loginpo);
     }

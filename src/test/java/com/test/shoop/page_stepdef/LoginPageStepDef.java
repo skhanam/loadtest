@@ -8,36 +8,22 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by Thadeus Ssweanyana on 3/21/2016.
  */
 public class LoginPageStepDef {
-
+    Actions action = new Actions(AbstractDriver.driver);
     LoginPage login = PageFactory.initElements(AbstractDriver.driver,LoginPage.class);
     HomePage homePage = new HomePage();
+    LoginPage loginPage = new LoginPage();
+//    UpdateUserDetailsPage userdetailsPage = new UpdateUserDetailsPage(Actions action);
+
     UpdateUserDetailsPage userDetails = PageFactory.initElements(AbstractDriver.driver,UpdateUserDetailsPage.class);
 
-    @When("^I click on the login link$")
-    public void i_click_on_the_login_link() throws Throwable {
-        login.clickOnLoginLink();
 
-    }
-
-    @And("^I enter my username$")
-    public void i_enter_my_username() throws Throwable {
-        login.enterUsername();
-    }
-
-    @And("^I enter my password$")
-    public void i_enter_my_password() throws Throwable {
-        login.enterMemberPassword();
-    }
-    @And("^I click on the login button$")
-    public void i_click_on_login_button() throws Throwable {
-        login.clickLoginButton();
-    }
 
     @Then("^I should be logged in to my account$")
     public void i_should_be_logged_in_to_my_account() throws Throwable {
