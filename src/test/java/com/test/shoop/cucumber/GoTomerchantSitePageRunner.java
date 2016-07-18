@@ -10,11 +10,12 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 /**
- * Created by thadeus on 04/07/16.
+ * Created by thadeus on 18/07/16.
  */
 
+
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@Registration",
+@CucumberOptions( tags="@GotoMerchantSite",
         plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_stepdef",
@@ -25,10 +26,7 @@ import java.io.IOException;
         features={"src/test/resources/features"}
 
 )
-
-
-public class RegistrationRunner {
-
+public class GoTomerchantSitePageRunner {
     @BeforeClass
     public static void setUp() throws IOException {
         System.out.println("Starting testing");
@@ -42,5 +40,4 @@ public class RegistrationRunner {
         System.out.println("Quiting browser");
         AbstractDriver.driver.quit();
     }
-
 }
