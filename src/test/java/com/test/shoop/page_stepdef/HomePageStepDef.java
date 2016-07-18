@@ -21,6 +21,11 @@ public class HomePageStepDef {
 
     }
 
+    @Given("^user logged in$")
+    public void user_logged_in() throws Throwable {
+        loginPage.doDefaultLogin();
+    }
+
     @When("^I click on the login link$")
     public void i_click_on_the_login_link() throws Throwable {
         loginPage.clickOnLoginLink();

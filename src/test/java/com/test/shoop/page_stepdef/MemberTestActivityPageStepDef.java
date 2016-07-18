@@ -1,5 +1,6 @@
 package com.test.shoop.page_stepdef;
 
+import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.MemberActivityPage;
 import com.test.shoop.config.AbstractDriver;
@@ -13,12 +14,15 @@ import org.openqa.selenium.support.PageFactory;
  * Created by thadeus on 13/04/16.
  */
 public class MemberTestActivityPageStepDef {
-    LoginPage login = PageFactory.initElements(AbstractDriver.driver,LoginPage.class);
+    HomePage homePage = PageFactory.initElements(AbstractDriver.driver,HomePage.class);
+    LoginPage login = new LoginPage();
     MemberActivityPage memberpage= PageFactory.initElements(AbstractDriver.driver, MemberActivityPage.class);
+
 
 
     @Given("^I click on a member my activity link$")
     public void i_click_on_a_member_my_activity_link() throws Throwable {
+//        login.doDefaultLogin();
         memberpage.clickOnMyActivityPage();
     }
     @Then("^I should be on the my activity page$")

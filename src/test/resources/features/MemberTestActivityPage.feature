@@ -1,16 +1,12 @@
 @MemberActivity
+
 Feature: Testing login to my shoop member account and edit details
 
   As Shoop count holder I should be able to login with my email and password
 
   Background: Shoop member Login
 
-    Given I go to shoop home Page
-    When I click on the login link
-    And I enter my username
-    And I enter my password
-    And I click on the login button
-    Then I should be logged in to my account
+    Given user logged in
 
 
   Scenario: Validate member area tabs
@@ -24,10 +20,10 @@ Feature: Testing login to my shoop member account and edit details
     And I click on the setting link
     Then I should see the  edit emaillink
 
-   Scenario: Search a merchant
-     When I enter merchant name "Groupon" in the search field
-     And click on the search result
-     Then I should be on shoop merchant page
+#   Scenario: Search a merchant
+#     When I enter merchant name "Groupon" in the search field
+#     And click on the search result
+#     Then I should be on shoop merchant page
 
   Scenario: Validate User Account Signout
 

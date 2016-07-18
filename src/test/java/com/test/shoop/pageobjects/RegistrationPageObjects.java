@@ -34,7 +34,8 @@ public class RegistrationPageObjects {
     public WebElement userEmail;
     @FindBy(name = "password")
     public WebElement emailpassword;
-    @FindBy(xpath ="//button[@type='submit']")
+//    @FindBy(xpath =".//*button[@type='submit']")
+    @FindBy(id ="register-submit")
     public WebElement regButton;
 
 //    @FindBy(css = Constants.loggedIn)

@@ -1,6 +1,8 @@
 package com.test.shoop.cucumber;
 
 import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.pages.HomePage;
+import com.test.shoop.pages.LoginPage;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -17,10 +19,12 @@ import java.util.logging.Logger;
 public class Hooks extends AbstractDriver {
 
     public static Logger logger = Logger.getLogger("InfoLogging");
+    public HomePage homePage = new HomePage();
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
         logger.info( "Starting before each scenario ..");
+
 
     }
 

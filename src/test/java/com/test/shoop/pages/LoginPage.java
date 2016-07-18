@@ -15,6 +15,7 @@ import static junit.framework.TestCase.assertTrue;
  * Created by Thadeus Ssweanyana on 3/21/2016.
  */
 public class LoginPage extends AbstractDriver {
+
     Actions build = new Actions(AbstractDriver.driver);
     LoginPageObjects loginpo = new LoginPageObjects();
     UserCredentials credentials;
@@ -38,6 +39,8 @@ public class LoginPage extends AbstractDriver {
               }
         clickOnLoginLink();
     }
+
+
     public void doDefaultLogin() {
         loginpo.loginLink.click();
         waitForElementDisplay(loginpo.userName);
@@ -119,9 +122,5 @@ public class LoginPage extends AbstractDriver {
         }
     }
 
-
-//    public boolean validateUserNameFieldIsDisplayed() {
-//        return loginpo.userName.isDisplayed();
-//    }
 }
 

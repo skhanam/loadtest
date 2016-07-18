@@ -16,12 +16,12 @@ public class MemberActivityPage extends AbstractDriver {
 
     MemberActivityPageObjects  mempo = new MemberActivityPageObjects();
     Actions action = new Actions(driver);
-   public MemberActivityPage() {
 
+
+    public MemberActivityPage() {
 
        PageFactory.initElements(AbstractDriver.driver, mempo);
-
-    LoginPageObjects loginpo = new LoginPageObjects();
+        LoginPageObjects loginpo = new LoginPageObjects();
 
 
    }
