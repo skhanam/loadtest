@@ -51,6 +51,7 @@ public abstract class AbstractDriver {
         if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox") ){
                 DesiredCapabilities dc = new DesiredCapabilities();
                 driver = new FirefoxDriver(dc);
+            setWindowMaximise();
             } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
@@ -63,13 +64,9 @@ public abstract class AbstractDriver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeMacdriver);
                     driver = new ChromeDriver(dc);
-                    Toolkit toolkit = Toolkit.getDefaultToolkit();
-                    Dimension screenResolution = new Dimension((int)
-                            toolkit.getScreenSize().getWidth(), (int)
-                            toolkit.getScreenSize().getHeight());
-                    driver.manage().window().setSize(screenResolution);
+                     setWindowMaximise();
 
             }
 
@@ -85,6 +82,15 @@ public abstract class AbstractDriver {
         wait.until(input -> element.isDisplayed());
     }
 
+
+    public static void setWindowMaximise(){
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension screenResolution = new Dimension((int)
+                toolkit.getScreenSize().getWidth(), (int)
+                toolkit.getScreenSize().getHeight());
+        System.out.println("Print the screen resolution :" + screenResolution);
+        driver.manage().window().setSize(screenResolution);
+    }
 
 }
 
