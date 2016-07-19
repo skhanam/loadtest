@@ -6,6 +6,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.Dimension;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -36,6 +37,7 @@ public class FrequentlyAskedRunner {
     public static void setUp() throws IOException {
         logger.info("Starting testing");
         AbstractDriver.initialize();
+       // AbstractDriver.driver.manage().window().setSize(new Dimension(1920, 1080));
         AbstractDriver.driver.manage().window().maximize();
 
     }
