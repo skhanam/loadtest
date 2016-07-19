@@ -21,6 +21,7 @@ public class MerchantSearchPage extends AbstractDriver {
     WebDriverWait wait= new WebDriverWait(driver,20);
 
     public MerchantSearchPage(SearchPageObjects spo) {
+
         PageFactory.initElements(AbstractDriver.driver,spo);
     }
 

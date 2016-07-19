@@ -15,6 +15,9 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
+import java.awt.Toolkit;
+import org.openqa.selenium.Dimension;
+
 
 
 /**
@@ -62,6 +65,11 @@ public abstract class AbstractDriver {
                     }
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
                     driver = new ChromeDriver(dc);
+                    Toolkit toolkit = Toolkit.getDefaultToolkit();
+                    Dimension screenResolution = new Dimension((int)
+                            toolkit.getScreenSize().getWidth(), (int)
+                            toolkit.getScreenSize().getHeight());
+                    driver.manage().window().setSize(screenResolution);
 
             }
 
