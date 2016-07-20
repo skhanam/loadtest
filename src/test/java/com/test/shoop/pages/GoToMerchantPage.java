@@ -49,7 +49,7 @@ public class GoToMerchantPage extends AbstractDriver {
     }
     public void clickOnCashBackLinkAgain(){
         waitForElementDisplay(gspo.cashBackAgain);
-        gspo.cashBackAgain.click();
+        gspo.cashBacklink.click();
 
     }
 

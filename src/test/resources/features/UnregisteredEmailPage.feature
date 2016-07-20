@@ -13,12 +13,3 @@ Feature: Sign in with un-registered email address
 
 
 
- Scenario: Sign up and do not tick to agree to terms and conditions (already registered
-
-#    When I navigate to the registration page
-#    And I enter an email address that is already registered with Shoop
-#    And I enter a password
-#    And I do not tick to agree to the terms and conditions of Shoop
-#    And I press the register button
-#    Then I should be presented with an error message advising me to accept the terms and conditions
-#    And I should be presented with an error message advising me that my email address is already registered

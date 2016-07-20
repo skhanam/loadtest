@@ -7,13 +7,14 @@
     Given I go to shoop home Page
     When I go to a merchant page "groupon"
     And I click on the cashback link Obtenir mon cashback
-    Then I should be logged in to my account
+    Then I am prompted to login as shoop member
+    #Then I should be logged in to my account
     And I click again on cashback
     Then the user is directed to the merchants home page "groupon"
 
 #    Then I see results <merchantname>
 #    Then I click on cashback of merchant
-#    Then I am prompted to login
+#    T
 #    Then I Verify that i am logged in
 #
 #    Then Verify i that i am on merchant page

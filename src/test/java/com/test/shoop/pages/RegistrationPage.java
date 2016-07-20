@@ -90,12 +90,6 @@ public class RegistrationPage extends AbstractDriver {
         assertTrue(reg.welcomeGreetings.getText().contains(greetings));
 
     }
-    public void scrollPageIncreaseElementVisibilty(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();",reg.regButton );
 
-
-
-    }
 
 }

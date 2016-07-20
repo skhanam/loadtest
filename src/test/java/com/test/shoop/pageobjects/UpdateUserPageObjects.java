@@ -46,15 +46,15 @@ public class UpdateUserPageObjects {
     public WebElement Femalesex;
     @FindBy(xpath = "//*[contains(@type,'submit')]")
     public WebElement submitEditDataButton;
-    @FindBy(xpath="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[2]/div[2]/form/div[4]/div/button[1]")
+    @FindBy(xpath="//*[@id='emailForm-save']")
     public WebElement emailRecordButton;
-    @FindBy(xpath="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[3]/div[2]/div[2]/form/div[2]/div/button[1]")
+    @FindBy(xpath="//*[@id='userNameForm-save']")
     public WebElement usernamerRecordButton;
-    @FindBy(xpath="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[4]/div[2]/div[2]/form/div[2]/div/button[1]")
+    @FindBy(xpath="//*[@id='genderForm-save']")
     public WebElement genderRecordButton;
-    @FindBy(xpath="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[5]/div[2]/div[2]/form/div[2]/div/button[1]")
+    @FindBy(xpath="//*[@id='birthDateForm-save']")
     public WebElement doBRecordButton;
-    @FindBy(xpath="html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[6]/div[2]/div[2]/form/div[2]/div/button[1]")
+    @FindBy(xpath="//*[@id='postCodeForm-save']")
     public WebElement postcodeRecordButton;
     @FindBy(xpath = "//*[@id='user.settings.general']")
     public WebElement generalSettings;
