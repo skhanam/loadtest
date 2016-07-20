@@ -52,7 +52,7 @@ public abstract class AbstractDriver {
                 DesiredCapabilities dc = new DesiredCapabilities();
                 driver = new FirefoxDriver(dc);
             setWindowMaximise();
-            } else {
+  } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
                     if (operatingSystem.contains("WINDOWS")) {
