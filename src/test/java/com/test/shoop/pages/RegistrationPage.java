@@ -1,9 +1,16 @@
 package com.test.shoop.pages;
 import com.test.shoop.pageobjects.RegistrationPageObjects;
 import com.test.shoop.config.AbstractDriver;
+<<<<<<< HEAD
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+=======
+<<<<<<< HEAD
+import org.openqa.selenium.JavascriptExecutor;
+=======
+>>>>>>> 9242e51bb5cb50582d29fcc10f162d1637329175
 
+>>>>>>> shoopdevelop
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -81,10 +88,21 @@ public class RegistrationPage extends AbstractDriver {
              assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
     }
     public void clickOnRegisterForFreeButton(){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9242e51bb5cb50582d29fcc10f162d1637329175
        // scrollPageIncreaseElementVisibilty();
         waitForElementDisplay(reg.regButton);
         reg.regButton.sendKeys(Keys.TAB);
         reg.regButton.sendKeys(Keys.ENTER);
+<<<<<<< HEAD
+=======
+=======
+    	 reg.regButton.sendKeys(Keys.TAB);
+         reg.regButton.sendKeys(Keys.ENTER);
+>>>>>>> shoopdevelop
+>>>>>>> 9242e51bb5cb50582d29fcc10f162d1637329175
         //reg.regButton.click();
     }
 

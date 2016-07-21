@@ -18,7 +18,7 @@ public class LoginPageObjects {
     public WebElement loginButton;
     @FindBy(xpath = "html/body/div[1]/div/div[1]/h1/span[2]")
     public WebElement logi;
-    @FindBy(css = ".qp-flash-notification.active")
+    @FindBy(xpath= "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     public static WebElement loggedIn;
     @FindBy(css = "h1.greeting-header > span.ng-binding.ng-scope")
     public WebElement confirmUserLogged;

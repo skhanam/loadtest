@@ -3,6 +3,7 @@ package com.test.shoop.pages;
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pageobjects.UpdateUserPageObjects;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -56,10 +57,12 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     }
     public void clickOnEmailRecordButton(){
         waitForElementDisplay(uupo.emailRecordButton);
-        //JavascriptExecutor executor = (JavascriptExecutor)driver;
-        //executor.executeScript("arguments[0].click();", uupo.emailRecordButton);
-        action.moveToElement(uupo.emailRecordButton).click().build().perform();
-       // uupo.emailRecordButton.click();
+        uupo.emailRecordButton.sendKeys(Keys.TAB);
+        //uupo.emailRecordButton.sendKeys(Keys.ENTER);
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", uupo.emailRecordButton);
+       // action.moveToElement(uupo.emailRecordButton).click().build().perform();
+        //uupo.emailRecordButton.click();
 
     }
     public void clickOnPostCodeRecordButton(){

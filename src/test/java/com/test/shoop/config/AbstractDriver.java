@@ -15,7 +15,12 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 
+=======
+import java.awt.Toolkit;
+import org.openqa.selenium.Dimension;
+>>>>>>> 9242e51bb5cb50582d29fcc10f162d1637329175
 
 
 
@@ -50,7 +55,11 @@ public abstract class AbstractDriver {
         if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox") ){
                 DesiredCapabilities dc = new DesiredCapabilities();
                 driver = new FirefoxDriver(dc);
+<<<<<<< HEAD
                 Utility.setWindowMaximise(driver);
+=======
+            setWindowMaximise();
+>>>>>>> 9242e51bb5cb50582d29fcc10f162d1637329175
   } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
@@ -65,7 +74,7 @@ public abstract class AbstractDriver {
                     }
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
                     driver = new ChromeDriver(dc);
-                      Utility.setWindowMaximise(driver);
+                        setWindowMaximise();
 
             }
 
@@ -82,7 +91,14 @@ public abstract class AbstractDriver {
     }
 
 
-   
+    public static void setWindowMaximise(){
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension screenResolution = new Dimension((int)
+                toolkit.getScreenSize().getWidth(), (int)
+                toolkit.getScreenSize().getHeight());
+        System.out.println("Print the screen resolution :" + screenResolution);
+        driver.manage().window().setSize(screenResolution);
+    }
 
 }
 

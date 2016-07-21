@@ -5,15 +5,18 @@ import com.test.shoop.pages.RegistrationPage;
 import com.test.shoop.config.AbstractDriver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
+
+import static com.test.shoop.config.AbstractDriver.driver;
 
 /**
  * Created by thadeus on 24/06/16.
  */
 public class RegistrationPageStepDef {
-    LoginPage login = PageFactory.initElements(AbstractDriver.driver,LoginPage.class);
+    LoginPage login = PageFactory.initElements(driver,LoginPage.class);
 
-    RegistrationPage reg = PageFactory.initElements(AbstractDriver.driver,RegistrationPage.class);
+    RegistrationPage reg = PageFactory.initElements(driver,RegistrationPage.class);
 
     @When("^I click on the register link$")
     public void i_click_on_the_register_link() throws Throwable {
