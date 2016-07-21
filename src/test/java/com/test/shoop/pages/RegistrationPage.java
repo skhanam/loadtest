@@ -44,7 +44,7 @@ public class RegistrationPage extends AbstractDriver {
     }
     public void validaterErrorMessageForTermsandConditions(String terms_conds){
         waitForElementDisplay(reg.regErrorMessaging);
-//        assertTrue(reg.regErrorMessaging.isDisplayed());
+        Assert.assertTrue(reg.regErrorMessaging.isDisplayed());
         //assertTrue(regErrorMessaging.getText().contains(terms_conds));
     }
 
@@ -69,15 +69,13 @@ public class RegistrationPage extends AbstractDriver {
     public void acceptShoopTermsAndConditions(){
             waitForElementDisplay(reg.regTermsAndConditions);
             action.moveToElement(reg.regTermsAndConditions).click().build().perform();
-           
-
-
     }
 
     public void validateShoopLatestEmailOffersCheckBoxIsChecked(){
             reg.acceptToReceiveShoopOffers.click();
-//             assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
+             Assert.assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
     }
+    
     public void clickOnRegisterForFreeButton(){
     	 reg.regButton.sendKeys(Keys.TAB);
          reg.regButton.sendKeys(Keys.ENTER);
@@ -86,7 +84,7 @@ public class RegistrationPage extends AbstractDriver {
 
     public void validateNewUserRegistered(String greetings){
         waitForElementDisplay(reg.welcomeGreetings);
-//        assertTrue(reg.welcomeGreetings.getText().contains(greetings));
+        Assert.assertTrue(reg.welcomeGreetings.getText().contains(greetings));
 
     }
 
