@@ -16,16 +16,16 @@ public class FrequentlyAskedQuestionPageObjects {
     public WebElement safeSecure;
     @FindBy(xpath = "//*[@id='exp4']/div[1]/span/span")
     public WebElement consultOfferB4SigningUp;
-    @FindBy(xpath = "//*[@id='exp5']/div[1]/span/span")
+    @FindBy(xpath = "//*[@id='exp5']")
     public WebElement HowMuchToEarn;
     @FindBy(xpath = "//*[@id='exp6']/div[1]/span/span")
     public WebElement HowItWorks;
-    @FindBy(xpath = ".//*[@id='helpdesk-link']/span")
+    @FindBy(xpath = "//*[@id='helpdesk-link']")
     public WebElement contactUs;
     @FindBy(css = ".top_header_title")
     public WebElement contactPage;
 
-
+    
 
 
 }
