@@ -24,7 +24,6 @@ public final class Utility {
     	 JavascriptExecutor js = (JavascriptExecutor) driver;
      	js.executeScript("window.scrollBy(0,200)", "");
      	
-    	 
      }
 
 }

@@ -55,8 +55,8 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOncanWeConsultTheOffersBeforeSignUpLink() {
-    	Utility.scrollDownWindow(driver);
         waitForElementDisplay(questions.consultOfferB4SigningUp);
+        Utility.scrollDownWindow(driver);
         questions.consultOfferB4SigningUp.click();
     }
 
