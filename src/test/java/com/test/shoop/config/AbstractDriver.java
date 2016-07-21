@@ -15,8 +15,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
-//import java.awt.Toolkit;
-//import org.openqa.selenium.Dimension;
+
 
 
 
@@ -52,7 +51,7 @@ public abstract class AbstractDriver {
                 DesiredCapabilities dc = new DesiredCapabilities();
                 driver = new FirefoxDriver(dc);
                 Utility.setWindowMaximise(driver);
-            } else {
+  } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
                     if (operatingSystem.contains("WINDOWS")) {

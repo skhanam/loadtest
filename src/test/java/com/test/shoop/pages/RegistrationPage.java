@@ -1,6 +1,8 @@
 package com.test.shoop.pages;
 import com.test.shoop.pageobjects.RegistrationPageObjects;
 import com.test.shoop.config.AbstractDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -79,8 +81,10 @@ public class RegistrationPage extends AbstractDriver {
              assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
     }
     public void clickOnRegisterForFreeButton(){
-    	 reg.regButton.sendKeys(Keys.TAB);
-         reg.regButton.sendKeys(Keys.ENTER);
+       // scrollPageIncreaseElementVisibilty();
+        waitForElementDisplay(reg.regButton);
+        reg.regButton.sendKeys(Keys.TAB);
+        reg.regButton.sendKeys(Keys.ENTER);
         //reg.regButton.click();
     }
 
