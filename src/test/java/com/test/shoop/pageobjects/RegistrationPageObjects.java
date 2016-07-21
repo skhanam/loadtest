@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class RegistrationPageObjects {
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
-    public WebElement registerLink;
+	public WebElement registerLink;
     @FindBy(xpath="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label")
 //    @FindBy(name="accepted_terms")
     public WebElement regTermsAndConditions;

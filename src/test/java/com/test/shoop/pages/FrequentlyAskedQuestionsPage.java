@@ -1,10 +1,14 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.config.Utility;
 import com.test.shoop.pageobjects.FrequentlyAskedQuestionPageObjects;
+
 import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
+
+
 
 /**
  * Created by thadeus on 14/07/16.
@@ -52,6 +56,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void clickOncanWeConsultTheOffersBeforeSignUpLink() {
         waitForElementDisplay(questions.consultOfferB4SigningUp);
+        Utility.scrollDownWindow(driver);
         questions.consultOfferB4SigningUp.click();
     }
 
@@ -61,29 +66,36 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnHowMuchWillIEarnLink() {
-        waitForElementDisplay(questions.HowMuchToEarn);
-        questions.HowMuchToEarn.click();
+    	waitForElementDisplay(questions.HowMuchToEarn);
+    	Utility.scrollDownWindow(driver);
+    	questions.HowMuchToEarn.click();
     }
 
     public void ValidateHowMuchWillEarnLink(String c_earing) {
-        waitForElementDisplay(questions.HowMuchToEarn);
+    	waitForElementDisplay(questions.HowMuchToEarn);
         assertTrue(questions.HowMuchToEarn.getText().contains(c_earing));
 
     }
 
     public void clickOnhowITWorksLink() {
+    	
         waitForElementDisplay(questions.HowItWorks);
-        questions.HowItWorks.click();
+         Utility.scrollDownWindow(driver);
+         questions.HowItWorks.click();
+         
     }
+    
     public void validateHowITWorksLink(String w_texy) {
         waitForElementDisplay(questions.HowItWorks);
         assertTrue(questions.HowItWorks.getText().contains(w_texy));
     }
 
     public void clickOnTheContactLink(){
-        waitForElementDisplay(questions.contactUs);
-        questions.contactUs.click();
+         waitForElementDisplay(questions.contactUs);
+         Utility.scrollDownWindow(driver);
+           questions.contactUs.click();
     }
+    
     public void ValidateOnTheContactLinkPage(){
         waitForElementDisplay(questions.contactPage);
         assertTrue(questions.contactPage.isDisplayed());
