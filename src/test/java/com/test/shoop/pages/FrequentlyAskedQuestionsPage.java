@@ -85,6 +85,8 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
          
     }
     
+    
+    
     public void validateHowITWorksLink(String w_texy) {
         waitForElementDisplay(questions.HowItWorks);
         assertTrue(questions.HowItWorks.getText().contains(w_texy));

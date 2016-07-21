@@ -24,8 +24,4 @@ public class FrequentlyAskedQuestionPageObjects {
     public WebElement contactUs;
     @FindBy(css = ".top_header_title")
     public WebElement contactPage;
-
-    
-
-
 }
