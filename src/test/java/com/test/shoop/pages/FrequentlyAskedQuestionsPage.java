@@ -4,6 +4,7 @@ import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
 import com.test.shoop.pageobjects.FrequentlyAskedQuestionPageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
@@ -44,6 +45,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void clickOnIsItSafeAndSecureLink() {
         waitForElementDisplay(questions.safeSecure);
+        Utility.scrollDownWindow(driver);
         questions.safeSecure.click();
 
     }
@@ -93,9 +95,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnTheContactLink(){
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+     	js.executeScript("window.scrollBy(0,250)", "");
          waitForElementDisplay(questions.contactUs);
-         Utility.scrollDownWindow(driver);
-           questions.contactUs.click();
+         questions.contactUs.click();
     }
     
     public void ValidateOnTheContactLinkPage(){
