@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
  * Created by thadeus on 19/07/16.
  */
 public class MemberZenDeskSupportPageObject {
-
-    @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[3]/a/span/span")
+	                
+    @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[3]/a")
     public WebElement aidLink;
     @FindBy(xpath = "html/body/main/section/div/div[1]/div[2]/p[3]/a")
     public WebElement customerserviceLink;
