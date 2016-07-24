@@ -11,16 +11,13 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 /**
- * Created by thadeus on 07/07/16.
+ * Created by thadeus on 21/07/16.
  */
 
 
-
-
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@MerchantCategory",
-        plugin= {"pretty","html:target/cucumber","json:target/cucumber.json"
-                },
+@CucumberOptions( tags="@MyPayementsPage",
+        plugin= {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.test.shoop.page_stepdef",
                 "com.test.shoop.config",
@@ -28,9 +25,9 @@ import java.util.logging.Logger;
                 "com.test.shoop.pageobjects",
                 "com.test.shoop.cucumber"},
         features={"src/test/resources/features"}
-
 )
-public class MerchantCategoryRunner {
+public class MYPayementsSettingPageRunner {
+
     private static Logger LOGGER = Logger.getLogger("InfoLogging");
     @BeforeClass
     public static void setUp() throws IOException {
@@ -48,5 +45,6 @@ public class MerchantCategoryRunner {
         LOGGER.info("Quiting browser");
         AbstractDriver.driver.quit();
     }
+
 
 }

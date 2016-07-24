@@ -45,7 +45,7 @@ public class MemberTestActivityPageStepDef {
     @Then("^I click on the setting link$")
     public void i_click_on_the_setting_link() throws Throwable {
         memberpage.clickOnMyActivityPage();
-        memberpage.clickAndAndvalidateOnSettingPage();
+        memberpage.clickAndAndvalidateUserOnSettingPage();
     }
     @Then("^I should see the  edit emaillink$")
     public void i_should_see_the_edit_emaillink() throws Throwable {

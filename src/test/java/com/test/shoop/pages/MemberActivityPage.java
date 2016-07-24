@@ -54,7 +54,7 @@ public class MemberActivityPage extends AbstractDriver {
         assertTrue(mempo.yourBalanceLink.isDisplayed());
     }
 
-    public void clickAndAndvalidateOnSettingPage(){
+    public void clickAndAndvalidateUserOnSettingPage(){
         waitForElementDisplay(mempo.settingButton);
         mempo.settingButton.click();
 
