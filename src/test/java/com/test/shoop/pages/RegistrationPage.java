@@ -1,15 +1,15 @@
 package com.test.shoop.pages;
+
 import com.test.shoop.pageobjects.RegistrationPageObjects;
-import com.test.shoop.config.AbstractDriver;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.logging.Logger;
 
-import static org.junit.Assert.assertTrue;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+import org.junit.Assert;
+import com.test.shoop.config.AbstractDriver;
+
 
 /**
  * Created by thadeus on 24/06/16.
@@ -44,7 +44,7 @@ public class RegistrationPage extends AbstractDriver {
     }
     public void validaterErrorMessageForTermsandConditions(String terms_conds){
         waitForElementDisplay(reg.regErrorMessaging);
-        assertTrue(reg.regErrorMessaging.isDisplayed());
+        Assert.assertTrue(reg.regErrorMessaging.isDisplayed());
         //assertTrue(regErrorMessaging.getText().contains(terms_conds));
     }
 
@@ -69,25 +69,22 @@ public class RegistrationPage extends AbstractDriver {
     public void acceptShoopTermsAndConditions(){
             waitForElementDisplay(reg.regTermsAndConditions);
             action.moveToElement(reg.regTermsAndConditions).click().build().perform();
-//         reg.regTermsAndConditions.click();
-
     }
 
     public void validateShoopLatestEmailOffersCheckBoxIsChecked(){
             reg.acceptToReceiveShoopOffers.click();
-             assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
+             Assert.assertTrue( reg.acceptToReceiveShoopOffers.isSelected());
     }
+    
     public void clickOnRegisterForFreeButton(){
-       // scrollPageIncreaseElementVisibilty();
-        waitForElementDisplay(reg.regButton);
-        reg.regButton.sendKeys(Keys.TAB);
-        reg.regButton.sendKeys(Keys.ENTER);
-        //reg.regButton.click();
+    	 reg.regButton.sendKeys(Keys.TAB);
+         reg.regButton.sendKeys(Keys.ENTER);
+       
     }
 
     public void validateNewUserRegistered(String greetings){
         waitForElementDisplay(reg.welcomeGreetings);
-        assertTrue(reg.welcomeGreetings.getText().contains(greetings));
+        Assert.assertTrue(reg.welcomeGreetings.getText().contains(greetings));
 
     }
 

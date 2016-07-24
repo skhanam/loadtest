@@ -1,16 +1,16 @@
 package com.test.shoop.pages;
 
-import com.test.shoop.config.AbstractDriver;
-import com.test.shoop.pageobjects.UpdateUserPageObjects;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import static org.junit.Assert.assertTrue;
+import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.pageobjects.UpdateUserPageObjects;
 
 /**
  * Created by thadeus on 16/06/16.
@@ -97,7 +97,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     public void validateYourModificationIsSuccessfulMessageDisplayed(String success_text) {
         waitForElementDisplay(uupo.successfulUpdates);
-        assertTrue(uupo.successfulUpdates.getText().contains(success_text));
+        Assert.assertTrue(uupo.successfulUpdates.getText().contains(success_text));
 
     }
 

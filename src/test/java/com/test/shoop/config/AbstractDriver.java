@@ -1,5 +1,12 @@
 package com.test.shoop.config;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
+
+import org.junit.Assert;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -10,13 +17,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
-import java.awt.Toolkit;
-import org.openqa.selenium.Dimension;
+
 
 
 
@@ -51,7 +52,8 @@ public abstract class AbstractDriver {
         if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox") ){
                 DesiredCapabilities dc = new DesiredCapabilities();
                 driver = new FirefoxDriver(dc);
-            setWindowMaximise();
+                Utility.setWindowMaximise(driver);
+
   } else {
                 if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
                     DesiredCapabilities dc = DesiredCapabilities.chrome();
@@ -66,7 +68,7 @@ public abstract class AbstractDriver {
                     }
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
                     driver = new ChromeDriver(dc);
-                        setWindowMaximise();
+                        Utility.setWindowMaximise(driver);
 
             }
 
@@ -83,14 +85,6 @@ public abstract class AbstractDriver {
     }
 
 
-    public static void setWindowMaximise(){
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Dimension screenResolution = new Dimension((int)
-                toolkit.getScreenSize().getWidth(), (int)
-                toolkit.getScreenSize().getHeight());
-        System.out.println("Print the screen resolution :" + screenResolution);
-        driver.manage().window().setSize(screenResolution);
-    }
-
+    
 }
 
