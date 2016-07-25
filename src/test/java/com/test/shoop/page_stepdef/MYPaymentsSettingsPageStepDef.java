@@ -1,5 +1,4 @@
 package com.test.shoop.page_stepdef;
-
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pages.MYPayementsSettingsPage;
 import cucumber.api.java.en.Given;
@@ -12,17 +11,19 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class MYPaymentsSettingsPageStepDef {
 
-MYPayementsSettingsPage paymentsPage = PageFactory.initElements(AbstractDriver.driver, MYPayementsSettingsPage.class);
+    MYPayementsSettingsPage paymentsPage = PageFactory.initElements(AbstractDriver.driver, MYPayementsSettingsPage.class);
+
 
 
     @Given("^I go to \"([^\"]*)\" page$")
     public void i_go_to_page(String arg1) throws Throwable {
-        paymentsPage.goToMYPaymentSettingsPage(arg1);
+        paymentsPage.goToMyPaymentSettingsPage(arg1);
     }
     @Then("^I click on the banking information link$")
     public void i_click_on_the_banking_information_link() throws Throwable {
         paymentsPage.moveToBankingInformationAndClick();
     }
+
     @When("^I click on modify link for payment account$")
     public void i_click_on_modify_link_for_payment_account() throws Throwable {
        paymentsPage.clickOnModifyYourBillingInformationLink();
@@ -36,7 +37,6 @@ MYPayementsSettingsPage paymentsPage = PageFactory.initElements(AbstractDriver.d
     @When("^I enter my sort as \"([^\"]*)\"$")
     public void i_enter_my_sort_as(String arg1) throws Throwable {
         paymentsPage.enterIBAN(arg1);
-
 
     }
 

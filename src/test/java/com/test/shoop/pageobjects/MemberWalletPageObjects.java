@@ -14,5 +14,11 @@ public class MemberWalletPageObjects {
     @FindBy(xpath = "html/body/div[2]/div/ui-view/div/p/strong")
     public WebElement availableBalance;
 
+    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div[1]/div/div/div[1]/ul/li[2]/span/span")
+    public WebElement cashBackToPay;
+    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div[2]/table/tbody/tr/td[2]/span[2]")
+    public WebElement transaction;
+
+
 
 }

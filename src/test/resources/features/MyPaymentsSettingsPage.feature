@@ -11,6 +11,7 @@ Feature: Member updates account details
     And I click on the setting link
    # And I click on the  my payments  tab link
     And I click on the banking information link
+    And I click on the  my payments  tab link
     When I click on modify link for payment account
     And I enter my account number as "BESCPTPL"
     And I enter my sort as "PT50000700000010803055555"

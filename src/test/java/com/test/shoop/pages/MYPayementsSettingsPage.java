@@ -1,12 +1,8 @@
 package com.test.shoop.pages;
-
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pageobjects.MYPayementsSettingsPageObjects;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-
 import static org.junit.Assert.assertTrue;
 
 
@@ -14,41 +10,23 @@ import static org.junit.Assert.assertTrue;
  * Created by thadeus on 21/07/16.
  */
 public class MYPayementsSettingsPage extends AbstractDriver {
+
     Actions action = new Actions(driver);
     HomePage homePage = new HomePage();
     MYPayementsSettingsPageObjects payment = new MYPayementsSettingsPageObjects();
 
-    public MYPayementsSettingsPage() {
+    public void MYPayementsSettingsPage(){
         PageFactory.initElements(AbstractDriver.driver, payment);
     }
 
-    public void goToMYPaymentSettingsPage(String pageLink) {
+    public void goToMyPaymentSettingsPage(String pageLink) {
         String paymentUrl = homePage.getUrl();
         String paymentPage = paymentUrl + "/utilisateur/"+"/parametres/" + pageLink;
         driver.get(paymentPage);
-
     }
 
-    public void validateOnUserPaymentPage() {
+    public void validateOnUserPaymentPage(){
         assertTrue(payment.memberPayementsPages.isDisplayed());
-    }
-
-   /* public void clickOnBankingInformationLink() {
-        waitForElementDisplay(payment.bankingInfoLink);
-        payment.bankingInfoLink.sendKeys(Keys.TAB);
-        //payment.bankingInfoLink.sendKeys(Keys.ENTER);
-    }
-       */
-       public void moveToBankingInformationAndClick(){
-           waitForElementDisplay(payment.generalSettings);
-           action.click(payment.generalSettings).
-                   moveToElement(payment.bankingInfoLink).
-                   click().
-                   build().
-                   perform();
-
-         //action.moveToElement(payment.bankingInfoLink).click().build().perform();
-
     }
 
     public void clickOnModifyYourBillingInformationLink(){
@@ -85,6 +63,14 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     public void validateMemberPaymentsSuccessfullyUpdated(String updated_accounts){
         waitForElementDisplay(payment.updateDone);
         assertTrue(payment.updateDone.getText().contains(updated_accounts));
+    }
+    public void moveToBankingInformationAndClick(){
+        waitForElementDisplay(payment.generalSettings);
+        action.click(payment.generalSettings).
+                moveToElement(payment.bankingInfoLink).
+                click().
+                build().
+                perform();
     }
 
 }

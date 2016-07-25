@@ -23,5 +23,8 @@ Feature: Testing login to my shoop member account and edit details
 
   Scenario: Validate User Account Signout
 
-    When I click on the signout link
+    Given I click on a member my activity link
+    And I click on the signout link
     Then I should be logged out of my account
+
+
