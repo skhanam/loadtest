@@ -1,12 +1,13 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.pageobjects.RegistrationPageObjects;
-
-import java.util.logging.Logger;
-
+import com.test.shoop.config.AbstractDriver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.logging.Logger;
 import org.junit.Assert;
 import com.test.shoop.config.AbstractDriver;
 
@@ -80,6 +81,7 @@ public class RegistrationPage extends AbstractDriver {
     	 reg.regButton.sendKeys(Keys.TAB);
          reg.regButton.sendKeys(Keys.ENTER);
        
+
     }
 
     public void validateNewUserRegistered(String greetings){

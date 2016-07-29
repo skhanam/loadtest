@@ -6,7 +6,7 @@ Feature: Testing login to my shoop member account and edit details
 
   Background: Shoop member Login
 
-    Given user logged in
+    Given user is logged in
 
 
   Scenario: Validate member area tabs
@@ -20,12 +20,11 @@ Feature: Testing login to my shoop member account and edit details
     And I click on the setting link
     Then I should see the  edit emaillink
 
-#   Scenario: Search a merchant
-#     When I enter merchant name "Groupon" in the search field
-#     And click on the search result
-#     Then I should be on shoop merchant page
 
   Scenario: Validate User Account Signout
 
-    When I click on the signout link
+    Given I click on a member my activity link
+    And I click on the signout link
     Then I should be logged out of my account
+
+
