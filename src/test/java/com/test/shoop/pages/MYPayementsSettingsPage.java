@@ -69,11 +69,13 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     public void moveToBankingInformationAndClick(){
         waitForElementDisplay(payment.generalSettings);
-        action.click(payment.generalSettings).
+        payment.generalSettings.click();
+       waitForElementDisplay(payment.bankingInfoLink);
+                action.
                 moveToElement(payment.bankingInfoLink).
-                click().
                 build().
                 perform();
+        action.click().build().perform();
     }
 
 }
