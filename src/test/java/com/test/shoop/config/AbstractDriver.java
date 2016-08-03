@@ -65,7 +65,15 @@ public abstract class AbstractDriver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
+<<<<<<< HEAD
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+=======
+
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver );
+
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+
+>>>>>>> refs/remotes/origin/toolbar
                     driver = new ChromeDriver(dc);
                         Utility.setWindowMaximise(driver);
 
