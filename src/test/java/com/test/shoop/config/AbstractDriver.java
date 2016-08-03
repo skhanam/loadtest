@@ -66,13 +66,19 @@ public abstract class AbstractDriver {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
 =======
+=======
+>>>>>>> refs/remotes/origin/toolbar
 
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver );
 
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
 
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/toolbar
+=======
 >>>>>>> refs/remotes/origin/toolbar
                     driver = new ChromeDriver(dc);
                         Utility.setWindowMaximise(driver);

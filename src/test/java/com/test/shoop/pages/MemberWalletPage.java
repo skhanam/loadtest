@@ -26,13 +26,19 @@ public class MemberWalletPage extends AbstractDriver {
     }
     public void validateUserTransaction(){
 <<<<<<< HEAD
+<<<<<<< HEAD
     	Utility.scrollDownWindow(driver);
         waitForElementDisplay(wallet.transaction);
 =======
+=======
+>>>>>>> refs/remotes/origin/toolbar
 
 
     	Utility.scrollDownWindow(driver);
     	waitForElementDisplay(wallet.transaction);
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/toolbar
+=======
 >>>>>>> refs/remotes/origin/toolbar
         wallet.transaction.isDisplayed();
     }
@@ -44,8 +50,11 @@ public class MemberWalletPage extends AbstractDriver {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
      
 
+=======
+>>>>>>> refs/remotes/origin/toolbar
 =======
 >>>>>>> refs/remotes/origin/toolbar
 

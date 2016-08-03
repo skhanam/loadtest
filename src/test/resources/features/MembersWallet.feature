@@ -4,8 +4,11 @@ Feature: As a user
   So users can navigate to their and withdraw funds
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> refs/remotes/origin/toolbar
 
     Background: loging into shoop home page
   
@@ -15,6 +18,9 @@ Feature: As a user
     
 
 =======
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/toolbar
+=======
 >>>>>>> refs/remotes/origin/toolbar
   Background: loging into shoop home page
   
@@ -23,6 +29,10 @@ Feature: As a user
   Scenario: Validating wallet pages
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b24c9f13197f1847c62a7a50dbef2c5c614dda87
+>>>>>>> refs/remotes/origin/toolbar
 =======
 >>>>>>> b24c9f13197f1847c62a7a50dbef2c5c614dda87
 >>>>>>> refs/remotes/origin/toolbar
@@ -33,8 +43,14 @@ Feature: As a user
    # Then I should see the wallet available "60" balance
    # Given I have balance more than 10 euros
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+=======
+>>>>>>> b24c9f13197f1847c62a7a50dbef2c5c614dda87
+>>>>>>> refs/remotes/origin/toolbar
+=======
 
 =======
 >>>>>>> b24c9f13197f1847c62a7a50dbef2c5c614dda87
