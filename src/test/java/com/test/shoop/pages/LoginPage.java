@@ -1,6 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.config.UserCredentials;
+import com.test.shoop.config.Utility;
 import com.test.shoop.page_stepdef.LoginPageStepDef;
 import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.config.AbstractDriver;
@@ -60,6 +61,7 @@ public class LoginPage extends AbstractDriver {
     }
 
     public void clickLoginButton() {
+    	Utility.scrollDownWindow(driver);
         waitForElementDisplay(loginpo.loginButton);
         loginpo.loginButton.click();
     }
