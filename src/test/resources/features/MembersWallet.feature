@@ -4,10 +4,10 @@ Feature: As a user
   So users can navigate to their and withdraw funds
 
 
-    Background: loging into shoop home page
+  Background: loging into shoop home page
   
-        Given user is logged in
-  
+       Given user is logged in
+
   Scenario: Validating wallet pages
 
     When I click on a member my activity link
@@ -16,6 +16,7 @@ Feature: As a user
     Then I should see transactions in my wallet
    # Then I should see the wallet available "60" balance
    # Given I have balance more than 10 euros
+
 
 
 

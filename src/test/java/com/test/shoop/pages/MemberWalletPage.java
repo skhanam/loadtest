@@ -25,8 +25,16 @@ public class MemberWalletPage extends AbstractDriver {
 
     }
     public void validateUserTransaction(){
+
     	Utility.scrollDownWindow(driver);
         waitForElementDisplay(wallet.transaction);
+
+
+
+
+    	Utility.scrollDownWindow(driver);
+        waitForElementDisplay(wallet.transaction);
+
     	Utility.scrollDownWindow(driver);
     	waitForElementDisplay(wallet.transaction);
         wallet.transaction.isDisplayed();
