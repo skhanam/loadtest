@@ -49,6 +49,7 @@ public class LoginPage extends AbstractDriver {
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
         loginpo.emailpassword.sendKeys(credentials.getPassword());
+        Utility.scrollDownWindow(driver);
         loginpo.loginButton.click();
 
     }
