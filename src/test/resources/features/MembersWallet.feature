@@ -10,7 +10,6 @@ Feature: As a user
 
   Scenario: Validating wallet pages
 
-
     When I click on a member my activity link
     Then I should be on the my activity page
     When I click on the  my payments  tab link

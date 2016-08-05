@@ -49,6 +49,7 @@ public class LoginPage extends AbstractDriver {
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
         loginpo.emailpassword.sendKeys(credentials.getPassword());
+        Utility.scrollDownWindow(driver);
         loginpo.loginButton.click();
 
     }
@@ -71,7 +72,9 @@ public class LoginPage extends AbstractDriver {
         loginpo.emailpassword.sendKeys("testQA!12");
     }
 
-    public void validateUserLoggedIn() {
+    public void validateUserLoggedIn() throws InterruptedException {
+    	driver.manage().deleteAllCookies();
+    	Thread.sleep(1000);
         waitForElementDisplay(loginpo.loggedIn);
         assertTrue(loginpo.loggedIn.isDisplayed());
     }
