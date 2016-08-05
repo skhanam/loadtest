@@ -23,7 +23,7 @@ public class LoginPage extends AbstractDriver {
 
     public LoginPage( ) {
         // loadPage();
-        PageFactory.initElements(AbstractDriver.driver,loginpo);
+        PageFactory.initElements(driver,loginpo);
     }
 
 

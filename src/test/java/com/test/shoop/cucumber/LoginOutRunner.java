@@ -33,6 +33,8 @@ import java.util.logging.Logger;
     public class LoginOutRunner extends AbstractDriver {
 
     private static Logger LOGGER = Logger.getLogger("InfoLogging");
+
+
         @BeforeClass
         public static void setUp() throws IOException {
 

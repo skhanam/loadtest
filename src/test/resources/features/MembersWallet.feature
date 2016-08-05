@@ -3,10 +3,11 @@ Feature: As a user
   I want to validate the wallet page is up and running
   So users can navigate to their and withdraw funds
 
+
   Background: loging into shoop home page
   
        Given user is logged in
-  
+
   Scenario: Validating wallet pages
 
 
