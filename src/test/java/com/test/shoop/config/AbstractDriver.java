@@ -63,7 +63,7 @@ public abstract class AbstractDriver {
                     } else if (operatingSystem.contains("LINUX")) {
                         System.setProperty("webdriver.chrome.driver",chromeLinuxdriver );
                     }else if (operatingSystem.contains("Centos")) {
-                        System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
+                        System.setProperty("webdriver.chrome.driver", chromeCentosdriver);
                     }
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
 

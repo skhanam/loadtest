@@ -9,10 +9,8 @@ Feature: Member updates account details
     Given I click on a member my activity link
     Then I should be on the my activity page
     And I click on the setting link
-   # And I click on the  my payments  tab link
     And I click on the banking information link
-    And I click on the  my payments  tab link
-    When I click on modify link for payment account
+     When I click on modify link for payment account
     And I enter my account number as "BESCPTPL"
     And I enter my sort as "PT50000700000010803055555"
     And I enter my new email as "Tester"
