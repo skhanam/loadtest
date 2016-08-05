@@ -28,15 +28,6 @@ public class MemberWalletPage extends AbstractDriver {
 
     	Utility.scrollDownWindow(driver);
         waitForElementDisplay(wallet.transaction);
-
-
-
-
-    	Utility.scrollDownWindow(driver);
-        waitForElementDisplay(wallet.transaction);
-
-    	Utility.scrollDownWindow(driver);
-    	waitForElementDisplay(wallet.transaction);
         wallet.transaction.isDisplayed();
     }
 
