@@ -1,5 +1,7 @@
 package com.test.shoop.pages;
 import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.config.Utility;
+
 import org.openqa.selenium.support.PageFactory;
 import com.test.shoop.pageobjects.MemberWalletPageObjects;
 import static org.junit.Assert.assertTrue;
@@ -23,7 +25,21 @@ public class MemberWalletPage extends AbstractDriver {
 
     }
     public void validateUserTransaction(){
+<<<<<<< HEAD
+<<<<<<< HEAD
+    	Utility.scrollDownWindow(driver);
         waitForElementDisplay(wallet.transaction);
+=======
+=======
+>>>>>>> refs/remotes/origin/toolbar
+
+
+    	Utility.scrollDownWindow(driver);
+    	waitForElementDisplay(wallet.transaction);
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/toolbar
+=======
+>>>>>>> refs/remotes/origin/toolbar
         wallet.transaction.isDisplayed();
     }
 
@@ -33,10 +49,13 @@ public class MemberWalletPage extends AbstractDriver {
 
     }
 
-     public void validateCashWithDraw(){
+<<<<<<< HEAD
+<<<<<<< HEAD
+     
 
-     }
-
-
+=======
+>>>>>>> refs/remotes/origin/toolbar
+=======
+>>>>>>> refs/remotes/origin/toolbar
 
 }

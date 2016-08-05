@@ -31,7 +31,7 @@ public class MemberTestActivityPageStepDef {
     }
 
 
-        @Then("^I click on the  my payments  tab link$")
+        @When("^I click on the  my payments  tab link$")
     public void i_click_on_the_my_payments_tab_link() throws Throwable {
         memberpage.clickOnMPaymentsPage();
 

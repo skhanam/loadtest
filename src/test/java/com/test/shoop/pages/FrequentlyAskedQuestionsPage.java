@@ -95,10 +95,11 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnTheContactLink(){
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-     	js.executeScript("window.scrollBy(0,250)", "");
-         waitForElementDisplay(questions.contactUs);
-         questions.contactUs.click();
+
+         JavascriptExecutor js = (JavascriptExecutor) driver;
+      	js.executeScript("window.scrollBy(0,250)", "");
+      	waitForElementDisplay(questions.contactUs);
+           questions.contactUs.click();
     }
     
     public void ValidateOnTheContactLinkPage(){

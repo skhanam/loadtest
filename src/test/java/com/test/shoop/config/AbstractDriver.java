@@ -6,7 +6,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import org.junit.Assert;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -66,7 +65,21 @@ public abstract class AbstractDriver {
                     }else if (operatingSystem.contains("Centos")) {
                         System.setProperty("webdriver.chrome.driver",chromeCentosdriver);
                     }
+<<<<<<< HEAD
+<<<<<<< HEAD
                     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+=======
+=======
+>>>>>>> refs/remotes/origin/toolbar
+
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver );
+
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/toolbar
+=======
+>>>>>>> refs/remotes/origin/toolbar
                     driver = new ChromeDriver(dc);
                         Utility.setWindowMaximise(driver);
 

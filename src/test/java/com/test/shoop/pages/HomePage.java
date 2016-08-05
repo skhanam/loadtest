@@ -9,6 +9,7 @@ import com.test.shoop.config.AbstractDriver;
 public class HomePage extends AbstractDriver {
 
     public void navigateToHomePage(){
+    	
         driver.get(CONFIG.getProperty("HomePageUrl"));
     }
 

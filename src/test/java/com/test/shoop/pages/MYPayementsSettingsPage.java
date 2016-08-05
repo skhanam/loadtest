@@ -1,8 +1,11 @@
 package com.test.shoop.pages;
+
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pageobjects.MYPayementsSettingsPageObjects;
+import com.test.shoop.pages.HomePage;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+
 import static org.junit.Assert.assertTrue;
 
 
@@ -66,11 +69,13 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     public void moveToBankingInformationAndClick(){
         waitForElementDisplay(payment.generalSettings);
-        action.click(payment.generalSettings).
+        payment.generalSettings.click();
+       waitForElementDisplay(payment.bankingInfoLink);
+                action.
                 moveToElement(payment.bankingInfoLink).
-                click().
                 build().
                 perform();
+        action.click().build().perform();
     }
 
 }
