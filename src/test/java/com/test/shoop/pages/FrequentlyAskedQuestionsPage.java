@@ -4,7 +4,9 @@ import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
 import com.test.shoop.pageobjects.FrequentlyAskedQuestionPageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
@@ -94,15 +96,17 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         assertTrue(questions.HowItWorks.getText().contains(w_texy));
     }
 
-    public void clickOnTheContactLink(){
-
-         JavascriptExecutor js = (JavascriptExecutor) driver;
+    public void clickOnTheContactLink(){  
+    	Actions act = new Actions(driver);
+    	act.moveToElement(driver.findElement(By.xpath("//*[@ng-click='close()']"))).click().build().perform();
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
       	js.executeScript("window.scrollBy(0,250)", "");
       	waitForElementDisplay(questions.contactUs);
            questions.contactUs.click();
     }
     
     public void ValidateOnTheContactLinkPage(){
+    	
         waitForElementDisplay(questions.contactPage);
         assertTrue(questions.contactPage.isDisplayed());
         driver.getTitle();
