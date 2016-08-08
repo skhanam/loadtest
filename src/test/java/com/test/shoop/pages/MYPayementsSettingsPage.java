@@ -1,6 +1,7 @@
 package com.test.shoop.pages;
 
 import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.config.Utility;
 import com.test.shoop.pageobjects.MYPayementsSettingsPageObjects;
 import com.test.shoop.pages.HomePage;
 import org.openqa.selenium.interactions.Actions;
@@ -18,7 +19,7 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     HomePage homePage = new HomePage();
     MYPayementsSettingsPageObjects payment = new MYPayementsSettingsPageObjects();
 
-    public void MYPayementsSettingsPage(){
+    public MYPayementsSettingsPage(){
         PageFactory.initElements(AbstractDriver.driver, payment);
     }
 
@@ -54,12 +55,12 @@ public class MYPayementsSettingsPage extends AbstractDriver {
 
     }
     public void clickOnPaymentRecordButton(){
+    	Utility.scrollDownWindow(driver);
         payment.paymentRecordButton.click();
 
     }
     public void acceptAccountPayementUpdatedTermsAndCond(){
         waitForElementDisplay(payment.alertAccountAdded);
-        driver.switchTo().alert().accept();
         payment.alertAccountAdded.click();
 
     }
