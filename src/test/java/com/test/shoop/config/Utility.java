@@ -2,9 +2,11 @@ package com.test.shoop.config;
 
 import java.awt.Toolkit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public final class Utility {
 
@@ -27,5 +29,8 @@ public final class Utility {
      	
      	
      }
-
+     public static void acceptCookies(WebDriver driver){
+     Actions act = new Actions(driver);
+ 	act.moveToElement(driver.findElement(By.xpath("//*[@ng-click='close()']"))).click().build().perform();
+     }
 }

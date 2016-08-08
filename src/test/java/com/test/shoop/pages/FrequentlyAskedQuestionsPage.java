@@ -6,6 +6,7 @@ import com.test.shoop.pageobjects.FrequentlyAskedQuestionPageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -97,8 +98,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnTheContactLink(){  
-    	Actions act = new Actions(driver);
-    	act.moveToElement(driver.findElement(By.xpath("//*[@ng-click='close()']"))).click().build().perform();
+    	Utility.acceptCookies(driver);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
       	js.executeScript("window.scrollBy(0,250)", "");
       	waitForElementDisplay(questions.contactUs);
