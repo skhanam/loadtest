@@ -4,6 +4,8 @@ import com.test.shoop.pageobjects.LoginPageObjects;
 
 import com.test.shoop.pageobjects.MemberActivityPageObjects;
 import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.config.Utility;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -34,6 +36,7 @@ public class MemberActivityPage extends AbstractDriver {
 
     public void clickOnMyActivityPage(){
         waitForElementDisplay(mempo.myactivityButton);
+       Utility.acceptCookies(driver);
         mempo.myactivityButton.click();
 
     }
