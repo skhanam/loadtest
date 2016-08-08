@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 public class MYPayementsSettingsPageObjects {
 
 
-    @FindBy(css = ".container.ng-binding")
+	@FindBy(css = ".container.ng-binding")
     public WebElement memberPayementsPages;
     @FindBy(xpath = "//*[@id='user.settings.general']")
     public  WebElement generalSettings;
@@ -17,15 +17,15 @@ public class MYPayementsSettingsPageObjects {
     public WebElement bankingInfoLink;
     @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[1]/div[3]/a")
     public WebElement modifiedPaymenyLink;
-    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[2]/div[1]")
+    @FindBy(xpath = "//*[@name = 'bic']")
     public WebElement codeBicField;
-    @FindBy(xpath= "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[2]/div[2]/form/div[2]/div/input")
+    @FindBy(xpath= "//*[@name='iban']")
     public WebElement iBANField;
-    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[2]/div[2]/form/div[3]/div/input")
+    @FindBy(xpath = "//*[@name ='holder_name']")
     public WebElement nameField;
-    @FindBy(xpath= "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[2]/div[2]/form/div[6]/div/input")
+    @FindBy(xpath= "//*[@name='password']")
     public WebElement passwordField;
-    @FindBy(css = "#bacsInternationalForm-save")
+    @FindBy(id = "bacsInternationalForm-save")
     public WebElement paymentRecordButton;
     @FindBy(css = ".qp-btn.danger")
     public WebElement alertAccountAdded;
