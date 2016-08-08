@@ -31,6 +31,7 @@ public class LoginPage extends AbstractDriver {
 
     public void clickOnLoginLink() {
          waitForElementDisplay(loginpo.loginLink);
+         Utility.acceptCookies(driver);
         loginpo.loginLink.click();
     }
 
