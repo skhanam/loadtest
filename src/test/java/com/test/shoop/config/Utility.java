@@ -30,7 +30,12 @@ public final class Utility {
      	
      }
      public static void acceptCookies(WebDriver driver){
+    	 
+    	try{
      Actions act = new Actions(driver);
  	act.moveToElement(driver.findElement(By.xpath("//*[@ng-click='close()']"))).click().build().perform();
+    	}catch(Exception e){
+    		e.printStackTrace();
+    	}
      }
 }
