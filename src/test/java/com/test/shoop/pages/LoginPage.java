@@ -32,6 +32,8 @@ public class LoginPage extends AbstractDriver {
     public void clickOnLoginLink() {
          waitForElementDisplay(loginpo.loginLink);
         loginpo.loginLink.click();
+        Utility.acceptCookies(driver);
+       
     }
 
     public void clickOnHomePageLoginLink(){
@@ -45,11 +47,13 @@ public class LoginPage extends AbstractDriver {
 
     public void doDefaultLogin() {
         loginpo.loginLink.click();
-        waitForElementDisplay(loginpo.userName);
+        Utility.acceptCookies(driver);
+         waitForElementDisplay(loginpo.userName);
         credentials = new UserCredentials("quidcoqa@quidco.com","testQA!12");
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
         loginpo.emailpassword.sendKeys(credentials.getPassword());
+        Utility.scrollDownWindow(driver);
         loginpo.loginButton.click();
 
     }
@@ -72,7 +76,9 @@ public class LoginPage extends AbstractDriver {
         loginpo.emailpassword.sendKeys("testQA!12");
     }
 
-    public void validateUserLoggedIn() {
+    public void validateUserLoggedIn() throws InterruptedException {
+    	driver.manage().deleteAllCookies();
+    	Thread.sleep(1000);
         waitForElementDisplay(loginpo.loggedIn);
         assertTrue(loginpo.loggedIn.isDisplayed());
     }

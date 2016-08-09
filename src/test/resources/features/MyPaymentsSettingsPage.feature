@@ -14,7 +14,7 @@ Feature: Member updates account details
     And I enter my account number as "BESCPTPL"
     And I enter my sort as "PT50000700000010803055555"
     And I enter my new email as "Tester"
-    And I enter my new password as"QATest!12"
+    And I enter my new password as"testQA!12"
     And I click on account payment record button
     And I click on Yes to accept user account update terms and conditions
     Then I should see successfuly"Les modifications ont bien été effectuées" updated text

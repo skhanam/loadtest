@@ -2,6 +2,8 @@ package com.test.shoop.pages;
 
 import com.test.shoop.pageobjects.RegistrationPageObjects;
 import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.config.Utility;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -30,6 +32,7 @@ public class RegistrationPage extends AbstractDriver {
     }
     public void clickOnRegistrationLink(){
         waitForElementDisplay(reg.registerLink);
+        Utility.acceptCookies(driver);
         reg.registerLink.click();
     }
 
@@ -38,8 +41,6 @@ public class RegistrationPage extends AbstractDriver {
         waitForElementDisplay(reg.registerLink);
        reg.registerLink.click();
         waitForElementDisplay(reg.userName);
-//        final String email = "autotest"+System.currentTimeMillis() +"staging"+ "@quidco.com";
-
         reg.userName.sendKeys(email);
         reg.emailpassword.sendKeys("Testquality09!");
     }
