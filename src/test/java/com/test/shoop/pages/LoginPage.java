@@ -1,5 +1,4 @@
 package com.test.shoop.pages;
-
 import com.test.shoop.config.UserCredentials;
 import com.test.shoop.config.Utility;
 import com.test.shoop.page_stepdef.LoginPageStepDef;
@@ -7,6 +6,7 @@ import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+
 
 import java.util.logging.Logger;
 
@@ -39,6 +39,7 @@ public class LoginPage extends AbstractDriver {
             logOutUser();
               }
         clickOnLoginLink();
+
     }
 
 
