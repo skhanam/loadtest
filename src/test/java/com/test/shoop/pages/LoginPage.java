@@ -31,8 +31,9 @@ public class LoginPage extends AbstractDriver {
 
     public void clickOnLoginLink() {
          waitForElementDisplay(loginpo.loginLink);
-         Utility.acceptCookies(driver);
         loginpo.loginLink.click();
+        Utility.acceptCookies(driver);
+       
     }
 
     public void clickOnHomePageLoginLink(){
@@ -45,7 +46,8 @@ public class LoginPage extends AbstractDriver {
 
     public void doDefaultLogin() {
         loginpo.loginLink.click();
-        waitForElementDisplay(loginpo.userName);
+        Utility.acceptCookies(driver);
+         waitForElementDisplay(loginpo.userName);
         credentials = new UserCredentials("quidcoqa@quidco.com","testQA!12");
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
