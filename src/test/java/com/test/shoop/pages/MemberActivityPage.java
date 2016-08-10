@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Assert;
+
 /**
  * Created by thadeus on 13/04/16.
  */
@@ -51,10 +53,11 @@ public class MemberActivityPage extends AbstractDriver {
         mempo.paymentbutton.click();
 
     }
-    public void validateOnPaymentsPage(){
-
-        waitForElementDisplay(mempo.yourBalanceLink);
-        assertTrue(mempo.yourBalanceLink.isDisplayed());
+    public void validateOnPaymentsPage(String url) throws InterruptedException{
+    	Thread.sleep(1000);
+    	String pageUrl = driver.getCurrentUrl();
+    	System.out.println("URL of the page is ---- "+pageUrl);
+         Assert.assertTrue(url.equals(pageUrl));
     }
 
     public void clickAndAndvalidateUserOnSettingPage(){

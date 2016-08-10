@@ -14,7 +14,7 @@ Feature: Testing login to my shoop member account and edit details
     Given I click on a member my activity link
     Then I should be on the my activity page
     And I click on the  my payments  tab link
-    Then i should  see  the your balance on payments page
+    Then I should verify the url of the page as "https://staging.shoop.fr/utilisateur/paiement/"
 
     Scenario: General setting tab
     And I click on the setting link

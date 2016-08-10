@@ -36,9 +36,9 @@ public class MemberTestActivityPageStepDef {
         memberpage.clickOnMPaymentsPage();
 
     }
-    @Then("^i should  see  the your balance on payments page$")
-    public void i_should_see_the_your_balance_on_payments_page() throws Throwable {
-        memberpage.validateOnPaymentsPage();
+    @Then("^I should verify the url of the page as \"([^\"]*)\"$")
+    public void i_should_verify_the_url_of_the_page_as(String url) throws Throwable {
+        memberpage.validateOnPaymentsPage(url);
         memberpage.clickOnSignoutLink();
             }
 
