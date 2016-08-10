@@ -53,11 +53,12 @@ public class MemberActivityPage extends AbstractDriver {
         mempo.paymentbutton.click();
 
     }
-    public void validateOnPaymentsPage(String url) throws InterruptedException{
+    public void validateOnPaymentsPage(String title) throws InterruptedException{
     	Thread.sleep(1000);
-    	String pageUrl = driver.getCurrentUrl();
-    	System.out.println("URL of the page is ---- "+pageUrl);
-         Assert.assertTrue(url.equals(pageUrl));
+          String pageTitle = driver.getTitle();
+    	 Assert.assertTrue(title.equals(pageTitle));
+         waitForElementDisplay(mempo.yourBalanceLink);
+         mempo.yourBalanceLink.isDisplayed();
     }
 
     public void clickAndAndvalidateUserOnSettingPage(){

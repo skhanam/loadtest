@@ -14,8 +14,8 @@ public class MemberActivityPageObjects {
     public WebElement memberArea;
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     public WebElement myAccountButton;
-  //  @FindBy(xpath = "html/body/div[2]/div/ui-view/div/p/span/span")
-   // public WebElement yourBalanceLink;
+    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/p/span/span")
+    public WebElement yourBalanceLink;
     @FindBy(xpath = "//*[@id='user.payments']")
     public WebElement paymentbutton;
     @FindBy(xpath = "//*[contains(@name,'my-account-link')]")

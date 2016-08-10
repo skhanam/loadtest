@@ -4,6 +4,8 @@ import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.MemberActivityPage;
 import com.test.shoop.config.AbstractDriver;
+
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,11 +38,10 @@ public class MemberTestActivityPageStepDef {
         memberpage.clickOnMPaymentsPage();
 
     }
-    @Then("^I should verify the url of the page as \"([^\"]*)\"$")
-    public void i_should_verify_the_url_of_the_page_as(String url) throws Throwable {
-        memberpage.validateOnPaymentsPage(url);
-        memberpage.clickOnSignoutLink();
-            }
+    @Then("^I should verify the title of the page as \"([^\"]*)\"$")
+    public void i_should_verify_the_title_of_the_page_as(String title) throws Throwable {
+        memberpage.validateOnPaymentsPage(title);
+      }
 
     @Then("^I click on the setting link$")
     public void i_click_on_the_setting_link() throws Throwable {
@@ -50,12 +51,11 @@ public class MemberTestActivityPageStepDef {
     @Then("^I should see the  edit emaillink$")
     public void i_should_see_the_edit_emaillink() throws Throwable {
         memberpage.validateOnEditEmailSettingPage();
-        memberpage.clickOnSignoutLink();
     }
 
     @When("^I click on the signout link$")
     public void i_click_on_the_signout_link() throws Throwable {
-        memberpage.clickOnSignoutLink();
+    	memberpage.clickOnSignoutLink();
     }
 
     @Then("^I should be logged out of my account$")
@@ -63,7 +63,8 @@ public class MemberTestActivityPageStepDef {
         memberpage.validateSignOutComplete();
 
     }
-
+    
+   
 
 
 }
