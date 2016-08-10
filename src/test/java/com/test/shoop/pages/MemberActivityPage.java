@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Assert;
 
 /**
@@ -54,11 +56,10 @@ public class MemberActivityPage extends AbstractDriver {
 
     }
     public void validateOnPaymentsPage(String title) throws InterruptedException{
-    	Thread.sleep(1000);
+    	  driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
           String pageTitle = driver.getTitle();
     	 Assert.assertTrue(title.equals(pageTitle));
-         waitForElementDisplay(mempo.yourBalanceLink);
-         mempo.yourBalanceLink.isDisplayed();
+        
     }
 
     public void clickAndAndvalidateUserOnSettingPage(){
