@@ -40,7 +40,6 @@ public class MemberActivityPage extends AbstractDriver {
 
     public void clickOnMyActivityPage(){
         waitForElementDisplay(mempo.myactivityButton);
-       Utility.acceptCookies(driver);
         mempo.myactivityButton.click();
 
     }
@@ -74,19 +73,11 @@ public class MemberActivityPage extends AbstractDriver {
 
     public void clickOnSignoutLink(){
         waitForElementDisplay(mempo.logOutButton);
-       //if(myAccountButton.isDisplayed()){
         mempo.logOutButton.click();
-       //}
-
-
-    }
+       }
 
     public void validateSignOutComplete(){
-
-        waitForElementDisplay(mempo.loginLiknk);
+    	waitForElementDisplay(mempo.loginLiknk);
         assertTrue(mempo.loginLiknk.isDisplayed());
-
-
-
-    }
+      }
 }

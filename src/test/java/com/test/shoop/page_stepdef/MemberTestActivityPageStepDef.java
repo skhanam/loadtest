@@ -56,6 +56,7 @@ public class MemberTestActivityPageStepDef {
     @When("^I click on the signout link$")
     public void i_click_on_the_signout_link() throws Throwable {
     	memberpage.clickOnSignoutLink();
+    	
     }
 
     @Then("^I should be logged out of my account$")

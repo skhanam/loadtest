@@ -6,10 +6,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+
+import com.test.shoop.pageobjects.LoginPageObjects;
 
 public final class Utility {
 
+	static LoginPageObjects ulp = new LoginPageObjects();
+	
+
+    public Utility() {
+
+       PageFactory.initElements(AbstractDriver.driver, ulp);
+     
+    }
 	
      public static void setWindowMaximise(WebDriver driver){
 	        Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -29,13 +41,16 @@ public final class Utility {
      	
      	
      }
+
      public static void acceptCookies(WebDriver driver){
-    	 
-    	try{
-     Actions act = new Actions(driver);
- 	act.moveToElement(driver.findElement(By.xpath("//*[@ng-click='close()']"))).click().build().perform();
-    	}catch(Exception e){
-    		e.printStackTrace();
-    	}
-     }
+    	
+    	 if(ulp.cookie.isDisplayed()){
+    		 
+    	     Actions act = new Actions(driver);
+           act.moveToElement(ulp.cookie).click().build().perform();
+           
+        }
+     else
+          System.out.println("no cookie");
+    }
 }

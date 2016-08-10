@@ -1,5 +1,6 @@
 package com.test.shoop.pageobjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -30,5 +31,7 @@ public class LoginPageObjects {
     public WebElement signOutLink;
     @FindBy(xpath = "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div")
     public WebElement incorrectlogindetails;
+    @FindBy(xpath = "//*[@ng-click='close()']")
+	public WebElement cookie;
 
 }
