@@ -43,14 +43,13 @@ public final class Utility {
      }
 
      public static void acceptCookies(WebDriver driver){
-    	
-    	 if(ulp.cookie.isDisplayed()){
-    		 
-    	     Actions act = new Actions(driver);
+    	try{
+    		
+    		Actions act = new Actions(driver);
            act.moveToElement(ulp.cookie).click().build().perform();
-           
-        }
-     else
-          System.out.println("no cookie");
+            
+    }catch(Exception e){
+                 System.out.println("no cookie");
+            }
     }
 }
