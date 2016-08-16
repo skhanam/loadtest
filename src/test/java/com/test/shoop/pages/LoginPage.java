@@ -32,7 +32,7 @@ public class LoginPage extends AbstractDriver {
     public void clickOnLoginLink() {
          waitForElementDisplay(loginpo.loginLink);
         loginpo.loginLink.click();
-        Utility.acceptCookies(driver);
+       
        
     }
 
@@ -66,8 +66,9 @@ public class LoginPage extends AbstractDriver {
     }
 
     public void clickLoginButton() {
-    	Utility.scrollDownWindow(driver);
+    	 Utility.scrollDownWindow(driver);
         waitForElementDisplay(loginpo.loginButton);
+        Utility.acceptCookies(driver);
         loginpo.loginButton.click();
     }
 

@@ -1,21 +1,20 @@
 package com.test.shoop.config;
 
 import java.awt.Toolkit;
+import java.util.logging.Logger;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.test.shoop.pageobjects.LoginPageObjects;
 
-public final class Utility {
+public final class Utility extends AbstractDriver{
 
 	static LoginPageObjects ulp = new LoginPageObjects();
-	
+	 private static Logger logger = Logger.getLogger("Utility");
 
     public Utility() {
 
@@ -43,13 +42,18 @@ public final class Utility {
      }
 
      public static void acceptCookies(WebDriver driver){
-    	try{
-    		
+    	
+    	/* try{
+    		waitForElementDisplay(ulp.cookie);
     		Actions act = new Actions(driver);
-           act.moveToElement(ulp.cookie).click().build().perform();
-            
-    }catch(Exception e){
+            act.moveToElement(ulp.cookie).click().build().perform();
+*/
+    	 logger.info("U r here in acceptcookies");
+       	 JavascriptExecutor js = (JavascriptExecutor) driver;
+        	js.executeScript("close();", "");
+        	logger.info("ur script   :"+js.executeScript("close()", ""));
+        /* }catch(Exception e){
                  System.out.println("no cookie");
-            }
+            }*/
     }
 }

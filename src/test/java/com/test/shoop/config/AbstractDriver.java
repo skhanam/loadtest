@@ -76,7 +76,7 @@ public abstract class AbstractDriver {
 
     }
 
-    public void waitForElementDisplay(final WebElement element) throws ElementNotVisibleException{
+    public static void waitForElementDisplay(final WebElement element) throws ElementNotVisibleException{
         Wait<WebDriver> wait = new FluentWait<>(AbstractDriver.driver)
                 .withTimeout(30, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)
