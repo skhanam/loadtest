@@ -40,17 +40,21 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     public void enterCodeBIC(String accout_num){
         waitForElementDisplay(payment.codeBicField);
+        payment.codeBicField.clear();
         payment.codeBicField.sendKeys(accout_num);
 
     }
     public void enterIBAN(String sort_code){
+    	payment.iBANField.clear();
         payment.iBANField.sendKeys(sort_code);
 
     }
     public void enterTitulaireDuCompte(String n_Name){
+    	    payment.nameField.clear();
             payment.nameField.sendKeys(n_Name);
     }
     public void enterMotDePasseShoop(String n_password){
+    	 payment.passwordField.clear();
         payment.passwordField.sendKeys(n_password);
 
     }
