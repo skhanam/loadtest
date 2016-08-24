@@ -4,6 +4,8 @@ import com.test.shoop.config.Utility;
 import com.test.shoop.page_stepdef.LoginPageStepDef;
 import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.config.AbstractDriver;
+
+import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -90,6 +92,12 @@ public class LoginPage extends AbstractDriver {
         loginpo.userName.sendKeys("quidcoqa@quidco.com");
         loginpo.emailpassword.sendKeys("testQA!12");
         loginpo.loggedIn.click();
+    }
+    
+    public void validateLoginPage(String message){
+    	waitForElementDisplay(loginpo.successMessage);
+    	String successMessage = loginpo.successMessage.getText();
+    	Assert.assertTrue(successMessage.equals(message));
     }
 
     public void logOutUser() {

@@ -48,6 +48,11 @@ public class HomePageStepDef {
         loginPage.clickLoginButton();
     }
 
+    @Then("^I should see a greeting message \"([^\"]*)\"$")
+    public void i_should_see_a_greeting_message(String message){
+    	loginPage.validateLoginPage(message);
+    }
+    
     @Then("^I should be logged in to my account$")
     public void i_should_be_logged_in_to_my_account() throws Throwable {
         loginPage.validateUserLoggedIn();

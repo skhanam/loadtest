@@ -7,9 +7,11 @@ import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by shabanakhanum on 6/30/16.
+ * 
  */
+
 public class LoginPageObjects {
-//    @FindBy(xpath = "//a[contains(@href,'je-me-connecte')]")
+	
     @FindBy(name ="login-link")
     public WebElement loginLink;
     @FindBy(xpath = "//input[@type='email']")
@@ -21,7 +23,9 @@ public class LoginPageObjects {
     @FindBy(xpath = "html/body/div[1]/div/div[1]/h1/span[2]")
     public WebElement logi;
     @FindBy(xpath= "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
-    public static WebElement loggedIn;
+    public WebElement loggedIn;
+    @FindBy(xpath= "//html/body/div[2]/div/div[1]/h1/span/span")
+    public WebElement successMessage;
     @FindBy(css = "h1.greeting-header > span.ng-binding.ng-scope")
     public WebElement confirmUserLogged;
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
