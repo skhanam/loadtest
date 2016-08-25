@@ -1,5 +1,8 @@
 package com.test.shoop.page_stepdef;
 
+import java.util.concurrent.TimeUnit;
+
+import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.LoginPage;
 import cucumber.api.java.en.And;
@@ -25,6 +28,7 @@ public class HomePageStepDef {
     public void user_is_logged_in() throws Throwable {
         homePage.navigateToHomePage();
         homePage.getUrl();
+        AbstractDriver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginPage.doDefaultLogin();
     }
 

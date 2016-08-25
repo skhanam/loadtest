@@ -23,7 +23,7 @@ Feature: Testing login to my shoop member account and edit details
   
     And I click on the setting link
     Then I should see the  edit emaillink
-    And I click on the signout link
+   And I click on the signout link
  
 
   Scenario: Validate User Account Signout
