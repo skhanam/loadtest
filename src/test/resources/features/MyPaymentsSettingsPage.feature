@@ -3,7 +3,7 @@
 Feature: Member updates account details
 
   Background: Shoop member Login
-    Given user is logged in
+     Given user is logged in
 
   Scenario: Validate member update details
     Given I click on a member my activity link
