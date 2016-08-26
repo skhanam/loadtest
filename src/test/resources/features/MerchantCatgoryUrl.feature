@@ -1,19 +1,22 @@
 
 @MerchantUrl
+
   Feature: Validate merchant category on shoop
-
+  
+  Background: I launch shoop home page
+      Given I go to shoop home Page
+  
   Scenario Outline: Merchant category tabs urls
-
-    Given I go to shoop home Page
+  
     When I click on a merchant"<merchantTable>"category name
     Then I should see merchant category tabs displayed
 
 
     Examples:
-      | merchantTable      |
-      | bebe               |
-      | Voyages            |
-      | lunettes-de-soleil |
+      | merchantTable            |
+      | bebe                     |
+      | Voyages                  |
+      | lunettes-de-soleil       |
       | montres-bijoux           |
       | chaussures               |
       | enfant                   |
