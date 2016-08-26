@@ -63,6 +63,7 @@ public class RegistrationPage extends AbstractDriver {
 //            UID userid = new UID();
 //            final String email =userid.toString().hashCode() +"@quidco.com";
 //            final String email = "autotest"+System.currentTimeMillis()+"@gmail.com";
+        	waitForElementDisplay(reg.userName);
             logger.info("email being created :"+email);
             reg.userName.sendKeys(email);
             reg.emailpassword.sendKeys("Hannah123L");
