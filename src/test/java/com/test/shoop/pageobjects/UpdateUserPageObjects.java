@@ -30,19 +30,19 @@ public class UpdateUserPageObjects {
     public WebElement usernameModifierLink;
     @FindBy(css = "a[e2e-edit-row='birthdate']")
     public WebElement dateOFBirthModiefierLink;
-    @FindBy(xpath = "//*[contains(@name,'year')]")
+    @FindBy(xpath = "//*[@name='day']/option[9]")
     public WebElement dayOFBirth;
-    @FindBy(xpath = "//*[contains(@name,'month')]")
+    @FindBy(xpath = "//*[contains(@name,'month')]/option[9]")
     public WebElement monthOFBirth;
-    @FindBy(xpath = "//*[contains(@name,'year')]")
+    @FindBy(xpath = "//*[contains(@name,'year')]/option[81]")
     public WebElement yearOFBirth;
     @FindBy(css = "a[e2e-edit-row='postcode']")
     public WebElement postCodeModiefier;
     @FindBy(xpath = "//*[contains(@name,'post_code')]")
     public WebElement editPostcode;
-    @FindBy(css = "#male")
+    @FindBy(xpath = "//div[@class='form-group radio']/div/label[1]/span")
     public WebElement malesex;
-    @FindBy(css = "#female")
+    @FindBy(xpath = "//div[@class='form-group radio']/div/label[2]/span")
     public WebElement Femalesex;
     @FindBy(xpath = "//*[contains(@type,'submit')]")
     public WebElement submitEditDataButton;

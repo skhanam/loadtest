@@ -11,7 +11,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
   Scenario: A member is able to edit first and last names
 
     When I click on modifier link for member names
-    And I enter a new first name as "Thadeus" and last name as"QATester"
+    And I enter a new first name as "Quidco" and last name as"QATester"
     And I click on name record button
  #   Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
@@ -28,7 +28,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
   Scenario: A member is able to edit username
 
     Given i click on modify link for username
-    When I enter my new username as "Quality"
+    When I enter my new username as "Quidco"
     And I click on username record button
   #  Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 

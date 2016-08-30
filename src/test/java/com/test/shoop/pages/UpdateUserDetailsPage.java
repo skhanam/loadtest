@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.test.shoop.config.AbstractDriver;
+import com.test.shoop.config.Utility;
 import com.test.shoop.pageobjects.UpdateUserPageObjects;
 
 /**
@@ -17,20 +18,10 @@ import com.test.shoop.pageobjects.UpdateUserPageObjects;
  */
 public class UpdateUserDetailsPage extends AbstractDriver {
 
-    UpdateUserPageObjects uupo = new UpdateUserPageObjects();
+    UpdateUserPageObjects uupo = PageFactory.initElements(driver,UpdateUserPageObjects.class);
     Actions action = new Actions(driver);
 
-//    public UpdateUserDetailsPage(Actions action) {
-//
-//        PageFactory.initElements(AbstractDriver.driver,uupo);
-//    }
-
-    public UpdateUserDetailsPage() {
-        PageFactory.initElements(AbstractDriver.driver,uupo);
-    }
-
-
-    public void clickOnGeneralSettingsLinkLoggedInUser() {
+      public void clickOnGeneralSettingsLinkLoggedInUser() {
         waitForElementDisplay(uupo.generalSettings);
         uupo.generalSettings.click();
     }
@@ -114,6 +105,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     public void enterNewUserName(String n_userName) {
         waitForElementDisplay(uupo.editUserName);
+        uupo.editUserName.clear();
         uupo.editUserName.sendKeys(n_userName);
     }
 
@@ -125,7 +117,6 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     public void clickToSelectMaleGenderasOption(String sexType) {
         waitForElementDisplay(uupo.malesex);
         uupo.malesex.click();
-        assertTrue(uupo.malesex.isSelected());
     }
 
     public void clickDateOfBirthModifyLink() {
@@ -145,23 +136,20 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     public void selectDayOfBirthToEditDOB(String d_birth){
         waitForElementDisplay(uupo.dayOFBirth);
-        Select day = new Select(uupo.dayOFBirth);
-        day.selectByVisibleText(d_birth);}
-
-
-
-
+        uupo.dayOFBirth.click();
+      
+        
+    }
+      
     public void selectMonthOfBirthToEditDOB(String m_birth){
         waitForElementDisplay(uupo.monthOFBirth);
-       Select month = new Select(uupo.monthOFBirth);
-        month.selectByValue(m_birth);
+        uupo.monthOFBirth.click();
 
     }
 
     public void selectYearOfBirthToEditDOB(String y_bith){
         waitForElementDisplay(uupo.yearOFBirth);
-        Select year = new Select(uupo.yearOFBirth);
-        year.selectByValue(y_bith);
+        uupo.yearOFBirth.click();
 
     }
     public void enterNewPostCodeToEditExistingPostCode(String n_postCode){
@@ -170,4 +158,4 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPostcode.sendKeys(n_postCode);
     }
 
-    }
+}
