@@ -124,6 +124,9 @@ public class UpdateUserDetailsStepDef {
         userDetails.clickOnPostCodeRecordButton();
 
     }
-
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed$")
+    public void i_should_see_details_changed_succefully_message_displayed(String message){
+    	userDetails.validateSuccessMessage(message);
+    }
 
 }

@@ -60,5 +60,7 @@ public class UpdateUserPageObjects {
     public WebElement generalSettings;
     @FindBy(css = ".inline-notification.ng-isolate-scope.successful")
     public WebElement successfulUpdates;
+    
+    
 
 }

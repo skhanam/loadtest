@@ -13,16 +13,16 @@ Feature: As a shoop member I should be able to edit personal details on general 
     When I click on modifier link for member names
     And I enter a new first name as "Quidco" and last name as"QATester"
     And I click on name record button
- #   Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
-
+#html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[1]/div[3]/span
   Scenario: A member is able to edit current email and password
 
     Given I click on modifier email modifier link
     When I enter my new email "quidcoqa@quidco.com" and enter email to confirm "quidcoqa@quidco.com"
     And I enter my new password as "testQA!12"
     And I click on email record button
-   # Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+   Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
 
   Scenario: A member is able to edit username
@@ -30,7 +30,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     Given i click on modify link for username
     When I enter my new username as "Quidco"
     And I click on username record button
-  #  Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+  Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
 
 #  Scenario:A member is able to edit gender to female
@@ -45,7 +45,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     Given I click on the modify link for gender
     When I click to select the "male" gender
     And I click on gender record button
-   # Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+   Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
 
   Scenario: A member is able to edit DOB
@@ -55,13 +55,13 @@ Feature: As a shoop member I should be able to edit personal details on general 
     And I enter my month of as"09"
     And I enter and "1996"of birth as
     And I click on DOB record button
-   # Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+   Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
   Scenario: A member is able to edit post code
 
     Given I click on the modify link for Postcode
     When I enter my new post code as"75016"
     And I click on postcode record button
-    #Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
 

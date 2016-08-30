@@ -157,5 +157,10 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPostcode.clear();
         uupo.editPostcode.sendKeys(n_postCode);
     }
-
+    public void validateSuccessMessage(String message){
+    	 waitForElementDisplay(uupo.successfulUpdates);
+    	uupo.successfulUpdates.isDisplayed();
+    	
+    	
+    }
 }

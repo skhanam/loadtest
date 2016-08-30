@@ -3,6 +3,7 @@ Feature: Sign in with un-registered email address
 
 
   Scenario: Sign up with un-registered email address
+  
     Given I go to shoop home Page
     When I click on the login link
     And I enter an email address that is not registered on Shoop
