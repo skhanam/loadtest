@@ -15,7 +15,6 @@ Feature: As a shoop member I should be able to edit personal details on general 
     And I click on name record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
-#html/body/div[2]/div/ui-view/div/div/div/div[2]/div/div[2]/div[1]/div[3]/span
   Scenario: A member is able to edit current email and password
 
     Given I click on modifier email modifier link
