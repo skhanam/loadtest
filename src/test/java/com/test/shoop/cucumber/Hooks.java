@@ -24,9 +24,12 @@ public class Hooks extends AbstractDriver {
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
         logger.info( "Starting before each scenario ..");
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
+            for(String tag : scenario.getSourceTagNames()){
+                System.out.print("Tag: " + tag);
+            }
+        }
 
-    }
 
     public void embedScreenshot(Scenario scenario) {
         try {
