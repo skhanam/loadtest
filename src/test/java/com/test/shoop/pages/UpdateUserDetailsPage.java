@@ -134,6 +134,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.usernameModifierLink.click();
     }
     public void clickOnModifyPostCodeLink() {
+    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.postCodeModiefier);
         uupo.postCodeModiefier.click();
     }

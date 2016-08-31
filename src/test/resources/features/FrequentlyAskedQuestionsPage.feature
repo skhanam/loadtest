@@ -42,3 +42,11 @@ Feature: view shoop Questions fréquentes
 
     And I click on the Contact us link
     Then I should be on customer service page
+    
+    
+    
+    
+    
+    
+    
+    
