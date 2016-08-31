@@ -65,7 +65,7 @@ public abstract class AbstractDriver {
                 } else if (operatingSystem.contains("Centos")) {
                     System.setProperty("webdriver.chrome.driver", chromeCentosdriver);
                 }
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromeMacdriver);
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromeLinuxdriver);
                 driver = new ChromeDriver(dc);
                 Utility.setWindowMaximise(driver);
 
