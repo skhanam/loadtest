@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import static junit.framework.TestCase.assertTrue;
@@ -101,13 +102,12 @@ public class LoginPage extends AbstractDriver {
     }
 
     public void logOutUser() {
+        driver.navigate().refresh();
         waitForElementDisplay(loginpo.myAccount);
+        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         build.click(loginpo.myAccount).build().perform();
+        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         loginpo.signOutLink.click();
-       build.moveToElement(loginpo.signOutLink).
-                click().
-                build().
-                perform();
     }
 
 
