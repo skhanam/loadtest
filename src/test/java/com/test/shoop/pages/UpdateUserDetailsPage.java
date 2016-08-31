@@ -95,11 +95,13 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     }
 
     public void clickonNameModifierLink() {
+    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.nameModifierLink);
         uupo.nameModifierLink.click();
     }
 
     public void clickEmailModifyLink() {
+    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.emailModifierLink);
         uupo.emailModifierLink.click();
 
@@ -113,7 +115,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
 
     public void clickOnGenderModifyLink() {
-    	
+    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.genderModifierLink);
         uupo.genderModifierLink.click();
     }
@@ -123,6 +125,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     }
 
     public void clickDateOfBirthModifyLink() {
+    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.dateOFBirthModiefierLink);
         uupo.dateOFBirthModiefierLink.click();
 
@@ -130,6 +133,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     public void clickOnModifyUsernameLink() {
     	Utility.scrollDownWindow(driver);
+    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.usernameModifierLink);
         uupo.usernameModifierLink.click();
     }
