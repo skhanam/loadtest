@@ -2,6 +2,8 @@ package com.test.shoop.pages;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -111,6 +113,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
 
     public void clickOnGenderModifyLink() {
+    	
         waitForElementDisplay(uupo.genderModifierLink);
         uupo.genderModifierLink.click();
     }
@@ -159,6 +162,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPostcode.sendKeys(n_postCode);
     }
     public void validateSuccessMessage(String message){
+    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
     	 waitForElementDisplay(uupo.successfulUpdates);
     	uupo.successfulUpdates.isDisplayed();
     	

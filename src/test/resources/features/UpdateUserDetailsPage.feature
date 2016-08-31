@@ -21,7 +21,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     When I enter my new email "quidcoqa@quidco.com" and enter email to confirm "quidcoqa@quidco.com"
     And I enter my new password as "testQA!12"
     And I click on email record button
-   Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
 
   Scenario: A member is able to edit username
@@ -29,7 +29,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     Given i click on modify link for username
     When I enter my new username as "Quidco"
     And I click on username record button
-  Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
 
 #  Scenario:A member is able to edit gender to female
