@@ -39,7 +39,8 @@ Feature: As a shoop member I should be able to edit personal details on general 
 #    And I click on gender record button
 #    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
-  Scenario: A member is able to edit gender to male
+ 
+    Scenario: A member is able to edit gender to male
 
     Given I click on the modify link for gender
     When I click to select the "male" gender

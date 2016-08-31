@@ -39,7 +39,6 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     }
     public void clickOnGenderRecordButton(){
      waitForElementDisplay(uupo.genderRecordButton);
-     Utility.scrollDownWindow(driver);
         uupo.genderRecordButton.click();
     }
     public void clickOnDateOfBirthRecordButton(){
@@ -127,6 +126,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     }
 
     public void clickOnModifyUsernameLink() {
+    	Utility.scrollDownWindow(driver);
         waitForElementDisplay(uupo.usernameModifierLink);
         uupo.usernameModifierLink.click();
     }
