@@ -18,4 +18,5 @@ Feature: Member updates account details
     And I click on account payment record button
     And I click on Yes to accept user account update terms and conditions
     Then I should see successfuly"Les modifications ont bien été effectuées" updated text
+    And I click on the signout link
 

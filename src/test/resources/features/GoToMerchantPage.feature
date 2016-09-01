@@ -8,9 +8,9 @@
     When I go to a merchant page "groupon"
     And I click on the cashback link Obtenir mon cashback
     Then I am prompted to login as shoop member
-    #Then I should be logged in to my account
     And I click again on cashback
     Then the user is directed to the merchants home page "groupon"
+    
 
 #    Then I see results <merchantname>
 #    Then I click on cashback of merchant

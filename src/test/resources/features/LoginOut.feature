@@ -11,7 +11,7 @@ Feature:  Shoop member account login test
     And I enter my password
     And I click on the login button
     Then I should see a greeting message "Bonjour"
-    And I should be logged out
+   # And I should be logged out
 
 
 

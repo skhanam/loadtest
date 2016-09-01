@@ -23,7 +23,7 @@ Feature: view shoop Questions fréquentes
 
   Scenario: Can we consult the offers before signing up?
 
-    And I click on the "Peut-on consulter les offres avant de s'inscrire  link
+    And I click on the Peut-on consulter les offres avant de s'inscrire  link
     Then I should see text containing "Bien sûr ! Nous travaillons déjà avec des centaines de marchands avec qui nous négocions pour vous les" offers
 
   Scenario: How much will I earn?link

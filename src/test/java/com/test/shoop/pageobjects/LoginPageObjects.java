@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPageObjects {
 	
-    @FindBy(name ="login-link")
+    @FindBy(id ="header-login-link")
     public WebElement loginLink;
     @FindBy(xpath = "//input[@type='email']")
     public WebElement userName;

@@ -49,6 +49,7 @@ public class LoginPage extends AbstractDriver {
 
 
     public void doDefaultLogin() {
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginpo.loginLink.click();
         Utility.acceptCookies(driver);
          waitForElementDisplay(loginpo.userName);

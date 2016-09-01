@@ -1,4 +1,7 @@
 @MerchantCategory
+
+
+
 Feature: validate merchant Category
 
  Background: launch shoop home page
@@ -10,6 +13,7 @@ Feature: validate merchant Category
     When I click on a merchant category"<merchantCategory>" link
     Then I should be on the shoop merchant category page
    # Then I should be on the shoop "<termOnMerchantpage>" merchant page
+   
     Examples:
 
       | merchantCategory      | termOnMerchantpage    |

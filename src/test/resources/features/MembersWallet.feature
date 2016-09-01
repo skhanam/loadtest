@@ -14,7 +14,7 @@ Feature: As a user
     Then I should be on the my activity page
     When I click on the  my payments  tab link
     Then I should see transactions in my wallet
-
+    And I click on the signout link
 
 
 

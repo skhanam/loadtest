@@ -63,5 +63,6 @@ Feature: As a shoop member I should be able to edit personal details on general 
     When I enter my new post code as"75016"
     And I click on postcode record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    And I click on the signout link
 
 

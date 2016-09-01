@@ -10,6 +10,7 @@
   
     When I click on a merchant"<merchantTable>"category name
     Then I should see merchant category tabs displayed
+     
 
 
     Examples:

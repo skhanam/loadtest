@@ -48,7 +48,7 @@ public class FrequentlyAskedQuestionStepDef {
 
     }
 
-    @When("^I click on the \"Peut-on consulter les offres avant de s'inscrire  link$")
+    @When("^I click on the Peut-on consulter les offres avant de s'inscrire  link$")
     public void i_click_on_the_Peut_on_consulter_les_offres_avant_de_s_inscrire_link() throws Throwable {
         questions.clickOncanWeConsultTheOffersBeforeSignUpLink();
 

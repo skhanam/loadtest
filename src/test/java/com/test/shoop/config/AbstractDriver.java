@@ -68,7 +68,6 @@ public abstract class AbstractDriver {
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromeLinuxdriver);
                 driver = new ChromeDriver(dc);
                 Utility.setWindowMaximise(driver);
-
             }
         }
     }
