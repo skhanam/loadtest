@@ -20,6 +20,7 @@ public class Hooks extends AbstractDriver {
 
     public static Logger logger = Logger.getLogger("InfoLogging");
     public HomePage homePage = new HomePage();
+    public LoginPage loginPage = new LoginPage();
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
@@ -43,6 +44,7 @@ public class Hooks extends AbstractDriver {
     @After
     public void afterScenario(Scenario scenario) {
         embedScreenshot(scenario);
+//        loginPage.newUserlogout();
     }
 
 
