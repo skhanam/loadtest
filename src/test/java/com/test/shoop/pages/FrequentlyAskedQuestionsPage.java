@@ -12,18 +12,17 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.concurrent.TimeUnit;
+
 
 
 /**
  * Created by thadeus on 14/07/16.
  */
 public class FrequentlyAskedQuestionsPage extends AbstractDriver {
-    FrequentlyAskedQuestionPageObjects questions = new FrequentlyAskedQuestionPageObjects();
+    
+	FrequentlyAskedQuestionPageObjects questions = PageFactory.initElements(driver, FrequentlyAskedQuestionPageObjects.class);
 
-    public FrequentlyAskedQuestionsPage() {
-        PageFactory.initElements(AbstractDriver.driver, questions);
-
-    }
 
     public void clickOnByTheWaywhatsTheCashbackLink() {
         waitForElementDisplay(questions.whatsthecashback);
@@ -32,7 +31,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void validateTheWaywhatsTheCashbackLink(String c_back) {
         waitForElementDisplay(questions.whatsthecashback);
-        assertTrue(questions.whatsthecashback.getText().contains(c_back));
+        String whatsCashBack = questions.whatsthecashback.getText();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        assertTrue(whatsCashBack.contains(c_back));
 
     }
 
@@ -43,7 +44,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void validateShoopHowHeMakesMoney(String text_cash) {
         waitForElementDisplay(questions.howShoopMakesMoney);
-        assertTrue(questions.howShoopMakesMoney.getText().contains(text_cash));
+        String shoopMakesMoney = questions.howShoopMakesMoney.getText();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        assertTrue(shoopMakesMoney.contains(text_cash));
     }
 
     public void clickOnIsItSafeAndSecureLink() {
@@ -55,7 +58,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void validatesIsItSafeAndSecureLink(String s_secure) {
         waitForElementDisplay(questions.safeSecure);
-        assertTrue(questions.safeSecure.getText().contains(s_secure));
+        String safeSecure = questions.safeSecure.getText();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        assertTrue(safeSecure.contains(s_secure));
 
     }
 
@@ -67,7 +72,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void validateCanWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
         waitForElementDisplay(questions.consultOfferB4SigningUp);
-        assertTrue(questions.consultOfferB4SigningUp.getText().contains(offer_signUp));
+        String consultOffer = questions.consultOfferB4SigningUp.getText();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        assertTrue(consultOffer.contains(offer_signUp));
     }
 
     public void clickOnHowMuchWillIEarnLink() {
@@ -78,7 +85,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void ValidateHowMuchWillEarnLink(String c_earing) {
     	waitForElementDisplay(questions.HowMuchToEarn);
-        assertTrue(questions.HowMuchToEarn.getText().contains(c_earing));
+    	String howMuchToEarn = questions.HowMuchToEarn.getText();
+    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        assertTrue(howMuchToEarn.contains(c_earing));
 
     }
 
@@ -94,7 +103,8 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     
     public void validateHowITWorksLink(String w_texy) {
         waitForElementDisplay(questions.HowItWorks);
-        assertTrue(questions.HowItWorks.getText().contains(w_texy));
+        String howItWorks = questions.HowItWorks.getText();
+        assertTrue(howItWorks.contains(w_texy));
     }
 
     public void clickOnTheContactLink(){  
@@ -106,8 +116,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
     
     public void ValidateOnTheContactLinkPage(){
-    	
-        waitForElementDisplay(questions.contactPage);
+    	 waitForElementDisplay(questions.contactPage);
         assertTrue(questions.contactPage.isDisplayed());
         driver.getTitle();
     }

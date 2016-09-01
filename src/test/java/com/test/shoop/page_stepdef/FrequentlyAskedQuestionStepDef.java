@@ -25,6 +25,11 @@ public class FrequentlyAskedQuestionStepDef {
         questions.validateTheWaywhatsTheCashbackLink(arg1);
 
     }
+    
+    @Then("^I should see text containing \"([^\"]*)\" in how he makes money$")
+    public void i_should_see_text_containing_in_how_he_makes_money(String makes_money){
+    	questions.validateShoopHowHeMakesMoney(makes_money);
+    }
 
     @When("^I click on the Comment Shoop gagne-t-il de l'argent link$")
     public void i_click_on_the_Comment_Shoop_gagne_t_il_de_l_argent_link() throws Throwable {
