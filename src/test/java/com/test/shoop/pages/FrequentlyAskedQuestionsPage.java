@@ -33,6 +33,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         waitForElementDisplay(questions.whatsthecashback);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String whatsCashBack = questions.whatsthecashback.getText();
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         assertTrue(whatsCashBack.contains(c_back));
      }
 
@@ -45,6 +46,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         waitForElementDisplay(questions.howShoopMakesMoney);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String shoopMakesMoney = questions.howShoopMakesMoney.getText();
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         assertTrue(shoopMakesMoney.contains(text_cash));
     }
 
@@ -57,9 +59,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void validatesIsItSafeAndSecureLink(String s_secure) {
         waitForElementDisplay(questions.safeSecure);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         String safeSecure = questions.safeSecure.getText();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        assertTrue(safeSecure.contains(s_secure));
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+         assertTrue(safeSecure.contains(s_secure));
 
     }
 
@@ -71,8 +74,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void validateCanWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
         waitForElementDisplay(questions.consultOfferB4SigningUp);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         String consultOffer = questions.consultOfferB4SigningUp.getText();
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         assertTrue(consultOffer.contains(offer_signUp));
     }
 
@@ -84,8 +88,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void ValidateHowMuchWillEarnLink(String c_earing) {
     	waitForElementDisplay(questions.HowMuchToEarn);
-    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	String howMuchToEarn = questions.HowMuchToEarn.getText();
+    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	assertTrue(howMuchToEarn.contains(c_earing));
 
     }
@@ -101,8 +106,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     
     public void validateHowITWorksLink(String w_texy) {
         waitForElementDisplay(questions.HowItWorks);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         String howItWorks = questions.HowItWorks.getText();
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         assertTrue(howItWorks.contains(w_texy));
     }
 
@@ -116,8 +122,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     
     public void ValidateOnTheContactLinkPage(){
     	 waitForElementDisplay(questions.contactPage);
-    	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    	 driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         assertTrue(questions.contactPage.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         driver.getTitle();
     }
 
