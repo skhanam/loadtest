@@ -33,6 +33,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         waitForElementDisplay(questions.whatsthecashback);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String whatsCashBack = questions.whatsthecashback.getText();
+        System.out.println("value of whats the cash back  "+whatsCashBack);
         assertTrue(whatsCashBack.contains(c_back));
      }
 
@@ -45,6 +46,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         waitForElementDisplay(questions.howShoopMakesMoney);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String shoopMakesMoney = questions.howShoopMakesMoney.getText();
+       System.out.println("value of shoop makes money  "+shoopMakesMoney);
         assertTrue(shoopMakesMoney.contains(text_cash));
     }
 
@@ -57,8 +59,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void validatesIsItSafeAndSecureLink(String s_secure) {
         waitForElementDisplay(questions.safeSecure);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String safeSecure = questions.safeSecure.getText();
+        System.out.println("value of safe secure  "+safeSecure);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         assertTrue(safeSecure.contains(s_secure));
 
     }
@@ -73,6 +76,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         waitForElementDisplay(questions.consultOfferB4SigningUp);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String consultOffer = questions.consultOfferB4SigningUp.getText();
+        System.out.println("value of consultOffer "+consultOffer);
         assertTrue(consultOffer.contains(offer_signUp));
     }
 
@@ -86,6 +90,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     	waitForElementDisplay(questions.HowMuchToEarn);
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	String howMuchToEarn = questions.HowMuchToEarn.getText();
+    	 System.out.println("value of how much to earn   "+howMuchToEarn);
     	assertTrue(howMuchToEarn.contains(c_earing));
 
     }
@@ -103,6 +108,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         waitForElementDisplay(questions.HowItWorks);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String howItWorks = questions.HowItWorks.getText();
+        System.out.println("value of how it works   "+howItWorks);
         assertTrue(howItWorks.contains(w_texy));
     }
 
