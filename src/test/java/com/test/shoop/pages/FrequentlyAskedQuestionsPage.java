@@ -4,12 +4,9 @@ import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
 import com.test.shoop.pageobjects.FrequentlyAskedQuestionPageObjects;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertTrue;
@@ -32,9 +29,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void validateTheWaywhatsTheCashbackLink(String c_back) {
-        waitForElementDisplay(questions.whatsthecashback);
+        waitForElementDisplay(questions.whatsthecashbackText);
         driverWait.toString().contains(c_back);
-        String whatsCashBack = questions.whatsthecashback.getText();
+        String whatsCashBack = questions.whatsthecashbackText.getText();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         assertTrue(whatsCashBack.contains(c_back));
      }
@@ -45,9 +42,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void validateShoopHowHeMakesMoney(String text_cash) {
-        waitForElementDisplay(questions.howShoopMakesMoney);
+        waitForElementDisplay(questions.howShoopMakesMoneyText);
         driverWait.toString().contains(text_cash);
-        String shoopMakesMoney = questions.howShoopMakesMoney.getText();
+        String shoopMakesMoney = questions.howShoopMakesMoneyText.getText();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         assertTrue(shoopMakesMoney.contains(text_cash));
     }
@@ -60,9 +57,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void validatesIsItSafeAndSecureLink(String s_secure) {
-        waitForElementDisplay(questions.safeSecure);
+        waitForElementDisplay(questions.safeSecureText);
        driverWait.toString().contains(s_secure);
-        String safeSecure = questions.safeSecure.getText();
+        String safeSecure = questions.safeSecureText.getText();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
          assertTrue(safeSecure.contains(s_secure));
 
@@ -75,9 +72,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void validateCanWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
-        waitForElementDisplay(questions.consultOfferB4SigningUp);
+        waitForElementDisplay(questions.consultOfferB4SigningUpText);
         driverWait.toString().contains(offer_signUp);
-        String consultOffer = questions.consultOfferB4SigningUp.getText();
+        String consultOffer = questions.consultOfferB4SigningUpText.getText();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         assertTrue(consultOffer.contains(offer_signUp));
     }
@@ -89,9 +86,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void ValidateHowMuchWillEarnLink(String c_earing) {
-    	waitForElementDisplay(questions.HowMuchToEarn);
+    	waitForElementDisplay(questions.HowMuchToEarnText);
     	driverWait.toString().contains(c_earing);
-    	String howMuchToEarn = questions.HowMuchToEarn.getText();
+    	String howMuchToEarn = questions.HowMuchToEarnText.getText();
     	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
     	assertTrue(howMuchToEarn.contains(c_earing));
 
@@ -106,9 +103,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     
     
     public void validateHowITWorksLink(String w_texy) {
-        waitForElementDisplay(questions.HowItWorks);
+        waitForElementDisplay(questions.HowItWorksText);
         driverWait.toString().contains(w_texy);
-        String howItWorks = questions.HowItWorks.getText();
+        String howItWorks = questions.HowItWorksText.getText();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         assertTrue(howItWorks.contains(w_texy));
     }
