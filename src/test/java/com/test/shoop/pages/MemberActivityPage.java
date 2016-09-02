@@ -55,9 +55,9 @@ public class MemberActivityPage extends AbstractDriver {
 
     }
     public void validateOnPaymentsPage(String title) throws InterruptedException{
-    	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
           String pageTitle = driver.getTitle();
-          driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+          driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	 Assert.assertTrue(title.equals(pageTitle));
        }
 
