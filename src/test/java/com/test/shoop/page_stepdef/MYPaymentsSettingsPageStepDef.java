@@ -1,6 +1,8 @@
 package com.test.shoop.page_stepdef;
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pages.MYPayementsSettingsPage;
+
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -67,5 +69,35 @@ public class MYPaymentsSettingsPageStepDef {
         paymentsPage.validateMemberPaymentsSuccessfullyUpdated(arg1);
 
     }
-
+     
+    @When("^I click on edit link of paypal account$")
+    public void i_click_on_edit_link_of_paypal_account(){
+    	paymentsPage.clickOnPaypalEditButton();
+    }
+    
+    @And("^I click on link my paypal account button$")
+    public void i_click_on_link_my_paypal_account_button(){
+    	paymentsPage.clickOnLinkPapalAccountButton();
+    }
+    
+    @Then("^I should be on the Paypal login page$")
+    public void i_should_be_on_the_Paypal_login_page(){
+    	paymentsPage.validatePaypalLoginPage();
+    }
+   
+    @And("^I enter paypal account emailid as \"([^\"]*)\"$")
+    public void i_enter_paypal_account_emailid_as(String emailid){
+    	paymentsPage.enterPaypalEmail(emailid);
+    }
+    
+    @And("^I enter paypal account password as \"([^\"]*)\"$")
+    public void i_enter_paypal_account_password(String password){
+    	paymentsPage.enterPaypalEmail(password);
+   }
+    
+    @And("^I click on sign in button on paypal page$")
+    public void i_click_on_sign_in_button_on_paypal_page(){
+    	paymentsPage.clickOnPaypalLoginButton();
+    }
+    
 }

@@ -82,5 +82,33 @@ public class MYPayementsSettingsPage extends AbstractDriver {
                 perform();
         action.click().build().perform();
     }
-
+    
+    public void clickOnPaypalEditButton(){
+    	waitForElementDisplay(payment.paypalEditButton);
+    	payment.paypalEditButton.click();
+    }
+    
+    public void clickOnLinkPapalAccountButton(){
+    	waitForElementDisplay(payment.paypalLinkMyAccountutton);
+    	payment.paypalLinkMyAccountutton.click();
+    }
+    
+    public void enterPaypalEmail(String email){
+    	waitForElementDisplay(payment.paypalEmail);
+    	payment.paypalEmail.sendKeys(email);
+    }
+    
+    public void enterPaypalPassword(String password){
+    	waitForElementDisplay(payment.paypalPassword);
+    	payment.paypalPassword.sendKeys(password);
+    }
+    
+    public void clickOnPaypalLoginButton(){
+    	waitForElementDisplay(payment.paypalLoginButton);
+    	payment.paypalLoginButton.click();
+    }
+    
+    public void validatePaypalLoginPage(){
+    	payment.validatePaypalLoginPage.isDisplayed();
+    }
 }
