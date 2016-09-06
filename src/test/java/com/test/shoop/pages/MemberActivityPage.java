@@ -72,7 +72,7 @@ public class MemberActivityPage extends AbstractDriver {
     }
 
     public void clickOnSignoutLink(){
-    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         waitForElementDisplay(mempo.logOutButton);
         mempo.logOutButton.click();
        }

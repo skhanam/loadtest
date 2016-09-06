@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.concurrent.TimeUnit;
+
 
 /**
  * Created by thadeus on 21/07/16.
@@ -109,6 +111,33 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     
     public void validatePaypalLoginPage(){
+    	waitForElementDisplay(payment.validatePaypalLoginPage);
     	payment.validatePaypalLoginPage.isDisplayed();
     }
+    
+    public void validateSuccessMessage(){
+    	waitForElementDisplay(payment.validateSuccessmessage);
+    	payment.validateSuccessmessage.isDisplayed();
+    }
+    
+    
+    public void validatePaypalAccountLinkSuccessMessage(){
+    	waitForElementDisplay(payment.paypalLinkaddedSuccessMessage);
+    	payment.paypalLinkaddedSuccessMessage.isDisplayed();
+    }
+    
+    public void clickOnDissociatePaypalLink(){
+    	waitForElementDisplay(payment.dissociatePaypallink);
+    	driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+    	payment.dissociatePaypallink.click();
+    	
+    }
+    
+    public void clickOnSignoutLink(){
+    	//driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    	waitForElementDisplay(payment.paypalLinkMyAccountutton);
+        waitForElementDisplay(payment.logOutButton);
+        payment.logOutButton.click();
+       }
 }
+

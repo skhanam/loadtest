@@ -45,4 +45,18 @@ public class MYPayementsSettingsPageObjects {
     public WebElement validatePaypalLoginPage;
     @FindBy(xpath = "//*[@id='btnLogin']")
     public WebElement paypalLoginButton;
+    @FindBy(xpath = "//*[@id='content']/p")
+    public WebElement validateSuccessmessage;
+    @FindBy(xpath = "//*[@id='agreeConsent']")
+    public WebElement agreeButton;
+    @FindBy(xpath = "//div[@class='td']/form/div[2]/div/button[1]")
+    public WebElement dissociatePaypallink;
+    @FindBy(xpath = "//a[@id='signOut']")
+    public WebElement logOutButton;
+    @FindBy(xpath = "//span[@class='inline-notification e2e-inline-notification ng-isolate-scope successful']")
+    public WebElement paypalLinkaddedSuccessMessage;
+    
+    
+    
+    
 }

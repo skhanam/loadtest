@@ -92,7 +92,7 @@ public class MYPaymentsSettingsPageStepDef {
     
     @And("^I enter paypal account password as \"([^\"]*)\"$")
     public void i_enter_paypal_account_password(String password){
-    	paymentsPage.enterPaypalEmail(password);
+    	paymentsPage.enterPaypalPassword(password);
    }
     
     @And("^I click on sign in button on paypal page$")
@@ -100,4 +100,26 @@ public class MYPaymentsSettingsPageStepDef {
     	paymentsPage.clickOnPaypalLoginButton();
     }
     
+    @Then("^I should see Hi message$")
+    public void i_should_see_Hi_message(){
+    	paymentsPage.validateSuccessMessage();
+    }
+     
+    @Then("^I should see paypal account added Success message$")
+    public void i_should_paypal_account_added_Success_message(){
+    	paymentsPage.validatePaypalAccountLinkSuccessMessage();
+    } 
+    
+    
+    @And("^I click on Dissociate my paypal account button$")
+    public void i_click_on_Dissociate_my_paypal_account_button(){
+    	paymentsPage.clickOnDissociatePaypalLink();
+    }
+    
+    @When("^I click on the signout link on paypal link page$")
+    public void i_click_on_the_signout_link_on_paypal_link_page() throws Throwable {
+    	paymentsPage.clickOnSignoutLink();
+    	
+    }
+
 }
