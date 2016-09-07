@@ -12,7 +12,7 @@ Feature: Member updates account details
   Scenario: Validate member update details
       When I click on modify link for payment account
     And I enter my account number as "BESCPTPL"
-    And I enter my sort as "FR7630066100410001057380116"
+    And I enter my sort code as "FR7630066100410001057380116"
     And I enter my new email as "Tester"
     And I enter my new password as"testQA!12"
     And I click on account payment record button

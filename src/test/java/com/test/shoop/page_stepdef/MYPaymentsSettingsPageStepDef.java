@@ -36,8 +36,8 @@ public class MYPaymentsSettingsPageStepDef {
      paymentsPage.enterCodeBIC(arg1);
     }
 
-    @When("^I enter my sort as \"([^\"]*)\"$")
-    public void i_enter_my_sort_as(String arg1) throws Throwable {
+    @When("^I enter my sort code as \"([^\"]*)\"$")
+    public void i_enter_my_sort_code_as(String arg1) throws Throwable {
         paymentsPage.enterIBAN(arg1);
 
     }
