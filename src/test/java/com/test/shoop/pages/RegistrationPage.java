@@ -88,21 +88,26 @@ public class RegistrationPage extends AbstractDriver {
     
     public void validateBICErrorMessage(String errorBIC){
     	waitForElementDisplay(reg.errorMessageBIC);
-    	reg.errorMessageBIC.isDisplayed();
+    	String message = reg.errorMessageBIC.getText();
+    	Assert.assertTrue(message.contains(errorBIC));
     }
 
     public void validateIBANErrorMessage(String errorIBAN){
     	waitForElementDisplay(reg.errorMessageIBAN);
-    	reg.errorMessageIBAN.isDisplayed();
+    	String message = reg.errorMessageIBAN.getText();
+    	Assert.assertTrue(message.contains(errorIBAN));
+    
     }
     
     public void validateEmailErrorMessage(String errorEmail){
     	waitForElementDisplay(reg.errorMessageEmail);
-    	reg.errorMessageEmail.isDisplayed();
+    	String message = reg.errorMessageEmail.getText();
+    	Assert.assertTrue(message.contains(errorEmail));
     }
     
     public void validatePasswordErrorMessage(String errorPassword){
     	waitForElementDisplay(reg.errorMessagePassword);
-    	reg.errorMessagePassword.isDisplayed();
+    	String message = reg.errorMessagePassword.getText();
+    	Assert.assertTrue(message.contains(errorPassword));
     }
 }
