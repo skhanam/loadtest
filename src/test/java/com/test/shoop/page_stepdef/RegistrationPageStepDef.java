@@ -3,6 +3,8 @@ package com.test.shoop.page_stepdef;
 import com.test.shoop.pages.LoginPage;
 import com.test.shoop.pages.RegistrationPage;
 import com.test.shoop.config.AbstractDriver;
+
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
@@ -62,5 +64,26 @@ public class RegistrationPageStepDef {
     public void i_should_see_message_advising_me_to_accept_the_terms_and_conditions(String arg1) throws Throwable {
         reg.validaterErrorMessageForTermsandConditions(arg1);
     }
+    
+    @Then("^I should see error message as \"([^\"]*)\" for BIC$")
+    public void i_should_see_error_message_as_for_BIC(String errorBIC){
+    	reg.validateBICErrorMessage(errorBIC);
+    }
+    
+    @And("^I should see error message as \"([^\"]*)\" for IBAN$")
+    public void i_should_see_error_message_as_for_IBAN(String errorIBAN){
+    	reg.validateIBANErrorMessage(errorIBAN);
+    }
+    
+    @And("^I should see error message as \"([^\"]*)\" for email field$")
+    public void i_should_see_error_message_as_for_email_field(String errorEmail){
+    	reg.validateEmailErrorMessage(errorEmail);
+    }
+    
+    @And("^I should see error message as \"([^\"]*)\" for password field$")
+    public void i_should_see_error_message_as_for_password_field(String errorPassword){
+    	reg.validatePasswordErrorMessage(errorPassword);
+    }
+    
 
 }

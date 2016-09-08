@@ -37,11 +37,15 @@ public class RegistrationPageObjects {
 //    @FindBy(xpath =".//*button[@type='submit']")
     @FindBy(id ="register-submit")
     public WebElement regButton;
-
-//    @FindBy(css = Constants.loggedIn)
-//   public WebElement loggedIn;
-   @FindBy(css=".error.ng-scope>span")
-   public WebElement regErrorMessaging;
-
+    @FindBy(css=".error.ng-scope>span")
+    public WebElement regErrorMessaging;
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[1]/div/span/span")
+    public WebElement errorMessageBIC;
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[3]/div/span/span")
+    public WebElement errorMessageIBAN;
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[5]/div/span/span")
+    public WebElement errorMessageEmail;
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[7]/div/span/span")
+    public WebElement errorMessagePassword;
     
 }

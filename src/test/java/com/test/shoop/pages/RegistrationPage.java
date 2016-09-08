@@ -19,17 +19,11 @@ import com.test.shoop.config.AbstractDriver;
  */
 public class RegistrationPage extends AbstractDriver {
     Actions action = new Actions(driver);
-   RegistrationPageObjects reg = new RegistrationPageObjects();
+   RegistrationPageObjects reg = PageFactory.initElements(driver, RegistrationPageObjects.class);
     private static Logger logger = Logger.getLogger("InfoLogging");
     final String email = "autotest"+System.currentTimeMillis()+"@quidco.com";
 
-    public RegistrationPage()
-
-    {
-
-        PageFactory.initElements(AbstractDriver.driver, reg);
-
-    }
+ 
     public void clickOnRegistrationLink(){
         waitForElementDisplay(reg.registerLink);
         Utility.acceptCookies(driver);
@@ -91,6 +85,24 @@ public class RegistrationPage extends AbstractDriver {
         Assert.assertTrue(reg.welcomeGreetings.getText().contains(greetings));
 
     }
+    
+    public void validateBICErrorMessage(String errorBIC){
+    	waitForElementDisplay(reg.errorMessageBIC);
+    	reg.errorMessageBIC.isDisplayed();
+    }
 
-
+    public void validateIBANErrorMessage(String errorIBAN){
+    	waitForElementDisplay(reg.errorMessageIBAN);
+    	reg.errorMessageIBAN.isDisplayed();
+    }
+    
+    public void validateEmailErrorMessage(String errorEmail){
+    	waitForElementDisplay(reg.errorMessageEmail);
+    	reg.errorMessageEmail.isDisplayed();
+    }
+    
+    public void validatePasswordErrorMessage(String errorPassword){
+    	waitForElementDisplay(reg.errorMessagePassword);
+    	reg.errorMessagePassword.isDisplayed();
+    }
 }
