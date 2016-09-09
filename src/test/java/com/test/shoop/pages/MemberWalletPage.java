@@ -25,10 +25,9 @@ public class MemberWalletPage extends AbstractDriver {
 
     }
     public void validateUserTransaction(){
-
-    	Utility.scrollDownWindow(driver);
-        waitForElementDisplay(wallet.transaction);
-        wallet.transaction.isDisplayed();
+        Utility.scrollDownWindow(driver);
+        waitForElementDisplay(wallet.titleOfThePage);
+        wallet.titleOfThePage.isDisplayed();
     }
 
     public void vaiidateUserMinimumCashBackForPayment(int min_topay){
