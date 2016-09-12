@@ -13,9 +13,9 @@ public class GoTomerchantSitePageObjects {
     public WebElement searchHome;
     @FindBy(css = ".e2e-list-merchant-name.ng-binding")
     public WebElement searchResult;
-    @FindBy(xpath = "html/body/div[2]/div/div[5]/div/div[1]/div/div[3]/div/div[2]/a")
+    @FindBy(xpath = "//div[@class = 'best-rate ng-scope']/div[1]/button")
     public WebElement cashBacklink;
-    @FindBy(css = "html/body/div[2]/div/div[1]/div[1]/button/span")
+    @FindBy(xpath = "//div[@class = 'best-rate ng-scope']/div[1]/button")
     public WebElement cashBackAgain;
     @FindBy(css = ".merchant-title")
     public WebElement shoopMerchantPageTitle;

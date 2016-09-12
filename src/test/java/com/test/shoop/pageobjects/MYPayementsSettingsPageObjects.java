@@ -33,5 +33,30 @@ public class MYPayementsSettingsPageObjects {
     public WebElement alertPaymentAccount;
     @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[1]/div[3]/span")
     public WebElement updateDone;
-
+    @FindBy(xpath = "//div[@class='tr paypal-row-edit tr']/div[3]/a")
+    public WebElement paypalEditButton;
+    @FindBy(xpath = "//button[@class= 'qp-btn paypal-link-button ng-binding ng-scope']")
+    public WebElement paypalLinkMyAccountutton;
+    @FindBy(xpath = "//*[@id='email']")
+    public WebElement paypalEmail;
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement paypalPassword;
+    @FindBy(xpath = "//*[@id='content']/h1")
+    public WebElement validatePaypalLoginPage;
+    @FindBy(xpath = "//*[@id='btnLogin']")
+    public WebElement paypalLoginButton;
+    @FindBy(xpath = "//*[@id='content']/p")
+    public WebElement validateSuccessmessage;
+    @FindBy(xpath = "//*[@id='agreeConsent']")
+    public WebElement agreeButton;
+    @FindBy(xpath = "//div[@class='td']/form/div[2]/div/button[1]")
+    public WebElement dissociatePaypallink;
+    @FindBy(xpath = "//a[@id='signOut']")
+    public WebElement logOutButton;
+    @FindBy(xpath = "//span[@class='inline-notification e2e-inline-notification ng-isolate-scope successful']")
+    public WebElement paypalLinkaddedSuccessMessage;
+    
+    
+    
+    
 }

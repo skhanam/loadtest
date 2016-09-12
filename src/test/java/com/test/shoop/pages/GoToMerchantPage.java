@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import static junit.framework.TestCase.assertTrue;
@@ -33,7 +34,9 @@ public class GoToMerchantPage extends AbstractDriver {
     public void goTomerchantPage(String merchantName){
     String url = homePage.getUrl();
     String fullUrl = url + "/"+ merchantName;
+    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
     driver.get(fullUrl);
+    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
     logger.info(driver.getTitle());
 }
 
@@ -71,9 +74,9 @@ public class GoToMerchantPage extends AbstractDriver {
     }
     public void confirmUserNavigatesToMerchantPage(){
        // waitForElementDisplay(wayOutPopup);
-        if (gspo.loginLink.isDisplayed()){
+        /*if (gspo.loginLink.isDisplayed()){
             cashBackLoginPopUp();
-        }
+        }*/
         String parent =driver.getWindowHandle();
         logger.info("Window handle for"  +driver.getTitle());
         Set<String> Strhandles =driver.getWindowHandles();

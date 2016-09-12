@@ -10,9 +10,9 @@ Feature:  Shoop member account login test
     And I enter my username
     And I enter my password
     And I click on the login button
-
-
-  Scenario: Validate User Account Signout
+    Then I should see a greeting message "Bonjour"
+  
+ Scenario: Validate User Account Signout
 
     Given I click on a member my activity link
     And I click on the signout link
