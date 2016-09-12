@@ -32,8 +32,7 @@ public class LoginPageObjects {
     public WebElement signOutLink;
     @FindBy(xpath = "html/body/div[1]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div")
     public WebElement incorrectlogindetails;
-    @FindBy(linkText = "Fermer")
-	public WebElement cookie;
-    
+    @FindBy(xpath = "//div[@class='container']/a[2]")
+   	public WebElement cookie;
    
 }
