@@ -4,13 +4,10 @@ import com.test.shoop.config.Utility;
 import com.test.shoop.page_stepdef.LoginPageStepDef;
 import com.test.shoop.pageobjects.LoginPageObjects;
 import com.test.shoop.config.AbstractDriver;
-
-import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import static junit.framework.TestCase.assertTrue;
@@ -49,7 +46,6 @@ public class LoginPage extends AbstractDriver {
 
 
     public void doDefaultLogin() {
-    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginpo.loginLink.click();
         Utility.acceptCookies(driver);
          waitForElementDisplay(loginpo.userName);
@@ -95,20 +91,15 @@ public class LoginPage extends AbstractDriver {
         loginpo.emailpassword.sendKeys("testQA!12");
         loginpo.loggedIn.click();
     }
-    
-    public void validateLoginPage(String message){
-    	waitForElementDisplay(loginpo.successMessage);
-    	String successMessage = loginpo.successMessage.getText();
-    	Assert.assertTrue(successMessage.equals(message));
-    }
 
     public void logOutUser() {
-        driver.navigate().refresh();
         waitForElementDisplay(loginpo.myAccount);
-        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         build.click(loginpo.myAccount).build().perform();
-        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         loginpo.signOutLink.click();
+       build.moveToElement(loginpo.signOutLink).
+                click().
+                build().
+                perform();
     }
 
 

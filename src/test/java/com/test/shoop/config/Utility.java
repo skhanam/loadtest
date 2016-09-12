@@ -13,9 +13,14 @@ import com.test.shoop.pageobjects.LoginPageObjects;
 
 public final class Utility extends AbstractDriver{
 
-	static LoginPageObjects ulp = PageFactory.initElements(driver, LoginPageObjects.class);
-	
-	 //private static Logger logger = Logger.getLogger("Utility");
+	static LoginPageObjects ulp = new LoginPageObjects();
+	 private static Logger logger = Logger.getLogger("Utility");
+
+    public Utility() {
+
+       PageFactory.initElements(AbstractDriver.driver, ulp);
+     
+    }
 	
      public static void setWindowMaximise(WebDriver driver){
 	        Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -31,15 +36,24 @@ public final class Utility extends AbstractDriver{
     	 
     	 JavascriptExecutor js = (JavascriptExecutor) driver;
      	js.executeScript("window.scrollBy(0,200)", "");
-    }
+     	
+     	
+     	
+     }
 
      public static void acceptCookies(WebDriver driver){
-    	 try{
+    	
+    	/* try{
     		waitForElementDisplay(ulp.cookie);
     		Actions act = new Actions(driver);
             act.moveToElement(ulp.cookie).click().build().perform();
-    	 }catch(Exception e){
-             System.out.println("no cookie");
-        }
+*/
+    	 logger.info("U r here in acceptcookies");
+       	 JavascriptExecutor js = (JavascriptExecutor) driver;
+        	js.executeScript("close();", "");
+        	logger.info("ur script   :"+js.executeScript("close()", ""));
+        /* }catch(Exception e){
+                 System.out.println("no cookie");
+            }*/
     }
 }

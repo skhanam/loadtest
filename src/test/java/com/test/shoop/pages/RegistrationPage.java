@@ -19,11 +19,17 @@ import com.test.shoop.config.AbstractDriver;
  */
 public class RegistrationPage extends AbstractDriver {
     Actions action = new Actions(driver);
-   RegistrationPageObjects reg = PageFactory.initElements(driver, RegistrationPageObjects.class);
+   RegistrationPageObjects reg = new RegistrationPageObjects();
     private static Logger logger = Logger.getLogger("InfoLogging");
     final String email = "autotest"+System.currentTimeMillis()+"@quidco.com";
 
- 
+    public RegistrationPage()
+
+    {
+
+        PageFactory.initElements(AbstractDriver.driver, reg);
+
+    }
     public void clickOnRegistrationLink(){
         waitForElementDisplay(reg.registerLink);
         Utility.acceptCookies(driver);
@@ -57,7 +63,6 @@ public class RegistrationPage extends AbstractDriver {
 //            UID userid = new UID();
 //            final String email =userid.toString().hashCode() +"@quidco.com";
 //            final String email = "autotest"+System.currentTimeMillis()+"@gmail.com";
-        	waitForElementDisplay(reg.userName);
             logger.info("email being created :"+email);
             reg.userName.sendKeys(email);
             reg.emailpassword.sendKeys("Hannah123L");
@@ -85,29 +90,6 @@ public class RegistrationPage extends AbstractDriver {
         Assert.assertTrue(reg.welcomeGreetings.getText().contains(greetings));
 
     }
-    
-    public void validateBICErrorMessage(String errorBIC){
-    	waitForElementDisplay(reg.errorMessageBIC);
-    	String message = reg.errorMessageBIC.getText();
-    	Assert.assertTrue(message.contains(errorBIC));
-    }
 
-    public void validateIBANErrorMessage(String errorIBAN){
-    	waitForElementDisplay(reg.errorMessageIBAN);
-    	String message = reg.errorMessageIBAN.getText();
-    	Assert.assertTrue(message.contains(errorIBAN));
-    
-    }
-    
-    public void validateEmailErrorMessage(String errorEmail){
-    	waitForElementDisplay(reg.errorMessageEmail);
-    	String message = reg.errorMessageEmail.getText();
-    	Assert.assertTrue(message.contains(errorEmail));
-    }
-    
-    public void validatePasswordErrorMessage(String errorPassword){
-    	waitForElementDisplay(reg.errorMessagePassword);
-    	String message = reg.errorMessagePassword.getText();
-    	Assert.assertTrue(message.contains(errorPassword));
-    }
+
 }

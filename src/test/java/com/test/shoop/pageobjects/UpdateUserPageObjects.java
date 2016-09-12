@@ -30,19 +30,19 @@ public class UpdateUserPageObjects {
     public WebElement usernameModifierLink;
     @FindBy(css = "a[e2e-edit-row='birthdate']")
     public WebElement dateOFBirthModiefierLink;
-    @FindBy(xpath = "//*[@name='day']/option[9]")
+    @FindBy(xpath = "//*[contains(@name,'year')]")
     public WebElement dayOFBirth;
-    @FindBy(xpath = "//*[contains(@name,'month')]/option[9]")
+    @FindBy(xpath = "//*[contains(@name,'month')]")
     public WebElement monthOFBirth;
-    @FindBy(xpath = "//*[contains(@name,'year')]/option[81]")
+    @FindBy(xpath = "//*[contains(@name,'year')]")
     public WebElement yearOFBirth;
     @FindBy(css = "a[e2e-edit-row='postcode']")
     public WebElement postCodeModiefier;
     @FindBy(xpath = "//*[contains(@name,'post_code')]")
     public WebElement editPostcode;
-    @FindBy(xpath = "//div[@class='form-group radio']/div/label[1]/span")
+    @FindBy(css = "#male")
     public WebElement malesex;
-    @FindBy(xpath = "//div[@class='form-group radio']/div/label[2]/span")
+    @FindBy(css = "#female")
     public WebElement Femalesex;
     @FindBy(xpath = "//*[contains(@type,'submit')]")
     public WebElement submitEditDataButton;
@@ -60,7 +60,5 @@ public class UpdateUserPageObjects {
     public WebElement generalSettings;
     @FindBy(css = ".inline-notification.ng-isolate-scope.successful")
     public WebElement successfulUpdates;
-    
-    
 
 }

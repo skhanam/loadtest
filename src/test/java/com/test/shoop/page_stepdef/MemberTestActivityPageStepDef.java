@@ -22,8 +22,9 @@ public class MemberTestActivityPageStepDef {
 
 
 
-    @And("^I click on a member my activity link$")
+    @Given("^I click on a member my activity link$")
     public void i_click_on_a_member_my_activity_link() throws Throwable {
+//        login.doDefaultLogin();
         memberpage.clickOnMyActivityPage();
     }
     @Then("^I should be on the my activity page$")
@@ -64,7 +65,7 @@ public class MemberTestActivityPageStepDef {
 
     }
     
-  
-    
+   
+
 
 }

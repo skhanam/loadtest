@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.concurrent.TimeUnit;
-
 
 /**
  * Created by thadeus on 21/07/16.
@@ -62,7 +60,6 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     public void clickOnPaymentRecordButton(){
     	Utility.scrollDownWindow(driver);
-    	waitForElementDisplay(payment.paymentRecordButton);
         payment.paymentRecordButton.click();
 
     }
@@ -85,60 +82,5 @@ public class MYPayementsSettingsPage extends AbstractDriver {
                 perform();
         action.click().build().perform();
     }
-    
-    public void clickOnPaypalEditButton(){
-    	waitForElementDisplay(payment.paypalEditButton);
-    	payment.paypalEditButton.click();
-    }
-    
-    public void clickOnLinkPapalAccountButton(){
-    	waitForElementDisplay(payment.paypalLinkMyAccountutton);
-    	payment.paypalLinkMyAccountutton.click();
-    }
-    
-    public void enterPaypalEmail(String email){
-    	waitForElementDisplay(payment.paypalEmail);
-    	payment.paypalEmail.sendKeys(email);
-    }
-    
-    public void enterPaypalPassword(String password){
-    	waitForElementDisplay(payment.paypalPassword);
-    	payment.paypalPassword.sendKeys(password);
-    }
-    
-    public void clickOnPaypalLoginButton(){
-    	waitForElementDisplay(payment.paypalLoginButton);
-    	payment.paypalLoginButton.click();
-    }
-    
-    public void validatePaypalLoginPage(){
-    	waitForElementDisplay(payment.validatePaypalLoginPage);
-    	payment.validatePaypalLoginPage.isDisplayed();
-    }
-    
-    public void validateSuccessMessage(){
-    	waitForElementDisplay(payment.validateSuccessmessage);
-    	payment.validateSuccessmessage.isDisplayed();
-    }
-    
-    
-    public void validatePaypalAccountLinkSuccessMessage(){
-    	waitForElementDisplay(payment.paypalLinkaddedSuccessMessage);
-    	payment.paypalLinkaddedSuccessMessage.isDisplayed();
-    }
-    
-    public void clickOnDissociatePaypalLink(){
-    	waitForElementDisplay(payment.dissociatePaypallink);
-    	driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-    	payment.dissociatePaypallink.click();
-    	
-    }
-    
-    public void clickOnSignoutLink(){
-    	//driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-    	waitForElementDisplay(payment.paypalLinkMyAccountutton);
-        waitForElementDisplay(payment.logOutButton);
-        payment.logOutButton.click();
-       }
-}
 
+}

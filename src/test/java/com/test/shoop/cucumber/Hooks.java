@@ -20,17 +20,13 @@ public class Hooks extends AbstractDriver {
 
     public static Logger logger = Logger.getLogger("InfoLogging");
     public HomePage homePage = new HomePage();
-    public LoginPage loginPage = new LoginPage();
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
         logger.info( "Starting before each scenario ..");
-//        driver.manage().window().maximize();
-            for(String tag : scenario.getSourceTagNames()){
-                System.out.print("Tag: " + tag);
-            }
-        }
+        driver.manage().window().maximize();
 
+    }
 
     public void embedScreenshot(Scenario scenario) {
         try {
@@ -44,7 +40,6 @@ public class Hooks extends AbstractDriver {
     @After
     public void afterScenario(Scenario scenario) {
         embedScreenshot(scenario);
-//        loginPage.newUserlogout();
     }
 
 

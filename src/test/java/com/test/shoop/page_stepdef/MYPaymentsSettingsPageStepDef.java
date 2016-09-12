@@ -1,8 +1,6 @@
 package com.test.shoop.page_stepdef;
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pages.MYPayementsSettingsPage;
-
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,8 +34,8 @@ public class MYPaymentsSettingsPageStepDef {
      paymentsPage.enterCodeBIC(arg1);
     }
 
-    @When("^I enter my sort code as \"([^\"]*)\"$")
-    public void i_enter_my_sort_code_as(String arg1) throws Throwable {
+    @When("^I enter my sort as \"([^\"]*)\"$")
+    public void i_enter_my_sort_as(String arg1) throws Throwable {
         paymentsPage.enterIBAN(arg1);
 
     }
@@ -68,58 +66,6 @@ public class MYPaymentsSettingsPageStepDef {
     public void i_should_see_successfuly_updated_text(String arg1) throws Throwable {
         paymentsPage.validateMemberPaymentsSuccessfullyUpdated(arg1);
 
-    }
-     
-    @When("^I click on edit link of paypal account$")
-    public void i_click_on_edit_link_of_paypal_account(){
-    	paymentsPage.clickOnPaypalEditButton();
-    }
-    
-    @And("^I click on link my paypal account button$")
-    public void i_click_on_link_my_paypal_account_button(){
-    	paymentsPage.clickOnLinkPapalAccountButton();
-    }
-    
-    @Then("^I should be on the Paypal login page$")
-    public void i_should_be_on_the_Paypal_login_page(){
-    	paymentsPage.validatePaypalLoginPage();
-    }
-   
-    @And("^I enter paypal account emailid as \"([^\"]*)\"$")
-    public void i_enter_paypal_account_emailid_as(String emailid){
-    	paymentsPage.enterPaypalEmail(emailid);
-    }
-    
-    @And("^I enter paypal account password as \"([^\"]*)\"$")
-    public void i_enter_paypal_account_password(String password){
-    	paymentsPage.enterPaypalPassword(password);
-   }
-    
-    @And("^I click on sign in button on paypal page$")
-    public void i_click_on_sign_in_button_on_paypal_page(){
-    	paymentsPage.clickOnPaypalLoginButton();
-    }
-    
-    @Then("^I should see Hi message$")
-    public void i_should_see_Hi_message(){
-    	paymentsPage.validateSuccessMessage();
-    }
-     
-    @Then("^I should see paypal account added Success message$")
-    public void i_should_paypal_account_added_Success_message(){
-    	paymentsPage.validatePaypalAccountLinkSuccessMessage();
-    } 
-    
-    
-    @And("^I click on Dissociate my paypal account button$")
-    public void i_click_on_Dissociate_my_paypal_account_button(){
-    	paymentsPage.clickOnDissociatePaypalLink();
-    }
-    
-    @When("^I click on the signout link on paypal link page$")
-    public void i_click_on_the_signout_link_on_paypal_link_page() throws Throwable {
-    	paymentsPage.clickOnSignoutLink();
-    	
     }
 
 }

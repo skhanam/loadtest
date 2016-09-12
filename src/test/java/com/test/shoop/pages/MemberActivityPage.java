@@ -55,11 +55,11 @@ public class MemberActivityPage extends AbstractDriver {
 
     }
     public void validateOnPaymentsPage(String title) throws InterruptedException{
-    	  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+    	  driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
           String pageTitle = driver.getTitle();
-          driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	 Assert.assertTrue(title.equals(pageTitle));
-       }
+        
+    }
 
     public void clickAndAndvalidateUserOnSettingPage(){
         waitForElementDisplay(mempo.settingButton);
@@ -72,7 +72,6 @@ public class MemberActivityPage extends AbstractDriver {
     }
 
     public void clickOnSignoutLink(){
-    	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         waitForElementDisplay(mempo.logOutButton);
         mempo.logOutButton.click();
        }

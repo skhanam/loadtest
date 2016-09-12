@@ -16,5 +16,3 @@ Feature: Users creates a support ticket
     When I click on the 'Aide' link in the top right hand corner
     Then the user should be transferred with SSO into their own zendesk portal
 
-  
-

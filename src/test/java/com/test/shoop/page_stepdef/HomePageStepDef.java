@@ -1,8 +1,5 @@
 package com.test.shoop.page_stepdef;
 
-import java.util.concurrent.TimeUnit;
-
-import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.pages.HomePage;
 import com.test.shoop.pages.LoginPage;
 import cucumber.api.java.en.And;
@@ -28,7 +25,6 @@ public class HomePageStepDef {
     public void user_is_logged_in() throws Throwable {
         homePage.navigateToHomePage();
         homePage.getUrl();
-        AbstractDriver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginPage.doDefaultLogin();
     }
 
@@ -52,11 +48,6 @@ public class HomePageStepDef {
         loginPage.clickLoginButton();
     }
 
-    @Then("^I should see a greeting message \"([^\"]*)\"$")
-    public void i_should_see_a_greeting_message(String message){
-    	loginPage.validateLoginPage(message);
-    }
-    
     @Then("^I should be logged in to my account$")
     public void i_should_be_logged_in_to_my_account() throws Throwable {
         loginPage.validateUserLoggedIn();

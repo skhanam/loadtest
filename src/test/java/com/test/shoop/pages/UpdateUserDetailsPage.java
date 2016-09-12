@@ -2,8 +2,6 @@ package com.test.shoop.pages;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.test.shoop.config.AbstractDriver;
-import com.test.shoop.config.Utility;
 import com.test.shoop.pageobjects.UpdateUserPageObjects;
 
 /**
@@ -20,10 +17,20 @@ import com.test.shoop.pageobjects.UpdateUserPageObjects;
  */
 public class UpdateUserDetailsPage extends AbstractDriver {
 
-    UpdateUserPageObjects uupo = PageFactory.initElements(driver,UpdateUserPageObjects.class);
+    UpdateUserPageObjects uupo = new UpdateUserPageObjects();
     Actions action = new Actions(driver);
 
-      public void clickOnGeneralSettingsLinkLoggedInUser() {
+//    public UpdateUserDetailsPage(Actions action) {
+//
+//        PageFactory.initElements(AbstractDriver.driver,uupo);
+//    }
+
+    public UpdateUserDetailsPage() {
+        PageFactory.initElements(AbstractDriver.driver,uupo);
+    }
+
+
+    public void clickOnGeneralSettingsLinkLoggedInUser() {
         waitForElementDisplay(uupo.generalSettings);
         uupo.generalSettings.click();
     }
@@ -95,13 +102,11 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     }
 
     public void clickonNameModifierLink() {
-    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.nameModifierLink);
         uupo.nameModifierLink.click();
     }
 
     public void clickEmailModifyLink() {
-    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.emailModifierLink);
         uupo.emailModifierLink.click();
 
@@ -109,56 +114,54 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     public void enterNewUserName(String n_userName) {
         waitForElementDisplay(uupo.editUserName);
-        uupo.editUserName.clear();
         uupo.editUserName.sendKeys(n_userName);
     }
 
 
     public void clickOnGenderModifyLink() {
-    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.genderModifierLink);
         uupo.genderModifierLink.click();
     }
     public void clickToSelectMaleGenderasOption(String sexType) {
         waitForElementDisplay(uupo.malesex);
-        uupo.malesex.isDisplayed();
+        uupo.malesex.click();
+        assertTrue(uupo.malesex.isSelected());
     }
 
     public void clickDateOfBirthModifyLink() {
-    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.dateOFBirthModiefierLink);
         uupo.dateOFBirthModiefierLink.click();
 
     }
 
     public void clickOnModifyUsernameLink() {
-    	Utility.scrollDownWindow(driver);
-    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.usernameModifierLink);
         uupo.usernameModifierLink.click();
     }
     public void clickOnModifyPostCodeLink() {
-    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.postCodeModiefier);
         uupo.postCodeModiefier.click();
     }
 
     public void selectDayOfBirthToEditDOB(String d_birth){
         waitForElementDisplay(uupo.dayOFBirth);
-        uupo.dayOFBirth.click();
-      
-        
-    }
-      
+        Select day = new Select(uupo.dayOFBirth);
+        day.selectByVisibleText(d_birth);}
+
+
+
+
     public void selectMonthOfBirthToEditDOB(String m_birth){
         waitForElementDisplay(uupo.monthOFBirth);
-        uupo.monthOFBirth.click();
+       Select month = new Select(uupo.monthOFBirth);
+        month.selectByValue(m_birth);
 
     }
 
     public void selectYearOfBirthToEditDOB(String y_bith){
         waitForElementDisplay(uupo.yearOFBirth);
-        uupo.yearOFBirth.click();
+        Select year = new Select(uupo.yearOFBirth);
+        year.selectByValue(y_bith);
 
     }
     public void enterNewPostCodeToEditExistingPostCode(String n_postCode){
@@ -166,11 +169,5 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPostcode.clear();
         uupo.editPostcode.sendKeys(n_postCode);
     }
-    public void validateSuccessMessage(String message){
-    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-    	 waitForElementDisplay(uupo.successfulUpdates);
-    	uupo.successfulUpdates.isDisplayed();
-    	
-    	
+
     }
-}

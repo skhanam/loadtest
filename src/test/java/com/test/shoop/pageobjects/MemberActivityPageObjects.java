@@ -24,7 +24,7 @@ public class MemberActivityPageObjects {
     public  WebElement settingButton;
     @FindBy(css = "a[e2e-edit-row='email']")
     public WebElement emailModifierLink;
-    @FindBy(xpath = "//a[@id='signOut']")
+    @FindBy(xpath = "//a[@id='signOut']" )
     public WebElement logOutButton;
     @FindBy(css = ".container.ng-binding")
     public WebElement settingPage;

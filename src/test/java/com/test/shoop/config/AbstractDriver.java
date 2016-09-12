@@ -48,28 +48,33 @@ public abstract class AbstractDriver {
         FileInputStream fp = new FileInputStream(System.getProperty("user.dir") + "/src/config.properties");
         CONFIG.load(fp);
 
-        if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox")) {
-            DesiredCapabilities dc = new DesiredCapabilities();
-            driver = new FirefoxDriver(dc);
-            Utility.setWindowMaximise(driver);
-
-        } else {
-            if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
-                DesiredCapabilities dc = DesiredCapabilities.chrome();
-                if (operatingSystem.contains("WINDOWS")) {
-                    System.setProperty("webdriver.chrome.driver", chromeWindowsdriver);
-                } else if (operatingSystem.contains("MAC")) {
-                    System.setProperty("webdriver.chrome.driver", chromeMacdriver);
-                } else if (operatingSystem.contains("LINUX")) {
-                    System.setProperty("webdriver.chrome.driver", chromeLinuxdriver);
-                } else if (operatingSystem.contains("Centos")) {
-                    System.setProperty("webdriver.chrome.driver", chromeCentosdriver);
-                }
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromeLinuxdriver);
-                driver = new ChromeDriver(dc);
+        if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox") ){
+                DesiredCapabilities dc = new DesiredCapabilities();
+                driver = new FirefoxDriver(dc);
                 Utility.setWindowMaximise(driver);
+
+  } else {
+                if (CONFIG.getProperty("Browser").equalsIgnoreCase("chrome")) {
+                    DesiredCapabilities dc = DesiredCapabilities.chrome();
+                    if (operatingSystem.contains("WINDOWS")) {
+                        System.setProperty("webdriver.chrome.driver",chromeWindowsdriver);
+                    } else if (operatingSystem.contains("MAC")) {
+                        System.setProperty("webdriver.chrome.driver",chromeMacdriver);
+                    } else if (operatingSystem.contains("LINUX")) {
+                        System.setProperty("webdriver.chrome.driver",chromeLinuxdriver);
+                    }else if (operatingSystem.contains("Centos")) {
+                        System.setProperty("webdriver.chrome.driver", chromeCentosdriver);
+                    }
+                    
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ chromeLinuxdriver);
+
+                    driver = new ChromeDriver(dc);
+                        Utility.setWindowMaximise(driver);
+
             }
+
         }
+
     }
 
     public static void waitForElementDisplay(final WebElement element) throws ElementNotVisibleException{
