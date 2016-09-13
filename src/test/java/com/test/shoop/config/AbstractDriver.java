@@ -47,7 +47,6 @@ public abstract class AbstractDriver {
         LOGGER.info(System.getProperty("user.dir"));
         FileInputStream fp = new FileInputStream(System.getProperty("user.dir") + "/src/config.properties");
         CONFIG.load(fp);
-
         if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox")) {
             DesiredCapabilities dc = new DesiredCapabilities();
             driver = new FirefoxDriver(dc);
@@ -67,6 +66,7 @@ public abstract class AbstractDriver {
                 }
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromeLinuxdriver);
                 driver = new ChromeDriver(dc);
+                System.out.println("here is the driver :"+driver);
                 Utility.setWindowMaximise(driver);
             }
         }
