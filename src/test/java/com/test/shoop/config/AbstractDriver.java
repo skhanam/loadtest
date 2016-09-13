@@ -49,6 +49,7 @@ public abstract class AbstractDriver {
         CONFIG.load(fp);
         if (CONFIG.getProperty("Browser").equalsIgnoreCase("firefox")) {
             DesiredCapabilities dc = new DesiredCapabilities();
+
             driver = new FirefoxDriver(dc);
             Utility.setWindowMaximise(driver);
 
@@ -61,10 +62,12 @@ public abstract class AbstractDriver {
                     System.setProperty("webdriver.chrome.driver", chromeMacdriver);
                 } else if (operatingSystem.contains("LINUX")) {
                     System.setProperty("webdriver.chrome.driver", chromeLinuxdriver);
+
                 } else if (operatingSystem.contains("Centos")) {
                     System.setProperty("webdriver.chrome.driver", chromeCentosdriver);
                 }
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromeLinuxdriver);
+
                 driver = new ChromeDriver(dc);
                 System.out.println("here is the driver :"+driver);
                 Utility.setWindowMaximise(driver);

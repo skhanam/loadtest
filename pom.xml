@@ -152,6 +152,27 @@
         <version>2.3.2</version>
       </plugin>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <execution>
+            <id>script-chmod</id>
+            <phase>install</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>chmod</executable>
+              <arguments>
+                <argument>+x</argument>
+                <argument>/src/test/resources/</argument>
+              </arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
           <groupId>com.lazerycode.selenium</groupId>
           <artifactId>driver-binary-downloader-maven-plugin</artifactId>
           <version>1.0.9</version>
