@@ -36,7 +36,7 @@ public class UpdateUserPageObjects {
     public WebElement monthOFBirth;
     @FindBy(xpath = "//*[contains(@name,'year')]/option[81]")
     public WebElement yearOFBirth;
-    @FindBy(css = "a[e2e-edit-row='postcode']")
+    @FindBy(xpath = "//div[@class='settings-grid']/div[6]/div[1]/div[3]/a")
     public WebElement postCodeModiefier;
     @FindBy(xpath = "//*[contains(@name,'post_code')]")
     public WebElement editPostcode;
