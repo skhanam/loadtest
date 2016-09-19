@@ -138,7 +138,9 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.usernameModifierLink.click();
     }
     public void clickOnModifyPostCodeLink() {
-    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+     	js.executeScript("window.scrollBy(0,30)", "");
         waitForElementDisplay(uupo.postCodeModiefier);
         uupo.postCodeModiefier.click();
     }
@@ -162,14 +164,12 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     }
     public void enterNewPostCodeToEditExistingPostCode(String n_postCode){
-    	Utility.scrollDownWindow(driver);
-    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.editPostcode);
         uupo.editPostcode.clear();
         uupo.editPostcode.sendKeys(n_postCode);
     }
     public void validateSuccessMessage(String message){
-    	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	 waitForElementDisplay(uupo.successfulUpdates);
     	uupo.successfulUpdates.isDisplayed();
     	
