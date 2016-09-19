@@ -162,6 +162,8 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     }
     public void enterNewPostCodeToEditExistingPostCode(String n_postCode){
+    	Utility.scrollDownWindow(driver);
+    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         waitForElementDisplay(uupo.editPostcode);
         uupo.editPostcode.clear();
         uupo.editPostcode.sendKeys(n_postCode);
