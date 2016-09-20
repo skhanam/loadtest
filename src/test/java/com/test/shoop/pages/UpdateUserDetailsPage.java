@@ -140,7 +140,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     public void clickOnModifyPostCodeLink() {
     	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
-     	js.executeScript("window.scrollBy(0,30)", "");
+     	js.executeScript("window.scrollBy(0,60)", "");
         waitForElementDisplay(uupo.postCodeModiefier);
         uupo.postCodeModiefier.click();
     }
