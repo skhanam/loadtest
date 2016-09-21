@@ -32,6 +32,11 @@ public final class Utility extends AbstractDriver{
     	 JavascriptExecutor js = (JavascriptExecutor) driver;
      	js.executeScript("window.scrollBy(0,200)", "");
     }
+     
+     public static void scrollUpWindow(WebDriver driver){
+    	 JavascriptExecutor js = (JavascriptExecutor) driver;
+      	js.executeScript("window.scrollBy(0,-100)", "");
+     }
 
      public static void acceptCookies(WebDriver driver){
     	 try{

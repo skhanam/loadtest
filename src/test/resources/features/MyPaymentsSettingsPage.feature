@@ -3,11 +3,11 @@
 Feature: Member updates account details
 
   Background: Shoop member Login
-     Given user is logged in
+      Given user is logged in
       Given I click on a member my activity link
-    Then I should be on the my activity page
-    And I click on the setting link
-    And I click on the banking information link
+      Then I should be on the my activity page
+      And I click on the setting link
+      And I click on the banking information link
 
   Scenario: Validate member update details
       When I click on modify link for payment account
@@ -19,6 +19,7 @@ Feature: Member updates account details
     And I click on Yes to accept user account update terms and conditions
     Then I should see successfuly"Les modifications ont bien été effectuées" updated text
     And I click on the signout link
+    Then I should be logged out of my account
 
   Scenario: validating paypal account login
     When I click on edit link of paypal account
