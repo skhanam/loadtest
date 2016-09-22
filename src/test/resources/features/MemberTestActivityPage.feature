@@ -16,6 +16,7 @@ Feature: Testing login to my shoop member account and edit details
     And I click on the  my payments  tab link
     Then I should verify the title of the page as "Paiement | Shoop - Le Meilleur du Cashback & du Code Promo"
     And I click on the signout link
+    Then I should be logged out of my account
 
     
     
@@ -26,6 +27,7 @@ Feature: Testing login to my shoop member account and edit details
     And I click on the setting link
     Then I should see the  edit emaillink
    And I click on the signout link
+   Then I should be logged out of my account
  
 
   Scenario: Validate User Account Signout
