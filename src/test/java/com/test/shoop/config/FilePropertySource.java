@@ -17,8 +17,9 @@ public class FilePropertySource implements PropertySource{
     private Properties properties;
 
     public FilePropertySource(final String resourcePath) throws IOException {
+        System.out.println("Here is the resourcePath :"+resourcePath);
         final Resource resource = new DefaultResourceLoader().getResource(resourcePath);
-
+        System.out.println("Here is the resource :"+resource);
         if (!resource.exists()) {
             throw new IOException("No resource found at path " + resourcePath);
         }
