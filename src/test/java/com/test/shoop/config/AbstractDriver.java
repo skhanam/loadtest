@@ -41,8 +41,8 @@ public abstract class AbstractDriver {
         LOGGER.info(("Current Operating System: " + operatingSystem));
         LOGGER.info("Current Architecture: " + systemArchitecture);
         LOGGER.info("Current Browser Selection: " + CONFIG.getProperty("Browser"));
-        final Environment environment = Environment.getSystemEnvironmentWithDefault();
-        System.out.println("This is the environment : "+environment.getProperty("staging.shoop"));
+//        final Environment environment = Environment.getSystemEnvironmentWithDefault();
+//        System.out.println("This is the environment : "+environment.getProperty("staging.shoop"));
     }
 
     public static void initialize() throws IOException {
