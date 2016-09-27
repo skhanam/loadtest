@@ -15,8 +15,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     And I click on name record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
     
-
-  Scenario: A member is able to edit current email and password
+ Scenario: A member is able to edit current email and password
 
     Given I click on modifier email modifier link
     When I enter my new email "quidcoqa@quidco.com" and enter email to confirm "quidcoqa@quidco.com"
@@ -24,8 +23,6 @@ Feature: As a shoop member I should be able to edit personal details on general 
     And I click on email record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
     
-
-
   Scenario: A member is able to edit username
 
     Given i click on modify link for username
@@ -42,8 +39,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
 #    And I click on gender record button
 #    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
 
- 
-    Scenario: A member is able to edit gender to male
+ Scenario: A member is able to edit gender to male
 
     Given I click on the modify link for gender
     When I click to select the "male" gender
@@ -68,6 +64,6 @@ Feature: As a shoop member I should be able to edit personal details on general 
     When I enter my new post code as"75016"
     And I click on postcode record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
-    
+    And I click on the signout link
 
 
