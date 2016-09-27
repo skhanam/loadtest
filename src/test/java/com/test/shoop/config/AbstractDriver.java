@@ -36,13 +36,18 @@ public abstract class AbstractDriver {
     public static final String  chromeLinuxdriver="/src/test/resources/linux/googlechrome/64bit/chromedriver";
     public static final String  chromeMacdriver="/src/test/resources/macChromedriver/chromedriver";
 
+
     public static void getEnvironmentInfo() throws IOException {
         LOGGER.info(("Current Operating System: " + operatingSystem));
         LOGGER.info("Current Architecture: " + systemArchitecture);
         LOGGER.info("Current Browser Selection: " + CONFIG.getProperty("Browser"));
+//        final Environment environment = Environment.getSystemEnvironmentWithDefault();
+//        System.out.println("This is the environment : "+environment.getProperty("staging.shoop"));
     }
 
     public static void initialize() throws IOException {
+//        final Environment environment = Environment.getSystemEnvironmentWithDefault();
+//        System.out.println("This is the environment : "+environment.getProperty("staging.shoop"));
         CONFIG = new Properties();
         LOGGER.info(System.getProperty("user.dir"));
         FileInputStream fp = new FileInputStream(System.getProperty("user.dir") + "/src/config.properties");
@@ -67,7 +72,6 @@ public abstract class AbstractDriver {
                     System.setProperty("webdriver.chrome.driver", chromeCentosdriver);
                 }
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromeLinuxdriver);
-
                 driver = new ChromeDriver(dc);
                 System.out.println("here is the driver :"+driver);
                 Utility.setWindowMaximise(driver);
@@ -83,7 +87,13 @@ public abstract class AbstractDriver {
         wait.until(input -> element.isDisplayed());
     }
 
+//    public String getStringProperty(String propertyKey) {
+//        System.out.println("Here it is the string : "+getStringProperty(propertyKey));
+//        return environment.getProperty(propertyKey);
+////        return
+//
+//    }
 
-    
+
 }
 
