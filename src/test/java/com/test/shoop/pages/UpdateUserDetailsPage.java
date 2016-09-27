@@ -168,10 +168,10 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPostcode.clear();
         uupo.editPostcode.sendKeys(n_postCode);
     }
+
     public void validateSuccessMessageName(String message){
     	 waitForElementDisplay(uupo.successMessageName);
     	 Assert.assertTrue(uupo.successMessageName.getText().contains(message));
-    	
     }
     public void validateSuccessMessageEmail(String message){
     	 waitForElementDisplay(uupo.successMessageEmail);
