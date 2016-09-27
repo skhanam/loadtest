@@ -2,7 +2,7 @@
 
 Feature: As a shoop member I should be able to edit personal details on general settings page
 
-  Scenario: Member Login
+  Background: Member Login
     Given I am logged into shoop
     When I click on a member my activity link
     Then I should be on the my activity page
@@ -14,6 +14,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     And I enter a new first name as "Quidco" and last name as"QATester"
     And I click on name record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    And I click on the signout link
 
   Scenario: A member is able to edit current email and password
 
@@ -22,6 +23,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     And I enter my new password as "testQA!12"
     And I click on email record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    And I click on the signout link
 
 
   Scenario: A member is able to edit username
@@ -30,6 +32,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     When I enter my new username as "Quidco"
     And I click on username record button
     Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+    And I click on the signout link
 
 
 #  Scenario:A member is able to edit gender to female
@@ -46,6 +49,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     When I click to select the "male" gender
     And I click on gender record button
    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+   And I click on the signout link
 
 
   Scenario: A member is able to edit DOB
@@ -56,6 +60,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
     And I enter and "1996"of birth as
     And I click on DOB record button
    Then I should see details changed succefully message"Les modifications ont bien été effectuées" displayed
+   And I click on the signout link
 
   Scenario: A member is able to edit post code
 
