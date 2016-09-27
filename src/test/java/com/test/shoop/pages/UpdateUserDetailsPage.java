@@ -169,7 +169,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPostcode.sendKeys(n_postCode);
     }
     public void validateSuccessMessage(String message){
-    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     	 waitForElementDisplay(uupo.successfulUpdates);
     	uupo.successfulUpdates.isDisplayed();
     	
