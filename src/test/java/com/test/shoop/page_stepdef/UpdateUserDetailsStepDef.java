@@ -124,9 +124,29 @@ public class UpdateUserDetailsStepDef {
         userDetails.clickOnPostCodeRecordButton();
 
     }
-    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed$")
-    public void i_should_see_details_changed_succefully_message_displayed(String message){
-    	userDetails.validateSuccessMessage(message);
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed for names$")
+    public void i_should_see_details_changed_succefully_message_displayed_for_names(String message){
+    	userDetails.validateSuccessMessageName(message);
+    }
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed for email$")
+    public void i_should_see_details_changed_succefully_message_displayed_for_email(String message){
+    	userDetails.validateSuccessMessageEmail(message);
+    }
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed for username$")
+    public void i_should_see_details_changed_succefully_message_displayed_for_username(String message){
+    	userDetails.validateSuccessMessageEditUsername(message);
+    }
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed for gender$")
+    public void i_should_see_details_changed_succefully_message_displayed_for_gender(String message){
+    	userDetails.validateSuccessMessageGender(message);
+    }
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed for DOB$")
+    public void i_should_see_details_changed_succefully_message_displayed_for_DOB(String message){
+    	userDetails.validateSuccessMessageDOB(message);
+    }
+    @Then("^I should see details changed succefully message\"([^\"]*)\" displayed for postal code$")
+    public void i_should_see_details_changed_succefully_message_displayed_for_postal_code(String message){
+    	userDetails.validateSuccessMessagePostalCode(message);
     }
 
 }

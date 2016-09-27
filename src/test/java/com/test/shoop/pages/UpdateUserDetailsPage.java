@@ -1,6 +1,6 @@
 package com.test.shoop.pages;
 
-import static org.junit.Assert.assertTrue;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
@@ -88,11 +88,11 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPassword.sendKeys(u_password);
     }
 
-    public void validateYourModificationIsSuccessfulMessageDisplayed(String success_text) {
+   /* public void validateYourModificationIsSuccessfulMessageDisplayed(String success_text) {
         waitForElementDisplay(uupo.successfulUpdates);
         Assert.assertTrue(uupo.successfulUpdates.getText().contains(success_text));
 
-    }
+    }*/
 
     public void clickonNameModifierLink() {
     	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -168,11 +168,32 @@ public class UpdateUserDetailsPage extends AbstractDriver {
         uupo.editPostcode.clear();
         uupo.editPostcode.sendKeys(n_postCode);
     }
-    public void validateSuccessMessage(String message){
-    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-    	 waitForElementDisplay(uupo.successfulUpdates);
-    	uupo.successfulUpdates.isDisplayed();
-    	
+    public void validateSuccessMessageName(String message){
+    	 waitForElementDisplay(uupo.successMessageName);
+    	 Assert.assertTrue(uupo.successMessageName.getText().contains(message));
     	
     }
+    public void validateSuccessMessageEmail(String message){
+    	 waitForElementDisplay(uupo.successMessageEmail);
+    	 Assert.assertTrue(uupo.successMessageEmail.getText().contains(message));
+    	
+    }
+    public void validateSuccessMessageEditUsername(String message){
+   	 waitForElementDisplay(uupo.successMessageEditUserName);
+   	Assert.assertTrue(uupo.successMessageEditUserName.getText().contains(message));
+   	
+   }
+    public void validateSuccessMessageGender(String message){
+      	 waitForElementDisplay(uupo.successMessageGender);
+      	Assert.assertTrue(uupo.successMessageGender.getText().contains(message));
+      }
+    public void validateSuccessMessageDOB(String message){
+     	 waitForElementDisplay(uupo.successMessageDOB);
+     	Assert.assertTrue(uupo.successMessageDOB.getText().contains(message));
+     }
+    public void validateSuccessMessagePostalCode(String message){
+    	 waitForElementDisplay(uupo.successMessagePostalCode);
+    	 Assert.assertTrue(uupo.successMessagePostalCode.getText().contains(message));
+    }
+    
 }

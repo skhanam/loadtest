@@ -58,9 +58,17 @@ public class UpdateUserPageObjects {
     public WebElement postcodeRecordButton;
     @FindBy(xpath = "//*[@id='user.settings.general']")
     public WebElement generalSettings;
-    @FindBy(css = ".inline-notification.ng-isolate-scope.successful")
-    public WebElement successfulUpdates;
-    
-    
+    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[1]/div[1]/div[3]/span")
+    public WebElement successMessageName;
+    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[2]/div[1]/div[3]/span")
+    public WebElement successMessageEmail;
+    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[3]/div[1]/div[3]/span")
+    public WebElement successMessageEditUserName;
+    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[4]/div[1]/div[3]/span")
+    public WebElement successMessageGender;
+    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[5]/div[1]/div[3]/span")
+    public WebElement successMessageDOB;
+    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[6]/div[1]/div[3]/span")
+    public WebElement successMessagePostalCode;
 
 }
