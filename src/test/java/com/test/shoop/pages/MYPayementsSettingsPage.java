@@ -87,8 +87,8 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     
     public void clickOnPaypalEditButton(){
-    	waitForElementDisplay(payment.paypalEditButton);
-    	payment.paypalEditButton.click();
+    	waitForElementDisplay(payment.paypalModifyButton);
+    	payment.paypalModifyButton.click();
     }
     
     public void clickOnLinkPapalAccountButton(){

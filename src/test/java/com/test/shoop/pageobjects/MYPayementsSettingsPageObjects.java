@@ -34,7 +34,7 @@ public class MYPayementsSettingsPageObjects {
     @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[1]/div[3]/span")
     public WebElement updateDone;
     @FindBy(xpath = "//div[@class='tr paypal-row-edit tr']/div[3]/a")
-    public WebElement paypalEditButton;
+    public WebElement paypalModifyButton;
     @FindBy(xpath = "//button[@class= 'qp-btn paypal-link-button ng-binding ng-scope']")
     public WebElement paypalLinkMyAccountutton;
     @FindBy(xpath = "//*[@id='email']")
