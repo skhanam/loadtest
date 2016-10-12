@@ -78,13 +78,10 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     public void moveToBankingInformationAndClick(){
         waitForElementDisplay(payment.generalSettings);
         payment.generalSettings.click();
-       waitForElementDisplay(payment.bankingInfoLink);
-                action.
-                moveToElement(payment.bankingInfoLink).
-                build().
-                perform();
-        action.click().build().perform();
-    }
+        waitForElementDisplay(payment.bankingInfoLink);
+        payment.bankingInfoLink.click();
+        
+       }
     
     public void clickOnPaypalEditButton(){
     	waitForElementDisplay(payment.paypalModifyButton);

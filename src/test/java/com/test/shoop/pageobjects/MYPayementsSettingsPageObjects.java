@@ -13,7 +13,7 @@ public class MYPayementsSettingsPageObjects {
     public WebElement memberPayementsPages;
     @FindBy(xpath = "//*[@id='user.settings.general']")
     public  WebElement generalSettings;
-   @FindBy(xpath = "//*[@id='menu-categories']/div[1]/ul/li[3]/ul/li[3]/a")
+   @FindBy(xpath = "//div[@class='col-md-2']/div/ul/li[3]/a")
     public WebElement bankingInfoLink;
     @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[1]/div[3]/a")
     public WebElement modifiedPaymenyLink;
