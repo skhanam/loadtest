@@ -19,13 +19,13 @@ Feature: Member updates account details
     And I click on Yes to accept user account update terms and conditions
     Then I should see successfuly"Les modifications ont bien été effectuées" updated text
     And I click on the signout link
-    Then I should be logged out of my account
+    And I should be logged out of my account
 
   Scenario: validating paypal account login
     When I click on edit link of paypal account
     And I click on link my paypal account button 
     And I click on Yes to accept user account update terms and conditions
-    Then I should be on the Paypal login page
+    And I should be on the Paypal login page
     And I enter paypal account emailid as "quidcoqa@quidco.com" 
     And I enter paypal account password as "testpass"
     And I click on sign in button on paypal page
@@ -33,5 +33,6 @@ Feature: Member updates account details
     And I click on Dissociate my paypal account button
     And I click on Yes to accept user account update terms and conditions
     And I click on the signout link on paypal link page
+    
     
     

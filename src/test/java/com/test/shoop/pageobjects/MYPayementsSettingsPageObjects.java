@@ -31,11 +31,11 @@ public class MYPayementsSettingsPageObjects {
     public WebElement alertAccountAdded;
     @FindBy(xpath = "html/body/div[5]/div/div/div[2]/button[1]")
     public WebElement alertPaymentAccount;
-    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[1]/div[3]/span")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div[2]/div[1]/div[1]/div/p")
     public WebElement updateDone;
     @FindBy(xpath = "//div[@class='settings-fields ng-scope']/div[2]/div[1]/div/div[3]/div/div")
     public WebElement paypalModifyButton;
-    @FindBy(xpath = "//button[@class= 'qp-btn paypal-link-button ng-binding ng-scope']")
+    @FindBy(xpath = "//button[@class= 'btn btn-primary ng-binding ng-scope']")
     public WebElement paypalLinkMyAccountutton;
     @FindBy(xpath = "//*[@id='email']")
     public WebElement paypalEmail;
@@ -49,13 +49,12 @@ public class MYPayementsSettingsPageObjects {
     public WebElement validateSuccessmessage;
     @FindBy(xpath = "//*[@id='agreeConsent']")
     public WebElement agreeButton;
-    @FindBy(xpath = "//div[@class='td']/form/div[2]/div/button[1]")
+    @FindBy(xpath = "//form[@class='form-horizontal ng-pristine ng-valid ng-scope']/div[2]/div/button[1]")
     public WebElement dissociatePaypallink;
-    @FindBy(xpath = "//a[@id='signOut']")
+    @FindBy(xpath = "//*[@id='signOut']")
     public WebElement logOutButton;
-    @FindBy(xpath = "//span[@class='inline-notification e2e-inline-notification ng-isolate-scope successful']")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div[2]/div[2]/div[1]/div/p")
     public WebElement paypalLinkaddedSuccessMessage;
-    
     
     
     

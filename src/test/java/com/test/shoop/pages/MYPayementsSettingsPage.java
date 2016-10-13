@@ -132,10 +132,11 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     
     public void clickOnSignoutLink(){
-    	//driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-    	waitForElementDisplay(payment.paypalLinkMyAccountutton);
+    	driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+        Utility.scrollUpWindow(driver);
         waitForElementDisplay(payment.logOutButton);
-        payment.logOutButton.click();
+        action.moveToElement(payment.logOutButton).click().build().perform();
+        
        }
 }
 
