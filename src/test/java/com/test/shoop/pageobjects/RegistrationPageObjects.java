@@ -39,13 +39,13 @@ public class RegistrationPageObjects {
     public WebElement regButton;
     @FindBy(css=".error.ng-scope>span")
     public WebElement regErrorMessaging;
-    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[1]/div/span/span")
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[1]/div/div/p")
     public WebElement errorMessageBIC;
-    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[3]/div/span/span")
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[2]/div/div/p")
     public WebElement errorMessageIBAN;
-    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[5]/div/span/span")
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[3]/div/div/p")
     public WebElement errorMessageEmail;
-    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[7]/div/span/span")
+    @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[4]/div/div/p")
     public WebElement errorMessagePassword;
     
 }

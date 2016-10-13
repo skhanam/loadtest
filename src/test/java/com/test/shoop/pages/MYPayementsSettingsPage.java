@@ -78,17 +78,14 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     public void moveToBankingInformationAndClick(){
         waitForElementDisplay(payment.generalSettings);
         payment.generalSettings.click();
-       waitForElementDisplay(payment.bankingInfoLink);
-                action.
-                moveToElement(payment.bankingInfoLink).
-                build().
-                perform();
-        action.click().build().perform();
-    }
+        waitForElementDisplay(payment.bankingInfoLink);
+        payment.bankingInfoLink.click();
+        
+       }
     
     public void clickOnPaypalEditButton(){
-    	waitForElementDisplay(payment.paypalEditButton);
-    	payment.paypalEditButton.click();
+    	waitForElementDisplay(payment.paypalModifyButton);
+    	payment.paypalModifyButton.click();
     }
     
     public void clickOnLinkPapalAccountButton(){
@@ -135,10 +132,11 @@ public class MYPayementsSettingsPage extends AbstractDriver {
     }
     
     public void clickOnSignoutLink(){
-    	//driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-    	waitForElementDisplay(payment.paypalLinkMyAccountutton);
+    	driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+        Utility.scrollUpWindow(driver);
         waitForElementDisplay(payment.logOutButton);
-        payment.logOutButton.click();
+        action.moveToElement(payment.logOutButton).click().build().perform();
+        
        }
 }
 
