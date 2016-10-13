@@ -15,7 +15,7 @@ public class MYPayementsSettingsPageObjects {
     public  WebElement generalSettings;
    @FindBy(xpath = "//div[@class='col-md-2']/div/ul/li[3]/a")
     public WebElement bankingInfoLink;
-    @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[1]/div[3]/a")
+    @FindBy(xpath = "//div[@class='settings-fields ng-scope']/div[1]/div[1]/div/div[3]/div/div")
     public WebElement modifiedPaymenyLink;
     @FindBy(xpath = "//*[@name = 'bic']")
     public WebElement codeBicField;
@@ -33,7 +33,7 @@ public class MYPayementsSettingsPageObjects {
     public WebElement alertPaymentAccount;
     @FindBy(xpath = "html/body/div[2]/div/ui-view/div/div/div/div[2]/div[2]/div/div[1]/div[3]/span")
     public WebElement updateDone;
-    @FindBy(xpath = "//div[@class='tr paypal-row-edit tr']/div[3]/a")
+    @FindBy(xpath = "//div[@class='settings-fields ng-scope']/div[2]/div[1]/div/div[3]/div/div")
     public WebElement paypalModifyButton;
     @FindBy(xpath = "//button[@class= 'qp-btn paypal-link-button ng-binding ng-scope']")
     public WebElement paypalLinkMyAccountutton;
