@@ -26,7 +26,7 @@ public class MemberActivityPageObjects {
     public WebElement emailModifierLink;
     @FindBy(xpath = "//a[@id='signOut']")
     public WebElement logOutButton;
-    @FindBy(css = ".container.ng-binding")
+    @FindBy(xpath = "//div[@class='settings-fields']/div[2]/div[1]/div/div[3]/div/div")
     public WebElement settingPage;
 
     String memberTabs= "//*[@id='user.activity.%s']";

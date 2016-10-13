@@ -20,19 +20,12 @@ import org.junit.Assert;
  */
 public class MemberActivityPage extends AbstractDriver {
 
-    MemberActivityPageObjects  mempo = new MemberActivityPageObjects();
+    MemberActivityPageObjects  mempo = PageFactory.initElements(driver, MemberActivityPageObjects.class);
     Actions action = new Actions(driver);
+    LoginPageObjects loginpo = PageFactory.initElements(driver, LoginPageObjects.class);
 
 
-    public MemberActivityPage() {
-
-       PageFactory.initElements(AbstractDriver.driver, mempo);
-        LoginPageObjects loginpo = new LoginPageObjects();
-
-
-   }
-
-    public void clickOnSignInLink(){
+   public void clickOnSignInLink(){
         waitForElementDisplay(mempo.loginLiknk);
         mempo.loginLiknk.click();
     }
@@ -57,6 +50,7 @@ public class MemberActivityPage extends AbstractDriver {
     public void validateOnPaymentsPage(String title) throws InterruptedException{
     	  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
           String pageTitle = driver.getTitle();
+          System.out.println("page title is --- "+pageTitle);
           driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	 Assert.assertTrue(title.equals(pageTitle));
        }
