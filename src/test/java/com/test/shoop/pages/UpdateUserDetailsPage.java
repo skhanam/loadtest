@@ -116,6 +116,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     public void clickOnGenderModifyLink() {
     	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+    	Utility.scrollDownWindow(driver);
         waitForElementDisplay(uupo.genderModifierLink);
         uupo.genderModifierLink.click();
     }
