@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class UpdateUserPageObjects {
 
-    @FindBy(css = "a[e2e-edit-row='name']")
+    @FindBy(xpath = "//div[@class='settings-fields']/div[1]/div[1]/div/div[3]/div")
     public WebElement nameModifierLink;
     @FindBy(xpath = "//*[contains(@name,'first_name')]")
     public WebElement editFname;
@@ -20,15 +20,15 @@ public class UpdateUserPageObjects {
     public WebElement emailConfirmation;
     @FindBy(xpath = "//*[contains(@name,'password' )]")
     public WebElement editPassword;
-    @FindBy(css = "a[e2e-edit-row='email']")
+    @FindBy(xpath = "//div[@class='settings-fields']/div[2]/div[1]/div/div[3]/div")
     public WebElement emailModifierLink;
     @FindBy(xpath = "//*[contains(@name,'username')]")
     public WebElement editUserName;
-    @FindBy(css = "a[e2e-edit-row='gender']")
+    @FindBy(xpath = "//div[@class='settings-fields']/div[4]/div[1]/div/div[3]/div")
     public WebElement genderModifierLink;
-    @FindBy(css= "a[e2e-edit-row='username']")
+    @FindBy(xpath= "//div[@class='settings-fields']/div[3]/div[1]/div/div[3]/div")
     public WebElement usernameModifierLink;
-    @FindBy(css = "a[e2e-edit-row='birthdate']")
+    @FindBy(xpath = "//div[@class='settings-fields']/div[5]/div[1]/div/div[3]/div")
     public WebElement dateOFBirthModiefierLink;
     @FindBy(xpath = "//*[@name='day']/option[9]")
     public WebElement dayOFBirth;
@@ -36,11 +36,11 @@ public class UpdateUserPageObjects {
     public WebElement monthOFBirth;
     @FindBy(xpath = "//*[contains(@name,'year')]/option[81]")
     public WebElement yearOFBirth;
-    @FindBy(xpath = "//div[@class='settings-grid']/div[6]/div[1]/div[3]/a")
+    @FindBy(xpath = "//div[@class='settings-fields']/div[6]/div[1]/div/div[3]/div")
     public WebElement postCodeModiefier;
     @FindBy(xpath = "//*[contains(@name,'post_code')]")
     public WebElement editPostcode;
-    @FindBy(xpath = "//div[@class='form-group radio']/div/label[1]/span")
+    @FindBy(xpath = "//div[@class='row']/div[1]/div/label")
     public WebElement malesex;
     @FindBy(xpath = "//div[@class='form-group radio']/div/label[2]/span")
     public WebElement Femalesex;
@@ -58,17 +58,17 @@ public class UpdateUserPageObjects {
     public WebElement postcodeRecordButton;
     @FindBy(xpath = "//*[@id='user.settings.general']")
     public WebElement generalSettings;
-    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[1]/div[1]/div[3]/span")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div/div[1]/div[1]/div/p")
     public WebElement successMessageName;
-    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[2]/div[1]/div[3]/span")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div/div[2]/div[1]/div/p")
     public WebElement successMessageEmail;
-    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[3]/div[1]/div[3]/span")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div/div[3]/div[1]/div/p")
     public WebElement successMessageEditUserName;
-    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[4]/div[1]/div[3]/span")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div/div[4]/div[1]/div/p")
     public WebElement successMessageGender;
-    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[5]/div[1]/div[3]/span")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div/div[5]/div[1]/div/p")
     public WebElement successMessageDOB;
-    @FindBy(xpath = "//div[@class ='settings editable-row ng-scope']/div/div[6]/div[1]/div[3]/span")
+    @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div/div[6]/div[1]/div/p")
     public WebElement successMessagePostalCode;
 
 }
