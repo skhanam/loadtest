@@ -1,5 +1,7 @@
 package com.test.shoop.pages;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
@@ -28,10 +30,21 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 		copy.viewVoucherCode.click();
 	}
 	public void validateCopyOption(){
-		driver.switchTo().defaultContent();
-		waitForElementDisplay(copy.copyOption);
-		copy.copyOption.isDisplayed();
+		driver.manage().timeouts().implicitlyWait(260, TimeUnit.SECONDS);
+		Set <String> handles =driver.getWindowHandles();
+		Iterator<String> it = handles.iterator();
+		
+		while (it.hasNext()){
+		    String newwin = it.next();
+		    String parentWindow = it.next();
+		    driver.switchTo().window(newwin);
+		     driver.switchTo().window(parentWindow);
+		    driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		    driver.switchTo().defaultContent();
+		   
+		    waitForElementDisplay(copy.copyOption);
+		     copy.copyOption.isDisplayed();
+	    }
+		
 	}
-
-
 }
