@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.test.shoop.config.AbstractDriver;
@@ -27,9 +28,11 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	public void clickOnViewCodeButton(){
 		driver.manage().timeouts().implicitlyWait(260, TimeUnit.SECONDS);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-     	js.executeScript("window.scrollBy(0,250)", "");
+     	js.executeScript("window.scrollBy(0,200)", "");
 		waitForElementDisplay(copy.viewVoucherCode);
-		copy.viewVoucherCode.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(copy.viewVoucherCode).click().build().perform();
+		//copy.viewVoucherCode.click();
 	}
 	public void validateCopyOption(){
 		driver.manage().timeouts().implicitlyWait(260, TimeUnit.SECONDS);
