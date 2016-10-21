@@ -36,16 +36,14 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 		driver.manage().timeouts().implicitlyWait(360, TimeUnit.SECONDS);
 		Set <String> handles =driver.getWindowHandles();
 		Iterator<String> it = handles.iterator();
-		
 		while (it.hasNext()){
 		    String newwin = it.next();
 		    String parentWindow = it.next();
 		    driver.switchTo().window(newwin);
 		     driver.switchTo().window(parentWindow);
-		    driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 		    driver.switchTo().defaultContent();
-		   
-		    waitForElementDisplay(copy.copyOption);
+			waitForElementDisplay(copy.copyOption);
 		     copy.copyOption.isDisplayed();
 	    }
 		
