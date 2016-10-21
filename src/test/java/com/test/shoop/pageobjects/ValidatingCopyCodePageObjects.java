@@ -9,7 +9,7 @@ public class ValidatingCopyCodePageObjects {
     public WebElement searchField;
 	@FindBy(xpath = "//*[@id='search-result-2220']/div[2]/h4")
     public WebElement merchantName;
-	@FindBy(xpath = "//div[@class='offer-btn-wrapper ng-scope']/div/div")
+	@FindBy(xpath = "//div[@class='offer-btn-wrapper ng-scope']/div/div/span")
     public WebElement viewVoucherCode;
 	@FindBy(xpath = "//div[@class='modal-content']/div[2]/p[2]/a/span")
 	public WebElement copyOption;
