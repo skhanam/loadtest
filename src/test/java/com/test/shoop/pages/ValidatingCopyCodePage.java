@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.test.shoop.config.AbstractDriver;
@@ -26,24 +27,27 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	}
 	public void clickOnViewCodeButton(){
 		driver.manage().timeouts().implicitlyWait(260, TimeUnit.SECONDS);
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//     	js.executeScript("window.scrollBy(0,250)", "");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+     	js.executeScript("window.scrollBy(0,350)", "");
 		waitForElementDisplay(copy.viewVoucherCode);
-		copy.viewVoucherCode.click();
-		driver.manage().timeouts().implicitlyWait(360, TimeUnit.SECONDS);
+		Actions act = new Actions(driver);
+		act.moveToElement(copy.viewVoucherCode).click().build().perform();
+		//copy.viewVoucherCode.click();
 	}
 	public void validateCopyOption(){
-		driver.manage().timeouts().implicitlyWait(360, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(260, TimeUnit.SECONDS);
 		Set <String> handles =driver.getWindowHandles();
 		Iterator<String> it = handles.iterator();
+		
 		while (it.hasNext()){
 		    String newwin = it.next();
 		    String parentWindow = it.next();
 		    driver.switchTo().window(newwin);
 		     driver.switchTo().window(parentWindow);
-		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
+		    driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		    driver.switchTo().defaultContent();
-			waitForElementDisplay(copy.copyOption);
+		    driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		    waitForElementDisplay(copy.copyOption);
 		     copy.copyOption.isDisplayed();
 	    }
 		
