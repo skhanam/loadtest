@@ -8,6 +8,7 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 /**
  * Created by thadeus on 07/07/16.
@@ -29,6 +30,7 @@ import java.io.IOException;
 )
 public class LoginUnregisteredEmailRunner {
 
+    private static Logger LOGGER = Logger.getLogger("InfoLogging");
 
     @BeforeClass
     public static void setUp() throws IOException {

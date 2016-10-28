@@ -1,4 +1,5 @@
 package com.test.shoop.pages;
+import com.sun.media.jfxmedia.logging.Logger;
 import com.test.shoop.pageobjects.UnregisteredEmailPageObjects;
 import com.test.shoop.config.AbstractDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +9,9 @@ import static junit.framework.TestCase.assertTrue;
  * Created by thadeus on 14/06/16.
  */
 public class UnregisteredEmailPage extends AbstractDriver {
-UnregisteredEmailPageObjects unReg = new UnregisteredEmailPageObjects();
+    UnregisteredEmailPageObjects unReg = new UnregisteredEmailPageObjects();
+    private static java.util.logging.Logger LOGGER = java.util.logging.Logger.getLogger("InfoLogging");
+
 
   public UnregisteredEmailPage(){
       PageFactory.initElements(AbstractDriver.driver,unReg);
@@ -36,6 +39,7 @@ UnregisteredEmailPageObjects unReg = new UnregisteredEmailPageObjects();
 
     public void validateInvalidEmailPasswordISDisplayed(String invalid_info){
         waitForElementDisplay(unReg.incorrectlogindetails);
+        LOGGER.info(unReg.invalidemailPassword.getText());
         assertTrue(unReg.invalidemailPassword.getText().contains(invalid_info));
 
     }
