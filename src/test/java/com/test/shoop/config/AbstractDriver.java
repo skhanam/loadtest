@@ -79,11 +79,11 @@ public class AbstractDriver {
 
     public static void waitForElementDisplay(final WebElement element) throws ElementNotVisibleException{
         if (wait == null){
-        Wait<WebDriver> wait = new FluentWait<>(AbstractDriver.driver)
+        wait = new FluentWait<>(AbstractDriver.driver)
                 .withTimeout(60, TimeUnit.SECONDS)
                 .pollingEvery(3, TimeUnit.SECONDS)
-                .ignoring(NoSuchElementException.class);}
-
+                .ignoring(NoSuchElementException.class);
+        }
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
