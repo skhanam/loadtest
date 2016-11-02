@@ -21,7 +21,6 @@
       | montres-bijoux           |
       | chaussures               |
       | enfant                   |
-      | maison-jardin            |
       | Voyages                  |
       | high-tech-electromenager |
       | mobile-telephone-tv      |
@@ -32,20 +31,8 @@
       | billetterie-concerts     |
       | charme-adulte            |
       | musique-streaming        |
-      | bio-produits-naturels    |
-      | puericulture             |
-      | minceur                  |
-      | parapharmacie            |
-      | nutrition-sportive       |
-      | lunettes-lentilles       |
       | offres-internet          |
       | forfaits-mobile          |
-      | camescope-photo          |
-      | electromenager           |
-      | gadgets-electroniques    |
-      | image-son                |
-      | informatique             |
-      | logiciels                |
       | parcs-de-loisirs         |
       | ski-sports-d-hiver       |
       | thalasso                 |
