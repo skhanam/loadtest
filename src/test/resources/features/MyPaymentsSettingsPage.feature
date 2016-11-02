@@ -17,7 +17,7 @@ Feature: Member updates account details
     And I enter my new password as"testQA!12"
     And I click on account payment record button
     And I click on Yes to accept user account update terms and conditions
-    Then I should see successfuly"Les modifications ont bien été effectuées" updated text
+    Then I should see successfuly "Les modifications ont bien été effectuées" updated text
     And I click on the signout link
     And I should be logged out of my account
 
@@ -26,7 +26,7 @@ Feature: Member updates account details
     And I click on link my paypal account button 
     And I click on Yes to accept user account update terms and conditions
     And I should be on the Paypal login page
-    And I enter paypal account emailid as "quidcoqa@quidco.com" 
+    And I enter paypal account emailid as "quidcoqa@quidco.com"
     And I enter paypal account password as "testpass"
     And I click on sign in button on paypal page
     Then I should see paypal account added Success message 
