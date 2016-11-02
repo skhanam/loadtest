@@ -47,6 +47,7 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 		     driver.switchTo().window(parentWindow);
 		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 		    driver.switchTo().defaultContent();
+			Utility.scrollDownWindow(driver);
 		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 		    waitForElementDisplay(copy.copyOption);
 			copy.copyOption.isDisplayed();
