@@ -64,7 +64,7 @@ public class MYPaymentsSettingsPageStepDef {
         paymentsPage.acceptAccountPayementUpdatedTermsAndCond();
     }
 
-    @Then("^I should see successfuly\"([^\"]*)\" updated text$")
+    @Then("^I should see successfuly \"([^\"]*)\" updated text$")
     public void i_should_see_successfuly_updated_text(String arg1) throws Throwable {
         paymentsPage.validateMemberPaymentsSuccessfullyUpdated(arg1);
 
