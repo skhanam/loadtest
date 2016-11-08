@@ -29,7 +29,7 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 		driver.manage().timeouts().implicitlyWait(1260, TimeUnit.SECONDS);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-     	js.executeScript("window.scrollBy(0,350)", "");
+     	js.executeScript("window.scrollBy(0,600)", "");
 		waitForElementDisplay(copy.viewVoucherCode);
 		Actions act = new Actions(driver);
 		act.moveToElement(copy.viewVoucherCode).click().build().perform();
