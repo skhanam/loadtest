@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,11 +30,11 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	}
 	public void clickOnViewCodeButton(){
 		driver.manage().timeouts().implicitlyWait(1260, TimeUnit.SECONDS);
-
 		JavascriptExecutor js = (JavascriptExecutor) driver;
      	js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		
-		waitForElementDisplay(copy.viewVoucherCode);
+     	WebDriverWait wait = new WebDriverWait(driver,30);
+     	wait.until(ExpectedConditions.elementToBeClickable(copy.viewVoucherCode));
+	    waitForElementDisplay(copy.viewVoucherCode);
 		Actions act = new Actions(driver);
 		act.moveToElement(copy.viewVoucherCode).click().build().perform();
 		//copy.viewVoucherCode.click();
