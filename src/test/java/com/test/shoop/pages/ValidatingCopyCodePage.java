@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
@@ -48,7 +49,10 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 		    driver.switchTo().defaultContent();
 			Utility.scrollDownWindow(driver);
+			waitForElementDisplay(copy.copyOption);
 		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
+		    WebDriverWait wait = new WebDriverWait(driver,30);
+		      wait.until()
 		    waitForElementDisplay(copy.copyOption);
 			copy.copyOption.isDisplayed();
 	    }
