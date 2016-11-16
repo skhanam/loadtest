@@ -19,7 +19,7 @@ public class MYPayementsSettingsPage extends AbstractDriver {
 
     Actions action = new Actions(driver);
     HomePage homePage = new HomePage();
-    MYPayementsSettingsPageObjects payment = new MYPayementsSettingsPageObjects();
+    MYPayementsSettingsPageObjects payment = PageFactory.initElements(AbstractDriver.driver,MYPayementsSettingsPageObjects.class);
 
     public MYPayementsSettingsPage(){
         PageFactory.initElements(AbstractDriver.driver, payment);
