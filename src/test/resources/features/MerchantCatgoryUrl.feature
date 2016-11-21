@@ -20,9 +20,8 @@
       | lunettes-de-soleil       |
       | montres-bijoux           |
       | chaussures               |
-      | enfant                   |
-      | Voyages                  |
-      | high-tech-electromenager |
+      | enfant                   | 
+      | high-tech                |
       | mobile-telephone-tv      |
       | Divertissement           |
       | rencontre-sur-internet   |

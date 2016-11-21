@@ -23,7 +23,7 @@ public class MerchantCategoryUrlPage extends AbstractDriver {
 
     public void goToMerchantCategoryUrl(String cat_name){
         String url = homePage.getUrl();
-        String fullUrl = url + "/c/"+ cat_name;
+        String fullUrl = url+"/c/"+cat_name;
         driver.get(fullUrl);
         /*String [] baseUrl = cat_name.split(",");
         for (String MC : baseUrl){
