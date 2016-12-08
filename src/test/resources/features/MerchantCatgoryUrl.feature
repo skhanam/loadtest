@@ -55,5 +55,5 @@
       | hotels                   |
       | billets-d-avion          |
       | films-series             |
-      | livres-magazines         |
+      #| livres-magazines         |
 
