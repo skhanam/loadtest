@@ -6,14 +6,19 @@ import com.test.shoop.pageobjects.MemberActivityPageObjects;
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by thadeus on 13/04/16.
@@ -23,6 +28,7 @@ public class MemberActivityPage extends AbstractDriver {
     MemberActivityPageObjects  mempo = PageFactory.initElements(driver, MemberActivityPageObjects.class);
     Actions action = new Actions(driver);
     LoginPageObjects loginpo = PageFactory.initElements(driver, LoginPageObjects.class);
+    Logger LOGGER = Logger.getLogger("InfoLogging");
 
 
    public void clickOnSignInLink(){
@@ -37,7 +43,6 @@ public class MemberActivityPage extends AbstractDriver {
 
     }
     public void validateOnMyActivityPage(){
-
         waitForElementDisplay(mempo.userActivityPage);
         assertTrue(mempo.userActivityPage.isDisplayed());
     }
@@ -68,7 +73,8 @@ public class MemberActivityPage extends AbstractDriver {
     public void clickOnSignoutLink(){
     	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     	Utility.scrollUpWindow(driver);
-        waitForElementDisplay(mempo.logOutButton);
+        new WebDriverWait(driver, 1000).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav nav-mega ng-scope']/li[5]/a")));
+        //waitForElementDisplay(mempo.logOutButton);
         mempo.logOutButton.click();
        }
 

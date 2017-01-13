@@ -11,8 +11,10 @@ import org.openqa.selenium.support.FindBy;
  */
 
 public class LoginPageObjects {
+
+
 	
-    @FindBy(id ="header-login-link")
+    @FindBy(xpath ="//category-icons[@class='pull-right ng-scope']/div/ul/li[2]/a")
     public WebElement loginLink;
     @FindBy(xpath = "//input[@type='email']")
     public WebElement userName;

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  * Created by thadeus on 04/07/16.
  */
 public class RegistrationPageObjects {
-    @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
+    @FindBy(xpath = "//category-icons[@class='pull-right ng-scope']/div/ul/li[1]/a")
 	public WebElement registerLink;
     @FindBy(xpath="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label")
 //    @FindBy(name="accepted_terms")
