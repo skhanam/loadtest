@@ -16,15 +16,15 @@ public class MemberActivityPageObjects {
     public WebElement myAccountButton;
     @FindBy(xpath = "//*[@id='user.payments']")
     public WebElement paymentbutton;
-    @FindBy(xpath = "//*[contains(@name,'my-account-link')]")
+    @FindBy(xpath = "//category-icons[@class='pull-right ng-scope']/div/ul/li/a")
     public WebElement myactivityButton;
-    @FindBy(xpath = "//*[@id='user.activity.purchases']")
+    @FindBy(xpath = "//div[@class='activity']/div/div/div[2]/div[1]/div")
     public WebElement userActivityPage;
     @FindBy(xpath = "//*[@id='user.settings.general']")
     public  WebElement settingButton;
     @FindBy(css = "a[e2e-edit-row='email']")
     public WebElement emailModifierLink;
-    @FindBy(xpath = "//a[@id='signOut']")
+    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[5]/a")
     public WebElement logOutButton;
     @FindBy(xpath = "//div[@class='settings-fields']/div[2]/div[1]/div/div[3]/div/div")
     public WebElement settingPage;
