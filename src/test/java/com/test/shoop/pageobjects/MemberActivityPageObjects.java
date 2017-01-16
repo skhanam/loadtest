@@ -24,7 +24,7 @@ public class MemberActivityPageObjects {
     public  WebElement settingButton;
     @FindBy(css = "a[e2e-edit-row='email']")
     public WebElement emailModifierLink;
-    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[5]/a")
+    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[5]/a[@href='/deconnexion/']")
     public WebElement logOutButton;
     @FindBy(xpath = "//div[@class='settings-fields']/div[2]/div[1]/div/div[3]/div/div")
     public WebElement settingPage;
