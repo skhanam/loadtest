@@ -14,7 +14,11 @@ public class LoginPageObjects {
 
 
 	
+<<<<<<< HEAD
     @FindBy(xpath ="//category-icons[@class='pull-right ng-scope']/div/ul/li[2]/a")
+=======
+    @FindBy(xpath ="header-login-link")
+>>>>>>> master
     public WebElement loginLink;
     @FindBy(xpath = "//input[@type='email']")
     public WebElement userName;

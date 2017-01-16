@@ -14,7 +14,7 @@ public class MemberActivityPageObjects {
     public WebElement memberArea;
     @FindBy(xpath = "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     public WebElement myAccountButton;
-    @FindBy(xpath = "//*[@id='user.payments']")
+    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[3]/a")
     public WebElement paymentbutton;
     @FindBy(xpath = "//category-icons[@class='pull-right ng-scope']/div/ul/li/a")
     public WebElement myactivityButton;
