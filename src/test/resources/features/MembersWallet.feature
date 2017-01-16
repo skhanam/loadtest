@@ -7,6 +7,7 @@ Feature: As a user
   Background: loging into shoop home page
   
        Given user is logged in
+       And I should see a greeting message "Bonjour"
 
   Scenario: Validating wallet pages
 
