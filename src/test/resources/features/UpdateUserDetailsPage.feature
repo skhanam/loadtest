@@ -4,6 +4,7 @@ Feature: As a shoop member I should be able to edit personal details on general 
 
   Scenario: Member Login
     Given I am logged into shoop
+    And I should see a greeting message "Bonjour"
     When I click on a member my activity link
     Then I should be on the my activity page
     And I click on the my account settings tab

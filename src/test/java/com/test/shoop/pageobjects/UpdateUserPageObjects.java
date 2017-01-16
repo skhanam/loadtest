@@ -56,7 +56,7 @@ public class UpdateUserPageObjects {
     public WebElement doBRecordButton;
     @FindBy(xpath="//*[@id='postCodeForm-save']")
     public WebElement postcodeRecordButton;
-    @FindBy(xpath = "//*[@id='user.settings.general']")
+    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[4]/a[@href='/utilisateur/parametres/general/']")
     public WebElement generalSettings;
     @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div/div[1]/div[1]/div/p")
     public WebElement successMessageName;
