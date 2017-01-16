@@ -7,6 +7,7 @@ import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -74,8 +75,9 @@ public class MemberActivityPage extends AbstractDriver {
     	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     	Utility.scrollUpWindow(driver);
         new WebDriverWait(driver, 1000).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@class='nav nav-mega ng-scope']/li[5]/a")));
-        //waitForElementDisplay(mempo.logOutButton);
-        mempo.logOutButton.click();
+        waitForElementDisplay(mempo.logOutButton);
+        action.moveToElement(mempo.logOutButton).click().build().perform();
+       // mempo.logOutButton.click();
        }
 
     public void validateSignOutComplete(){
