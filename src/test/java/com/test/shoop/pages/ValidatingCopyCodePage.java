@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,8 +22,8 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	
 	public void enterMerchantNameinSearch(){
 		waitForElementDisplay(copy.searchField);
-		copy.searchField.sendKeys("Yoin");
-		copy.searchField.submit();
+		copy.searchField.sendKeys("Yoins");
+		copy.searchField.sendKeys(Keys.ENTER);
 	}
 	public void clickOnMerchantName(){
 		waitForElementDisplay(copy.merchantName);
@@ -44,6 +45,11 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	}
 	public void validateCopyOption(){
 		driver.manage().timeouts().implicitlyWait(1260, TimeUnit.SECONDS);
+		waitForElementDisplay(copy.copyOption);
+          copy.copyOption.isDisplayed();
+
+
+		/*
 		Set <String> handles =driver.getWindowHandles();
 		Iterator<String> it = handles.iterator();
 		
@@ -60,7 +66,7 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 		    WebDriverWait wait = new WebDriverWait(driver,30);
 		    waitForElementDisplay(copy.copyOption);
 			copy.copyOption.isDisplayed();
-	    }
+	    }*/
 		
 	}
 }
