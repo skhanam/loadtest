@@ -20,7 +20,7 @@ public class MemberActivityPageObjects {
     public WebElement myactivityButton;
     @FindBy(xpath = "//div[@class='activity']/div/div/div[2]/div[1]/div")
     public WebElement userActivityPage;
-    @FindBy(xpath = "//*[@id='user.settings.general']")
+    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[4]/a")
     public  WebElement settingButton;
     @FindBy(css = "a[e2e-edit-row='email']")
     public WebElement emailModifierLink;

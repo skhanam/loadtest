@@ -7,14 +7,15 @@ Feature: Testing login to my shoop member account and edit details
   Background: Shoop member Login
 
     Given user is logged in
+    And I should see a greeting message "Bonjour"
 
 
   Scenario: Validate member area tabs
 
-    And I click on a member my activity link
-    Then I should be on the my activity page
+    When I click on a member my activity link
+    And I should be on the my activity page
     And I click on the  my payments  tab link
-    Then I should verify the title of the page as "Paiement | Shoop - Le Meilleur du Cashback & du Code Promo"
+    And I should verify the title of the page as "Paiement | Shoop - Le Meilleur du Cashback & du Code Promo"
     And I click on the signout link
     Then I should be logged out of my account
 

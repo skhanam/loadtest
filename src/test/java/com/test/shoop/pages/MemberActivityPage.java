@@ -39,8 +39,10 @@ public class MemberActivityPage extends AbstractDriver {
 
 
     public void clickOnMyActivityPage(){
+        driver.manage().timeouts().pageLoadTimeout(2000, TimeUnit.SECONDS);
         waitForElementDisplay(mempo.myactivityButton);
-        mempo.myactivityButton.click();
+       mempo.myactivityButton.click();
+       // action.moveToElement(mempo.myactivityButton).click().build().perform();
 
     }
     public void validateOnMyActivityPage(){
