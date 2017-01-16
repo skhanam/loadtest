@@ -11,9 +11,9 @@ public class MYPayementsSettingsPageObjects {
 
 	@FindBy(css = ".container.ng-binding")
     public WebElement memberPayementsPages;
-    @FindBy(xpath = "//*[@id='user.settings.general']")
+    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[4]/a[@href='/utilisateur/parametres/general/']")
     public  WebElement generalSettings;
-   @FindBy(xpath = "//div[@class='col-md-2']/div/ul/li[3]/a")
+   @FindBy(xpath = "//ul[@class='qp-left-nav nav nav-pills-vertical nav-stacked']/li[3]/a")
     public WebElement bankingInfoLink;
     @FindBy(xpath = "//div[@class='settings-fields ng-scope']/div[1]/div[1]/div/div[3]/div/div")
     public WebElement modifiedPaymenyLink;
@@ -51,7 +51,7 @@ public class MYPayementsSettingsPageObjects {
     public WebElement agreeButton;
     @FindBy(xpath = "//form[@class='form-horizontal ng-pristine ng-valid ng-scope']/div[2]/div/button[1]")
     public WebElement dissociatePaypallink;
-    @FindBy(xpath = "//*[@id='signOut']")
+    @FindBy(xpath = "//ul[@class='nav nav-mega ng-scope']/li[5]/a[@href='/deconnexion/']")
     public WebElement logOutButton;
     @FindBy(xpath = "//ui-view[@class='ng-scope']/div[2]/div[2]/div[2]/div[1]/div/p")
     public WebElement paypalLinkaddedSuccessMessage;

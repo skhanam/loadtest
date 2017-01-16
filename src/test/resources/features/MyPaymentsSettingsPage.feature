@@ -4,7 +4,8 @@ Feature: Member updates account details
 
   Background: Shoop member Login
       Given user is logged in
-      Given I click on a member my activity link
+      And I should see a greeting message "Bonjour"
+      And  I click on a member my activity link
       Then I should be on the my activity page
       And I click on the setting link
       And I click on the banking information link
