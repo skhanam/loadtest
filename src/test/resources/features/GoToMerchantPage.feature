@@ -1,5 +1,5 @@
-@Regression
-@GotoMerchantSite
+#@Regression
+#@GotoMerchantSite
   Feature: User clicks out of shoop to merchant site
 
   Scenario: login through the merchant site
