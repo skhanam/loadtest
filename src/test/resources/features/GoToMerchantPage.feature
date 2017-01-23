@@ -1,4 +1,4 @@
-
+@Regression
 @GotoMerchantSite
   Feature: User clicks out of shoop to merchant site
 

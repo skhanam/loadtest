@@ -1,3 +1,4 @@
+@Regression
 @UpdateUserDetails
 
 Feature: As a shoop member I should be able to edit personal details on general settings page

@@ -1,4 +1,4 @@
-
+@Regression
 #@QA-80
 Feature:
 When I navigate to the search bar

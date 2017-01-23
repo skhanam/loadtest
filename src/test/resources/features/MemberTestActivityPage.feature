@@ -1,3 +1,4 @@
+@Regression
 @MemberActivity
 
 Feature: Testing login to my shoop member account and edit details

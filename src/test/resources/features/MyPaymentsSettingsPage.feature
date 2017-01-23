@@ -1,3 +1,4 @@
+@Regression
 @MyPayementsPage
 
 Feature: Member updates account details

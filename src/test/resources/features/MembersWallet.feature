@@ -1,3 +1,4 @@
+@Regression
 @MemberWallet
 Feature: As a user
   I want to validate the wallet page is up and running

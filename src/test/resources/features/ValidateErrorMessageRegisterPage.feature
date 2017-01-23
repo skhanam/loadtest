@@ -1,3 +1,4 @@
+@Regression
 @ErrorRegister
 
 Feature: As a user I should be able to view relevant error messages with empty input fields

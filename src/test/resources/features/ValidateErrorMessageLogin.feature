@@ -1,3 +1,4 @@
+@Regression
 @ErrorMessage
 Feature:  Login user with Admin preverages
 

@@ -1,3 +1,4 @@
+@Regression
 @FrequentlyAsked
 Feature: view shoop Questions fréquentes
   As a user

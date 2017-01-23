@@ -1,3 +1,4 @@
+@Regression
 @LoginOut
 Feature:  Shoop member account login test
 

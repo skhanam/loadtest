@@ -1,4 +1,4 @@
-
+@Regression
 @MerchantUrl
 
   Feature: Validate merchant category on shoop

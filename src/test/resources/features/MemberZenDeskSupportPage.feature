@@ -1,3 +1,4 @@
+@Regression
 @CreateSupportTicket
 
 Feature: Users creates a support ticket

@@ -1,3 +1,4 @@
+@Regression
 @UnregisteredEmail
 Feature: Sign in with un-registered email address
 
