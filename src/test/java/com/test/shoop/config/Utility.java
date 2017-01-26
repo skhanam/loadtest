@@ -1,11 +1,11 @@
 package com.test.shoop.config;
 
 import java.awt.Toolkit;
-import java.util.logging.Logger;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -27,10 +27,11 @@ public final class Utility extends AbstractDriver{
 	        
 	    }
 	
-     public static void scrollDownWindow(WebDriver driver){
+     public static WebElement scrollDownWindow(WebDriver driver, WebElement element){
     	 
     	 JavascriptExecutor js = (JavascriptExecutor) driver;
-     	js.executeScript("window.scrollBy(0,200)", "");
+     	js.executeScript("window.scrollBy(0,200)", element);
+     	return element;
     }
      
      public static void scrollUpWindow(WebDriver driver){

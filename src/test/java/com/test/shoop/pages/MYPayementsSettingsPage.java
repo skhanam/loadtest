@@ -61,7 +61,7 @@ public class MYPayementsSettingsPage extends AbstractDriver {
 
     }
     public void clickOnPaymentRecordButton(){
-    	Utility.scrollDownWindow(driver);
+    	Utility.scrollDownWindow(driver,payment.paymentRecordButton );
     	waitForElementDisplay(payment.paymentRecordButton);
         payment.paymentRecordButton.click();
 

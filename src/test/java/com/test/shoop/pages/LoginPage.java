@@ -57,7 +57,7 @@ public class LoginPage extends AbstractDriver {
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
         loginpo.emailpassword.sendKeys(credentials.getPassword());
-        Utility.scrollDownWindow(driver);
+        Utility.scrollDownWindow(driver, loginpo.loginButton);
         loginpo.loginButton.click();
 
     }
@@ -70,7 +70,7 @@ public class LoginPage extends AbstractDriver {
     }
 
     public void clickLoginButton() {
-    	 Utility.scrollDownWindow(driver);
+    	 Utility.scrollDownWindow(driver,loginpo.loginButton );
         waitForElementDisplay(loginpo.loginButton);
         Utility.acceptCookies(driver);
         loginpo.loginButton.click();

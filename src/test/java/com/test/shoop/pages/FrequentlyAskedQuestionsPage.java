@@ -50,8 +50,8 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnIsItSafeAndSecureLink() {
-        waitForElementDisplay(questions.safeSecure);
-        Utility.scrollDownWindow(driver);
+        //waitForElementDisplay(questions.safeSecure);
+        Utility.scrollDownWindow(driver,questions.safeSecure );
         questions.safeSecure.click();
 
     }
@@ -66,8 +66,8 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOncanWeConsultTheOffersBeforeSignUpLink() {
-        waitForElementDisplay(questions.consultOfferB4SigningUp);
-        Utility.scrollDownWindow(driver);
+        Utility.scrollDownWindow(driver, questions.consultOfferB4SigningUp);
+       // waitForElementDisplay(questions.consultOfferB4SigningUp);
         questions.consultOfferB4SigningUp.click();
     }
 
@@ -80,9 +80,9 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnHowMuchWillIEarnLink() {
-    	waitForElementDisplay(questions.HowMuchToEarn);
-    	Utility.scrollDownWindow(driver);
-    	questions.HowMuchToEarn.click();
+        Utility.scrollDownWindow(driver,questions.HowMuchToEarn );
+    	//waitForElementDisplay(questions.HowMuchToEarn);
+        questions.HowMuchToEarn.click();
     }
 
     public void ValidateHowMuchWillEarnLink(String c_earing) {
@@ -95,8 +95,8 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnhowITWorksLink() {
-    	 waitForElementDisplay(questions.HowItWorks);
-         Utility.scrollDownWindow(driver);
+        Utility.scrollDownWindow(driver, questions.HowItWorks);
+    	// waitForElementDisplay(questions.HowItWorks);
          questions.HowItWorks.click();
    }
     

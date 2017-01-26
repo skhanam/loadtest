@@ -116,7 +116,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
 
     public void clickOnGenderModifyLink() {
     	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-    	Utility.scrollDownWindow(driver);
+    	Utility.scrollDownWindow(driver, uupo.genderModifierLink);
         waitForElementDisplay(uupo.genderModifierLink);
         uupo.genderModifierLink.click();
     }
@@ -133,7 +133,7 @@ public class UpdateUserDetailsPage extends AbstractDriver {
     }
 
     public void clickOnModifyUsernameLink() {
-    	Utility.scrollDownWindow(driver);
+    	Utility.scrollDownWindow(driver, uupo.usernameModifierLink);
     	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
          waitForElementDisplay(uupo.usernameModifierLink);
         uupo.usernameModifierLink.click();
