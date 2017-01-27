@@ -27,7 +27,7 @@ public class LoginPageObjects {
     public WebElement logi;
     @FindBy(xpath= "html/body/header/div[2]/div/div[1]/ul/li[1]/a/span/span")
     public WebElement loggedIn;
-    @FindBy(xpath= "//html/body/div[2]/div/div[1]/h1/span/span")
+    @FindBy(xpath= "//h1[@class='greeting-header']/span[1]/span")
     public WebElement successMessage;
     @FindBy(css = "h1.greeting-header > span.ng-binding.ng-scope")
     public WebElement confirmUserLogged;
