@@ -57,6 +57,7 @@ public class MemberActivityPage extends AbstractDriver {
     }
     public void validateOnPaymentsPage(String title) throws InterruptedException{
     	  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        waitForElementDisplay(mempo.settingButton);
           String pageTitle = driver.getTitle();
           System.out.println("page title is --- "+pageTitle);
           driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);

@@ -53,7 +53,7 @@ public class RegistrationPage extends AbstractDriver {
     }
 
     public void enterEmailAddressAndPassword(){
-        for (int idx=0;idx<1; ++idx){
+ //       for (int idx=0;idx<1; ++idx){
 //            UID userid = new UID();
 //            final String email =userid.toString().hashCode() +"@quidco.com";
 //            final String email = "autotest"+System.currentTimeMillis()+"@gmail.com";
@@ -61,7 +61,7 @@ public class RegistrationPage extends AbstractDriver {
             logger.info("email being created :"+email);
             reg.userName.sendKeys(email);
             reg.emailpassword.sendKeys("Hannah123L");
-        }
+
     }
     public void acceptShoopTermsAndConditions(){
             waitForElementDisplay(reg.regTermsAndConditions);

@@ -27,7 +27,7 @@ public class RegistrationPageObjects {
     public WebElement menuCategory;
     @FindBy(xpath = "#courses-en-ligne-drive")
     public WebElement pageTopTab;
-    @FindBy(xpath= "//input[@type='email']")
+    @FindBy(xpath= "//input[@name='email']")
     public WebElement userName;
     @FindBy(xpath="//input[@type='password']")
     public WebElement password;
