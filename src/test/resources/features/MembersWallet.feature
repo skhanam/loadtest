@@ -1,7 +1,6 @@
 @Regression
 @MemberWallet
-Feature: As a user
-  I want to validate the wallet page is up and running
+Feature: As a user, I want to validate the wallet page is up and running
   So users can navigate to their and withdraw funds
 
 
