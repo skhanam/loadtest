@@ -61,7 +61,7 @@ public class MemberActivityPage extends AbstractDriver {
           String pageTitle = driver.getTitle();
           System.out.println("page title is --- "+pageTitle);
           driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-    	 Assert.assertTrue(title.equals(pageTitle));
+    	 Assert.assertTrue(title.contains(pageTitle));
        }
 
     public void clickAndAndvalidateUserOnSettingPage(){

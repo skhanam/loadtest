@@ -16,7 +16,7 @@ Feature: Testing login to my shoop member account and edit details
     When I click on a member my activity link
     And I should be on the my activity page
     And I click on the  my payments  tab link
-    And I should verify the title of the page as "Paiement | Shoop - Le Meilleur du Cashback & du Code Promo"
+    And I should verify the title of the page as "Paiement | Shoop, Le Site de Cashback Français le plus Généreux pour vos Economies"
     And I click on the signout link
     Then I should be logged out of my account
 
