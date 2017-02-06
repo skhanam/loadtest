@@ -39,9 +39,9 @@ public class ValidatingCopyCodePage extends AbstractDriver{
      	WebDriverWait wait = new WebDriverWait(driver,30);
      	wait.until(ExpectedConditions.elementToBeClickable(copy.viewVoucherCode));
 	    waitForElementDisplay(copy.viewVoucherCode);
-		Actions act = new Actions(driver);
-		act.moveToElement(copy.viewVoucherCode).click().build().perform();
-		//copy.viewVoucherCode.click();
+		//Actions act = new Actions(driver);
+		//act.moveToElement(copy.viewVoucherCode).click().build().perform();
+		copy.viewVoucherCode.click();
 	}
 	public void validateCopyOption(){
 		driver.manage().timeouts().implicitlyWait(1260, TimeUnit.SECONDS);
