@@ -1,3 +1,6 @@
 .idea
+.gitignore
 /target/
-target/
+/.idea/
+/.idea/misc.xml
+/.idea/vcs.xml

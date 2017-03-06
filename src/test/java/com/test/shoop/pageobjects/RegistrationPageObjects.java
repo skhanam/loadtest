@@ -10,8 +10,7 @@ import org.openqa.selenium.support.FindBy;
 public class RegistrationPageObjects {
     @FindBy(xpath = "//category-icons[@class='pull-right ng-scope']/div/ul/li[1]/a")
 	public WebElement registerLink;
-    @FindBy(xpath="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label")
-//    @FindBy(name="accepted_terms")
+    @FindBy(xpath="//form[@name='registerForm']/div[5]/label")
     public WebElement regTermsAndConditions;
     @FindBy(xpath ="html/body/div[2]/div/div[2]/div[1]/div/div[2]/form/div[4]/label/span[1]/span")
     public WebElement acceptToReceiveShoopOffers;
@@ -27,6 +26,10 @@ public class RegistrationPageObjects {
     public WebElement menuCategory;
     @FindBy(xpath = "#courses-en-ligne-drive")
     public WebElement pageTopTab;
+    @FindBy(xpath= "//form[@name='registerForm']/div[1]/input")
+    public WebElement firstName;
+    @FindBy(xpath= "//form[@name='registerForm']/div[2]/input")
+    public WebElement name;
     @FindBy(xpath= "//input[@name='email']")
     public WebElement userName;
     @FindBy(xpath="//input[@type='password']")

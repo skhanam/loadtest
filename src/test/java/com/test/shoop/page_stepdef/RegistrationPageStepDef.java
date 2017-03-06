@@ -25,6 +25,11 @@ public class RegistrationPageStepDef {
         reg.clickOnRegistrationLink();
     }
 
+    @And("^I enter firstname as \"([^\"]*)\" and last name as \"([^\"]*)\"$")
+    public void i_enter_firstname_as_and_last_name_as(String firstname, String name){
+       reg.enterFirstNameandName(firstname,name);
+    }
+
     @When("^I enter my email and password$")
     public void i_enter_my_email_and_password() throws Throwable {
         reg.enterEmailAddressAndPassword();
