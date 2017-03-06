@@ -6,6 +6,7 @@ Feature: As new user I should be able to Register
 
     Given I go to shoop home Page
     When I click on the register link
+    And I enter firstname as "quico" and last name as "test"
     And I enter my email and password
     And I accept shoop terms and conditions
     And I click on the register for free button

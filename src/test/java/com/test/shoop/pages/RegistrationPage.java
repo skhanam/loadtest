@@ -44,6 +44,12 @@ public class RegistrationPage extends AbstractDriver {
         //assertTrue(regErrorMessaging.getText().contains(terms_conds));
     }
 
+    public void enterFirstNameandName(String firstname,String name){
+        waitForElementDisplay(reg.firstName);
+        reg.firstName.sendKeys(firstname);
+        reg.name.sendKeys(name);
+    }
+
     public void enterUsernameAndPassWord(){
         waitForElementDisplay(reg.userName);
 //        final String email = UUID.randomUUID().toString() + "staging" + "qa@quidco.com";
@@ -64,8 +70,7 @@ public class RegistrationPage extends AbstractDriver {
 
     }
     public void acceptShoopTermsAndConditions(){
-            waitForElementDisplay(reg.regTermsAndConditions);
-            action.moveToElement(reg.regTermsAndConditions).click().build().perform();
+        ((JavascriptExecutor)driver).executeScript("document.getElementById(\"accept-tncs\").click()");
     }
 
     public void validateShoopLatestEmailOffersCheckBoxIsChecked(){
@@ -77,7 +82,6 @@ public class RegistrationPage extends AbstractDriver {
     	 reg.regButton.sendKeys(Keys.TAB);
          reg.regButton.sendKeys(Keys.ENTER);
        
-
     }
 
     public void validateNewUserRegistered(String greetings){
