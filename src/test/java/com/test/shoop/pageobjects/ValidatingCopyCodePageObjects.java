@@ -7,11 +7,11 @@ public class ValidatingCopyCodePageObjects {
 	
 	@FindBy(xpath = "//search-bar[@class='ng-scope']/div/div/input")
     public WebElement searchField;
-	@FindBy(xpath = "//*[@id='search-result-2220']/div[2]/h4")
+	@FindBy(xpath = "//*[@id='search-result-2546']/div[2]/h4")
     public WebElement merchantName;
 	@FindBy(xpath = "//button[@class='qp-btn']/span")
 	public WebElement cookie;
-	@FindBy(xpath = "//div[@class='offer-btn-wrapper ng-scope']/div[@class='code ribbon ng-scope']")
+	@FindBy(xpath = "//div[@class='e2e-open-copy-code-modal code ribbon ng-scope']/div")
     public WebElement viewVoucherCode;
 	@FindBy(xpath = "//div[@class='voucher-code']/button")
 	public WebElement copyOption;

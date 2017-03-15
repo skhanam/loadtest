@@ -4,7 +4,7 @@
   Feature: Validate merchant category on shoop
   
   Background: I launch shoop home page
-      Given I go to shoop home Page
+        Given I go to shoop home Page
   
   Scenario Outline: Merchant category tabs urls
   
@@ -20,7 +20,7 @@
       | lunettes-de-soleil       |
       | montres-bijoux           |
       | chaussures               |
-      | enfant                   | 
+      | enfant                   |
       | high-tech                |
       | mobile-telephone-tv      |
       | Divertissement           |
