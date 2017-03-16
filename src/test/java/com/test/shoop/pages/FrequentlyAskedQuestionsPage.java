@@ -50,9 +50,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnIsItSafeAndSecureLink() {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.safeSecure);
         waitForElementDisplay(questions.safeSecure);
-        Utility.scrollDownWindow(driver,questions.safeSecure );
-        questions.safeSecure.click();
+        //questions.safeSecure.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.safeSecure);
 
     }
 
@@ -66,9 +67,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOncanWeConsultTheOffersBeforeSignUpLink() {
-        Utility.scrollDownWindow(driver, questions.consultOfferB4SigningUp);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.consultOfferB4SigningUp);
        waitForElementDisplay(questions.consultOfferB4SigningUp);
-        questions.consultOfferB4SigningUp.click();
+        //questions.consultOfferB4SigningUp.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.consultOfferB4SigningUp);
     }
 
     public void validateCanWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
@@ -80,9 +82,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnHowMuchWillIEarnLink() {
-        Utility.scrollDownWindow(driver,questions.HowMuchToEarn );
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.HowMuchToEarn);
     	waitForElementDisplay(questions.HowMuchToEarn);
-        questions.HowMuchToEarn.click();
+       // questions.HowMuchToEarn.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.HowMuchToEarn);
     }
 
     public void ValidateHowMuchWillEarnLink(String c_earing) {
@@ -95,9 +98,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnhowITWorksLink() {
-        Utility.scrollDownWindow(driver, questions.HowItWorks);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.HowItWorks);
     	waitForElementDisplay(questions.HowItWorks);
-         questions.HowItWorks.click();
+         //questions.HowItWorks.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.HowItWorks);
    }
     
     
@@ -112,13 +116,15 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
 
     public void clickOnTheContactLink(){  
     	Utility.acceptCookies(driver);
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-      	js.executeScript("window.scrollBy(0,250)", "");
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.contactUs);
+    	//JavascriptExecutor js = (JavascriptExecutor) driver;
+      //	js.executeScript("window.scrollBy(0,250)", "");
       	waitForElementDisplay(questions.contactUs);
            questions.contactUs.click();
     }
     
     public void ValidateOnTheContactLinkPage(){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.contactPage);
     	 waitForElementDisplay(questions.contactPage);
     	 driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         assertTrue(questions.contactPage.isDisplayed());
