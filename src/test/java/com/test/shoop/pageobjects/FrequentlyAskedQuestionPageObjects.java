@@ -18,7 +18,7 @@ public class FrequentlyAskedQuestionPageObjects {
     @FindBy(xpath = " //*[@id='exp2']/div[2]/span")
     public WebElement howShoopMakesMoneyText;
     
-    @FindBy(xpath = "//*[@id='exp3']")
+    @FindBy(xpath = "//h5[@id='exp3']")
     public WebElement safeSecure;
     @FindBy(xpath = "//*[@id='exp3']/div[2]/span")
     public WebElement safeSecureText;
