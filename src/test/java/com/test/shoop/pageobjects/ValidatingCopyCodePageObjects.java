@@ -7,7 +7,7 @@ public class ValidatingCopyCodePageObjects {
 	
 	@FindBy(xpath = "//search-bar[@class='ng-scope']/div/div/input")
     public WebElement searchField;
-	@FindBy(xpath = "//*[@id='search-result-2546']/div[2]/h4")
+	@FindBy(css = ".e2e-list-merchant-name.ng-binding")
     public WebElement merchantName;
 	@FindBy(xpath = "//button[@class='qp-btn']/span")
 	public WebElement cookie;
