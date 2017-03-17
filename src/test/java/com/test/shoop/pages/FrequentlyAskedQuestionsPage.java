@@ -104,8 +104,6 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.HowItWorks);
    }
     
-    
-    
     public void validateHowITWorksLink(String w_texy) {
         waitForElementDisplay(questions.HowItWorksText);
         driverWait.toString().contains(w_texy);
