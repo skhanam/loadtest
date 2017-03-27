@@ -11,9 +11,9 @@ public class ValidatingCopyCodePageObjects {
     public WebElement merchantName;
 	@FindBy(xpath = "//button[@class='qp-btn']/span")
 	public WebElement cookie;
-	@FindBy(xpath = "//div[@class='e2e-open-copy-code-modal code ribbon ng-scope']/div")
+	@FindBy(xpath = "//button[@class='btn btn-primary btn-reveal e2e-open-copy-code-modal']")
     public WebElement viewVoucherCode;
-	@FindBy(xpath = "//div[@class='voucher-code']/button")
+	@FindBy(xpath = "//button[@class = 'e2e-copy-code-button copy-button btn btn-link']")
 	public WebElement copyOption;
 	
 	
