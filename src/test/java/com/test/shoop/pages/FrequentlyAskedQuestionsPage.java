@@ -75,7 +75,7 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void validateCanWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
-        waitForElementDisplay(questions.consultOfferB4SigningUpText);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.consultOfferB4SigningUp);
         driverWait.toString().contains(offer_signUp);
         String consultOffer = questions.consultOfferB4SigningUpText.getText();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
@@ -114,12 +114,12 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnTheContactLink(){  
-    	Utility.acceptCookies(driver);
+    	//Utility.acceptCookies(driver);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.contactUs);
     	//JavascriptExecutor js = (JavascriptExecutor) driver;
       //	js.executeScript("window.scrollBy(0,250)", "");
-      	waitForElementDisplay(questions.contactUs);
-           questions.contactUs.click();
+        waitForElementDisplay(questions.contactUs);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.contactUs);
     }
     
     public void ValidateOnTheContactLinkPage(){
