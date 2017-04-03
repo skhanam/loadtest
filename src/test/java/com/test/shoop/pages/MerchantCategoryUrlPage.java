@@ -22,7 +22,7 @@ public class MerchantCategoryUrlPage extends AbstractDriver {
 
 
     public void goToMerchantCategoryUrl(String cat_name){
-        String url = homePage.getUrl();
+        String url = "https://staging.shoop.fr";
         String fullUrl = url+"/c/"+cat_name;
         driver.get(fullUrl);
         /*String [] baseUrl = cat_name.split(",");
@@ -38,8 +38,8 @@ public class MerchantCategoryUrlPage extends AbstractDriver {
 
     }
     public void validateMerchantCategoryUrlPages(){
-       waitForElementDisplay(catUrl.backHomeButton);
-        assertTrue(catUrl.backHomeButton.isDisplayed());
+       waitForElementDisplay(catUrl.merchantName);
+        assertTrue(catUrl.merchantName.isDisplayed());
     }
 
 

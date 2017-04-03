@@ -9,9 +9,9 @@ import org.openqa.selenium.support.FindBy;
  */
 public class MerchantCategoryUrlPageObjects {
 
-    @FindBy(css = "a[id='breadcrumb-home']")
-    public WebElement backHomeButton;
-    @FindBy(css = ".e2e-list-merchant-name.ng-binding")
+    @FindBy(xpath = "//ul[@class='breadcrumb vertical ng-scope']/li/div/a")
+    public WebElement merchantName;
+    @FindBy(css = ".ng-binding.ng-scope")
     public WebElement searchResult;
     @FindBy(css = "#courses-en-ligne-drive")
     public WebElement pageTopTab;

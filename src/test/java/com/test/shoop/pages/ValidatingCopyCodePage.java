@@ -22,7 +22,7 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	
 	public void enterMerchantNameinSearch(){
 		waitForElementDisplay(copy.searchField);
-		copy.searchField.sendKeys("Yoins");
+		copy.searchField.sendKeys("yoins");
 		copy.searchField.sendKeys(Keys.ENTER);
 	}
 	public void clickOnMerchantName(){
@@ -30,18 +30,17 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 		copy.merchantName.click();
 	}
 	public void clickOnViewCodeButton(){
-		driver.manage().timeouts().implicitlyWait(1260, TimeUnit.SECONDS);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", copy.viewVoucherCode);
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
      	//js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-     	if(copy.cookie.isDisplayed()){
-        copy.cookie.click();
-     	}
-     	WebDriverWait wait = new WebDriverWait(driver,30);
-     	wait.until(ExpectedConditions.elementToBeClickable(copy.viewVoucherCode));
+//     	if(copy.cookie.isDisplayed()){
+//     		System.out.println("-------------------im in if loop----------------");
+//        copy.cookie.click();
+//     	}
 	    waitForElementDisplay(copy.viewVoucherCode);
 		//Actions act = new Actions(driver);
 		//act.moveToElement(copy.viewVoucherCode).click().build().perform();
-		copy.viewVoucherCode.click();
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", copy.viewVoucherCode);
 	}
 	public void validateCopyOption(){
 		driver.manage().timeouts().implicitlyWait(1260, TimeUnit.SECONDS);

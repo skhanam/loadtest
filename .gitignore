@@ -4,3 +4,15 @@
 /.idea/
 /.idea/misc.xml
 /.idea/vcs.xml
+
+/.gitignore
+/mavenVersion.xml
+
+/debugger.renderers.xml
+/debugger.xml
+/diff.xml
+/gradle.run.settings.xml
+/ignore.xml
+/IntelliLang.xml
+/vcs.xml
+/web-browsers.xml

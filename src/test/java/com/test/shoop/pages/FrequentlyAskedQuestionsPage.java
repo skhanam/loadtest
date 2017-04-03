@@ -6,6 +6,7 @@ import com.test.shoop.pageobjects.FrequentlyAskedQuestionPageObjects;
 
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -50,9 +51,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnIsItSafeAndSecureLink() {
-        //waitForElementDisplay(questions.safeSecure);
-        Utility.scrollDownWindow(driver,questions.safeSecure );
-        questions.safeSecure.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.safeSecure);
+        waitForElementDisplay(questions.safeSecure);
+        //questions.safeSecure.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.safeSecure);
 
     }
 
@@ -66,13 +68,14 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOncanWeConsultTheOffersBeforeSignUpLink() {
-        Utility.scrollDownWindow(driver, questions.consultOfferB4SigningUp);
-       // waitForElementDisplay(questions.consultOfferB4SigningUp);
-        questions.consultOfferB4SigningUp.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.consultOfferB4SigningUp);
+       waitForElementDisplay(questions.consultOfferB4SigningUp);
+        //questions.consultOfferB4SigningUp.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.consultOfferB4SigningUp);
     }
 
     public void validateCanWeConsultTheOffersBeforeSignUpLink(String offer_signUp) {
-        waitForElementDisplay(questions.consultOfferB4SigningUpText);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.consultOfferB4SigningUp);
         driverWait.toString().contains(offer_signUp);
         String consultOffer = questions.consultOfferB4SigningUpText.getText();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
@@ -80,9 +83,10 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnHowMuchWillIEarnLink() {
-        Utility.scrollDownWindow(driver,questions.HowMuchToEarn );
-    	//waitForElementDisplay(questions.HowMuchToEarn);
-        questions.HowMuchToEarn.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.HowMuchToEarn);
+    	waitForElementDisplay(questions.HowMuchToEarn);
+       // questions.HowMuchToEarn.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.HowMuchToEarn);
     }
 
     public void ValidateHowMuchWillEarnLink(String c_earing) {
@@ -95,12 +99,11 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnhowITWorksLink() {
-        Utility.scrollDownWindow(driver, questions.HowItWorks);
-    	// waitForElementDisplay(questions.HowItWorks);
-         questions.HowItWorks.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.HowItWorks);
+    	waitForElementDisplay(questions.HowItWorks);
+         //questions.HowItWorks.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.HowItWorks);
    }
-    
-    
     
     public void validateHowITWorksLink(String w_texy) {
         waitForElementDisplay(questions.HowItWorksText);
@@ -111,14 +114,16 @@ public class FrequentlyAskedQuestionsPage extends AbstractDriver {
     }
 
     public void clickOnTheContactLink(){  
-    	Utility.acceptCookies(driver);
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-      	js.executeScript("window.scrollBy(0,250)", "");
-      	waitForElementDisplay(questions.contactUs);
-           questions.contactUs.click();
+    	//Utility.acceptCookies(driver);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.contactUs);
+    	//JavascriptExecutor js = (JavascriptExecutor) driver;
+      //	js.executeScript("window.scrollBy(0,250)", "");
+        waitForElementDisplay(questions.contactUs);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", questions.contactUs);
     }
     
     public void ValidateOnTheContactLinkPage(){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", questions.contactPage);
     	 waitForElementDisplay(questions.contactPage);
     	 driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         assertTrue(questions.contactPage.isDisplayed());
