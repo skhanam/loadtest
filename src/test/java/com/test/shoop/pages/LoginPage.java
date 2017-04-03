@@ -53,7 +53,7 @@ public class LoginPage extends AbstractDriver {
         loginpo.loginLink.click();
         Utility.acceptCookies(driver);
          waitForElementDisplay(loginpo.userName);
-        credentials = new UserCredentials("quidcoqa@quidco.com","testQA!12");
+        credentials = new UserCredentials("foo12666@bar.com","testQA!12");
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
         loginpo.emailpassword.sendKeys(credentials.getPassword());
@@ -65,7 +65,7 @@ public class LoginPage extends AbstractDriver {
     public void enterUsername() {
         waitForElementDisplay(loginpo.userName);
         loginpo.userName.clear();
-        loginpo.userName.sendKeys("quidcoqa@quidco.com");
+        loginpo.userName.sendKeys("foo12666@bar.com");
 
     }
 
@@ -91,7 +91,7 @@ public class LoginPage extends AbstractDriver {
     public void loginMember() {
         waitForElementDisplay(loginpo.loginLink);
         loginpo.loginLink.click();
-        loginpo.userName.sendKeys("quidcoqa@quidco.com");
+        loginpo.userName.sendKeys("foo12666@bar.com");
         loginpo.emailpassword.sendKeys("testQA!12");
         loginpo.loggedIn.click();
     }
