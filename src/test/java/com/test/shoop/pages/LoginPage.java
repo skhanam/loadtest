@@ -53,7 +53,7 @@ public class LoginPage extends AbstractDriver {
         loginpo.loginLink.click();
         Utility.acceptCookies(driver);
          waitForElementDisplay(loginpo.userName);
-        credentials = new UserCredentials("quidcoqa@quidco.com","testQA!12");
+        credentials = new UserCredentials("foo12666@bar.com","testQA!12");
         loginpo.userName.sendKeys(credentials.getUserName());
         loginpo.emailpassword.clear();
         loginpo.emailpassword.sendKeys(credentials.getPassword());
