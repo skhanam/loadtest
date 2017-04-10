@@ -65,7 +65,7 @@ public class LoginPage extends AbstractDriver {
     public void enterUsername() {
         waitForElementDisplay(loginpo.userName);
         loginpo.userName.clear();
-        loginpo.userName.sendKeys("quidcoqa@quidco.com");
+        loginpo.userName.sendKeys("foo12666@bar.com");
 
     }
 
@@ -91,7 +91,7 @@ public class LoginPage extends AbstractDriver {
     public void loginMember() {
         waitForElementDisplay(loginpo.loginLink);
         loginpo.loginLink.click();
-        loginpo.userName.sendKeys("quidcoqa@quidco.com");
+        loginpo.userName.sendKeys("foo12666@bar.com");
         loginpo.emailpassword.sendKeys("testQA!12");
         loginpo.loggedIn.click();
     }

@@ -28,8 +28,8 @@ Feature: Member updates account details
     And I click on link my paypal account button 
     And I click on Yes to accept user account update terms and conditions
     And I should be on the Paypal login page
-    And I enter paypal account emailid as "quidcoqa@quidco.com"
-    And I enter paypal account password as "testpass"
+    And I enter paypal account emailid as "quidcoqa+1@quidco.com"
+    And I enter paypal account password as "testp@ss"
     And I click on sign in button on paypal page
     Then I should see paypal account added Success message 
     And I click on Dissociate my paypal account button
