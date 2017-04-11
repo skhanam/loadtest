@@ -22,7 +22,7 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	
 	public void enterMerchantNameinSearch(){
 		waitForElementDisplay(copy.searchField);
-		copy.searchField.sendKeys("yoins");
+		copy.searchField.sendKeys("Tissel");
 		copy.searchField.sendKeys(Keys.ENTER);
 	}
 	public void clickOnMerchantName(){
