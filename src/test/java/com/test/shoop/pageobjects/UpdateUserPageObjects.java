@@ -24,7 +24,7 @@ public class UpdateUserPageObjects {
     public WebElement emailModifierLink;
     @FindBy(xpath = "//*[contains(@name,'username')]")
     public WebElement editUserName;
-    @FindBy(xpath = "//div[@class='settings-fields']/div[4]/div[1]/div/div[3]/div")
+    @FindBy(xpath = "//div[@class='settings-fields']/div[4]/div[1]/div/div[3]/div/div")
     public WebElement genderModifierLink;
     @FindBy(xpath= "//div[@class='settings-fields']/div[3]/div[1]/div/div[3]/div")
     public WebElement usernameModifierLink;
