@@ -12,7 +12,7 @@ public class MerchantCategoryPageObjects {
 
     @FindBy(xpath = "//ul[@class='breadcrumb vertical ng-scope']/li/div/a")
     public WebElement backHomeButton;
-    @FindBy(css =".e2e-list-merchant-name.ng-binding")
+    @FindBy(css ="#msm-breadcrumbs-toggler>a")
     public WebElement searchResult;
 
     @FindBy(xpath= ".//*[@id='menu-categories']/div[1]/div")

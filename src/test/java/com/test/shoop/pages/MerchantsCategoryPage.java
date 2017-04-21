@@ -29,7 +29,7 @@ public MerchantsCategoryPage(){
     }
     public void validateOnShoopMerchantsCategoryPage(){
         waitForElementDisplay(merchantCat.searchResult);
-        assertTrue(merchantCat.backHomeButton.isDisplayed());
+        assertTrue(merchantCat.searchResult.isDisplayed());
     }
 
 
