@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class MerchantCategoryUrlPageObjects {
 
-    @FindBy(xpath = "//ul[@class='breadcrumb vertical ng-scope']/li/div/a")
+    @FindBy(xpath = "//div[@id='msm-breadcrumbs-toggler']")
     public WebElement merchantName;
     @FindBy(css = ".ng-binding.ng-scope")
     public WebElement searchResult;
