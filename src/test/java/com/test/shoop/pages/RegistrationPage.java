@@ -70,7 +70,8 @@ public class RegistrationPage extends AbstractDriver {
 
     }
     public void acceptShoopTermsAndConditions(){
-        ((JavascriptExecutor)driver).executeScript("document.getElementById(\"accept-tncs\").click()");
+        ((JavascriptExecutor)driver).executeScript("document.getElementById(\"acceptTerms\").click()");
+
     }
 
     public void validateShoopLatestEmailOffersCheckBoxIsChecked(){
