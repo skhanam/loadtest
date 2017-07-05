@@ -41,7 +41,7 @@ public class MYPayementsSettingsPageObjects {
     public WebElement paypalEmail;
     @FindBy(xpath = "//*[@id='password']")
     public WebElement paypalPassword;
-    @FindBy(xpath = "//*[@id='content']/h1")
+    @FindBy(xpath = "//*[@id='login']/div/div/h1")
     public WebElement validatePaypalLoginPage;
     @FindBy(xpath = "//*[@id='btnLogin']")
     public WebElement paypalLoginButton;
