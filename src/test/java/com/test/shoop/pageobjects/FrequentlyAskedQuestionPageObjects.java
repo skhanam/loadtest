@@ -8,34 +8,34 @@ import org.openqa.selenium.support.FindBy;
  */
 public class FrequentlyAskedQuestionPageObjects {
 
-    @FindBy(xpath = "//*[@id='exp1']")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[1]/div/button[1]")
     public WebElement whatsthecashback;
-    @FindBy(xpath = "//*[@id='exp1']/div[2]/span")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[1]/div/div")
     public WebElement whatsthecashbackText;
     
-    @FindBy(xpath = "//*[@id='exp2']")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[2]/div/button[1]")
     public WebElement howShoopMakesMoney;
-    @FindBy(xpath = " //*[@id='exp2']/div[2]/span")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[2]/div/div")
     public WebElement howShoopMakesMoneyText;
     
-    @FindBy(xpath = "//h5[@id='exp3']")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[3]/div/button[1]")
     public WebElement safeSecure;
-    @FindBy(xpath = "//*[@id='exp3']/div[2]/span")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[3]/div/divn")
     public WebElement safeSecureText;
     
-    @FindBy(xpath = "//*[@id='exp4']")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[4]/div/button[1]")
     public WebElement consultOfferB4SigningUp;
-    @FindBy(xpath = "//*[@id='exp4']/div[2]/span")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[4]/div/div")
     public WebElement consultOfferB4SigningUpText;
     
-    @FindBy(xpath = "//*[@id='exp5']")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[5]/div/button[1]")
     public WebElement HowMuchToEarn;
-    @FindBy(xpath = "//*[@id='exp5']/div[2]/span")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[5]/div/div")
     public WebElement HowMuchToEarnText;
     
-    @FindBy(xpath = "//*[@id='exp6']")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[6]/div/button[1]")
     public WebElement HowItWorks;
-    @FindBy(xpath = "//*[@id='exp6']/div[2]/span")
+    @FindBy(xpath = "//div[@class='msm-register-faq']/msm-expandable-item[6]/div/div")
     public WebElement HowItWorksText;
     
     @FindBy(xpath = "//*[@id='helpdesk-link']")
