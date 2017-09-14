@@ -39,8 +39,9 @@ public class UnregisteredEmailPage extends AbstractDriver {
 
     public void validateInvalidEmailPasswordISDisplayed(String invalid_info){
         waitForElementDisplay(unReg.incorrectlogindetails);
-        LOGGER.info(unReg.invalidemailPassword.getText());
-        assertTrue(unReg.invalidemailPassword.getText().contains(invalid_info));
+//        LOGGER.info(unReg.invalidemailPassword.getText());
+        LOGGER.info(unReg.incorrectlogindetails.getText());
+        assertTrue(unReg.incorrectlogindetails.getText().contains(invalid_info));
 
     }
 
