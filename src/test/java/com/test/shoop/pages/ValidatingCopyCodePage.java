@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -28,6 +29,14 @@ public class ValidatingCopyCodePage extends AbstractDriver{
 	public void clickOnMerchantName(){
 		waitForElementDisplay(copy.merchantName);
 		copy.merchantName.click();
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 2);
+			wait.until(ExpectedConditions.alertIsPresent());
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+		} catch (Exception e) {
+				System.out.print("Stack trace : " +e);
+		}
 	}
 	public void clickOnViewCodeButton(){
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", copy.viewVoucherCode);
