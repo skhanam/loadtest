@@ -45,10 +45,7 @@ public class RegistrationPage extends AbstractDriver {
     }
     public void validaterErrorMessageForTermsandConditions(String terms_conds){
         wait.until(ExpectedConditions.visibilityOf(reg.regErrorMessaging));
-//        waitForElementDisplay(reg.regErrorMessaging);
         Assert.assertEquals(reg.regErrorMessaging.getText(),terms_conds);
-//        Assert.assertTrue(reg.regErrorMessaging.isDisplayed());
-        //assertTrue(regErrorMessaging.getText().contains(terms_conds));
     }
 
     public void enterFirstNameandName(String firstname,String name){
