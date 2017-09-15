@@ -3,11 +3,13 @@ package com.test.shoop.pageobjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by thadeus on 04/07/16.
  */
 public class RegistrationPageObjects {
+
     @FindBy(xpath = "//category-icons[@class='pull-right ng-scope']/div/ul/li[1]/a")
 	public WebElement registerLink;
     @FindBy(xpath="//form[@name='registerForm']/div[5]/label")
@@ -37,11 +39,8 @@ public class RegistrationPageObjects {
     public WebElement userEmail;
     @FindBy(name = "password")
     public WebElement emailpassword;
-//    @FindBy(xpath =".//*button[@type='submit']")
     @FindBy(id ="register-submit")
     public WebElement regButton;
-    @FindBy(css=".error.ng-scope>span")
-    public WebElement regErrorMessaging;
     @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[1]/div/div/p")
     public WebElement errorMessageBIC;
     @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[2]/div/div/p")
@@ -50,5 +49,9 @@ public class RegistrationPageObjects {
     public WebElement errorMessageEmail;
     @FindBy(xpath ="//form[@name = 'bacsInternationalForm.form']/div[4]/div/div/p")
     public WebElement errorMessagePassword;
+    @FindBy(xpath="html/body/div[2]/msm-shoop/div/msm-register-page/div/div[2]/div/div[1]/form/div[7]/label/input[@id='acceptTerms']")
+    public WebElement acceptTerms;
+    @FindBy(xpath="html/body/div[2]/msm-shoop/div/msm-register-page/div/div[2]/div/div[1]/form/div[5]/div/span")
+    public WebElement regErrorMessaging;
     
 }
