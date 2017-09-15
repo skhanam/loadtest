@@ -4,10 +4,13 @@ import com.test.shoop.pageobjects.RegistrationPageObjects;
 import com.test.shoop.config.AbstractDriver;
 import com.test.shoop.config.Utility;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.logging.Logger;
 import org.junit.Assert;
@@ -34,13 +37,17 @@ public class RegistrationPage extends AbstractDriver {
     public void doDefaultRegister(){
         waitForElementDisplay(reg.registerLink);
        reg.registerLink.click();
+        reg.firstName.sendKeys("autotest");
+        reg.name.sendKeys("foo");
         waitForElementDisplay(reg.userName);
         reg.userName.sendKeys(email);
         reg.emailpassword.sendKeys("Testquality09!");
     }
     public void validaterErrorMessageForTermsandConditions(String terms_conds){
-        waitForElementDisplay(reg.regErrorMessaging);
-        Assert.assertTrue(reg.regErrorMessaging.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOf(reg.regErrorMessaging));
+//        waitForElementDisplay(reg.regErrorMessaging);
+        Assert.assertEquals(reg.regErrorMessaging.getText(),terms_conds);
+//        Assert.assertTrue(reg.regErrorMessaging.isDisplayed());
         //assertTrue(regErrorMessaging.getText().contains(terms_conds));
     }
 
